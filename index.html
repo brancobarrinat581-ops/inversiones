@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#0f0f0f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Inversiones</title>
+    <style>
+      * { margin:0; padding:0; box-sizing:border-box; }
+      body { background:#0f0f0f; color:#e8e6e3; font-family:system-ui,-apple-system,sans-serif; }
+      #root { min-height:100vh; }
+    </style>
+    <script>
+      // Interceptar Supabase auth para usar contraseña local
+      (function(){
+        var VALID_EMAIL = "brancobarrinat581@gmail.com";
+        var VALID_PASS = "45490855";
+        var USER_ID = "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06";
+        var SUPA_KEY = "sb-bezxlrkolpfaeqvyxckj-auth-token";
+
+        // Si no hay sesión de Supabase, crear una fake para que la app cargue
+        var existing = localStorage.getItem(SUPA_KEY);
+        if (!existing) {
+          // Pre-seed una sesión fake que Supabase client va a leer
+          var fakeSession = {
+            access_token: "fake-local-auth-token",
+            refresh_token: "fake-refresh-token", 
+            expires_in: 86400,
+            expires_at: Math.floor(Date.now()/1000) + 86400,
+            token_type: "bearer",
+            user: {
+              id: USER_ID,
+              email: VALID_EMAIL,
+              role: "authenticated",
+              aud: "authenticated",
+              app_metadata: { provider: "email" },
+              user_metadata: {},
+              created_at: "2024-01-01T00:00:00Z"
+            }
+          };
+          localStorage.setItem(SUPA_KEY, JSON.stringify(fakeSession));
+        }
+
+        // Interceptar fetch para que signInWithPassword funcione offline
+        var origFetch = window.fetch;
+        window.fetch = function(url, opts) {
+          if (typeof url === "string") {
+            // Interceptar login
+            if (url.includes("/auth/v1/token") && url.includes("grant_type=password")) {
+              var body = JSON.parse(opts.body || "{}");
+              if (body.email === VALID_EMAIL && body.password === VALID_PASS) {
+                var resp = {
+                  access_token: "local-auth-" + Date.now(),
+                  refresh_token: "local-refresh-" + Date.now(),
+                  expires_in: 86400,
+                  expires_at: Math.floor(Date.now()/1000) + 86400,
+                  token_type: "bearer",
+                  user: {
+                    id: USER_ID,
+                    email: VALID_EMAIL,
+                    role: "authenticated",
+                    aud: "authenticated",
+                    app_metadata: { provider: "email" },
+                    user_metadata: {},
+                    created_at: "2024-01-01T00:00:00Z"
+                  }
+                };
+                return Promise.resolve(new Response(JSON.stringify(resp), {
+                  status: 200,
+                  headers: {"Content-Type": "application/json"}
+                }));
+              } else {
+                return Promise.resolve(new Response(JSON.stringify({
+                  error: "invalid_grant",
+                  error_description: "Email o contraseña incorrecto."
+                }), { status: 400, headers: {"Content-Type": "application/json"} }));
+              }
+            }
+            // Interceptar getSession
+            if (url.includes("/auth/v1/token") && url.includes("grant_type=refresh_token")) {
+              var stored = localStorage.getItem(SUPA_KEY);
+              if (stored) {
+                try {
+                  var s = JSON.parse(stored);
+                  s.expires_at = Math.floor(Date.now()/1000) + 86400;
+                  return Promise.resolve(new Response(JSON.stringify(s), {
+                    status: 200,
+                    headers: {"Content-Type": "application/json"}
+                  }));
+                } catch(e) {}
+              }
+            }
+            // Interceptar getUser
+            if (url.includes("/auth/v1/user") && opts && opts.method !== "PUT") {
+              return Promise.resolve(new Response(JSON.stringify({
+                id: USER_ID,
+                email: VALID_EMAIL,
+                role: "authenticated",
+                aud: "authenticated",
+                app_metadata: { provider: "email" },
+                user_metadata: {},
+                created_at: "2024-01-01T00:00:00Z"
+              }), { status: 200, headers: {"Content-Type": "application/json"} }));
+            }
+            // Interceptar logout
+            if (url.includes("/auth/v1/logout")) {
+              localStorage.removeItem(SUPA_KEY);
+              return Promise.resolve(new Response("{}", {
+                status: 204,
+                headers: {"Content-Type": "application/json"}
+              }));
+            }
+            // Interceptar signup (bloqueado)
+            if (url.includes("/auth/v1/signup")) {
+              return Promise.resolve(new Response(JSON.stringify({
+                error: "signup_disabled",
+                error_description: "Registro deshabilitado."
+              }), { status: 403, headers: {"Content-Type": "application/json"} }));
+            }
+          }
+          // Todo lo demás pasa normal (FMP API, Groq, Supabase data, etc)
+          return origFetch.apply(this, arguments);
+        };
+      })();
+    </script>
+    <script type="module" crossorigin src="/inversiones/app.js"></script>
+  </head>
+  <body><div id="root"></div></body>
+</html>
