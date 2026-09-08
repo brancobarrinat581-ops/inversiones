@@ -1,197 +1,144 @@
 // scripts/fetch-prices.js
-// Corre en GitHub Actions (server-side) - sin problemas de CORS
+// Busca precios REALES de BYMA via Open BYMA Data + FMP para USD
 const fs = require('fs');
-
 const FMP_KEY = 'eLJtPLqeqnU6YBft89zRBpetoDfVnwvO';
 
-// Tickers y ratios CEDEAR
 const TICKERS = {
-  ADBE: 44, MELI: 120, MSFT: 30, MU: 5, NVDA: 24, PANW: 50, SPY: 60,
-  VIST: 3, ACN: 75, MCD: 24, META: 24, NU: 2, PAMP: 25, IBIT: 10,
-  BMA: 10, GGAL: 10, YPF: 1, ICLN: 5
+  ADBE:44, MELI:120, MSFT:30, MU:5, NVDA:24, PANW:50, SPY:60,
+  VIST:3, ACN:75, MCD:24, META:24, NU:2, PAMP:25, IBIT:10,
+  BMA:10, GGAL:10, YPF:1, ICLN:5, ALUA:1, EWZ:1
 };
 
-// Tickers que cotizan en IOL con nombre diferente
-const IOL_MAP = { PAMP: 'PAM' };
-
-// Fallback hardcoded (último recurso)
-const FALLBACK_USD = {
-  ADBE: 267, NVDA: 222, MSFT: 510, META: 608, MU: 880, PANW: 370, SPY: 775,
-  MCD: 279, MELI: 1940, NU: 13.8, IBIT: 38, ACN: 178, VIST: 66, PAMP: 86,
-  BMA: 92, GGAL: 82, YPF: 41, ICLN: 20.92
-};
-
-async function fetchWithTimeout(url, timeout = 8000) {
-  const controller = new AbortController();
-  const id = setTimeout(() => controller.abort(), timeout);
+async function fetchJSON(url, timeout=10000) {
+  const c = new AbortController();
+  const id = setTimeout(() => c.abort(), timeout);
   try {
-    const res = await fetch(url, { signal: controller.signal });
+    const r = await fetch(url, {signal:c.signal});
     clearTimeout(id);
-    return res;
-  } catch (e) {
-    clearTimeout(id);
-    throw e;
-  }
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return await r.json();
+  } catch(e) { clearTimeout(id); throw e; }
 }
 
-// Fuente 1: FMP API
-async function fetchFMP(symbols) {
+// FUENTE 1: Open BYMA Data (precios ARS reales de BYMA)
+async function fetchBYMA() {
   const prices = {};
-  // Batch de 5
-  for (let i = 0; i < symbols.length; i += 5) {
-    const batch = symbols.slice(i, i + 5).join(',');
+  const endpoints = [
+    'https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/cedears',
+    'https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/leading-equity',
+    'https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/general-equity'
+  ];
+  for (const url of endpoints) {
     try {
-      const res = await fetchWithTimeout(
-        `https://financialmodelingprep.com/stable/profile?symbol=${batch}&apikey=${FMP_KEY}`
-      );
-      if (res.ok) {
-        const data = await res.json();
-        if (Array.isArray(data)) {
-          data.forEach(d => {
-            if (d.price > 0) {
-              // Reverse IOL map
-              const sym = Object.entries(IOL_MAP).find(([k, v]) => v === d.symbol)?.[0] || d.symbol;
-              prices[sym] = {
-                usd: d.price,
-                change: d.changes || 0,
-                changePct: d.changesPercentage || 0,
-                pe: d.pe || 0,
-                mcap: d.mktCap || 0,
-                h52: d.range ? parseFloat(d.range.split('-')[1]) || 0 : 0,
-                l52: d.range ? parseFloat(d.range.split('-')[0]) || 0 : 0,
-                vol: d.volAvg || 0,
-                src: 'FMP'
-              };
-            }
-          });
-        }
-      } else if (res.status === 429 || res.status === 403) {
-        console.log('⚠️ FMP rate limited');
-        break;
+      const data = await fetchJSON(url);
+      if (Array.isArray(data)) {
+        data.forEach(item => {
+          const sym = item.symbol || item.simbolo || '';
+          const price = item.trade || item.last || item.ultimoPrecio || item.close || 0;
+          if (sym && price > 0) {
+            prices[sym] = {
+              ars: price,
+              open: item.open || item.apertura || 0,
+              high: item.high || item.maximo || 0,
+              low: item.low || item.minimo || 0,
+              prevClose: item.previousClosingPrice || item.cierreAnterior || 0,
+              changePct: item.changeRate || item.variacion || 0,
+              vol: item.volume || item.volumen || 0,
+              src: 'BYMA'
+            };
+          }
+        });
       }
-      // Delay entre batches
-      await new Promise(r => setTimeout(r, 300));
-    } catch (e) {
-      console.log('FMP error:', e.message);
+    } catch(e) {
+      console.log('BYMA endpoint error:', url.split('/').pop(), e.message);
     }
   }
   return prices;
 }
 
-// Fuente 2: Yahoo Finance
-async function fetchYahoo(symbol) {
-  try {
-    const iolSym = IOL_MAP[symbol] || symbol;
-    const res = await fetchWithTimeout(
-      `https://query1.finance.yahoo.com/v8/finance/chart/${iolSym}?interval=1d&range=5d`
-    );
-    if (res.ok) {
-      const data = await res.json();
-      const meta = data?.chart?.result?.[0]?.meta;
-      if (meta?.regularMarketPrice > 0) {
-        return {
-          usd: meta.regularMarketPrice,
-          change: meta.regularMarketPrice - (meta.chartPreviousClose || meta.regularMarketPrice),
-          changePct: meta.chartPreviousClose
-            ? ((meta.regularMarketPrice - meta.chartPreviousClose) / meta.chartPreviousClose * 100)
-            : 0,
-          h52: meta.fiftyTwoWeekHigh || 0,
-          l52: meta.fiftyTwoWeekLow || 0,
-          src: 'Yahoo'
-        };
+// FUENTE 2: FMP (precios USD)
+async function fetchFMP() {
+  const prices = {};
+  const syms = Object.keys(TICKERS);
+  for (let i = 0; i < syms.length; i += 5) {
+    const batch = syms.slice(i, i+5).join(',');
+    try {
+      const data = await fetchJSON(
+        `https://financialmodelingprep.com/stable/profile?symbol=${batch}&apikey=${FMP_KEY}`
+      );
+      if (Array.isArray(data)) {
+        data.forEach(d => {
+          if (d.price > 0) {
+            prices[d.symbol] = {
+              usd: d.price,
+              changePct: d.changesPercentage || 0,
+              pe: d.pe || 0,
+              mcap: d.mktCap || 0
+            };
+          }
+        });
       }
+      await new Promise(r => setTimeout(r, 300));
+    } catch(e) {
+      console.log('FMP error:', e.message);
+      break;
     }
-  } catch (e) {
-    console.log(`Yahoo error for ${symbol}:`, e.message);
   }
-  return null;
+  return prices;
 }
 
-// CCL desde dolarapi.com
+// CCL
 async function fetchCCL() {
   try {
-    const res = await fetchWithTimeout('https://dolarapi.com/v1/dolares/contadoconliqui');
-    if (res.ok) {
-      const data = await res.json();
-      if (data.venta > 0) {
-        console.log(`✅ CCL: $${data.venta}`);
-        return data.venta;
-      }
-    }
-  } catch (e) {
-    console.log('CCL fetch error:', e.message);
-  }
-  // Fallback
-  return 1578;
+    const d = await fetchJSON('https://dolarapi.com/v1/dolares/contadoconliqui');
+    if (d.venta > 0) return d.venta;
+  } catch(e) { console.log('CCL error:', e.message); }
+  return 1583;
 }
 
 async function main() {
   console.log('🚀 Buscando precios...', new Date().toISOString());
 
-  // 1. CCL
-  const ccl = await fetchCCL();
+  const [bymaData, fmpData, ccl] = await Promise.all([
+    fetchBYMA().catch(e => { console.log('BYMA failed:', e.message); return {}; }),
+    fetchFMP().catch(e => { console.log('FMP failed:', e.message); return {}; }),
+    fetchCCL()
+  ]);
 
-  // 2. FMP (fuente principal)
-  const symbols = Object.keys(TICKERS).map(s => IOL_MAP[s] || s);
-  const fmpPrices = await fetchFMP(symbols);
-  console.log(`✅ FMP: ${Object.keys(fmpPrices).length} tickers`);
+  console.log(`📊 BYMA: ${Object.keys(bymaData).length} tickers`);
+  console.log(`📊 FMP: ${Object.keys(fmpData).length} tickers`);
+  console.log(`📊 CCL: $${ccl}`);
 
-  // 3. Yahoo (para los que faltan)
-  const prices = { ...fmpPrices };
-  const missing = Object.keys(TICKERS).filter(s => !prices[s] || prices[s].usd <= 0);
-
-  if (missing.length > 0) {
-    console.log(`📡 Yahoo para ${missing.length} tickers...`);
-    for (const sym of missing) {
-      const yp = await fetchYahoo(sym);
-      if (yp) prices[sym] = yp;
-      await new Promise(r => setTimeout(r, 200));
-    }
-  }
-
-  // 4. Fallback hardcoded para los que siguen sin precio
+  // Combinar: BYMA para ARS, FMP para USD
+  const prices = {};
   Object.keys(TICKERS).forEach(sym => {
-    if (!prices[sym] || prices[sym].usd <= 0) {
-      prices[sym] = {
-        usd: FALLBACK_USD[sym] || 0,
-        change: 0, changePct: 0, src: 'Fallback'
-      };
-    }
+    const byma = bymaData[sym];
+    const fmp = fmpData[sym];
+    const ratio = TICKERS[sym];
+
+    prices[sym] = {
+      usd: fmp?.usd || (byma?.ars > 0 && ratio > 1 ? Math.round(byma.ars * ratio / ccl * 100) / 100 : 0),
+      ars: byma?.ars || (fmp?.usd > 0 && ratio > 1 ? Math.round(fmp.usd / ratio * ccl) : 0),
+      changePct: byma?.changePct || fmp?.changePct || 0,
+      vol: byma?.vol || 0,
+      pe: fmp?.pe || 0,
+      mcap: fmp?.mcap || 0,
+      src: byma?.ars > 0 ? 'BYMA' : (fmp?.usd > 0 ? 'FMP' : 'Fallback')
+    };
   });
 
-  // 5. Calcular precios ARS CEDEAR
-  Object.keys(prices).forEach(sym => {
-    const ratio = TICKERS[sym] || 1;
-    if (prices[sym].usd > 0 && ratio > 1) {
-      prices[sym].ars = Math.round(prices[sym].usd / ratio * ccl);
-    }
-  });
+  // Tickers especiales
+  prices.IOLCAMA = { usd:0, ars:11.91, src:'Fixed' };
+  prices.IOLDOLD = { usd:0, ars:1648, src:'Fixed' };
+  prices.AL30D = { usd:63.96, ars:Math.round(63.96*ccl), src:'Calc' };
 
-  // 6. Agregar tickers no-CEDEAR (FCIs, bonos) con precios ARS fijos
-  prices.IOLCAMA = { usd: 0, ars: 11.91, src: 'Fixed' };
-  prices.IOLDOLD = { usd: 0, ars: 1648, src: 'Fixed' };
-  prices.AL30D = { usd: 63.96, ars: Math.round(63.96 * ccl), src: 'Calc' };
-
-  // 7. Guardar
-  const output = {
-    ts: new Date().toISOString(),
-    ccl: ccl,
-    count: Object.keys(prices).length,
-    prices: prices
-  };
-
+  const output = { ts: new Date().toISOString(), ccl, count: Object.keys(prices).length, prices };
   fs.writeFileSync('prices.json', JSON.stringify(output, null, 2));
 
   // Resumen
-  const sources = {};
-  Object.values(prices).forEach(p => {
-    sources[p.src || '?'] = (sources[p.src || '?'] || 0) + 1;
-  });
-  console.log('✅ prices.json guardado:', Object.entries(sources).map(([k,v]) => `${k}: ${v}`).join(', '));
-  console.log(`📊 Total: ${output.count} tickers | CCL: $${ccl}`);
+  const src = {};
+  Object.values(prices).forEach(p => { src[p.src] = (src[p.src]||0)+1; });
+  console.log('✅ Guardado:', Object.entries(src).map(([k,v])=>`${k}: ${v}`).join(', '));
 }
 
-main().catch(e => {
-  console.error('❌ Error:', e);
-  process.exit(1);
-});
+main().catch(e => { console.error('❌', e); process.exit(1); });
