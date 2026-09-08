@@ -1,28 +1,202 @@
 {
-  "ts": "2026-09-08T10:00:00Z",
-  "ccl": 1560,
-  "count": 21,
+  "ts": "2026-09-08T14:45:50.928Z",
+  "ccl": 1586.3,
+  "count": 23,
   "prices": {
-    "ACN": { "usd": 186.72, "ars": 3940, "changePct": 0.31, "src": "BYMA" },
-    "ADBE": { "usd": 266.51, "ars": 9650, "changePct": 0.52, "src": "BYMA" },
-    "IBIT": { "usd": 45.23, "ars": 7275, "changePct": 1.39, "src": "BYMA" },
-    "MELI": { "usd": 1978, "ars": 26120, "changePct": 0.07, "src": "BYMA" },
-    "META": { "usd": 616.77, "ars": 40920, "changePct": 0.49, "src": "BYMA" },
-    "MSFT": { "usd": 499.70, "ars": 26300, "changePct": -0.37, "src": "BYMA" },
-    "MU": { "usd": 1016.59, "ars": 326700, "changePct": 1.69, "src": "BYMA" },
-    "NU": { "usd": 15.37, "ars": 12200, "changePct": 0.57, "src": "BYMA" },
-    "NVDA": { "usd": 230.36, "ars": 15390, "changePct": 1.11, "src": "BYMA" },
-    "PAMP": { "usd": 84.80, "ars": 5410, "changePct": 0.83, "src": "BYMA" },
-    "PANW": { "usd": 333.26, "ars": 10580, "changePct": 0.09, "src": "BYMA" },
-    "SPY": { "usd": 770.19, "ars": 20480, "changePct": 0.44, "src": "BYMA" },
-    "VIST": { "usd": 73.73, "ars": 39000, "changePct": 0.30, "src": "BYMA" },
-    "MCD": { "usd": 255.69, "ars": 17130, "changePct": 1.18, "src": "BYMA" },
-    "BMA": { "usd": 78.57, "ars": 12200, "changePct": 0, "src": "BYMA" },
-    "GGAL": { "usd": 44.36, "ars": 7023, "changePct": 0, "src": "FMP" },
-    "YPF": { "usd": 52.62, "ars": 64698, "changePct": 0, "src": "FMP" },
-    "ICLN": { "usd": 17.77, "ars": 5627, "changePct": 0, "src": "FMP" },
-    "AL30D": { "usd": 63.96, "ars": 100929, "changePct": 0, "src": "Calc" },
-    "IOLCAMA": { "usd": 0, "ars": 12077, "changePct": 0.03, "src": "Fixed" },
-    "IOLDOLD": { "usd": 0, "ars": 1670, "changePct": -0.07, "src": "Fixed" }
+    "ADBE": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "MELI": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "MSFT": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "MU": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "NVDA": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "PANW": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "SPY": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "VIST": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "ACN": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "MCD": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "META": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "NU": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "PAMP": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "IBIT": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "BMA": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "GGAL": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "YPF": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "ICLN": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "ALUA": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "EWZ": {
+      "usd": 0,
+      "ars": 0,
+      "changePct": 0,
+      "vol": 0,
+      "pe": 0,
+      "mcap": 0,
+      "src": "Fallback"
+    },
+    "IOLCAMA": {
+      "usd": 0,
+      "ars": 11.91,
+      "src": "Fixed"
+    },
+    "IOLDOLD": {
+      "usd": 0,
+      "ars": 1648,
+      "src": "Fixed"
+    },
+    "AL30D": {
+      "usd": 63.96,
+      "ars": 101460,
+      "src": "Calc"
+    }
   }
 }
