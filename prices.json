@@ -1,130 +1,31 @@
 {
-  "ts": "2026-09-08T15:00:18.967Z",
-  "ccl": 1586.3,
+  "ts": "2026-09-08T14:00:00Z",
+  "ccl": 1560,
   "count": 21,
   "prices": {
-    "ADBE": {
-      "usd": 0,
-      "ars": 9650,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "MELI": {
-      "usd": 0,
-      "ars": 26120,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "MSFT": {
-      "usd": 0,
-      "ars": 26300,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "MU": {
-      "usd": 0,
-      "ars": 326700,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "NVDA": {
-      "usd": 0,
-      "ars": 15390,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "PANW": {
-      "usd": 0,
-      "ars": 10580,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "SPY": {
-      "usd": 0,
-      "ars": 20480,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "VIST": {
-      "usd": 0,
-      "ars": 39000,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "ACN": {
-      "usd": 0,
-      "ars": 3940,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "MCD": {
-      "usd": 0,
-      "ars": 17130,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "META": {
-      "usd": 0,
-      "ars": 40920,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "NU": {
-      "usd": 0,
-      "ars": 12200,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "PAMP": {
-      "usd": 0,
-      "ars": 5410,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "IBIT": {
-      "usd": 0,
-      "ars": 7275,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "BMA": {
-      "usd": 0,
-      "ars": 12200,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "GGAL": {
-      "usd": 0,
-      "ars": 7023,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "YPF": {
-      "usd": 0,
-      "ars": 64698,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "ICLN": {
-      "usd": 0,
-      "ars": 5627,
-      "changePct": 0,
-      "src": "Fallback"
-    },
-    "IOLCAMA": {
-      "usd": 0,
-      "ars": 12077,
-      "changePct": 0,
-      "src": "Fixed"
-    },
-    "IOLDOLD": {
-      "usd": 0,
-      "ars": 1670,
-      "changePct": 0,
-      "src": "Fixed"
-    },
-    "AL30D": {
-      "usd": 63.96,
+    "ACN": { "usd": 213.09, "ars": 3777.50, "changePct": 0, "src": "IOL" },
+    "ADBE": { "usd": 237.56, "ars": 9265, "changePct": 0, "src": "IOL" },
+    "IBIT": { "usd": 263.23, "ars": 7080, "changePct": 0, "src": "IOL" },
+    "MELI": { "usd": 312.28, "ars": 25640, "changePct": 0, "src": "IOL" },
+    "META": { "usd": 365.97, "ars": 40780, "changePct": 0, "src": "IOL" },
+    "MSFT": { "usd": 652.00, "ars": 26080, "changePct": 0, "src": "IOL" },
+    "MU": { "usd": 415.26, "ars": 323900, "changePct": 0, "src": "IOL" },
+    "NU": { "usd": 237.88, "ars": 12370, "changePct": 0, "src": "IOL" },
+    "NVDA": { "usd": 356.72, "ars": 15040, "changePct": 0, "src": "IOL" },
+    "PAMP": { "usd": 205.93, "ars": 5445, "changePct": 0, "src": "IOL" },
+    "PANW": { "usd": 201.15, "ars": 10460, "changePct": 0, "src": "IOL" },
+    "SPY": { "usd": 626.46, "ars": 20360, "changePct": 0, "src": "IOL" },
+    "VIST": { "usd": 204.62, "ars": 39900, "changePct": 0, "src": "IOL" },
+    "MCD": { "usd": 141.33, "ars": 16960, "changePct": 0, "src": "IOL" },
+    "BMA": { "usd": 0, "ars": 12370, "changePct": 0, "src": "IOL" },
+    "GGAL": { "usd": 0, "ars": 7023, "changePct": 0, "src": "Fallback" },
+    "YPF": { "usd": 0, "ars": 64698, "changePct": 0, "src": "Fallback" },
+    "ICLN": { "usd": 0, "ars": 5627, "changePct": 0, "src": "Fallback" },
+    "AL30D": { "usd": 63.96, "ars": 100929, "changePct": 0, "src": "Calc" },
+    "IOLCAMA": { "usd": 286.48, "ars": 12077, "changePct": 0, "src": "IOL" },
+    "IOLDOLD": { "usd": 450, "ars": 1666.99, "changePct": 0, "src": "IOL" }
+  }
+}
       "ars": 101460,
       "changePct": 0,
       "src": "Calc"
