@@ -1,186 +1,151 @@
-// scripts/fetch-prices.js - VERSIÓN FINAL
-// Trae precios reales de BYMA via Open BYMA Data + FMP
+// scripts/fetch-prices.js - BASE SÓLIDA
+// Fuente 1: Open BYMA Data (precios ARS reales)
+// Fuente 2: FMP (precios USD, convertidos)
+// Fuente 3: Fallback hardcoded
 const fs = require('fs');
 
-const TICKERS = {
+// Tickers y ratios
+const CEDEAR_RATIOS = {
   ADBE:44, MELI:120, MSFT:30, MU:5, NVDA:24, PANW:50, SPY:60,
-  VIST:3, ACN:75, MCD:24, META:24, NU:2, PAMP:25, IBIT:10,
-  BMA:10, GGAL:10, YPF:1, ICLN:5
+  ACN:75, MCD:24, META:24, NU:2, IBIT:10, ICLN:5
+};
+const ACCIONES_ARG = ['PAMP','GGAL','YPF','BMA','VIST'];
+const ALL_TICKERS = [...Object.keys(CEDEAR_RATIOS), ...ACCIONES_ARG];
+
+// Fallback (precios IOL del 08/09/2026)
+const FALLBACK = {
+  ADBE:9265, IBIT:7080, MELI:25640, META:40780, MSFT:26080, MU:323900,
+  NU:12370, NVDA:15040, PAMP:5445, PANW:10460, SPY:20360, VIST:39900,
+  ACN:3777, MCD:16960, BMA:12370, GGAL:7023, YPF:64698, ICLN:5627
 };
 
-// Precios fallback (último recurso)
-const FALLBACK_ARS = {
-  ADBE:9650, MELI:26120, MSFT:26300, MU:326700, NVDA:15390, PANW:10580, SPY:20480,
-  VIST:39000, ACN:3940, MCD:17130, META:40920, NU:12200, PAMP:5410, IBIT:7275,
-  BMA:12200, GGAL:7023, YPF:64698, ICLN:5627
-};
-
-async function fetchWithTimeout(url, timeout = 8000) {
-  const controller = new AbortController();
-  const id = setTimeout(() => controller.abort(), timeout);
+async function fetchJSON(url, timeout = 8000) {
+  const c = new AbortController();
+  const id = setTimeout(() => c.abort(), timeout);
   try {
-    const res = await fetch(url, { signal: controller.signal });
+    const r = await fetch(url, { signal: c.signal });
     clearTimeout(id);
-    return res;
-  } catch(e) {
-    clearTimeout(id);
-    throw e;
-  }
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return await r.json();
+  } catch(e) { clearTimeout(id); throw e; }
 }
 
-// Open BYMA Data (precios ARS reales)
+// === BYMA DATA ===
 async function fetchBYMA() {
-  console.log('📡 Consultando Open BYMA Data...');
   const prices = {};
-  const endpoints = [
+  const urls = [
     'https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/cedears',
     'https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/leading-equity',
     'https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/general-equity'
   ];
-
-  for (const url of endpoints) {
+  for (const url of urls) {
     try {
-      const res = await fetchWithTimeout(url, 6000);
-      if (!res.ok) continue;
-      const data = await res.json();
+      const data = await fetchJSON(url, 10000);
       if (!Array.isArray(data)) continue;
-
       data.forEach(item => {
-        const sym = item.symbol || item.simbolo || '';
+        // Probar distintos nombres de campo
+        const sym = (item.symbol || item.simbolo || '').trim();
         const price = item.trade || item.last || item.ultimoPrecio || item.close || 0;
-        if (sym && price > 0 && TICKERS[sym]) {
-          prices[sym] = {
-            ars: Math.round(price),
-            changePct: item.changeRate || item.variacion || 0,
-            src: 'BYMA'
-          };
+        const change = item.changeRate || item.variacionPorcentual || item.variacion || 0;
+        const vol = item.volume || item.volumen || 0;
+        if (sym && price > 0 && (ALL_TICKERS.includes(sym) || CEDEAR_RATIOS[sym])) {
+          prices[sym] = { ars: Math.round(price * 100) / 100, changePct: change, vol, src: 'BYMA' };
         }
       });
     } catch(e) {
-      console.log(`⚠️  BYMA endpoint error: ${e.message}`);
+      console.log('⚠️ BYMA ' + url.split('/').pop() + ': ' + e.message);
     }
   }
-  console.log(`✅ BYMA: ${Object.keys(prices).length} tickers`);
   return prices;
 }
 
-// FMP para USD (fallback)
+// === FMP (USD) ===
 async function fetchFMP() {
-  console.log('📡 Consultando FMP...');
-  const prices = {};
   const FMP_KEY = 'eLJtPLqeqnU6YBft89zRBpetoDfVnwvO';
-  const syms = Object.keys(TICKERS);
-
+  const prices = {};
+  const syms = Object.keys(CEDEAR_RATIOS);
   for (let i = 0; i < syms.length; i += 5) {
-    const batch = syms.slice(i, i+5).join(',');
+    const batch = syms.slice(i, i + 5).join(',');
     try {
-      const res = await fetchWithTimeout(
-        `https://financialmodelingprep.com/stable/profile?symbol=${batch}&apikey=${FMP_KEY}`,
+      const data = await fetchJSON(
+        'https://financialmodelingprep.com/stable/profile?symbol=' + batch + '&apikey=' + FMP_KEY,
         6000
       );
-      if (!res.ok) break;
-      const data = await res.json();
-      if (!Array.isArray(data)) continue;
-
-      data.forEach(d => {
-        if (d.price > 0 && TICKERS[d.symbol]) {
-          prices[d.symbol] = {
-            usd: d.price,
-            changePct: d.changesPercentage || 0,
-            src: 'FMP'
-          };
-        }
-      });
-      await new Promise(r => setTimeout(r, 250));
+      if (Array.isArray(data)) {
+        data.forEach(d => {
+          if (d.price > 0) prices[d.symbol] = { usd: d.price, changePct: d.changesPercentage || 0, src: 'FMP' };
+        });
+      }
+      await new Promise(r => setTimeout(r, 300));
     } catch(e) {
-      console.log(`⚠️  FMP error: ${e.message}`);
+      console.log('⚠️ FMP: ' + e.message);
       break;
     }
   }
-  console.log(`✅ FMP: ${Object.keys(prices).length} tickers`);
   return prices;
 }
 
-// CCL desde dolarapi
+// === CCL ===
 async function fetchCCL() {
   try {
-    const res = await fetchWithTimeout('https://dolarapi.com/v1/dolares/contadoconliqui', 5000);
-    if (res.ok) {
-      const data = await res.json();
-      if (data.venta > 0) {
-        console.log(`✅ CCL: $${data.venta.toFixed(2)}`);
-        return data.venta;
-      }
-    }
-  } catch(e) {
-    console.log(`⚠️  CCL error: ${e.message}`);
-  }
-  return 1560; // Fallback
+    const d = await fetchJSON('https://dolarapi.com/v1/dolares/contadoconliqui', 5000);
+    if (d.venta > 0) return d.venta;
+  } catch(e) { console.log('⚠️ CCL: ' + e.message); }
+  return 1560;
 }
 
 async function main() {
   console.log('🚀 Actualizando precios...', new Date().toISOString());
 
-  const [bymaData, fmpData, ccl] = await Promise.all([
+  const [byma, fmp, ccl] = await Promise.all([
     fetchBYMA().catch(() => ({})),
     fetchFMP().catch(() => ({})),
     fetchCCL()
   ]);
 
-  // Combinar: BYMA tiene prioridad (son ARS reales)
-  const prices = {};
-  Object.keys(TICKERS).forEach(sym => {
-    const byma = bymaData[sym];
-    const fmp = fmpData[sym];
+  console.log('BYMA: ' + Object.keys(byma).length + ' | FMP: ' + Object.keys(fmp).length + ' | CCL: $' + ccl);
 
-    if (byma && byma.ars > 0) {
-      // BYMA tiene precio ARS real
-      prices[sym] = {
-        usd: 0,
-        ars: byma.ars,
-        changePct: byma.changePct || 0,
-        src: 'BYMA'
-      };
-    } else if (fmp && fmp.usd > 0) {
-      // FMP: calcular ARS
-      const ars = Math.round(fmp.usd / TICKERS[sym] * ccl);
-      prices[sym] = {
-        usd: fmp.usd,
-        ars: ars,
-        changePct: fmp.changePct || 0,
-        src: 'FMP'
-      };
+  // Combinar precios
+  const prices = {};
+  ALL_TICKERS.forEach(sym => {
+    const b = byma[sym];
+    const f = fmp[sym];
+    const ratio = CEDEAR_RATIOS[sym] || 1;
+
+    if (b && b.ars > 0) {
+      // BYMA: precio ARS directo
+      const usd = ratio > 1 ? Math.round(b.ars * ratio / ccl * 100) / 100 : 0;
+      prices[sym] = { usd, ars: b.ars, changePct: b.changePct || 0, vol: b.vol || 0, src: 'BYMA' };
+    } else if (f && f.usd > 0 && ratio > 1) {
+      // FMP: convertir USD → ARS
+      const ars = Math.round(f.usd / ratio * ccl);
+      prices[sym] = { usd: f.usd, ars, changePct: f.changePct || 0, vol: 0, src: 'FMP' };
     } else {
-      // Fallback hardcodeado
-      prices[sym] = {
-        usd: 0,
-        ars: FALLBACK_ARS[sym] || 0,
-        changePct: 0,
-        src: 'Fallback'
-      };
+      // Fallback
+      prices[sym] = { usd: 0, ars: FALLBACK[sym] || 0, changePct: 0, vol: 0, src: 'Fallback' };
     }
   });
 
-  // Especiales
-  prices.IOLCAMA = { usd: 0, ars: 12077, changePct: 0, src: 'Fixed' };
-  prices.IOLDOLD = { usd: 0, ars: 1670, changePct: 0, src: 'Fixed' };
+  // Especiales (FCIs IOL, bonos)
+  prices.IOLCAMA = { usd: 0, ars: 12.08, changePct: 0, src: 'Fixed' };
+  prices.IOLDOLD = { usd: 0, ars: 1667.49, changePct: 0, src: 'Fixed' };
   prices.AL30D = { usd: 63.96, ars: Math.round(63.96 * ccl), changePct: 0, src: 'Calc' };
 
   // Guardar
-  const output = {
-    ts: new Date().toISOString(),
-    ccl: ccl,
-    count: Object.keys(prices).length,
-    prices: prices
-  };
-
+  const output = { ts: new Date().toISOString(), ccl, count: Object.keys(prices).length, prices };
   fs.writeFileSync('prices.json', JSON.stringify(output, null, 2));
 
   // Resumen
   const src = {};
-  Object.values(prices).forEach(p => { src[p.src] = (src[p.src]||0)+1; });
-  console.log('✅ Guardado:', Object.entries(src).map(([k,v])=>`${k}: ${v}`).join(', '));
-  console.log(`📊 Total: ${output.count} tickers | CCL: $${ccl.toFixed(2)}`);
+  Object.values(prices).forEach(p => { src[p.src] = (src[p.src] || 0) + 1; });
+  console.log('✅ ' + Object.entries(src).map(([k, v]) => k + ': ' + v).join(', '));
+  console.log('📊 Total: ' + output.count + ' tickers | CCL: $' + ccl);
+
+  // Mostrar precios para verificar
+  ALL_TICKERS.forEach(sym => {
+    const p = prices[sym];
+    if (p) console.log('  ' + sym + ': ARS $' + p.ars + ' (' + p.src + ')');
+  });
 }
 
 main().catch(e => { console.error('❌', e); process.exit(1); });
