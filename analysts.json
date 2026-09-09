@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-09T11:26:42.946Z",
+  "ts": "2026-09-09T12:00:11.104Z",
   "tickers": {
     "NVDA": {
       "name": "NVIDIA",
@@ -67,13 +67,189 @@
     }
   },
   "fundamentals": {},
+  "bank_targets": {
+    "NVDA": [
+      {
+        "bank": "Goldman Sachs",
+        "analyst": "Toshiya Hari",
+        "target": 285,
+        "rating": "Buy",
+        "date": "2026-06-01"
+      },
+      {
+        "bank": "Morgan Stanley",
+        "analyst": "Joseph Moore",
+        "target": 288,
+        "rating": "Overweight",
+        "date": "2026-06-03"
+      },
+      {
+        "bank": "JPMorgan",
+        "analyst": "Harlan Sur",
+        "target": 265,
+        "rating": "Overweight",
+        "date": "2026-05"
+      },
+      {
+        "bank": "Bank of America",
+        "analyst": "",
+        "target": 350,
+        "rating": "Buy",
+        "date": "2026-06-04"
+      },
+      {
+        "bank": "Jefferies",
+        "analyst": "Blayne Curtis",
+        "target": 275,
+        "rating": "Buy",
+        "date": "2026-05"
+      },
+      {
+        "bank": "Wells Fargo",
+        "analyst": "",
+        "target": 315,
+        "rating": "Buy",
+        "date": "2026-05-12"
+      }
+    ],
+    "MSFT": [
+      {
+        "bank": "Goldman Sachs",
+        "analyst": "",
+        "target": 655,
+        "rating": "Buy",
+        "date": "2026-08"
+      },
+      {
+        "bank": "Morgan Stanley",
+        "analyst": "",
+        "target": 600,
+        "rating": "Overweight",
+        "date": "2026-07-30"
+      },
+      {
+        "bank": "Wedbush",
+        "analyst": "Dan Ives",
+        "target": 625,
+        "rating": "Outperform",
+        "date": "2026-07"
+      },
+      {
+        "bank": "Stifel",
+        "analyst": "",
+        "target": 530,
+        "rating": "Hold",
+        "date": "2026-09"
+      },
+      {
+        "bank": "Bernstein",
+        "analyst": "",
+        "target": 641,
+        "rating": "Buy",
+        "date": "2026-07"
+      }
+    ],
+    "META": [
+      {
+        "bank": "Morgan Stanley",
+        "analyst": "",
+        "target": 750,
+        "rating": "Overweight",
+        "date": "2026-06"
+      },
+      {
+        "bank": "JPMorgan",
+        "analyst": "Doug Anmuth",
+        "target": 800,
+        "rating": "Overweight",
+        "date": "2026-05"
+      },
+      {
+        "bank": "Goldman Sachs",
+        "analyst": "Eric Sheridan",
+        "target": 636,
+        "rating": "Buy",
+        "date": "2026-04"
+      }
+    ],
+    "MELI": [
+      {
+        "bank": "Morgan Stanley",
+        "analyst": "Andrew Ruben",
+        "target": 2950,
+        "rating": "Overweight",
+        "date": "2026-06"
+      },
+      {
+        "bank": "JPMorgan",
+        "analyst": "Marcelo Santos",
+        "target": 2650,
+        "rating": "Neutral",
+        "date": "2026-06"
+      },
+      {
+        "bank": "Barclays",
+        "analyst": "",
+        "target": 2900,
+        "rating": "Buy",
+        "date": "2026-06"
+      }
+    ],
+    "VIST": [
+      {
+        "bank": "Simply Wall St",
+        "analyst": "",
+        "target": 86,
+        "rating": "Buy",
+        "date": "2026-07"
+      }
+    ],
+    "MU": [
+      {
+        "bank": "JPMorgan",
+        "analyst": "",
+        "target": 150,
+        "rating": "Overweight",
+        "date": "2026-06"
+      },
+      {
+        "bank": "Morgan Stanley",
+        "analyst": "",
+        "target": 140,
+        "rating": "Overweight",
+        "date": "2026-06"
+      }
+    ],
+    "PANW": [
+      {
+        "bank": "Goldman Sachs",
+        "analyst": "",
+        "target": 330,
+        "rating": "Buy",
+        "date": "2026-05"
+      },
+      {
+        "bank": "Morgan Stanley",
+        "analyst": "",
+        "target": 320,
+        "rating": "Overweight",
+        "date": "2026-05"
+      }
+    ]
+  },
   "news": {
     "NVDA": [
       {
         "title": "Dow Jones Futures Fall As Oil Prices Push Stocks Toward Breaking Point; Apple iPhone Event Due",
         "url": "https://finance.yahoo.com/m/61edb329-2f31-3e10-8832-6860b7819ab2/dow-jones-futures-fall-as-oil.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Wed, 09 Sep 2026 11:12:23 +0000"
+        "published": "Wed, 09 Sep 2026 11:54:59 +0000"
+      },
+      {
+        "title": "Billionaire Stanley Druckenmiller Dumped 2 Chip Stocks to Load Up On These 2 Robotics-Focused AI Plays",
+        "url": "https://www.fool.com/investing/2026/09/09/billionaire-stanley-druckenmiller-chip-stock-robot/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Wed, 09 Sep 2026 11:35:00 +0000"
       },
       {
         "title": "Amazon CEO Andy Jassy Explained Why Semiconductor Sales Could Keep Climbing for Years to Come. Here's My Favorite AI Chipmaker Right Now.",
@@ -98,12 +274,6 @@
         "url": "https://www.fool.com/investing/2026/09/09/billionaire-israel-englander-is-doubling-down-on-these-2-outstanding-dividend-stocks-should-you/?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Wed, 09 Sep 2026 10:20:02 +0000"
-      },
-      {
-        "title": "Can Micron Catch Up to Nvidia's $5.5 Trillion Market Cap?",
-        "url": "https://www.fool.com/investing/2026/09/09/can-micron-catch-up-to-nvidias-55-trillion-market/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Wed, 09 Sep 2026 10:07:00 +0000"
       }
     ],
     "META": [
@@ -348,6 +518,12 @@
         "published": "Tue, 08 Sep 2026 13:45:04 +0000"
       },
       {
+        "title": "Oracle Is The Disruptive Cloud Wildcard: Do You Buy It?",
+        "url": "https://247wallst.com/investing/2026/09/09/oracle-is-the-disruptive-cloud-wildcard-do-you-buy-it/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Wed, 09 Sep 2026 11:43:24 +0000"
+      },
+      {
         "title": "Has AI Made S&amp;P 500 Index Funds Too Dangerous to Touch?",
         "url": "https://www.fool.com/investing/2026/09/09/has-ai-made-sp-500-index-funds-too-dangerous-to-to/?.tsrc=rss",
         "source": "Yahoo Finance",
@@ -364,12 +540,6 @@
         "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61676904/stock-market-will-sp-500-open-up-or-down-today-33?utm_source=yahooFinance&amp;utm_campaign=partner_feed&amp;utm_medium=referral&amp;.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Wed, 09 Sep 2026 05:48:03 +0000"
-      },
-      {
-        "title": "QQQ vs QQQM: Same Index, Same Stocks, Different Fee – and the Math Says One Leaves You Thousands Richer",
-        "url": "https://247wallst.com/investing/etf/2026/09/08/qqq-vs-qqqm-same-index-same-stocks-different-fee-and-the-math-says-one-leaves-you-thousands-richer/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Tue, 08 Sep 2026 21:45:32 +0000"
       }
     ],
     "ACN": [
