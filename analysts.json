@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-09T12:29:05.794Z",
+  "ts": "2026-09-09T12:43:38.192Z",
   "tickers": {
     "NVDA": {
       "name": "NVIDIA",
@@ -11,7 +11,7 @@
     },
     "MSFT": {
       "name": "Microsoft",
-      "sector": "Big Tech / Cloud"
+      "sector": "Cloud / IA"
     },
     "ADBE": {
       "name": "Adobe",
@@ -43,7 +43,7 @@
     },
     "IBIT": {
       "name": "iShares Bitcoin Trust",
-      "sector": "Crypto"
+      "sector": "Crypto ETF"
     },
     "NU": {
       "name": "Nu Holdings",
@@ -74,14 +74,14 @@
         "analyst": "Toshiya Hari",
         "target": 285,
         "rating": "Buy",
-        "date": "2026-06-01"
+        "date": "2026-06"
       },
       {
         "bank": "Morgan Stanley",
         "analyst": "Joseph Moore",
         "target": 288,
         "rating": "Overweight",
-        "date": "2026-06-03"
+        "date": "2026-06"
       },
       {
         "bank": "JPMorgan",
@@ -95,7 +95,7 @@
         "analyst": "",
         "target": 350,
         "rating": "Buy",
-        "date": "2026-06-04"
+        "date": "2026-06"
       },
       {
         "bank": "Jefferies",
@@ -109,7 +109,7 @@
         "analyst": "",
         "target": 315,
         "rating": "Buy",
-        "date": "2026-05-12"
+        "date": "2026-05"
       }
     ],
     "MSFT": [
@@ -125,7 +125,7 @@
         "analyst": "",
         "target": 600,
         "rating": "Overweight",
-        "date": "2026-07-30"
+        "date": "2026-07"
       },
       {
         "bank": "Wedbush",
@@ -172,35 +172,47 @@
         "date": "2026-04"
       }
     ],
-    "MELI": [
+    "ADBE": [
       {
-        "bank": "Morgan Stanley",
-        "analyst": "Andrew Ruben",
-        "target": 2950,
-        "rating": "Overweight",
-        "date": "2026-06"
+        "bank": "RBC Capital",
+        "analyst": "Matthew Swanson",
+        "target": 315,
+        "rating": "Buy",
+        "date": "2026-09"
       },
       {
-        "bank": "JPMorgan",
-        "analyst": "Marcelo Santos",
-        "target": 2650,
+        "bank": "Morgan Stanley",
+        "analyst": "Adam Wood",
+        "target": 240,
+        "rating": "Underweight",
+        "date": "2026-07"
+      },
+      {
+        "bank": "Citi",
+        "analyst": "",
+        "target": 301,
         "rating": "Neutral",
-        "date": "2026-06"
+        "date": "2026-09"
+      },
+      {
+        "bank": "CLSA",
+        "analyst": "",
+        "target": 300,
+        "rating": "Outperform",
+        "date": "2026-09"
       },
       {
         "bank": "Barclays",
         "analyst": "",
-        "target": 2900,
+        "target": 295,
         "rating": "Buy",
-        "date": "2026-06"
-      }
-    ],
-    "VIST": [
+        "date": "2026-09"
+      },
       {
-        "bank": "Simply Wall St",
-        "analyst": "",
-        "target": 86,
-        "rating": "Buy",
+        "bank": "Goldman Sachs",
+        "analyst": "Gabriela Borges",
+        "target": 220,
+        "rating": "Sell",
         "date": "2026-07"
       }
     ],
@@ -234,6 +246,79 @@
         "target": 320,
         "rating": "Overweight",
         "date": "2026-05"
+      }
+    ],
+    "MELI": [
+      {
+        "bank": "Morgan Stanley",
+        "analyst": "Andrew Ruben",
+        "target": 2950,
+        "rating": "Overweight",
+        "date": "2026-06"
+      },
+      {
+        "bank": "JPMorgan",
+        "analyst": "Marcelo Santos",
+        "target": 2650,
+        "rating": "Neutral",
+        "date": "2026-06"
+      },
+      {
+        "bank": "Barclays",
+        "analyst": "",
+        "target": 2900,
+        "rating": "Buy",
+        "date": "2026-06"
+      }
+    ],
+    "ACN": [
+      {
+        "bank": "Wolfe Research",
+        "analyst": "",
+        "target": 285,
+        "rating": "Outperform",
+        "date": "2026-09"
+      },
+      {
+        "bank": "BMO Capital",
+        "analyst": "",
+        "target": 325,
+        "rating": "Hold",
+        "date": "2026-06"
+      },
+      {
+        "bank": "HSBC",
+        "analyst": "",
+        "target": 240,
+        "rating": "Reduce",
+        "date": "2026-07"
+      }
+    ],
+    "MCD": [
+      {
+        "bank": "Consenso Wall St",
+        "analyst": "41 analistas",
+        "target": 337,
+        "rating": "Buy",
+        "date": "2026-08"
+      }
+    ],
+    "NU": [
+      {
+        "bank": "Consenso Wall St",
+        "analyst": "14 analistas",
+        "target": 16.5,
+        "rating": "Buy",
+        "date": "2026-08"
+      }
+    ],
+    "VIST": [
+      {
+        "bank": "Seeking Alpha",
+        "analyst": "",
+        "target": 86,
+        "rating": "Buy",
+        "date": "2026-07"
       }
     ]
   },
@@ -273,13 +358,6 @@
         "source": "Yahoo Finance",
         "published": "Wed, 09 Sep 2026 10:35:00 +0000",
         "titleEs": "AMD and Nvidia Just Experienced an Unprecedented Valuation Split"
-      },
-      {
-        "title": "Prediction: Here's What a $5,000 Investment in SpaceX Stock Could Be Worth in 2031",
-        "url": "https://www.fool.com/investing/2026/09/09/prediction-heres-what-a-5000-investment-in-spacex/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Wed, 09 Sep 2026 12:05:00 +0000",
-        "titleEs": "Prediction: Here's What a $5,000 Investment in SpaceX Stock Could Be Worth in 2031"
       }
     ],
     "META": [
@@ -317,13 +395,6 @@
         "source": "Yahoo Finance",
         "published": "Wed, 09 Sep 2026 01:00:28 +0000",
         "titleEs": "Meta Platforms Settles Major Lawsuit, Pays $18 Billion"
-      },
-      {
-        "title": "Constellation Energy's Biggest AI Power Deal Doesn't Start Paying Until June 2027",
-        "url": "https://www.fool.com/investing/2026/09/08/constellation-energy-s-biggest-ai-power-deal-doesn-t-start-paying-until-june-2027/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Tue, 08 Sep 2026 23:58:01 +0000",
-        "titleEs": "Constellation Energy's Biggest AI Power Deal Doesn't Start Paying Until June 2027"
       }
     ],
     "MSFT": [
@@ -361,13 +432,6 @@
         "source": "Yahoo Finance",
         "published": "Wed, 09 Sep 2026 10:03:17 +0000",
         "titleEs": "Harworth Group H1 Earnings Call Highlights"
-      },
-      {
-        "title": "Goldman's New AI Office Adds Just 1% to Its Engineering Army",
-        "url": "https://finance.yahoo.com/technology/ai/articles/goldmans-ai-office-adds-just-213259052.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Tue, 08 Sep 2026 21:32:59 +0000",
-        "titleEs": "Goldman's New AI Office Adds Just 1% to Its Engineering Army"
       }
     ],
     "ADBE": [
@@ -405,13 +469,6 @@
         "source": "Yahoo Finance",
         "published": "Tue, 08 Sep 2026 18:16:00 +0000",
         "titleEs": "Adobe Before Q3 Earnings: Should You Hold or Fold the ADBE Stock?"
-      },
-      {
-        "title": "Adobe's Fiscal Q3 Report Likely to Show Faster User Growth, Oppenheimer Says",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/adobe-apos-fiscal-q3-report-162257660.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Tue, 08 Sep 2026 16:22:57 +0000",
-        "titleEs": "Adobe's Fiscal Q3 Report Likely to Show Faster User Growth, Oppenheimer Says"
       }
     ],
     "MU": [
@@ -423,11 +480,11 @@
         "titleEs": "Can Micron Catch Up to Nvidia's $5.5 Trillion Market Cap?"
       },
       {
-        "title": "This Little-Known AI Storage Stock Will Join the S&amp;P 500 (Not Micron or Sandisk). History Says This Will Happen Next.",
+        "title": "This Little-Known AI Storage Stock Will Join the S&P 500 (Not Micron or Sandisk). History Says This Will Happen Next.",
         "url": "https://www.fool.com/investing/2026/09/09/ai-stock-join-sp-500-not-micron-this-happen-next/?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Wed, 09 Sep 2026 09:08:01 +0000",
-        "titleEs": "This Little-Known AI Storage Stock Will Join the S&amp;P 500 (Not Micron or Sandisk). History Says This Will Happen Next."
+        "titleEs": "This Little-Known AI Storage Stock Will Join the S&P 500 (Not Micron or Sandisk). History Says This Will Happen Next."
       },
       {
         "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
@@ -449,13 +506,6 @@
         "source": "Yahoo Finance",
         "published": "Tue, 08 Sep 2026 21:33:48 +0000",
         "titleEs": "Micron and Sandisk Soar as Goldman Sees New Memory Stock Rally"
-      },
-      {
-        "title": "Goldman Says the Worst May Be Over for Micron and SanDisk",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/goldman-says-worst-may-over-213151330.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Tue, 08 Sep 2026 21:31:51 +0000",
-        "titleEs": "Goldman Says the Worst May Be Over for Micron and SanDisk"
       }
     ],
     "PANW": [
@@ -493,13 +543,6 @@
         "source": "Yahoo Finance",
         "published": "Tue, 08 Sep 2026 02:03:01 +0000",
         "titleEs": "Why SNDK, DELL, PANW Stocks Are Rallying Overnight Ahead Of Fresh Trading Week"
-      },
-      {
-        "title": "Palo Alto Networks Delivers Strong FCF Margins - Is PANW Stock Set to Rise?",
-        "url": "https://www.barchart.com/story/news/4474591/palo-alto-networks-stock-delivers-strong-fcf-margins-is-panw-stock-set-to-rise?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Mon, 07 Sep 2026 13:30:02 +0000",
-        "titleEs": "Palo Alto Networks Delivers Strong FCF Margins - Is PANW Stock Set to Rise?"
       }
     ],
     "MELI": [
@@ -511,11 +554,11 @@
         "titleEs": "MercadoLibre Is Building the Infrastructure Latin America's Economy Will Run on for Decades. Here's Why That Makes It a Forever Hold."
       },
       {
-        "title": "Netflix, MercadoLibre, and Tesla Are All Underperforming the S&amp;P 500. Here's the 1 Stock I'd Buy in September.",
+        "title": "Netflix, MercadoLibre, and Tesla Are All Underperforming the S&P 500. Here's the 1 Stock I'd Buy in September.",
         "url": "https://www.fool.com/investing/2026/09/02/netflix-mercadolibre-and-tesla-are-all-underperfor/?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Wed, 02 Sep 2026 15:31:00 +0000",
-        "titleEs": "Netflix, MercadoLibre, and Tesla Are All Underperforming the S&amp;P 500. Here's the 1 Stock I'd Buy in September."
+        "titleEs": "Netflix, MercadoLibre, and Tesla Are All Underperforming the S&P 500. Here's the 1 Stock I'd Buy in September."
       },
       {
         "title": "My 3 Favorite Growth Stocks to Buy Right Now",
@@ -537,29 +580,22 @@
         "source": "Yahoo Finance",
         "published": "Mon, 31 Aug 2026 13:58:00 +0000",
         "titleEs": "MercadoLibre's Free Shipping Bet Keeps Brazil's Growth Accelerating"
-      },
-      {
-        "title": "Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites — Here’s How His August Bets Fared",
-        "url": "https://stocktwits.com/news-articles/markets/equity/michael-burry-beaten-down-shorted-ai-how-august-bets-fared/cZYyK0uRJro?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Mon, 31 Aug 2026 04:30:23 +0000",
-        "titleEs": "Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites — Here’s How His August Bets Fared"
       }
     ],
     "SPY": [
       {
-        "title": "S&amp;P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data — META, QCOM, BE, AMZN, AVGO In Focus",
+        "title": "S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data — META, QCOM, BE, AMZN, AVGO In Focus",
         "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-dow-end-lower-as-middle-east-tensions-spur-oil-rally/cZtEOUNRJyE?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Tue, 08 Sep 2026 22:46:39 +0000",
-        "titleEs": "S&amp;P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data — META, QCOM, BE, AMZN, AVGO In Focus"
+        "titleEs": "S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data — META, QCOM, BE, AMZN, AVGO In Focus"
       },
       {
-        "title": "Wall Street Keeps Asking How Much Meta Will Spend. The Better Question Is at What Price to Buy",
-        "url": "https://247wallst.com/investing/2026/09/08/wall-street-keeps-asking-how-much-meta-will-spend-the-better-question-is-at-what-price-to-buy/?.tsrc=rss",
+        "title": "Salesforce is Nearly Fully Priced: Why Bulls Say This is Just the Beginning",
+        "url": "https://247wallst.com/investing/2026/09/09/salesforce-is-nearly-fully-priced-why-bulls-say-this-is-just-the-beginning/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Tue, 08 Sep 2026 13:45:04 +0000",
-        "titleEs": "Wall Street Keeps Asking How Much Meta Will Spend. The Better Question Is at What Price to Buy"
+        "published": "Wed, 09 Sep 2026 12:28:39 +0000",
+        "titleEs": "Salesforce is Nearly Fully Priced: Why Bulls Say This is Just the Beginning"
       },
       {
         "title": "Oracle Is The Disruptive Cloud Wildcard: Do You Buy It?",
@@ -569,11 +605,11 @@
         "titleEs": "Oracle Is The Disruptive Cloud Wildcard: Do You Buy It?"
       },
       {
-        "title": "Has AI Made S&amp;P 500 Index Funds Too Dangerous to Touch?",
+        "title": "Has AI Made S&P 500 Index Funds Too Dangerous to Touch?",
         "url": "https://www.fool.com/investing/2026/09/09/has-ai-made-sp-500-index-funds-too-dangerous-to-to/?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Wed, 09 Sep 2026 10:02:00 +0000",
-        "titleEs": "Has AI Made S&amp;P 500 Index Funds Too Dangerous to Touch?"
+        "titleEs": "Has AI Made S&P 500 Index Funds Too Dangerous to Touch?"
       },
       {
         "title": "How to Profit From Sharp Stock Moves—Up or Down",
@@ -581,13 +617,6 @@
         "source": "Yahoo Finance",
         "published": "Wed, 09 Sep 2026 06:00:00 +0000",
         "titleEs": "How to Profit From Sharp Stock Moves—Up or Down"
-      },
-      {
-        "title": "Stock Market: Will S&amp;P 500 Open Up or Down Today?",
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61676904/stock-market-will-sp-500-open-up-or-down-today-33?utm_source=yahooFinance&amp;utm_campaign=partner_feed&amp;utm_medium=referral&amp;.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Wed, 09 Sep 2026 05:48:03 +0000",
-        "titleEs": "Stock Market: Will S&amp;P 500 Open Up or Down Today?"
       }
     ],
     "ACN": [
@@ -625,13 +654,6 @@
         "source": "Yahoo Finance",
         "published": "Tue, 08 Sep 2026 13:48:31 +0000",
         "titleEs": "Accenture and Google Cloud Launch Gemini Enterprise Business Group to Scale AI Adoption"
-      },
-      {
-        "title": "Accenture and Google Cloud Deepen Partnership with Formation of New Accenture Gemini Enterprise Business Group",
-        "url": "https://finance.yahoo.com/technology/ai/articles/accenture-google-cloud-deepen-partnership-125900322.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Tue, 08 Sep 2026 12:59:00 +0000",
-        "titleEs": "Accenture and Google Cloud Deepen Partnership with Formation of New Accenture Gemini Enterprise Business Group"
       }
     ],
     "MCD": [
@@ -669,13 +691,6 @@
         "source": "Yahoo Finance",
         "published": "Sun, 06 Sep 2026 10:30:00 +0000",
         "titleEs": "McDonald's Once Owned 90% Of A Popular Restaurant Chain. Selling It Left Billions On The Table"
-      },
-      {
-        "title": "McDonald's Has Raised Its Dividend Every Year Since 1976. Here Are 3 Reasons I'd Buy It and Never Sell.",
-        "url": "https://www.fool.com/investing/2026/09/06/mcdonalds-has-raised-its-dividend-every-year-since/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 06 Sep 2026 08:15:00 +0000",
-        "titleEs": "McDonald's Has Raised Its Dividend Every Year Since 1976. Here Are 3 Reasons I'd Buy It and Never Sell."
       }
     ],
     "IBIT": [
@@ -713,13 +728,6 @@
         "source": "Yahoo Finance",
         "published": "Tue, 08 Sep 2026 21:05:57 +0000",
         "titleEs": "Goldman Is Paying $2.25 Billion for the Firm Behind This Bitcoin Income Fund"
-      },
-      {
-        "title": "Bitcoin ETFs Took In $731 Million in a Day While XRP ETF Inflows Fell 83% in a Week. Is Money Rotating to Bitcoin?",
-        "url": "https://247wallst.com/investing/cryptocurrency/2026/09/07/bitcoin-etfs-took-in-731-million-in-a-day-while-xrp-etf-inflows-fell-83-in-a-week-is-money-rotating-to-bitcoin/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Mon, 07 Sep 2026 12:21:42 +0000",
-        "titleEs": "Bitcoin ETFs Took In $731 Million in a Day While XRP ETF Inflows Fell 83% in a Week. Is Money Rotating to Bitcoin?"
       }
     ],
     "NU": [
@@ -757,13 +765,6 @@
         "source": "Yahoo Finance",
         "published": "Tue, 01 Sep 2026 13:54:20 +0000",
         "titleEs": "Q1 Earnings Highlights: Nubank (NYSE:NU) Vs The Rest Of The Personal Loan Stocks"
-      },
-      {
-        "title": "Nubank (NU): Buy, Sell, or Hold Post Q1 Earnings?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/nubank-nu-buy-sell-hold-200107826.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 27 Aug 2026 20:01:07 +0000",
-        "titleEs": "Nubank (NU): Buy, Sell, or Hold Post Q1 Earnings?"
       }
     ],
     "VIST": [
@@ -801,13 +802,6 @@
         "source": "Yahoo Finance",
         "published": "Sun, 16 Aug 2026 11:24:39 +0000",
         "titleEs": "Peter Thiel’s Second-Biggest Bet is Not a Tech Stock Anymore"
-      },
-      {
-        "title": "Peter Thiel buys 1% stake in Argentina’s Vista Energy",
-        "url": "https://finance.yahoo.com/energy/articles/peter-thiel-buys-1-stake-023240015.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 16 Aug 2026 02:32:40 +0000",
-        "titleEs": "Peter Thiel buys 1% stake in Argentina’s Vista Energy"
       }
     ],
     "GGAL": [
@@ -845,13 +839,6 @@
         "source": "Yahoo Finance",
         "published": "Thu, 23 Jul 2026 12:55:01 +0000",
         "titleEs": "Looking for a Fast-paced Momentum Stock at a Bargain? Consider Grupo Financiero Galicia (GGAL)"
-      },
-      {
-        "title": "GGAL vs. UOVEY: Which Stock Is the Better Value Option?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/ggal-vs-uovey-stock-better-154001696.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 03 Sep 2026 15:40:01 +0000",
-        "titleEs": "GGAL vs. UOVEY: Which Stock Is the Better Value Option?"
       }
     ],
     "YPF": [
@@ -863,11 +850,11 @@
         "titleEs": "Is YPF a Buy as Shale Growth Collides With Rising Execution Risk?"
       },
       {
-        "title": "YPF Q2 Earnings Beat Estimates on Shale Growth &amp; Strong Pricing",
+        "title": "YPF Q2 Earnings Beat Estimates on Shale Growth & Strong Pricing",
         "url": "https://finance.yahoo.com/energy/articles/ypf-q2-earnings-beat-estimates-142000061.html?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Thu, 13 Aug 2026 14:20:00 +0000",
-        "titleEs": "YPF Q2 Earnings Beat Estimates on Shale Growth &amp; Strong Pricing"
+        "titleEs": "YPF Q2 Earnings Beat Estimates on Shale Growth & Strong Pricing"
       },
       {
         "title": "YPF Q2 Earnings Call Spotlights Higher Outlook and Shale Ramp",
@@ -888,13 +875,6 @@
         "url": "https://www.marketbeat.com/instant-alerts/ypf-sociedad-annima-q2-earnings-call-highlights-2026-08-11/?utm_source=yahoofinance&amp;utm_medium=yahoofinance&amp;.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Tue, 11 Aug 2026 20:04:32 +0000"
-      },
-      {
-        "title": "YPF shares gain 4% after Q2 earnings and revenue beat expectations",
-        "url": "https://investorshub.advfn.com/market-news/article/33960/ypf-shares-gain-4-after-q2-earnings-and-revenue-beat-expectations?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Tue, 11 Aug 2026 10:40:36 +0000",
-        "titleEs": "YPF shares gain 4% after Q2 earnings and revenue beat expectations"
       }
     ]
   },
@@ -939,10 +919,42 @@
         "importance": "medium"
       }
     ],
+    "MELI": [
+      {
+        "date": "2026-11-05",
+        "event": "Q3 2026 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "VIST": [
+      {
+        "date": "2026-11-10",
+        "event": "Q3 2026 Earnings",
+        "type": "earnings",
+        "importance": "medium"
+      }
+    ],
     "NU": [
       {
         "date": "2026-11-12",
         "event": "Q3 2026 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "PAMP": [
+      {
+        "date": "2026-11-12",
+        "event": "Q3 2026 Earnings",
+        "type": "earnings",
+        "importance": "medium"
+      }
+    ],
+    "PANW": [
+      {
+        "date": "2026-11-19",
+        "event": "Q1 FY2027 Earnings",
         "type": "earnings",
         "importance": "high"
       }
@@ -962,40 +974,8 @@
         "type": "earnings",
         "importance": "high"
       }
-    ],
-    "PANW": [
-      {
-        "date": "2026-11-19",
-        "event": "Q1 FY2027 Earnings",
-        "type": "earnings",
-        "importance": "high"
-      }
-    ],
-    "MELI": [
-      {
-        "date": "2026-11-05",
-        "event": "Q3 2026 Earnings",
-        "type": "earnings",
-        "importance": "high"
-      }
-    ],
-    "VIST": [
-      {
-        "date": "2026-11-10",
-        "event": "Q3 2026 Earnings",
-        "type": "earnings",
-        "importance": "medium"
-      }
-    ],
-    "PAMP": [
-      {
-        "date": "2026-11-12",
-        "event": "Q3 2026 Earnings",
-        "type": "earnings",
-        "importance": "medium"
-      }
     ]
   },
-  "version": "2.0",
-  "source": "Yahoo Finance RSS + quoteSummary"
+  "version": "3.0",
+  "source": "Yahoo Finance + Groq + Bancos verificados"
 }
