@@ -1,14 +1,11 @@
 // analysis.js — Gráficos TradingView por activo.
-// El análisis (targets, consenso, P/E, veredictos) lo hace app.js con los datos
-// reales que llegan de analysts.json. Acá NO hay datos de mercado hardcodeados.
+// NO inyecta botones en listas compactas (Top Ganadoras / En Pérdida).
 (function () {
   "use strict";
 
-  // Simbolo BYMA en TradingView. YPF cotiza como YPFD en Buenos Aires.
   var BCBA = { YPF: "BCBA:YPFD" };
   function tvSymbol(tk) { return BCBA[tk] || ("BCBA:" + tk); }
 
-  // FCIs y bonos: no tienen grafico en TradingView
   var SIN_GRAFICO = ["IOLCAMA", "IOLDOLD", "AL30D"];
 
   function openChart(tk) {
@@ -42,6 +39,19 @@
     catch (e) { return []; }
   }
 
+  // NO inyectar en listas compactas (Top Ganadoras, En Pérdida, etc.)
+  function isCompactList(el) {
+    var p = el.parentElement;
+    if (!p) return false;
+    var s = p.style || {};
+    // Listas compactas usan flex + space-between + borderBottom
+    if (s.display === "flex" && s.justifyContent === "space-between" && (s.borderBottom || s.padding === "6px 0" || s.padding === "4px 0")) return true;
+    // También: si el parent tiene hijos con ganPct ("+XX.X%")
+    var txt = p.textContent || "";
+    if (/^\w{2,6}\+?\-?\d/.test(txt.replace(/\s/g, ""))) return true;
+    return false;
+  }
+
   function inject() {
     var tks = tickers();
     if (!tks.length) return;
@@ -52,11 +62,12 @@
       var txt = (el.textContent || "").trim();
       if (txt.length > 8 || !set.has(txt)) return;
       if (!el.parentElement || el.parentElement.querySelector(".tv-btn")) return;
+      if (isCompactList(el)) { el.dataset.tvInjected = "1"; return; }
 
       var b = document.createElement("button");
       b.className = "tv-btn";
-      b.textContent = "📈";
-      b.title = "Ver gráfico de " + txt;
+      b.textContent = "\ud83d\udcc8";
+      b.title = "Ver gr\u00e1fico de " + txt;
       b.style.cssText = "background:#1976D2;color:#fff;border:none;border-radius:4px;width:28px;height:28px;margin-left:6px;cursor:pointer;font-size:13px;vertical-align:middle";
       b.onclick = function (e) { e.stopPropagation(); e.preventDefault(); openChart(txt); };
       el.parentElement.appendChild(b);
