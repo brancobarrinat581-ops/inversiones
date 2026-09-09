@@ -1,0 +1,65 @@
+name: Backup Operaciones
+
+on:
+  schedule:
+    - cron: '0 22 * * *'  # Todos los días a las 22:00 UTC (19:00 Argentina)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    env:
+      SB_URL: https://bezxlrkolpfaeqvyxckj.supabase.co
+      SB_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJlenhscmtvbHBmYWVxdnl4Y2tqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM5ODcwOTYsImV4cCI6MjA5OTU2MzA5Nn0.ZbHLp-0f8M7quTPA8QUM5a64LuDxdFSs5Q1u9xGej8Y
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch operaciones from Supabase
+        run: |
+          echo "Descargando operaciones de Supabase..."
+
+          # Branco
+          curl -s "${SB_URL}/rest/v1/operaciones?user_id=eq.dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06&order=fecha.asc" \
+            -H "apikey: ${SB_KEY}" -o /tmp/branco_ops.json
+
+          # Corina
+          curl -s "${SB_URL}/rest/v1/operaciones?user_id=eq.ca7f985f-4b40-41da-b55b-86b5bc045bcb&order=fecha.asc" \
+            -H "apikey: ${SB_KEY}" -o /tmp/corina_ops.json
+
+          BRANCO=$(cat /tmp/branco_ops.json | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{console.log(JSON.parse(d).length)}catch(e){console.log(0)}})")
+          CORINA=$(cat /tmp/corina_ops.json | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{console.log(JSON.parse(d).length)}catch(e){console.log(0)}})")
+
+          echo "Branco: ${BRANCO} operaciones"
+          echo "Corina: ${CORINA} operaciones"
+
+          if [ "$BRANCO" -gt "0" ] 2>/dev/null; then
+            # Combinar en operaciones.json
+            node -e "
+              const b = require('/tmp/branco_ops.json');
+              const c = require('/tmp/corina_ops.json');
+              const all = [...(Array.isArray(b)?b:[]), ...(Array.isArray(c)?c:[])];
+              all.sort((a,b) => new Date(a.fecha) - new Date(b.fecha));
+              const out = { ts: new Date().toISOString(), total: all.length, operaciones: all };
+              require('fs').writeFileSync('operaciones.json', JSON.stringify(out, null, 2));
+              console.log('operaciones.json escrito:', all.length, 'operaciones');
+            "
+          else
+            echo "Supabase no respondió o 0 operaciones. No sobrescribo."
+            exit 0
+          fi
+
+      - name: Commit backup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add operaciones.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios en operaciones"
+          else
+            git commit -m "💾 Backup operaciones $(date -u +'%Y-%m-%d')"
+            git push
+            echo "Backup guardado"
+          fi
