@@ -3,23 +3,31 @@ name: Update Prices
 on:
   schedule:
     - cron: '*/30 13-21 * * 1-5'
-    - cron: '0 22 * * 1-5'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update-prices:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Fetch prices
+
+      # Ping Supabase para que no se pause por inactividad
+      - name: Ping Supabase
+        run: |
+          curl -s -o /dev/null -w "Supabase: HTTP %{http_code}\n" \
+            "https://bezxlrkolpfaeqvyxckj.supabase.co/rest/v1/operaciones?select=id&limit=1" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJlenhscmtvbHBmYWVxdnl4Y2tqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM5ODcwOTYsImV4cCI6MjA5OTU2MzA5Nn0.ZbHLp-0f8M7quTPA8QUM5a64LuDxdFSs5Q1u9xGej8Y"
+
+      - name: Fetch Prices
         run: node scripts/fetch-prices.js
-      - name: Commit and push
+
+      - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -27,6 +35,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes"
           else
-            git commit -m "📊 Update prices $(date -u +%H:%M)"
+            git commit -m "💰 Update prices $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
           fi
