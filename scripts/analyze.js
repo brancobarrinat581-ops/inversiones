@@ -81,6 +81,34 @@ async function fetchNews(prev){
     await new Promise(r=>setTimeout(r,400));
   }
   console.log(`noticias: ${ok} ok / ${fail} fallidas`);
+
+  // Traducir títulos al español
+  const allTitles = [];
+  const titleMap = []; // [{ticker, index}]
+  Object.entries(news).forEach(([tk, items]) => {
+    (items || []).forEach((item, i) => {
+      if (item.title && !/[áéíóúñ¿¡]/.test(item.title)) { // Solo si no está en español
+        allTitles.push(item.title);
+        titleMap.push({ tk, i });
+      }
+    });
+  });
+
+  if (allTitles.length) {
+    console.log("Traduciendo " + allTitles.length + " títulos...");
+    // Traducir en lotes de 10
+    for (let b = 0; b < allTitles.length; b += 10) {
+      const batch = allTitles.slice(b, b + 10);
+      const translated = await translateBatch(batch);
+      translated.forEach((tr, j) => {
+        const { tk, i } = titleMap[b + j];
+        if (news[tk] && news[tk][i]) news[tk][i].titleEs = tr;
+      });
+      if (b + 10 < allTitles.length) await new Promise(r => setTimeout(r, 500));
+    }
+    console.log("Traducción completada");
+  }
+
   return news;
 }
 
@@ -162,6 +190,46 @@ const BANK_TARGETS = {
     { bank: "Morgan Stanley", analyst: "", target: 320, rating: "Overweight", date: "2026-05" }
   ]
 };
+
+// === TRADUCIR TÍTULOS CON GROQ (server-side, sin CORS) ===
+const GROQ_KEY = "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";
+
+async function translateBatch(titles) {
+  if (!titles.length) return titles;
+  try {
+    const prompt = "Traducí estos títulos de noticias financieras al español neutro. " +
+      "Devolvé SOLO un JSON array con las traducciones, en el mismo orden. Sin explicaciones.\n\n" +
+      JSON.stringify(titles);
+    const r = await get("https://api.groq.com/openai/v1/chat/completions", 15000);
+    // No, necesitamos POST
+    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + GROQ_KEY
+      },
+      body: JSON.stringify({
+        model: "llama-3.3-70b-versatile",
+        messages: [
+          { role: "system", content: "Sos un traductor. Traducí títulos de noticias financieras al español neutro latinoamericano. Devolvé SOLO un JSON array con las traducciones en el mismo orden. Sin explicaciones ni markdown." },
+          { role: "user", content: JSON.stringify(titles) }
+        ],
+        max_tokens: 2000,
+        temperature: 0.1
+      })
+    });
+    if (!res.ok) throw new Error("Groq HTTP " + res.status);
+    const j = await res.json();
+    const text = (j.choices?.[0]?.message?.content || "").trim();
+    const arr = JSON.parse(text);
+    if (Array.isArray(arr) && arr.length === titles.length) return arr;
+    throw new Error("respuesta no es array valido");
+  } catch(e) {
+    console.log("Traducción falló: " + e.message + " -> se usan títulos originales");
+    return titles;
+  }
+}
+
 
 async function main(){
   console.log('Backend análisis:', new Date().toISOString());
