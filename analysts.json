@@ -1,0 +1,188 @@
+{
+  "ts": "2026-09-09T01:35:48.664Z",
+  "tickers": {
+    "NVDA": {
+      "name": "NVIDIA",
+      "sector": "Semiconductores"
+    },
+    "META": {
+      "name": "Meta Platforms",
+      "sector": "Big Tech"
+    },
+    "MSFT": {
+      "name": "Microsoft",
+      "sector": "Big Tech / Cloud"
+    },
+    "ADBE": {
+      "name": "Adobe",
+      "sector": "Software"
+    },
+    "MU": {
+      "name": "Micron",
+      "sector": "Memoria / IA"
+    },
+    "PANW": {
+      "name": "Palo Alto Networks",
+      "sector": "Ciberseguridad"
+    },
+    "MELI": {
+      "name": "MercadoLibre",
+      "sector": "E-commerce LatAm"
+    },
+    "SPY": {
+      "name": "S&P 500 ETF",
+      "sector": "ETF"
+    },
+    "ACN": {
+      "name": "Accenture",
+      "sector": "Consultoría IT"
+    },
+    "MCD": {
+      "name": "McDonald's",
+      "sector": "Consumo"
+    },
+    "IBIT": {
+      "name": "iShares Bitcoin Trust",
+      "sector": "Crypto"
+    },
+    "NU": {
+      "name": "Nu Holdings",
+      "sector": "Fintech LatAm"
+    },
+    "PAMP": {
+      "name": "Pampa Energía",
+      "sector": "Energía Argentina"
+    },
+    "VIST": {
+      "name": "Vista Energy",
+      "sector": "Oil & Gas Argentina"
+    },
+    "GGAL": {
+      "name": "Grupo Galicia",
+      "sector": "Bancos Argentina"
+    },
+    "YPF": {
+      "name": "YPF",
+      "sector": "Energía Argentina"
+    }
+  },
+  "fundamentals": {},
+  "news": {
+    "NVDA": [],
+    "META": [],
+    "MSFT": [],
+    "ADBE": [],
+    "MU": [],
+    "PANW": [],
+    "MELI": [],
+    "SPY": [],
+    "ACN": [],
+    "MCD": [],
+    "IBIT": [],
+    "NU": [],
+    "PAMP": [],
+    "VIST": [],
+    "GGAL": [],
+    "YPF": []
+  },
+  "catalysts": {
+    "ADBE": [
+      {
+        "date": "2026-09-10",
+        "event": "Q3 FY2026 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "ACN": [
+      {
+        "date": "2026-09-24",
+        "event": "Q4 FY2026 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "MSFT": [
+      {
+        "date": "2026-10-27",
+        "event": "Q1 FY2027 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "META": [
+      {
+        "date": "2026-10-28",
+        "event": "Q3 2026 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "MCD": [
+      {
+        "date": "2026-10-28",
+        "event": "Q3 2026 Earnings",
+        "type": "earnings",
+        "importance": "medium"
+      }
+    ],
+    "NU": [
+      {
+        "date": "2026-11-12",
+        "event": "Q3 2026 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "NVDA": [
+      {
+        "date": "2026-11-25",
+        "event": "Q3 FY2027 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "MU": [
+      {
+        "date": "2026-12-18",
+        "event": "Q1 FY2027 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "PANW": [
+      {
+        "date": "2026-11-19",
+        "event": "Q1 FY2027 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "MELI": [
+      {
+        "date": "2026-11-05",
+        "event": "Q3 2026 Earnings",
+        "type": "earnings",
+        "importance": "high"
+      }
+    ],
+    "VIST": [
+      {
+        "date": "2026-11-10",
+        "event": "Q3 2026 Earnings",
+        "type": "earnings",
+        "importance": "medium"
+      }
+    ],
+    "PAMP": [
+      {
+        "date": "2026-11-12",
+        "event": "Q3 2026 Earnings",
+        "type": "earnings",
+        "importance": "medium"
+      }
+    ]
+  },
+  "version": "2.0",
+  "source": "semilla — se rellena en la primera corrida del workflow"
+}
