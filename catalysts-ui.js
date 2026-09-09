@@ -2,8 +2,6 @@
   "use strict";
 
   var analystsData = null;
-  var GROQ_KEY = "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";
-
   async function loadAnalystsData() {
     try {
       var res = await fetch("analysts.json?t=" + Date.now());
@@ -13,26 +11,6 @@
         injectUI();
       }
     } catch(e) { console.warn("analysts.json no disponible"); }
-  }
-
-  // === TRADUCIR con Groq ===
-  async function translateText(text) {
-    try {
-      var r = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Authorization": "Bearer " + GROQ_KEY },
-        body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
-          messages: [
-            { role: "system", content: "Traducí al español neutro latinoamericano. Solo devolvé la traducción, sin explicaciones." },
-            { role: "user", content: text }
-          ],
-          max_tokens: 200, temperature: 0.1
-        })
-      });
-      var j = await r.json();
-      return j.choices?.[0]?.message?.content?.trim() || text;
-    } catch(e) { return text; }
   }
 
   // === NOTICIAS ===
@@ -53,10 +31,10 @@
           '</div>' +
           '<div id="news-list" style="display:flex;flex-direction:column;gap:12px">' +
             items.map(function(item, i) {
-              return '<a href="' + item.url + '" target="_blank" id="news-item-' + i + '" style="display:block;padding:12px;background:#0d1117;border-radius:8px;border-left:4px solid #64B5F6;text-decoration:none">' +
+              return '<a href="' + item.url + '" target="_blank"" style="display:block;padding:12px;background:#0d1117;border-radius:8px;border-left:4px solid #64B5F6;text-decoration:none">' +
                 '<div style="color:#64B5F6;font-size:12px;margin-bottom:4px">' + (item.source || "Yahoo Finance") + '</div>' +
-                '<div style="color:#fff;font-weight:600;margin-bottom:4px" class="news-title">' + item.title + '</div>' +
-                '<div style="color:#555;font-size:11px;font-style:italic" class="news-traduccion">Traduciendo...</div>' +
+                '<div style="color:#fff;font-weight:600;margin-bottom:4px">' + (item.titleEs || item.title) + '</div>' +
+                (item.titleEs ? '<div style="color:#555;font-size:11px;font-style:italic">' + item.title + '</div>' : '') +
               '</a>';
             }).join("") +
             (items.length === 0 ? '<div style="color:#888;text-align:center;padding:20px">Sin noticias disponibles</div>' : '') +
@@ -65,16 +43,7 @@
       '</div>';
     document.body.appendChild(modal);
 
-    // Traducir cada titulo
-    items.forEach(function(item, i) {
-      translateText(item.title).then(function(tr) {
-        var el = document.getElementById("news-item-" + i);
-        if (el) {
-          var td = el.querySelector(".news-traduccion");
-          if (td) td.textContent = tr;
-        }
-      });
-    });
+
   }
 
   // === ANALISTAS POR BANCO ===
