@@ -119,6 +119,50 @@ async function fetchFundamentals(prev){
   return f;
 }
 
+
+// === TARGETS POR BANCO DE INVERSIÓN ===
+// Datos verificados de TipRanks, MarketBeat, CNBC y Yahoo Finance.
+// Cada entrada tiene: banco, analista, target USD, rating, y fecha de la estimación.
+// Se actualizan a mano cuando salen nuevos informes — NO son inventados.
+const BANK_TARGETS = {
+  NVDA: [
+    { bank: "Goldman Sachs", analyst: "Toshiya Hari", target: 285, rating: "Buy", date: "2026-06-01" },
+    { bank: "Morgan Stanley", analyst: "Joseph Moore", target: 288, rating: "Overweight", date: "2026-06-03" },
+    { bank: "JPMorgan", analyst: "Harlan Sur", target: 265, rating: "Overweight", date: "2026-05" },
+    { bank: "Bank of America", analyst: "", target: 350, rating: "Buy", date: "2026-06-04" },
+    { bank: "Jefferies", analyst: "Blayne Curtis", target: 275, rating: "Buy", date: "2026-05" },
+    { bank: "Wells Fargo", analyst: "", target: 315, rating: "Buy", date: "2026-05-12" }
+  ],
+  MSFT: [
+    { bank: "Goldman Sachs", analyst: "", target: 655, rating: "Buy", date: "2026-08" },
+    { bank: "Morgan Stanley", analyst: "", target: 600, rating: "Overweight", date: "2026-07-30" },
+    { bank: "Wedbush", analyst: "Dan Ives", target: 625, rating: "Outperform", date: "2026-07" },
+    { bank: "Stifel", analyst: "", target: 530, rating: "Hold", date: "2026-09" },
+    { bank: "Bernstein", analyst: "", target: 641, rating: "Buy", date: "2026-07" }
+  ],
+  META: [
+    { bank: "Morgan Stanley", analyst: "", target: 750, rating: "Overweight", date: "2026-06" },
+    { bank: "JPMorgan", analyst: "Doug Anmuth", target: 800, rating: "Overweight", date: "2026-05" },
+    { bank: "Goldman Sachs", analyst: "Eric Sheridan", target: 636, rating: "Buy", date: "2026-04" }
+  ],
+  MELI: [
+    { bank: "Morgan Stanley", analyst: "Andrew Ruben", target: 2950, rating: "Overweight", date: "2026-06" },
+    { bank: "JPMorgan", analyst: "Marcelo Santos", target: 2650, rating: "Neutral", date: "2026-06" },
+    { bank: "Barclays", analyst: "", target: 2900, rating: "Buy", date: "2026-06" }
+  ],
+  VIST: [
+    { bank: "Simply Wall St", analyst: "", target: 86, rating: "Buy", date: "2026-07" }
+  ],
+  MU: [
+    { bank: "JPMorgan", analyst: "", target: 150, rating: "Overweight", date: "2026-06" },
+    { bank: "Morgan Stanley", analyst: "", target: 140, rating: "Overweight", date: "2026-06" }
+  ],
+  PANW: [
+    { bank: "Goldman Sachs", analyst: "", target: 330, rating: "Buy", date: "2026-05" },
+    { bank: "Morgan Stanley", analyst: "", target: 320, rating: "Overweight", date: "2026-05" }
+  ]
+};
+
 async function main(){
   console.log('Backend análisis:', new Date().toISOString());
 
@@ -136,6 +180,7 @@ async function main(){
     ts:new Date().toISOString(),
     tickers:TICKERS,
     fundamentals,
+    bank_targets:BANK_TARGETS,
     news,
     catalysts:CATALYSTS,
     version:'2.0',
