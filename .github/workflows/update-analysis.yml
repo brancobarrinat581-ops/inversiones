@@ -16,10 +16,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      
+
+      # Ping Supabase
+      - name: Ping Supabase
+        run: |
+          curl -s -o /dev/null -w "Supabase: HTTP %{http_code}\n" \
+            "https://bezxlrkolpfaeqvyxckj.supabase.co/rest/v1/operaciones?select=id&limit=1" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJlenhscmtvbHBmYWVxdnl4Y2tqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM5ODcwOTYsImV4cCI6MjA5OTU2MzA5Nn0.ZbHLp-0f8M7quTPA8QUM5a64LuDxdFSs5Q1u9xGej8Y"
+
       - name: Run Analysis Script
         run: node scripts/analyze.js
-      
+
       - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
