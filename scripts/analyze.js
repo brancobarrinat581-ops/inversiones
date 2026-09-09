@@ -230,6 +230,38 @@ async function fetchFundamentals(prev){
 }
 
 // === MAIN ===
+// === EMPRESAS DISCOVERY (fuera de cartera, para ampliar panorama) ===
+const DISCOVERY = {
+  TSLA:{name:"Tesla",sector:"EV / IA / Robotaxi"},
+  AMZN:{name:"Amazon",sector:"E-commerce / Cloud"},
+  AAPL:{name:"Apple",sector:"Consumer Tech"},
+  GOOGL:{name:"Alphabet (Google)",sector:"Ads / IA / Cloud"},
+  AMD:{name:"AMD",sector:"Semiconductores"},
+  AVGO:{name:"Broadcom",sector:"Semiconductores / Infra"},
+  SNOW:{name:"Snowflake",sector:"Cloud Data"},
+  PLTR:{name:"Palantir",sector:"IA / Defensa"},
+  COIN:{name:"Coinbase",sector:"Crypto"},
+  ARM:{name:"ARM Holdings",sector:"Chips / Licencias"}
+};
+
+async function fetchDiscoveryNews(prev){
+  const news={};
+  let ok=0;
+  for(const tk of Object.keys(DISCOVERY)){
+    try{
+      const r=await get(`https://feeds.finance.yahoo.com/rss/2.0/headline?s=${tk}&region=US&lang=en-US`);
+      const items=parseRSS(await r.text()).slice(0,4);
+      if(items.length){news[tk]=items;ok++;}
+    }catch(e){
+      if(prev&&prev[tk])news[tk]=prev[tk];
+    }
+    await new Promise(r=>setTimeout(r,300));
+  }
+  console.log(`Discovery news: ${ok} tickers`);
+  return news;
+}
+
+
 async function main(){
   console.log('=== Backend Análisis ===', new Date().toISOString());
 
@@ -237,13 +269,17 @@ async function main(){
   try{prev=JSON.parse(fs.readFileSync('analysts.json','utf8'));console.log('Previo cargado');}
   catch(e){console.log('Sin previo');}
 
-  console.log('\n[1/3] Noticias (Yahoo RSS)');
+  console.log('\n[1/4] Noticias cartera (Yahoo RSS)');
   const news=await fetchNews(prev.news);
 
-  console.log('\n[2/3] Traducción (Groq)');
-  await translateNews(news);
+  console.log('\n[2/4] Noticias discovery');
+  const discoveryNews=await fetchDiscoveryNews((prev.discovery_news||{}));
 
-  console.log('\n[3/3] Fundamentals (Yahoo)');
+  console.log('\n[3/4] Traducción (Groq)');
+  await translateNews(news);
+  await translateNews(discoveryNews);
+
+  console.log('\n[4/4] Fundamentals (Yahoo)');
   const fundamentals=await fetchFundamentals(prev.fundamentals);
 
   const out={
