@@ -1,31 +1,7 @@
 {
-  "ts": "2026-09-09T23:58:22.098Z",
-  "total": 59,
+  "ts": "2026-09-10T23:54:28.368Z",
+  "total": 61,
   "operaciones": [
-    {
-      "id": 202,
-      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "IOLCAMA",
-      "tipo": "compra",
-      "cantidad": 37004.5231,
-      "precio": 11,
-      "fecha": "2026-01-26",
-      "comision_pct": 0,
-      "comision_monto": 0,
-      "created_at": "2026-08-18T11:46:13.180424+00:00"
-    },
-    {
-      "id": 140,
-      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "ADBE",
-      "tipo": "compra",
-      "cantidad": 11,
-      "precio": 10440,
-      "fecha": "2026-01-26",
-      "comision_pct": 0.605,
-      "comision_monto": 694.78,
-      "created_at": "2026-08-06T11:41:24.378445+00:00"
-    },
     {
       "id": 141,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
@@ -36,6 +12,30 @@
       "fecha": "2026-01-26",
       "comision_pct": 0.715,
       "comision_monto": 1379.4,
+      "created_at": "2026-08-06T11:41:24.378445+00:00"
+    },
+    {
+      "id": 203,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "IOLDOLD",
+      "tipo": "compra",
+      "cantidad": 414.175,
+      "precio": 1671.05,
+      "fecha": "2026-01-26",
+      "comision_pct": 0,
+      "comision_monto": 0,
+      "created_at": "2026-08-18T11:46:13.180424+00:00"
+    },
+    {
+      "id": 152,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "MU",
+      "tipo": "compra",
+      "cantidad": 1,
+      "precio": 118350,
+      "fecha": "2026-01-26",
+      "comision_pct": 0.6897,
+      "comision_monto": 816.27,
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
@@ -171,24 +171,24 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
-      "id": 152,
+      "id": 140,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "MU",
+      "ticker": "ADBE",
       "tipo": "compra",
-      "cantidad": 1,
-      "precio": 118350,
+      "cantidad": 11,
+      "precio": 10440,
       "fecha": "2026-01-26",
-      "comision_pct": 0.6897,
-      "comision_monto": 816.27,
+      "comision_pct": 0.605,
+      "comision_monto": 694.78,
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
-      "id": 203,
+      "id": 202,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "IOLDOLD",
+      "ticker": "IOLCAMA",
       "tipo": "compra",
-      "cantidad": 414.175,
-      "precio": 1671.05,
+      "cantidad": 37004.5231,
+      "precio": 11,
       "fecha": "2026-01-26",
       "comision_pct": 0,
       "comision_monto": 0,
@@ -231,18 +231,6 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
-      "id": 159,
-      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "PANW",
-      "tipo": "compra",
-      "cantidad": 4,
-      "precio": 4972.5,
-      "fecha": "2026-02-03",
-      "comision_pct": 0.6896,
-      "comision_monto": 137.17,
-      "created_at": "2026-08-06T11:41:24.378445+00:00"
-    },
-    {
       "id": 156,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
       "ticker": "VIST",
@@ -252,6 +240,18 @@
       "fecha": "2026-02-03",
       "comision_pct": 0.6897,
       "comision_monto": 1331.53,
+      "created_at": "2026-08-06T11:41:24.378445+00:00"
+    },
+    {
+      "id": 159,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "PANW",
+      "tipo": "compra",
+      "cantidad": 4,
+      "precio": 4972.5,
+      "fecha": "2026-02-03",
+      "comision_pct": 0.6896,
+      "comision_monto": 137.17,
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
@@ -291,18 +291,6 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
-      "id": 162,
-      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "VIST",
-      "tipo": "compra",
-      "cantidad": 4,
-      "precio": 33130,
-      "fecha": "2026-03-17",
-      "comision_pct": 0.0848,
-      "comision_monto": 112.24,
-      "created_at": "2026-08-06T11:41:24.378445+00:00"
-    },
-    {
       "id": 161,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
       "ticker": "VIST",
@@ -312,6 +300,18 @@
       "fecha": "2026-03-17",
       "comision_pct": 0.6848,
       "comision_monto": 1108.05,
+      "created_at": "2026-08-06T11:41:24.378445+00:00"
+    },
+    {
+      "id": 162,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "VIST",
+      "tipo": "compra",
+      "cantidad": 4,
+      "precio": 33130,
+      "fecha": "2026-03-17",
+      "comision_pct": 0.0848,
+      "comision_monto": 112.24,
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
@@ -327,18 +327,6 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
-      "id": 166,
-      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "NU",
-      "tipo": "compra",
-      "cantidad": 3,
-      "precio": 10380,
-      "fecha": "2026-04-07",
-      "comision_pct": 0.6945,
-      "comision_monto": 214.78,
-      "created_at": "2026-08-06T11:41:24.378445+00:00"
-    },
-    {
       "id": 165,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
       "ticker": "NVDA",
@@ -348,6 +336,18 @@
       "fecha": "2026-04-07",
       "comision_pct": 0.6945,
       "comision_monto": 225.95,
+      "created_at": "2026-08-06T11:41:24.378445+00:00"
+    },
+    {
+      "id": 166,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "NU",
+      "tipo": "compra",
+      "cantidad": 3,
+      "precio": 10380,
+      "fecha": "2026-04-07",
+      "comision_pct": 0.6945,
+      "comision_monto": 214.78,
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
@@ -375,6 +375,18 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
+      "id": 171,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "ADBE",
+      "tipo": "compra",
+      "cantidad": 1,
+      "precio": 8135,
+      "fecha": "2026-04-15",
+      "comision_pct": 0.6945,
+      "comision_monto": 56.11,
+      "created_at": "2026-08-06T11:41:24.378445+00:00"
+    },
+    {
       "id": 169,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
       "ticker": "EWZ",
@@ -396,18 +408,6 @@
       "fecha": "2026-04-15",
       "comision_pct": 0.6945,
       "comision_monto": 280.89,
-      "created_at": "2026-08-06T11:41:24.378445+00:00"
-    },
-    {
-      "id": 171,
-      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "ADBE",
-      "tipo": "compra",
-      "cantidad": 1,
-      "precio": 8135,
-      "fecha": "2026-04-15",
-      "comision_pct": 0.6945,
-      "comision_monto": 56.11,
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
@@ -459,18 +459,6 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
-      "id": 176,
-      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "NU",
-      "tipo": "compra",
-      "cantidad": 10,
-      "precio": 8980,
-      "fecha": "2026-05-15",
-      "comision_pct": 0.6945,
-      "comision_monto": 619.35,
-      "created_at": "2026-08-06T11:41:24.378445+00:00"
-    },
-    {
       "id": 177,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
       "ticker": "MELI",
@@ -480,6 +468,18 @@
       "fecha": "2026-05-15",
       "comision_pct": 0.6945,
       "comision_monto": 675.22,
+      "created_at": "2026-08-06T11:41:24.378445+00:00"
+    },
+    {
+      "id": 176,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "NU",
+      "tipo": "compra",
+      "cantidad": 10,
+      "precio": 8980,
+      "fecha": "2026-05-15",
+      "comision_pct": 0.6945,
+      "comision_monto": 619.35,
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
@@ -495,18 +495,6 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
-      "id": 179,
-      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "BMA",
-      "tipo": "venta",
-      "cantidad": 6,
-      "precio": 13280,
-      "fecha": "2026-06-02",
-      "comision_pct": 0.685,
-      "comision_monto": 549.55,
-      "created_at": "2026-08-06T11:41:24.378445+00:00"
-    },
-    {
       "id": 180,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
       "ticker": "ACN",
@@ -519,6 +507,18 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
+      "id": 179,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "BMA",
+      "tipo": "venta",
+      "cantidad": 6,
+      "precio": 13280,
+      "fecha": "2026-06-02",
+      "comision_pct": 0.685,
+      "comision_monto": 549.55,
+      "created_at": "2026-08-06T11:41:24.378445+00:00"
+    },
+    {
       "id": 181,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
       "ticker": "ADBE",
@@ -528,6 +528,18 @@
       "fecha": "2026-06-02",
       "comision_pct": 0.6945,
       "comision_monto": 123.32,
+      "created_at": "2026-08-06T11:41:24.378445+00:00"
+    },
+    {
+      "id": 184,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "META",
+      "tipo": "compra",
+      "cantidad": 3,
+      "precio": 35240,
+      "fecha": "2026-06-07",
+      "comision_pct": 0.6945,
+      "comision_monto": 729.15,
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
@@ -555,18 +567,6 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
-      "id": 184,
-      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "META",
-      "tipo": "compra",
-      "cantidad": 3,
-      "precio": 35240,
-      "fecha": "2026-06-07",
-      "comision_pct": 0.6945,
-      "comision_monto": 729.15,
-      "created_at": "2026-08-06T11:41:24.378445+00:00"
-    },
-    {
       "id": 185,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
       "ticker": "ACN",
@@ -576,6 +576,18 @@
       "fecha": "2026-06-07",
       "comision_pct": 0.6945,
       "comision_monto": 256.63,
+      "created_at": "2026-08-06T11:41:24.378445+00:00"
+    },
+    {
+      "id": 192,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "MCD",
+      "tipo": "compra",
+      "cantidad": 3,
+      "precio": 18220,
+      "fecha": "2026-07-08",
+      "comision_pct": 0.6945,
+      "comision_monto": 376.99,
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
@@ -651,18 +663,6 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
-      "id": 192,
-      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
-      "ticker": "MCD",
-      "tipo": "compra",
-      "cantidad": 3,
-      "precio": 18220,
-      "fecha": "2026-07-08",
-      "comision_pct": 0.6945,
-      "comision_monto": 376.99,
-      "created_at": "2026-08-06T11:41:24.378445+00:00"
-    },
-    {
       "id": 193,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
       "ticker": "MU",
@@ -672,6 +672,18 @@
       "fecha": "2026-07-29",
       "comision_pct": 0.6945,
       "comision_monto": 1681.15,
+      "created_at": "2026-08-06T11:41:24.378445+00:00"
+    },
+    {
+      "id": 196,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "MCD",
+      "tipo": "compra",
+      "cantidad": 5,
+      "precio": 17640,
+      "fecha": "2026-08-04",
+      "comision_pct": 0.6945,
+      "comision_monto": 608.32,
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
@@ -699,16 +711,28 @@
       "created_at": "2026-08-06T11:41:24.378445+00:00"
     },
     {
-      "id": 196,
+      "id": 206,
       "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
       "ticker": "MCD",
       "tipo": "compra",
-      "cantidad": 5,
-      "precio": 17640,
-      "fecha": "2026-08-04",
-      "comision_pct": 0.6945,
-      "comision_monto": 608.32,
-      "created_at": "2026-08-06T11:41:24.378445+00:00"
+      "cantidad": 8,
+      "precio": 16900,
+      "fecha": "2026-09-10",
+      "comision_pct": 0,
+      "comision_monto": 933,
+      "created_at": "2026-09-10T12:41:02.027734+00:00"
+    },
+    {
+      "id": 205,
+      "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+      "ticker": "NVDA",
+      "tipo": "compra",
+      "cantidad": 16,
+      "precio": 14950,
+      "fecha": "2026-09-10",
+      "comision_pct": 0,
+      "comision_monto": 1649.76,
+      "created_at": "2026-09-10T12:40:08.943503+00:00"
     }
   ]
 }
