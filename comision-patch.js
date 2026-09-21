@@ -1,4 +1,4 @@
-// comision-patch.js v3 — Fix completo: migración datos + fix tipo/precio + autocomplete + comisiones + sync
+// comision-patch.js v4 — Fix DEFINITIVO: uppercase tipo + ppc + autocomplete + comisiones + sync
 (function(){
   "use strict";
   var DEFAULT_PCT = 0.6;
@@ -17,19 +17,24 @@
       if(!Array.isArray(ops) || ops.length === 0) return;
       var fixed = 0;
       ops.forEach(function(op){
-        // Fix 1: si ppc falta o es 0 pero precio existe, copiar precio → ppc
-        if((!op.ppc || op.ppc === 0) && op.precio && op.precio > 0){
+        // Fix ppc
+        if((!op.ppc || op.ppc === 0) && op.precio > 0){
           op.ppc = op.precio;
           fixed++;
         }
-        // Fix 2: calcular invertido_ars si falta
+        // Fix tipo → MAYÚSCULA (app.js espera "COMPRA" / "VENTA")
+        if(op.tipo && op.tipo !== op.tipo.toUpperCase()){
+          op.tipo = op.tipo.toUpperCase();
+          fixed++;
+        }
+        // Fix invertido_ars
         if(!op.invertido_ars && op.ppc > 0 && op.cantidad > 0){
           op.invertido_ars = op.cantidad * op.ppc;
         }
       });
       if(fixed > 0){
         localStorage.setItem("operaciones_raw", JSON.stringify(ops));
-        console.log("🔧 Migración: " + fixed + " operaciones arregladas (ppc copiado de precio)");
+        console.log("🔧 Migración: " + fixed + " campos arreglados");
       }
     } catch(e){ console.warn("Migración falló:", e); }
   })();
@@ -37,7 +42,7 @@
   // === Referencias al formulario activo ===
   var activeForm = null;
 
-  // === MUTATION OBSERVER: detectar formulario ===
+  // === MUTATION OBSERVER ===
   new MutationObserver(function(muts){
     muts.forEach(function(mut){
       mut.addedNodes.forEach(function(node){
@@ -58,7 +63,7 @@
   function enhanceForm(form){
     activeForm = form;
 
-    // Autocomplete de tickers
+    // Autocomplete tickers
     var tickerInput = form.querySelector("input[placeholder='Ticker']");
     if(tickerInput){
       if(!document.getElementById("dl-tickers")){
@@ -75,7 +80,7 @@
       tickerInput.setAttribute("autocomplete", "off");
     }
 
-    // Campos de comisión
+    // Comisión
     var grid = form.querySelector("div[style*='grid']");
     if(!grid) return;
     var ref = grid.querySelector("input[type='number']");
@@ -117,7 +122,7 @@
     setTimeout(upd, 100);
   }
 
-  // === LEER VALORES REALES DEL DOM ===
+  // === LEER DOM ===
   function readFormDOM(){
     if(!activeForm) return null;
     var ticker = (activeForm.querySelector("input[placeholder='Ticker']")||{}).value || "";
@@ -127,7 +132,15 @@
     var precio = parseFloat((activeForm.querySelector("input[placeholder='Precio ARS']")||{}).value) || 0;
     var fechaInput = activeForm.querySelector("input[type='date']");
     var fecha = fechaInput ? fechaInput.value : new Date().toISOString().slice(0,10);
-    return { ticker: ticker.toUpperCase(), tipo: tipo, cantidad: cantidad, precio: precio, fecha: fecha };
+    return { ticker: ticker.toUpperCase(), tipo: tipo.toUpperCase(), cantidad: cantidad, precio: precio, fecha: fecha };
+  }
+
+  // === NORMALIZAR OPERACIÓN: asegurar ppc y tipo uppercase ===
+  function normalizeOp(op){
+    if((!op.ppc || op.ppc === 0) && op.precio > 0) op.ppc = op.precio;
+    if(op.tipo) op.tipo = op.tipo.toUpperCase();
+    if(!op.invertido_ars && op.ppc > 0 && op.cantidad > 0) op.invertido_ars = op.cantidad * op.ppc;
+    return op;
   }
 
   // === LOCALSTORAGE ===
@@ -144,21 +157,22 @@
 
     var method = (opts && opts.method || "GET").toUpperCase();
 
-    // ========== POST: nueva operación ==========
+    // ========== POST ==========
     if(method === "POST" && opts && opts.body){
       var body;
       try{ body = JSON.parse(opts.body); } catch(e){ return _real.apply(this, arguments); }
 
-      // >>> FIX: leer valores reales del DOM, no confiar en app.js <<<
+      // Leer DOM real
       var dom = readFormDOM();
       if(dom && dom.ticker){
-        console.log("📋 DOM dice:", dom.tipo, dom.ticker, "x"+dom.cantidad, "$"+dom.precio);
-        console.log("📋 app.js mandó:", body.tipo, body.ticker, "x"+body.cantidad, "$"+body.precio);
         body.ticker = dom.ticker;
-        body.tipo   = dom.tipo;
+        body.tipo   = dom.tipo;       // Ya uppercase
         body.cantidad = dom.cantidad;
         body.precio = dom.precio;
         body.fecha  = dom.fecha;
+      } else {
+        // Fallback: uppercase el tipo del body
+        body.tipo = (body.tipo || "compra").toUpperCase();
       }
 
       // Comisión
@@ -172,31 +186,28 @@
         body.comision_monto = monto > 0 ? monto : Math.round(total * pct / 100);
       }
 
-      // Reconstruir opts
       opts = Object.assign({}, opts, { body: JSON.stringify(body) });
 
       // Guardar localmente
       var localId = Date.now() + Math.floor(Math.random()*1000);
-      var localOp = Object.assign({}, body, {
+      var localOp = normalizeOp(Object.assign({}, body, {
         id: localId,
         ppc: body.precio,
         invertido_ars: (body.cantidad||0) * (body.precio||0)
-      });
+      }));
 
       var ops = getOps();
       ops.push(localOp);
       localStorage.setItem("operaciones_raw", JSON.stringify(ops));
-      console.log("💾 Guardado:", localOp.tipo, localOp.ticker,
-        "x"+localOp.cantidad, "$"+localOp.ppc, "| Total ops:", ops.length);
+      console.log("💾", localOp.tipo, localOp.ticker, "x"+localOp.cantidad, "$"+localOp.ppc);
 
-      // Supabase
       return _real.apply(this, [url, opts]).then(function(res){
         return res.json().then(function(data){
           if(Array.isArray(data) && data[0] && data[0].id){
             var ops2 = getOps();
             var ix = ops2.findIndex(function(o){ return o.id===localId; });
             if(ix>=0){
-              ops2[ix] = Object.assign({}, data[0], { ppc: data[0].precio || data[0].ppc });
+              ops2[ix] = normalizeOp(Object.assign({}, data[0]));
               localStorage.setItem("operaciones_raw", JSON.stringify(ops2));
             }
           }
@@ -204,7 +215,7 @@
             { status:200, headers:{"Content-Type":"application/json"} });
         });
       }).catch(function(){
-        console.warn("☁️ Supabase offline. Guardado solo local.");
+        console.warn("☁️ Supabase offline. Solo local.");
         return new Response(JSON.stringify([localOp]),
           { status:200, headers:{"Content-Type":"application/json"} });
       });
@@ -234,7 +245,7 @@
         var ix = ops.findIndex(function(o){ return o.id === eid; });
         if(ix >= 0){
           Object.assign(ops[ix], chg);
-          if(chg.precio) ops[ix].ppc = chg.precio;
+          normalizeOp(ops[ix]);
           localStorage.setItem("operaciones_raw", JSON.stringify(ops));
         }
       }
@@ -244,31 +255,30 @@
       });
     }
 
-    // ========== GET: servir desde localStorage con ppc asegurado ==========
+    // ========== GET: normalizar antes de servir ==========
     if(method === "GET" && url.indexOf("order=fecha") >= 0){
       var ops = getOps();
       if(ops.length > 0){
-        // Asegurar que cada op tenga ppc
-        var fixedNow = 0;
+        // Normalizar CADA operación antes de servir
+        var changed = false;
         ops.forEach(function(op){
-          if((!op.ppc || op.ppc === 0) && op.precio > 0){
-            op.ppc = op.precio;
-            fixedNow++;
-          }
+          var oldTipo = op.tipo, oldPpc = op.ppc;
+          normalizeOp(op);
+          if(op.tipo !== oldTipo || op.ppc !== oldPpc) changed = true;
         });
-        if(fixedNow > 0){
-          localStorage.setItem("operaciones_raw", JSON.stringify(ops));
-        }
+        if(changed) localStorage.setItem("operaciones_raw", JSON.stringify(ops));
 
         // Sync de fondo
         _real.apply(this, arguments).then(function(res){
           return res.json().then(function(data){
-            if(Array.isArray(data) && data.length > ops.length){
-              // Asegurar ppc en los datos de Supabase también
-              data.forEach(function(op){
-                if((!op.ppc || op.ppc === 0) && op.precio > 0) op.ppc = op.precio;
-              });
-              localStorage.setItem("operaciones_raw", JSON.stringify(data));
+            if(Array.isArray(data) && data.length > 0){
+              // Normalizar datos de Supabase también
+              data.forEach(function(op){ normalizeOp(op); });
+              // Reemplazar si Supabase tiene más datos
+              var local = getOps();
+              if(data.length >= local.length){
+                localStorage.setItem("operaciones_raw", JSON.stringify(data));
+              }
             }
           });
         }).catch(function(){});
@@ -281,5 +291,5 @@
     return _real.apply(this, arguments);
   };
 
-  console.log("💰 comision-patch v3: migración + fix tipo/precio + autocomplete + sync");
+  console.log("💰 comision-patch v4: uppercase tipo + ppc + autocomplete + sync");
 })();
