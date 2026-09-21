@@ -1,4 +1,4 @@
-// comision-patch.js v4 — Fix DEFINITIVO: uppercase tipo + ppc + autocomplete + comisiones + sync
+// comision-patch.js v4 — Portfolio desde operaciones + uppercase tipo + ppc + autocomplete + tabla mejorada
 (function(){
   "use strict";
   var DEFAULT_PCT = 0.6;
@@ -8,7 +8,25 @@
     'IOLCAMA','IOLDOLD'
   ];
 
-  // === MIGRACIÓN: arreglar datos existentes en localStorage ===
+  // =====================================================
+  // FIX #1: Eliminar portfolio_iol para forzar que app.js
+  // calcule la cartera DESDE las operaciones
+  // =====================================================
+  localStorage.removeItem("portfolio_iol");
+
+  // Bloquear que se vuelva a setear
+  var _setItem = localStorage.setItem.bind(localStorage);
+  localStorage.setItem = function(key, val){
+    if(key === "portfolio_iol") {
+      console.log("🚫 Bloqueado portfolio_iol — cartera se calcula desde operaciones");
+      return;
+    }
+    return _setItem(key, val);
+  };
+
+  // =====================================================
+  // FIX #2: Migrar localStorage existente
+  // =====================================================
   (function migrate(){
     var raw = localStorage.getItem("operaciones_raw");
     if(!raw) return;
@@ -17,36 +35,32 @@
       if(!Array.isArray(ops) || ops.length === 0) return;
       var fixed = 0;
       ops.forEach(function(op){
-        // Fix ppc
         if((!op.ppc || op.ppc === 0) && op.precio > 0){
-          op.ppc = op.precio;
-          fixed++;
+          op.ppc = op.precio; fixed++;
         }
-        // Fix tipo → MAYÚSCULA (app.js espera "COMPRA" / "VENTA")
         if(op.tipo && op.tipo !== op.tipo.toUpperCase()){
-          op.tipo = op.tipo.toUpperCase();
-          fixed++;
+          op.tipo = op.tipo.toUpperCase(); fixed++;
         }
-        // Fix invertido_ars
         if(!op.invertido_ars && op.ppc > 0 && op.cantidad > 0){
           op.invertido_ars = op.cantidad * op.ppc;
         }
       });
       if(fixed > 0){
-        localStorage.setItem("operaciones_raw", JSON.stringify(ops));
+        _setItem("operaciones_raw", JSON.stringify(ops));
         console.log("🔧 Migración: " + fixed + " campos arreglados");
       }
-    } catch(e){ console.warn("Migración falló:", e); }
+    } catch(e){}
   })();
 
-  // === Referencias al formulario activo ===
-  var activeForm = null;
-
-  // === MUTATION OBSERVER ===
+  // =====================================================
+  // FIX #3: Mejorar tabla de operaciones (agregar Total)
+  // =====================================================
   new MutationObserver(function(muts){
     muts.forEach(function(mut){
       mut.addedNodes.forEach(function(node){
-        if(node.nodeType!==1)return;
+        if(node.nodeType!==1) return;
+
+        // --- Detectar formulario de operación ---
         var h3s = node.querySelectorAll ? node.querySelectorAll("h3") : [];
         h3s.forEach(function(h3){
           if(h3.textContent.indexOf("Operaci")===-1) return;
@@ -55,11 +69,74 @@
           form.dataset.comPatched = "1";
           enhanceForm(form);
         });
+
+        // --- Detectar tabla de operaciones y agregar columna Total ---
+        var tables = node.querySelectorAll ? node.querySelectorAll("table, div[style*='grid']") : [];
+        enhanceOpRows(node);
       });
     });
   }).observe(document.body, {childList:true, subtree:true});
 
-  // === ENHANCE FORM ===
+  // Mejorar filas de operaciones: agregar precio total
+  function enhanceOpRows(root){
+    // Las operaciones se muestran en un contenedor con filas
+    // Cada fila tiene: fecha, ticker, tipo, cantidad, precio, botones
+    // Buscar por el patrón de texto "$" en la columna de precio
+    var allRows = root.querySelectorAll ? root.querySelectorAll("div[style*='grid'], tr") : [];
+    allRows.forEach(function(row){
+      if(row.dataset.totalAdded) return;
+      var cells = row.children;
+      if(!cells || cells.length < 5) return;
+
+      // Verificar que es una fila de operación (tiene ticker y precio)
+      var texts = Array.from(cells).map(function(c){ return (c.textContent||"").trim(); });
+
+      // Buscar patrón: fecha | ticker | tipo | cantidad | $precio
+      var fechaMatch = texts[0] && texts[0].match(/^\d{4}-/);
+      var precioMatch = texts[4] && texts[4].match(/^\$[\d.,]+$/);
+      if(!fechaMatch) return;
+
+      var cantidad = parseFloat(texts[3]) || 0;
+      var precio = parseFloat((texts[4]||"").replace(/[$.,]/g, function(m){ return m==='.'?'':m===','?'':m==='$'?'':''; })) || 0;
+
+      // Intentar parsear precio más robustamente
+      var precioText = (texts[4]||"").replace('$','').replace(/\./g,'').replace(',','.');
+      precio = parseFloat(precioText) || 0;
+
+      if(cantidad > 0 && precio > 0){
+        var total = Math.round(cantidad * precio);
+        var totalCell = document.createElement("span");
+        totalCell.style.cssText = "color:#8b949e;font-size:13px;white-space:nowrap;padding:0 8px";
+        totalCell.textContent = "$" + total.toLocaleString("es-AR");
+        totalCell.title = "Total: " + cantidad + " x $" + precio.toLocaleString("es-AR");
+
+        // Insertar antes de los botones de acción
+        var actionIdx = -1;
+        for(var i = cells.length-1; i >= 0; i--){
+          if(cells[i].querySelector && cells[i].querySelector("button, svg, [role='button']")){
+            actionIdx = i; break;
+          }
+        }
+        if(actionIdx > 0){
+          row.insertBefore(totalCell, cells[actionIdx]);
+        } else {
+          row.appendChild(totalCell);
+        }
+        row.dataset.totalAdded = "1";
+      }
+    });
+  }
+
+  // Observar cambios en la lista de operaciones continuamente
+  setInterval(function(){
+    enhanceOpRows(document.body);
+  }, 2000);
+
+  // =====================================================
+  // Formulario: autocomplete + comisiones
+  // =====================================================
+  var activeForm = null;
+
   function enhanceForm(form){
     activeForm = form;
 
@@ -83,10 +160,7 @@
     // Comisión
     var grid = form.querySelector("div[style*='grid']");
     if(!grid) return;
-    var ref = grid.querySelector("input[type='number']");
-    var st = ref
-      ? "padding:8px;border-radius:6px;border:1px solid #333;background:#0d1117;color:#fff;font-size:14px"
-      : "";
+    var st = "padding:8px;border-radius:6px;border:1px solid #333;background:#0d1117;color:#fff;font-size:14px";
 
     var ci = document.createElement("input");
     ci.type="number"; ci.placeholder="Comisión %"; ci.value=DEFAULT_PCT;
@@ -111,10 +185,11 @@
       var monto = parseFloat(cm.value||0);
       var total = cant * precio;
       var com = monto > 0 ? monto : (total * pct / 100);
-      pv.textContent = com > 0
-        ? "Comisión: $" + Math.round(com).toLocaleString("es-AR") +
-          " (" + (total>0?(com/total*100).toFixed(2):0) + "%) — Costo total: $" +
-          Math.round(total+com).toLocaleString("es-AR")
+      pv.textContent = total > 0
+        ? "Total: $" + Math.round(total).toLocaleString("es-AR") +
+          (com > 0 ? " | Comisión: $" + Math.round(com).toLocaleString("es-AR") +
+          " (" + (com/total*100).toFixed(2) + "%) | Costo: $" +
+          Math.round(total+com).toLocaleString("es-AR") : "")
         : "";
     }
     [ci,cm].forEach(function(x){ x.addEventListener("input",upd); });
@@ -122,7 +197,9 @@
     setTimeout(upd, 100);
   }
 
-  // === LEER DOM ===
+  // =====================================================
+  // Leer DOM
+  // =====================================================
   function readFormDOM(){
     if(!activeForm) return null;
     var ticker = (activeForm.querySelector("input[placeholder='Ticker']")||{}).value || "";
@@ -135,7 +212,6 @@
     return { ticker: ticker.toUpperCase(), tipo: tipo.toUpperCase(), cantidad: cantidad, precio: precio, fecha: fecha };
   }
 
-  // === NORMALIZAR OPERACIÓN: asegurar ppc y tipo uppercase ===
   function normalizeOp(op){
     if((!op.ppc || op.ppc === 0) && op.precio > 0) op.ppc = op.precio;
     if(op.tipo) op.tipo = op.tipo.toUpperCase();
@@ -143,13 +219,14 @@
     return op;
   }
 
-  // === LOCALSTORAGE ===
   function getOps(){
     try{ return JSON.parse(localStorage.getItem("operaciones_raw")||"[]"); }
     catch(e){ return []; }
   }
 
-  // === INTERCEPTAR FETCH ===
+  // =====================================================
+  // INTERCEPTAR FETCH
+  // =====================================================
   var _real = window.fetch;
   window.fetch = function(url, opts){
     if(typeof url !== "string" || url.indexOf("/operaciones") === -1)
@@ -157,25 +234,22 @@
 
     var method = (opts && opts.method || "GET").toUpperCase();
 
-    // ========== POST ==========
+    // === POST ===
     if(method === "POST" && opts && opts.body){
       var body;
       try{ body = JSON.parse(opts.body); } catch(e){ return _real.apply(this, arguments); }
 
-      // Leer DOM real
       var dom = readFormDOM();
       if(dom && dom.ticker){
         body.ticker = dom.ticker;
-        body.tipo   = dom.tipo;       // Ya uppercase
+        body.tipo   = dom.tipo;
         body.cantidad = dom.cantidad;
         body.precio = dom.precio;
         body.fecha  = dom.fecha;
       } else {
-        // Fallback: uppercase el tipo del body
         body.tipo = (body.tipo || "compra").toUpperCase();
       }
 
-      // Comisión
       var ci = document.getElementById("com-pct-input");
       var cm = document.getElementById("com-monto-input");
       if(ci || cm){
@@ -188,17 +262,15 @@
 
       opts = Object.assign({}, opts, { body: JSON.stringify(body) });
 
-      // Guardar localmente
       var localId = Date.now() + Math.floor(Math.random()*1000);
       var localOp = normalizeOp(Object.assign({}, body, {
-        id: localId,
-        ppc: body.precio,
+        id: localId, ppc: body.precio,
         invertido_ars: (body.cantidad||0) * (body.precio||0)
       }));
 
       var ops = getOps();
       ops.push(localOp);
-      localStorage.setItem("operaciones_raw", JSON.stringify(ops));
+      _setItem("operaciones_raw", JSON.stringify(ops));
       console.log("💾", localOp.tipo, localOp.ticker, "x"+localOp.cantidad, "$"+localOp.ppc);
 
       return _real.apply(this, [url, opts]).then(function(res){
@@ -208,33 +280,32 @@
             var ix = ops2.findIndex(function(o){ return o.id===localId; });
             if(ix>=0){
               ops2[ix] = normalizeOp(Object.assign({}, data[0]));
-              localStorage.setItem("operaciones_raw", JSON.stringify(ops2));
+              _setItem("operaciones_raw", JSON.stringify(ops2));
             }
           }
           return new Response(JSON.stringify(data),
-            { status:200, headers:{"Content-Type":"application/json"} });
+            {status:200, headers:{"Content-Type":"application/json"}});
         });
       }).catch(function(){
-        console.warn("☁️ Supabase offline. Solo local.");
         return new Response(JSON.stringify([localOp]),
-          { status:200, headers:{"Content-Type":"application/json"} });
+          {status:200, headers:{"Content-Type":"application/json"}});
       });
     }
 
-    // ========== DELETE ==========
+    // === DELETE ===
     if(method === "DELETE"){
       var m = url.match(/id=eq\.(\d+)/);
       if(m){
         var did = parseInt(m[1]);
         var ops = getOps().filter(function(o){ return o.id !== did; });
-        localStorage.setItem("operaciones_raw", JSON.stringify(ops));
+        _setItem("operaciones_raw", JSON.stringify(ops));
       }
       return _real.apply(this, arguments).catch(function(){
-        return new Response("[]", { status:200, headers:{"Content-Type":"application/json"} });
+        return new Response("[]", {status:200, headers:{"Content-Type":"application/json"}});
       });
     }
 
-    // ========== PATCH ==========
+    // === PATCH ===
     if(method === "PATCH" && opts && opts.body){
       var chg;
       try{ chg = JSON.parse(opts.body); } catch(e){ return _real.apply(this, arguments); }
@@ -246,50 +317,46 @@
         if(ix >= 0){
           Object.assign(ops[ix], chg);
           normalizeOp(ops[ix]);
-          localStorage.setItem("operaciones_raw", JSON.stringify(ops));
+          _setItem("operaciones_raw", JSON.stringify(ops));
         }
       }
       return _real.apply(this, arguments).catch(function(){
         return new Response(JSON.stringify([chg]),
-          { status:200, headers:{"Content-Type":"application/json"} });
+          {status:200, headers:{"Content-Type":"application/json"}});
       });
     }
 
-    // ========== GET: normalizar antes de servir ==========
+    // === GET ===
     if(method === "GET" && url.indexOf("order=fecha") >= 0){
       var ops = getOps();
       if(ops.length > 0){
-        // Normalizar CADA operación antes de servir
         var changed = false;
         ops.forEach(function(op){
-          var oldTipo = op.tipo, oldPpc = op.ppc;
+          var old = op.tipo + "|" + op.ppc;
           normalizeOp(op);
-          if(op.tipo !== oldTipo || op.ppc !== oldPpc) changed = true;
+          if(op.tipo + "|" + op.ppc !== old) changed = true;
         });
-        if(changed) localStorage.setItem("operaciones_raw", JSON.stringify(ops));
+        if(changed) _setItem("operaciones_raw", JSON.stringify(ops));
 
-        // Sync de fondo
         _real.apply(this, arguments).then(function(res){
           return res.json().then(function(data){
             if(Array.isArray(data) && data.length > 0){
-              // Normalizar datos de Supabase también
               data.forEach(function(op){ normalizeOp(op); });
-              // Reemplazar si Supabase tiene más datos
               var local = getOps();
               if(data.length >= local.length){
-                localStorage.setItem("operaciones_raw", JSON.stringify(data));
+                _setItem("operaciones_raw", JSON.stringify(data));
               }
             }
           });
         }).catch(function(){});
 
         return Promise.resolve(new Response(JSON.stringify(ops),
-          { status:200, headers:{"Content-Type":"application/json"} }));
+          {status:200, headers:{"Content-Type":"application/json"}}));
       }
     }
 
     return _real.apply(this, arguments);
   };
 
-  console.log("💰 comision-patch v4: uppercase tipo + ppc + autocomplete + sync");
+  console.log("💰 comision-patch v4: portfolio desde ops + uppercase + ppc + autocomplete");
 })();
