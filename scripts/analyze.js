@@ -141,33 +141,24 @@ async function fetchNews(prev){
   return news;
 }
 
-// === 2. TRADUCIR CON GROQ (server-side) ===
-const GROQ_KEY="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";
+// === 2. TRADUCIR CON GOOGLE TRANSLATE (sin key, no expira) ===
 async function translateBatch(titles){
-  if(!titles.length) return titles;
-  try{
-    const r=await fetch("https://api.groq.com/openai/v1/chat/completions",{
-      method:"POST",
-      headers:{"Content-Type":"application/json","Authorization":"Bearer "+GROQ_KEY},
-      body:JSON.stringify({
-        model:"llama-3.3-70b-versatile",
-        messages:[
-          {role:"system",content:"Traducí estos títulos de noticias financieras al español neutro. Devolvé SOLO un JSON array con las traducciones, en el mismo orden. Sin explicaciones ni markdown."},
-          {role:"user",content:JSON.stringify(titles)}
-        ],
-        max_tokens:2000, temperature:0.1
-      })
-    });
-    if(!r.ok) throw new Error("Groq HTTP "+r.status);
-    const j=await r.json();
-    const text=(j.choices?.[0]?.message?.content||"").trim();
-    const arr=JSON.parse(text);
-    if(Array.isArray(arr)&&arr.length===titles.length) return arr;
-    throw new Error("respuesta inválida");
-  }catch(e){
-    console.log("  Traducción falló: "+e.message);
-    return titles;
+  if(!titles.length) return [];
+  const results = [];
+  for(const t of titles){
+    try {
+      const url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=es&dt=t&q=" + encodeURIComponent(t);
+      const r = await fetch(url);
+      const data = await r.json();
+      // data[0] es array de traducciones, cada una es [traducido, original, ...]
+      const translated = data[0].map(x => x[0]).join("");
+      results.push(translated);
+    } catch(e) {
+      results.push(t); // Si falla, devuelve original
+    }
+    await new Promise(r=>setTimeout(r,200)); // Rate limit
   }
+  return results;
 }
 
 async function translateNews(news){
