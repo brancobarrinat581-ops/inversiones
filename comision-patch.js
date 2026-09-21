@@ -1,44 +1,66 @@
-// comision-patch.js v3 — Fix tipo/precio + autocomplete tickers + comisiones + localStorage sync
+// comision-patch.js v3 — Fix completo: migración datos + fix tipo/precio + autocomplete + comisiones + sync
 (function(){
   "use strict";
   var DEFAULT_PCT = 0.6;
-
-  // Tickers del portfolio
   var TICKERS = [
     'NVDA','META','MSFT','ADBE','MU','PANW','MELI','ACN','MCD',
     'NU','VIST','IBIT','ICLN','PAMP','GGAL','YPF','BMA','SPY',
     'IOLCAMA','IOLDOLD'
   ];
 
+  // === MIGRACIÓN: arreglar datos existentes en localStorage ===
+  (function migrate(){
+    var raw = localStorage.getItem("operaciones_raw");
+    if(!raw) return;
+    try {
+      var ops = JSON.parse(raw);
+      if(!Array.isArray(ops) || ops.length === 0) return;
+      var fixed = 0;
+      ops.forEach(function(op){
+        // Fix 1: si ppc falta o es 0 pero precio existe, copiar precio → ppc
+        if((!op.ppc || op.ppc === 0) && op.precio && op.precio > 0){
+          op.ppc = op.precio;
+          fixed++;
+        }
+        // Fix 2: calcular invertido_ars si falta
+        if(!op.invertido_ars && op.ppc > 0 && op.cantidad > 0){
+          op.invertido_ars = op.cantidad * op.ppc;
+        }
+      });
+      if(fixed > 0){
+        localStorage.setItem("operaciones_raw", JSON.stringify(ops));
+        console.log("🔧 Migración: " + fixed + " operaciones arregladas (ppc copiado de precio)");
+      }
+    } catch(e){ console.warn("Migración falló:", e); }
+  })();
+
   // === Referencias al formulario activo ===
   var activeForm = null;
 
-  // === MUTATION OBSERVER: detectar formulario de operaciones ===
+  // === MUTATION OBSERVER: detectar formulario ===
   new MutationObserver(function(muts){
     muts.forEach(function(mut){
       mut.addedNodes.forEach(function(node){
         if(node.nodeType!==1)return;
-        // Buscar h3 con "Operaci" (Agregar Operación / Editar Operación)
-        var h3s=node.querySelectorAll?node.querySelectorAll("h3"):[];
+        var h3s = node.querySelectorAll ? node.querySelectorAll("h3") : [];
         h3s.forEach(function(h3){
-          if(h3.textContent.indexOf("Operaci")===-1)return;
-          var form=h3.closest("div");
-          if(!form||form.dataset.comPatched)return;
-          form.dataset.comPatched="1";
+          if(h3.textContent.indexOf("Operaci")===-1) return;
+          var form = h3.closest("div");
+          if(!form || form.dataset.comPatched) return;
+          form.dataset.comPatched = "1";
           enhanceForm(form);
         });
       });
     });
-  }).observe(document.body,{childList:true,subtree:true});
+  }).observe(document.body, {childList:true, subtree:true});
 
-  // === ENHANCE FORM: autocomplete + comisiones ===
+  // === ENHANCE FORM ===
   function enhanceForm(form){
     activeForm = form;
 
-    // 1. Encontrar el input del Ticker y agregar datalist
+    // Autocomplete de tickers
     var tickerInput = form.querySelector("input[placeholder='Ticker']");
     if(tickerInput){
-      // Crear datalist si no existe
       if(!document.getElementById("dl-tickers")){
         var dl = document.createElement("datalist");
         dl.id = "dl-tickers";
@@ -49,11 +71,11 @@
         });
         document.body.appendChild(dl);
       }
-      tickerInput.setAttribute("list","dl-tickers");
-      tickerInput.setAttribute("autocomplete","off");
+      tickerInput.setAttribute("list", "dl-tickers");
+      tickerInput.setAttribute("autocomplete", "off");
     }
 
-    // 2. Inyectar campos de comisión
+    // Campos de comisión
     var grid = form.querySelector("div[style*='grid']");
     if(!grid) return;
     var ref = grid.querySelector("input[type='number']");
@@ -92,7 +114,7 @@
     }
     [ci,cm].forEach(function(x){ x.addEventListener("input",upd); });
     grid.querySelectorAll("input").forEach(function(x){ x.addEventListener("input",upd); });
-    setTimeout(upd,100);
+    setTimeout(upd, 100);
   }
 
   // === LEER VALORES REALES DEL DOM ===
@@ -108,7 +130,7 @@
     return { ticker: ticker.toUpperCase(), tipo: tipo, cantidad: cantidad, precio: precio, fecha: fecha };
   }
 
-  // === LOCALSTORAGE HELPERS ===
+  // === LOCALSTORAGE ===
   function getOps(){
     try{ return JSON.parse(localStorage.getItem("operaciones_raw")||"[]"); }
     catch(e){ return []; }
@@ -127,17 +149,19 @@
       var body;
       try{ body = JSON.parse(opts.body); } catch(e){ return _real.apply(this, arguments); }
 
-      // >>> FIX PRINCIPAL: leer valores reales del DOM <<<
+      // >>> FIX: leer valores reales del DOM, no confiar en app.js <<<
       var dom = readFormDOM();
       if(dom && dom.ticker){
+        console.log("📋 DOM dice:", dom.tipo, dom.ticker, "x"+dom.cantidad, "$"+dom.precio);
+        console.log("📋 app.js mandó:", body.tipo, body.ticker, "x"+body.cantidad, "$"+body.precio);
         body.ticker = dom.ticker;
-        body.tipo = dom.tipo;
+        body.tipo   = dom.tipo;
         body.cantidad = dom.cantidad;
         body.precio = dom.precio;
-        body.fecha = dom.fecha;
+        body.fecha  = dom.fecha;
       }
 
-      // Agregar comisión
+      // Comisión
       var ci = document.getElementById("com-pct-input");
       var cm = document.getElementById("com-monto-input");
       if(ci || cm){
@@ -148,10 +172,10 @@
         body.comision_monto = monto > 0 ? monto : Math.round(total * pct / 100);
       }
 
-      // Reconstruir opts con body corregido
+      // Reconstruir opts
       opts = Object.assign({}, opts, { body: JSON.stringify(body) });
 
-      // Generar ID local
+      // Guardar localmente
       var localId = Date.now() + Math.floor(Math.random()*1000);
       var localOp = Object.assign({}, body, {
         id: localId,
@@ -159,14 +183,13 @@
         invertido_ars: (body.cantidad||0) * (body.precio||0)
       });
 
-      // Guardar en localStorage INMEDIATAMENTE
       var ops = getOps();
       ops.push(localOp);
       localStorage.setItem("operaciones_raw", JSON.stringify(ops));
-      console.log("💾 Operación guardada:", localOp.ticker, localOp.tipo,
-        "x"+localOp.cantidad, "$"+localOp.precio, "Total:", ops.length);
+      console.log("💾 Guardado:", localOp.tipo, localOp.ticker,
+        "x"+localOp.cantidad, "$"+localOp.ppc, "| Total ops:", ops.length);
 
-      // Intentar Supabase
+      // Supabase
       return _real.apply(this, [url, opts]).then(function(res){
         return res.json().then(function(data){
           if(Array.isArray(data) && data[0] && data[0].id){
@@ -181,7 +204,7 @@
             { status:200, headers:{"Content-Type":"application/json"} });
         });
       }).catch(function(){
-        console.warn("☁️ Supabase offline. Operación guardada solo localmente.");
+        console.warn("☁️ Supabase offline. Guardado solo local.");
         return new Response(JSON.stringify([localOp]),
           { status:200, headers:{"Content-Type":"application/json"} });
       });
@@ -221,18 +244,35 @@
       });
     }
 
-    // ========== GET ==========
+    // ========== GET: servir desde localStorage con ppc asegurado ==========
     if(method === "GET" && url.indexOf("order=fecha") >= 0){
       var ops = getOps();
       if(ops.length > 0){
+        // Asegurar que cada op tenga ppc
+        var fixedNow = 0;
+        ops.forEach(function(op){
+          if((!op.ppc || op.ppc === 0) && op.precio > 0){
+            op.ppc = op.precio;
+            fixedNow++;
+          }
+        });
+        if(fixedNow > 0){
+          localStorage.setItem("operaciones_raw", JSON.stringify(ops));
+        }
+
         // Sync de fondo
         _real.apply(this, arguments).then(function(res){
           return res.json().then(function(data){
             if(Array.isArray(data) && data.length > ops.length){
+              // Asegurar ppc en los datos de Supabase también
+              data.forEach(function(op){
+                if((!op.ppc || op.ppc === 0) && op.precio > 0) op.ppc = op.precio;
+              });
               localStorage.setItem("operaciones_raw", JSON.stringify(data));
             }
           });
         }).catch(function(){});
+
         return Promise.resolve(new Response(JSON.stringify(ops),
           { status:200, headers:{"Content-Type":"application/json"} }));
       }
@@ -241,5 +281,5 @@
     return _real.apply(this, arguments);
   };
 
-  console.log("💰 comision-patch v3: fix tipo/precio + autocomplete + comisiones + sync");
+  console.log("💰 comision-patch v3: migración + fix tipo/precio + autocomplete + sync");
 })();
