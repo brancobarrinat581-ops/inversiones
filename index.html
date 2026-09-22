@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inversiones Dashboard</title>
+  <meta name="description" content="IOL Portfolio Dashboard - Seguimiento CEDEAR" />
+  <meta name="theme-color" content="#0d1117" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; background: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    body { display: flex; flex-direction: column; }
+    #root { flex: 1; overflow: auto; }
+  </style>
+  
+  <script>
+    // === CARGAR DATOS ANTES DE LA APP ===
+    (async function() {
+      // Backup pasivo cada 30s
+      var doBackup = async function() {
+        try {
+          var res = await fetch("/operaciones?limit=1000&order=fecha.desc");
+          if(!res.ok) return;
+          var ops = await res.json();
+          localStorage.setItem("operaciones_raw", JSON.stringify(ops));
+          console.log("💾 Backup automático:", ops.length, "ops");
+        } catch(e){}
+      };
+      setInterval(doBackup, 30000);
+    })();
+  </script>
+
+  <script>
+    (function() {
+      function sha256(txt) {
+        var data = new TextEncoder().encode(txt);
+        return crypto.subtle.digest('SHA-256', data).then(buf => {
+          var arr = Array.from(new Uint8Array(buf));
+          return arr.map(b => b.toString(16).padStart(2, '0')).join('');
+        });
+      }
+
+      var USERS = {
+        "brancobarrinat581@gmail.com": { pwd: "b7bef4c1d9d83520b27d807ca0689f7b60ab5c3bc3cfede619e044b13560b931", uid: "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06" },
+        "corina.pacini77@gmail.com": { pwd: "b7bef4c1d9d83520b27d807ca0689f7b60ab5c3bc3cfede619e044b13560b931", uid: "ca7f985f-4b40-41da-b55b-86b5bc045bcb" }
+      };
+
+      var origFetch = window.fetch;
+      window.fetch = function(url, opts) {
+        if (url.indexOf("/auth/v1/signup") !== -1) {
+          return Promise.resolve(new Response(JSON.stringify({
+            user: { id: "fake-id", email: "test@test.com" },
+            session: { access_token: "fake-token" }
+          }), { status: 200, headers: {"Content-Type":"application/json"} }));
+        }
+
+        if (url.indexOf("/auth/v1/token") !== -1 || url.indexOf("/auth/v1/user") !== -1) {
+          var body = (opts && opts.body) ? JSON.parse(opts.body) : {};
+          var email = body.email || body.username || "";
+          var pwd = body.password || "";
+
+          if (url.indexOf("/auth/v1/user") !== -1) {
+            var auth = (opts && opts.headers && opts.headers.Authorization) || "";
+            var token = auth.replace("Bearer ", "");
+            if (token.length > 5) {
+              var email2 = Object.keys(USERS)[0];
+              return Promise.resolve(new Response(JSON.stringify({ id: USERS[email2].uid, email: email2, role: "authenticated" }), { status: 200, headers: {"Content-Type":"application/json"} }));
+            }
+          }
+
+          if (!USERS[email]) {
+            return Promise.resolve(new Response(JSON.stringify({
+              error: "invalid_credentials",
+              error_description: "Email o contraseña invalidos"
+            }), { status: 400, headers: {"Content-Type":"application/json"} }));
+          }
+
+          return sha256(pwd).then(function(hash) {
+            if (hash !== USERS[email].pwd) {
+              return new Response(JSON.stringify({
+                error: "invalid_credentials",
+                error_description: "Credenciales invalidas"
+              }), { status: 400, headers: {"Content-Type":"application/json"} });
+            }
+            return new Response(JSON.stringify({
+              user: { id: USERS[email].uid, email: email },
+              session: { access_token: "fake-jwt-token-" + email, expires_in: 3600 }
+            }), { status: 200, headers: {"Content-Type":"application/json"} });
+          });
+        }
+
+        if (url.indexOf("/auth/v1/logout") !== -1) {
+          return Promise.resolve(new Response("{}", { status: 200, headers: {"Content-Type":"application/json"} }));
+        }
+
+        return origFetch.apply(this, arguments);
+      };
+    })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <script>
+    (function() {
+      try {
+        var x = new XMLHttpRequest();
+        x.open("GET", "analysts.json?t=" + Date.now(), false);
+        x.send(null);
+        if (x.status !== 200) return;
+        var f = JSON.parse(x.responseText).fundamentals || {};
+        var out = {}, n = 0;
+        var CON = { strong_buy:"Strong Buy", buy:"Buy", hold:"Hold", underperform:"Sell", sell:"Sell" };
+        Object.keys(f).forEach(function(tk) {
+          var d = f[tk]; if (!d) return;
+          var o = {};
+          if (d.target != null)    o.target = Math.round(d.target * 100) / 100;
+          if (d.consensus)         o.con = CON[d.consensus] || d.consensus;
+          if (d.pe != null)        o.pe = Math.round(d.pe) + (d.forwardPE != null ? "/" + Math.round(d.forwardPE) : "");
+          if (d.analysts != null)  o.analistas = d.analysts;
+          if (Object.keys(o).length) { o.fuente = d.source || "Yahoo Finance"; out[tk] = o; n++; }
+        });
+        window.__FUND_REAL = out;
+        if (n) console.log("Analistas: " + n + " tickers con datos reales de Yahoo");
+        else   console.log("Analistas: sin datos reales todavia, corre el workflow Update Analysis Data");
+      } catch (e) { console.warn("analysts.json no disponible:", e.message); }
+    })();
+  </script>
+
+  <script type="module" src="app.js"></script>
+  <script src="analysis.js"></script>
+  <script src="catalysts-ui.js"></script>
+  <script src="comision-patch.js"></script>
+  <script src="usd-patch.js"></script>
+</body>
+</html>
