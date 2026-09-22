@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inversiones Dashboard</title>
+  <meta name="description" content="IOL Portfolio Dashboard - Seguimiento CEDEAR" />
+  <meta name="theme-color" content="#0d1117" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; background: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    body { display: flex; flex-direction: column; }
+    #root { flex: 1; overflow: auto; }
+  </style>
+
+  <script>
+  // === 1. PRECARGAR DATOS ANTES DE APP.JS ===
+  (async function() {
+    // Cargar operaciones: localStorage tiene prioridad
+    try {
+      var opsLocal = localStorage.getItem('operaciones_raw');
+      if (opsLocal && JSON.parse(opsLocal).length > 0) {
+        console.log('✅ Operaciones desde localStorage:', JSON.parse(opsLocal).length);
+      } else {
+        var res = await fetch('operaciones.json?t=' + Date.now());
+        if (res.ok) {
+          var data = await res.json();
+          localStorage.setItem('operaciones_raw', JSON.stringify(data.operaciones));
+          console.log('✅ Operaciones semilla cargadas:', data.operaciones.length);
+        }
+      }
+    } catch(e) { console.warn('operaciones: error carga', e); }
+
+    // Backup pasivo cada 30s
+    setInterval(function() {
+      try {
+        var ops = JSON.parse(localStorage.getItem("operaciones_raw") || "[]");
+        if (ops.length > 0) console.log("💾 Backup check:", ops.length, "ops en localStorage");
+      } catch(e) {}
+    }, 30000);
+  })();
+  </script>
+
+  <script>
+  // === 2. AUTH BRIDGE (intercepta login sin Supabase auth) ===
+  (function() {
+    function sha256(txt) {
+      var data = new TextEncoder().encode(txt);
+      return crypto.subtle.digest("SHA-256", data).then(function(buf) {
+        return Array.from(new Uint8Array(buf)).map(function(b) {
+          return b.toString(16).padStart(2, "0");
+        }).join("");
+      });
+    }
+
+    var USERS = {
+      "brancobarrinat581@gmail.com": {
+        passHash: "b7bef4c1d9d83520b27d807ca0689f7b60ab5c3bc3cfede619e044b13560b931",
+        uid: "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjo0MTAyNDQ0ODAwLCJpYXQiOjE3ODU4NzgxMDAsImlzcyI6Imh0dHBzOi8vYmV6eGxya29scGZhZXF2eXhja2ouc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6ImRkOWJlOGU5LTE0ZjEtNGMyNy1iYjk2LTRlNmI2Y2IyNGYwNiIsImVtYWlsIjoiYnJhbmNvYmFycmluYXQ1ODFAZ21haWwuY29tIiwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJzZXNzaW9uX2lkIjoiMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDAwMDAwMDAxIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3ODU4NzgxMDB9XX0.dshyFRmmLwnjqhkI7r6gU10zX9rq-5H564wXsDW2JsA"
+      },
+      "corina.pacini77@gmail.com": {
+        passHash: "b7bef4c1d9d83520b27d807ca0689f7b60ab5c3bc3cfede619e044b13560b931",
+        uid: "ca7f985f-4b40-41da-b55b-86b5bc045bcb",
+        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjo0MTAyNDQ0ODAwLCJpYXQiOjE3ODU4NzgxMDAsImlzcyI6Imh0dHBzOi8vYmV6eGxya29scGZhZXF2eXhja2ouc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6ImNhN2Y5ODVmLTRiNDAtNDFkYS1iNTViLTg2YjViYzA0NWNiYiIsImVtYWlsIjoiY29yaW5hLnBhY2luaTc3QGdtYWlsLmNvbSIsInJvbGUiOiJhdXRoZW50aWNhdGVkIiwic2Vzc2lvbl9pZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMiIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzg1ODc4MTAwfV19.Bz8HX7fXr9a4xW5D_J6oLNbX_nPcWsVvXeCZBcKN0WQ"
+      }
+    };
+
+    // Rate limiting
+    var login_attempts = {};
+    var login_lock = {};
+
+    var origFetch = window.fetch;
+    window.fetch = function(url, opts) {
+      if (typeof url !== "string") return origFetch.apply(this, arguments);
+
+      // Signup
+      if (url.indexOf("/auth/v1/signup") !== -1) {
+        return Promise.resolve(new Response(JSON.stringify({
+          error: "signup_disabled", error_description: "Registro deshabilitado"
+        }), { status: 400, headers: {"Content-Type":"application/json"} }));
+      }
+
+      // Token (login)
+      if (url.indexOf("/auth/v1/token") !== -1 && opts && opts.body) {
+        var body; try { body = JSON.parse(opts.body); } catch(e) { return origFetch.apply(this, arguments); }
+        var email = (body.email || "").toLowerCase();
+        var pwd = body.password || "";
+
+        // Rate limit
+        var now = Date.now();
+        if (login_lock[email] && login_lock[email] > now) {
+          var seg = Math.ceil((login_lock[email] - now) / 1000);
+          return Promise.resolve(new Response(JSON.stringify({
+            error: "too_many_attempts",
+            error_description: "Demasiados intentos. Espera " + seg + " segundos."
+          }), { status: 429, headers: {"Content-Type":"application/json"} }));
+        }
+
+        var u = USERS[email];
+        if (!u) {
+          return Promise.resolve(new Response(JSON.stringify({
+            error: "invalid_credentials", error_description: "Email o contraseña invalidos"
+          }), { status: 400, headers: {"Content-Type":"application/json"} }));
+        }
+
+        return sha256(pwd).then(function(hash) {
+          if (hash === u.passHash) {
+            login_attempts[email] = 0;
+            return new Response(JSON.stringify({
+              access_token: u.token,
+              token_type: "bearer",
+              expires_in: 36000000,
+              refresh_token: u.token,
+              user: { id: u.uid, email: email, role: "authenticated" }
+            }), { status: 200, headers: {"Content-Type":"application/json"} });
+          }
+          // Wrong password
+          var st = login_attempts[email] = (login_attempts[email] || 0) + 1;
+          if (st >= 5) { login_lock[email] = now + 120000; login_attempts[email] = 0; }
+          var rest = 5 - st;
+          return new Response(JSON.stringify({
+            error: "invalid_credentials",
+            error_description: rest > 0
+              ? "Credenciales invalidas. Te quedan " + rest + " intentos."
+              : "Demasiados intentos. Cuenta bloqueada 2 minutos."
+          }), { status: 400, headers: {"Content-Type":"application/json"} });
+        });
+      }
+
+      // Get user (session check)
+      if (url.indexOf("/auth/v1/user") !== -1) {
+        var auth = (opts && opts.headers && (opts.headers.Authorization || opts.headers.authorization)) || "";
+        var tkn = auth.replace("Bearer ", "");
+        var found = null;
+        Object.keys(USERS).forEach(function(em) {
+          if (USERS[em].token === tkn) found = { id: USERS[em].uid, email: em, role: "authenticated" };
+        });
+        if (found) {
+          return Promise.resolve(new Response(JSON.stringify(found),
+            { status: 200, headers: {"Content-Type":"application/json"} }));
+        }
+        return Promise.resolve(new Response(JSON.stringify({ error: "not_authenticated" }),
+          { status: 401, headers: {"Content-Type":"application/json"} }));
+      }
+
+      // Logout
+      if (url.indexOf("/auth/v1/logout") !== -1) {
+        return Promise.resolve(new Response("{}", { status: 200, headers: {"Content-Type":"application/json"} }));
+      }
+
+      return origFetch.apply(this, arguments);
+    };
+  })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+  // === 3. DATOS REALES DE ANALISTAS ===
+  (function() {
+    try {
+      var x = new XMLHttpRequest();
+      x.open("GET", "analysts.json?t=" + Date.now(), false);
+      x.send(null);
+      if (x.status !== 200) return;
+      var f = JSON.parse(x.responseText).fundamentals || {};
+      var out = {}, n = 0;
+      var CON = { strong_buy:"Strong Buy", buy:"Buy", hold:"Hold", underperform:"Sell", sell:"Sell" };
+      Object.keys(f).forEach(function(tk) {
+        var d = f[tk]; if (!d) return;
+        var o = {};
+        if (d.target != null)    o.target = Math.round(d.target * 100) / 100;
+        if (d.consensus)         o.con = CON[d.consensus] || d.consensus;
+        if (d.pe != null)        o.pe = Math.round(d.pe) + (d.forwardPE != null ? "/" + Math.round(d.forwardPE) : "");
+        if (d.analysts != null)  o.analistas = d.analysts;
+        if (Object.keys(o).length) { o.fuente = d.source || "Yahoo Finance"; out[tk] = o; n++; }
+      });
+      window.__FUND_REAL = out;
+      if (n) console.log("Analistas: " + n + " tickers con datos reales de Yahoo");
+    } catch (e) { console.warn("analysts.json no disponible:", e.message); }
+  })();
+  </script>
+
+  <script type="module" src="app.js"></script>
+  <script src="analysis.js"></script>
+  <script src="catalysts-ui.js"></script>
+  <script src="comision-patch.js"></script>
+  <script src="usd-patch.js"></script>
+</body>
+</html>
