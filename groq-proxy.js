@@ -1,27 +1,29 @@
-// groq-proxy.js v5 — Manejo de errores para lupa/chat AI
-// Groq API soporta CORS directo. Solo interceptamos errores.
+// groq-proxy.js v6 — Reemplaza API key y maneja errores
 (function(){
   "use strict";
   var _fetch = window.fetch;
+  var NEW_KEY = "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";
 
   window.fetch = function(url, opts){
     if(typeof url !== "string" || url.indexOf("api.groq.com") === -1)
       return _fetch.apply(this, arguments);
 
-    console.log("🔍 Lupa: llamando Groq directo...");
+    // Reemplazar la API key vieja por la nueva
+    if(opts && opts.headers){
+      if(opts.headers instanceof Headers){
+        opts.headers.set("Authorization", "Bearer " + NEW_KEY);
+      } else if(typeof opts.headers === "object"){
+        opts.headers.Authorization = "Bearer " + NEW_KEY;
+        opts.headers.authorization = "Bearer " + NEW_KEY;
+      }
+    }
 
     return _fetch.apply(this, arguments)
       .then(function(resp){
         if(!resp.ok){
-          console.warn("⚠️ Groq respondió HTTP " + resp.status);
-          // Clonar para leer el error sin consumir el body
           return resp.clone().text().then(function(body){
             var msg = "Error del servidor AI (HTTP " + resp.status + ")";
-            try {
-              var err = JSON.parse(body);
-              if(err.error && err.error.message) msg = err.error.message;
-            } catch(e){}
-            // Devolver respuesta con formato que app.js entiende
+            try { var e = JSON.parse(body); if(e.error && e.error.message) msg = e.error.message; } catch(x){}
             return new Response(JSON.stringify({
               choices: [{ message: { content: "⚠️ " + msg } }]
             }), { status: 200, headers: {"Content-Type":"application/json"} });
@@ -30,11 +32,10 @@
         return resp;
       })
       .catch(function(err){
-        console.error("❌ Groq no accesible:", err.message);
         return new Response(JSON.stringify({
-          choices: [{ message: { content: "⚠️ No pude conectar con el asistente AI: " + err.message + ". Verificá tu conexión e intentá de nuevo." } }]
+          choices: [{ message: { content: "⚠️ No pude conectar con el asistente AI: " + err.message } }]
         }), { status: 200, headers: {"Content-Type":"application/json"} });
       });
   };
-  console.log("🔍 groq-proxy v5: error handler activo");
+  console.log("🔍 groq-proxy v6: key actualizada + error handler");
 })();
