@@ -1,6 +1,5 @@
-// usd-patch.js v3 — USD equivalente para Invertido y Valor actual
-// Usa el MISMO cálculo que app.js: sum(cantidad/ratio × precio_USD)
-// No usa ARS/CCL (que infla por spread)
+// usd-patch.js v4 — USD bajo Invertido y Valor actual
+// Navega el DOM por estructura, no por estilos
 (function(){
   "use strict";
 
@@ -12,8 +11,9 @@
   };
 
   function fmt(n) {
-    if (n >= 1000) return (n/1000).toFixed(1).replace(/\.0$/,'') + 'k';
-    return Math.round(n).toLocaleString('es-AR');
+    return n >= 1000
+      ? Math.round(n).toLocaleString('en-US')
+      : Math.round(n).toLocaleString('en-US');
   }
 
   function calcUSD() {
@@ -23,7 +23,7 @@
     if (!pd || !pd.prices || !ops || !ops.length) return;
     var ccl = pd.ccl || 1578;
 
-    // Calcular tenencia neta por ticker
+    // Tenencia neta
     var holdings = {};
     ops.forEach(function(o) {
       var tk = o.ticker;
@@ -36,7 +36,7 @@
       }
     });
 
-    // Calcular USD invertido y USD valor actual con MISMO método de app.js
+    // USD con mismo método que app.js
     var invUSD = 0, valUSD = 0;
     Object.keys(holdings).forEach(function(tk) {
       var h = holdings[tk];
@@ -44,73 +44,52 @@
       var ratio = RATIOS[tk] || 1;
       var p = pd.prices[tk];
       var usdPrice = p ? (p.usd || 0) : 0;
-
       if (usdPrice > 0) {
-        // Valor actual USD = cantidad/ratio × precio_USD (igual que app.js)
         valUSD += h.cant / ratio * usdPrice;
-        // Invertido USD = costoARS / CCL (aproximación, porque no tenemos el CCL histórico)
-        invUSD += h.costoARS / ccl;
       } else {
-        // Sin precio USD: usar ARS/CCL como fallback
-        var arsPrice = p ? (p.ars || 0) : 0;
-        if (arsPrice > 0) {
-          valUSD += h.cant * arsPrice / ccl;
-          invUSD += h.costoARS / ccl;
-        }
+        var ars = p ? (p.ars || 0) : 0;
+        if (ars > 0) valUSD += h.cant * ars / ccl;
       }
+      invUSD += h.costoARS / ccl;
     });
 
     if (valUSD === 0) return;
 
-    // Buscar los elementos del resumen
-    var spans = document.querySelectorAll('div');
-    var invertidoEl = null, valorEl = null;
+    // Buscar labels "Invertido" y "Valor actual" en el DOM
+    var allDivs = document.querySelectorAll('#root div');
+    allDivs.forEach(function(el) {
+      var txt = (el.textContent || '').trim();
+      var isLabel = (txt === 'Invertido' || txt === 'Valor actual');
+      if (!isLabel) return;
+      // Verificar que es el label chico (0.8rem), no un container
+      if (el.children.length > 0) return;
+      var fs = el.style.fontSize;
+      if (fs && fs !== '0.8rem') return;
 
-    spans.forEach(function(el) {
-      var text = el.textContent.trim();
-      if (text === 'Invertido') invertidoEl = el;
-      if (text === 'Valor actual') valorEl = el;
+      var usdVal = txt === 'Invertido' ? invUSD : valUSD;
+      var valueDiv = el.nextElementSibling;
+      if (!valueDiv) return;
+
+      // Buscar si ya existe mi sub
+      var parent = el.parentElement;
+      var existing = parent ? parent.querySelector('.usd-eq') : null;
+      if (existing) {
+        existing.textContent = '≈ USD ' + fmt(usdVal);
+        return;
+      }
+
+      // Crear sub
+      var sub = document.createElement('div');
+      sub.className = 'usd-eq';
+      sub.style.cssText = 'color:#58a6ff;font-size:0.8rem;margin-top:2px;';
+      sub.textContent = '≈ USD ' + fmt(usdVal);
+      valueDiv.insertAdjacentElement('afterend', sub);
     });
-
-    // Inyectar USD debajo de cada valor
-    if (invertidoEl) {
-      var container = invertidoEl.parentElement;
-      if (container && !container.querySelector('.usd-sub')) {
-        var valDiv = container.querySelector('div[style*="1.4rem"], div[style*="1.5rem"], div[style*="1.6rem"]');
-        if (valDiv) {
-          var sub = document.createElement('div');
-          sub.className = 'usd-sub';
-          sub.style.cssText = 'color:#58a6ff;font-size:0.8rem;margin-top:2px;';
-          sub.textContent = '≈ USD ' + fmt(invUSD);
-          valDiv.after(sub);
-        }
-      } else if (container) {
-        var existing = container.querySelector('.usd-sub');
-        if (existing) existing.textContent = '≈ USD ' + fmt(invUSD);
-      }
-    }
-
-    if (valorEl) {
-      var container2 = valorEl.parentElement;
-      if (container2 && !container2.querySelector('.usd-sub')) {
-        var valDiv2 = container2.querySelector('div[style*="1.4rem"], div[style*="1.5rem"], div[style*="1.6rem"]');
-        if (valDiv2) {
-          var sub2 = document.createElement('div');
-          sub2.className = 'usd-sub';
-          sub2.style.cssText = 'color:#58a6ff;font-size:0.8rem;margin-top:2px;';
-          sub2.textContent = '≈ USD ' + fmt(valUSD);
-          valDiv2.after(sub2);
-        }
-      } else if (container2) {
-        var existing2 = container2.querySelector('.usd-sub');
-        if (existing2) existing2.textContent = '≈ USD ' + fmt(valUSD);
-      }
-    }
   }
 
-  // Polling suave: esperar a que React renderice, luego cada 5s
-  setTimeout(calcUSD, 2000);
+  // Esperar render de React, luego polling suave
+  setTimeout(calcUSD, 2500);
   setTimeout(calcUSD, 4000);
   setInterval(calcUSD, 5000);
-  console.log('💵 usd-patch v3: USD consistente con app.js');
+  console.log('💵 usd-patch v4 activo');
 })();
