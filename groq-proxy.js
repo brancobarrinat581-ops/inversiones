@@ -2,13 +2,12 @@
 (function(){
   "use strict";
   var _fetch = window.fetch;
-  var NEW_KEY = "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";
+  var NEW_KEY = "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";
 
   window.fetch = function(url, opts){
     if(typeof url !== "string" || url.indexOf("api.groq.com") === -1)
       return _fetch.apply(this, arguments);
 
-    // Reemplazar la API key vieja por la nueva
     if(opts && opts.headers){
       if(opts.headers instanceof Headers){
         opts.headers.set("Authorization", "Bearer " + NEW_KEY);
