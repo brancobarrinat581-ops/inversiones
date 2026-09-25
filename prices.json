@@ -1,122 +1,154 @@
 {
-  "ts": "2026-09-25T12:58:20.348484Z",
-  "ccl": 1614.3,
-  "cclSrc": "dolarapi (seed)",
+  "ts": "2026-09-25T17:40:00.070Z",
+  "ccl": 1621,
+  "cclSrc": "dolarapi",
   "count": 20,
   "real": 18,
-  "stale": 2,
+  "stale": 0,
   "prices": {
     "ADBE": {
-      "usd": 246.67,
-      "ars": 9050,
-      "changePct": 0,
-      "src": "Excel seed",
+      "usd": 235.99,
+      "ars": 8680,
+      "changePct": -0.74,
+      "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
-    },
-    "IBIT": {
-      "usd": 48.41,
-      "ars": 7815,
-      "changePct": 0,
-      "src": "Excel seed",
-      "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
+      "asOf": "2026-09-25T17:40:00.070Z"
     },
     "MELI": {
-      "usd": 1800.41,
-      "ars": 24220,
-      "changePct": 0,
-      "src": "Excel seed",
+      "usd": 1748.94,
+      "ars": 23660,
+      "changePct": 0.3,
+      "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
-    },
-    "META": {
-      "usd": 732.06,
-      "ars": 49240,
-      "changePct": 0,
-      "src": "Excel seed",
-      "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
+      "asOf": "2026-09-25T17:40:00.070Z"
     },
     "MSFT": {
-      "usd": 496.19,
-      "ars": 26700,
-      "changePct": 0,
-      "src": "Excel seed",
+      "usd": 515.84,
+      "ars": 27880,
+      "changePct": 4.03,
+      "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
+      "asOf": "2026-09-25T17:40:00.070Z"
     },
     "MU": {
-      "usd": 1031.56,
-      "ars": 333050,
-      "changePct": 0,
-      "src": "Excel seed",
+      "usd": 1082.5,
+      "ars": 351075,
+      "changePct": 0.77,
+      "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
-    },
-    "NU": {
-      "usd": 14.87,
-      "ars": 12000,
-      "changePct": 0,
-      "src": "Excel seed",
-      "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
+      "asOf": "2026-09-25T17:40:00.070Z"
     },
     "NVDA": {
-      "usd": 224.64,
-      "ars": 15110,
-      "changePct": 0,
-      "src": "Excel seed",
+      "usd": 224.89,
+      "ars": 15230,
+      "changePct": 0.73,
+      "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
-    },
-    "PAMP": {
-      "usd": 80.38,
-      "ars": 5190,
-      "changePct": 0,
-      "src": "Excel seed",
-      "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
+      "asOf": "2026-09-25T17:40:00.070Z"
     },
     "PANW": {
-      "usd": 367.03,
-      "ars": 11850,
-      "changePct": 0,
-      "src": "Excel seed",
+      "usd": 378.61,
+      "ars": 12270,
+      "changePct": -2.85,
+      "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
+      "asOf": "2026-09-25T17:40:00.070Z"
     },
     "SPY": {
-      "usd": 766.03,
-      "ars": 20610,
-      "changePct": 0,
-      "src": "Excel seed",
+      "usd": 770.93,
+      "ars": 20860,
+      "changePct": 0.87,
+      "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
-    },
-    "VIST": {
-      "usd": 69.65,
-      "ars": 37480,
-      "changePct": 0,
-      "src": "Excel seed",
-      "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
+      "asOf": "2026-09-25T17:40:00.070Z"
     },
     "ACN": {
-      "usd": 184.56,
-      "ars": 3972.5,
-      "changePct": 0,
-      "src": "Excel seed",
+      "usd": 177.285,
+      "ars": 3835,
+      "changePct": 0.92,
+      "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
+      "asOf": "2026-09-25T17:40:00.070Z"
     },
     "MCD": {
-      "usd": 245.46,
-      "ars": 16510,
-      "changePct": 0,
-      "src": "Excel seed",
+      "usd": 237.475,
+      "ars": 16030,
+      "changePct": 0.12,
+      "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
+      "asOf": "2026-09-25T17:40:00.070Z"
+    },
+    "META": {
+      "usd": 751.29,
+      "ars": 50625,
+      "changePct": -3.34,
+      "src": "Yahoo .BA",
+      "stale": false,
+      "asOf": "2026-09-25T17:40:00.070Z"
+    },
+    "NU": {
+      "usd": 13.58,
+      "ars": 11040,
+      "changePct": 0.73,
+      "src": "Yahoo .BA",
+      "stale": false,
+      "asOf": "2026-09-25T17:40:00.070Z"
+    },
+    "IBIT": {
+      "usd": 47.42,
+      "ars": 7720,
+      "changePct": -0.32,
+      "src": "Yahoo .BA",
+      "stale": false,
+      "asOf": "2026-09-25T17:40:00.070Z"
+    },
+    "ICLN": {
+      "usd": 17.195,
+      "ars": 5605,
+      "changePct": 2.19,
+      "src": "Yahoo .BA",
+      "stale": false,
+      "asOf": "2026-09-25T17:40:00.070Z"
+    },
+    "PAMP": {
+      "usd": 77.944,
+      "ars": 5055,
+      "changePct": -0.59,
+      "src": "Yahoo .BA",
+      "stale": false,
+      "asOf": "2026-09-25T17:40:00.070Z"
+    },
+    "GGAL": {
+      "usd": 38.98,
+      "ars": 6335,
+      "changePct": -0.94,
+      "src": "Yahoo .BA",
+      "stale": false,
+      "asOf": "2026-09-25T17:40:00.070Z"
+    },
+    "YPF": {
+      "usd": 52.13,
+      "ars": 8460,
+      "changePct": -2.03,
+      "src": "Yahoo .BA",
+      "stale": false,
+      "asOf": "2026-09-25T17:40:00.070Z"
+    },
+    "BMA": {
+      "usd": 68.69,
+      "ars": 11190,
+      "changePct": -2.19,
+      "src": "Yahoo .BA",
+      "stale": false,
+      "asOf": "2026-09-25T17:40:00.070Z"
+    },
+    "VIST": {
+      "usd": 67.61,
+      "ars": 36460,
+      "changePct": -1.03,
+      "src": "Yahoo .BA",
+      "stale": false,
+      "asOf": "2026-09-25T17:40:00.070Z"
     },
     "IOLCAMA": {
       "usd": 7.57,
@@ -132,38 +164,6 @@
       "changePct": 0,
       "src": "Manual",
       "stale": true,
-      "asOf": "2026-09-25T12:58:20.348484Z"
-    },
-    "BMA": {
-      "usd": 74.34,
-      "ars": 12000,
-      "changePct": 0,
-      "src": "Excel seed",
-      "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
-    },
-    "GGAL": {
-      "usd": 52.65,
-      "ars": 8500,
-      "changePct": 0,
-      "src": "Excel seed",
-      "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
-    },
-    "YPF": {
-      "usd": 29.73,
-      "ars": 48000,
-      "changePct": 0,
-      "src": "Excel seed",
-      "stale": false,
-      "asOf": "2026-09-25T12:58:20.348484Z"
-    },
-    "ALUA": {
-      "usd": 0.74,
-      "ars": 1200,
-      "changePct": 0,
-      "src": "Excel seed",
-      "stale": false,
       "asOf": "2026-09-25T12:58:20.348484Z"
     }
   }
