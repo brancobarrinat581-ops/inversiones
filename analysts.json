@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-28T13:44:52.728254Z",
+  "ts": "2026-09-28T22:41:12.797Z",
   "tickers": {
     "NVDA": {
       "name": "NVIDIA",
@@ -67,64 +67,16 @@
     }
   },
   "fundamentals": {
-    "ACN": {
-      "price": 183,
-      "target": 185,
-      "targetHigh": 275,
-      "targetLow": 130,
-      "consensus": "buy",
-      "analysts": 27,
-      "pe": 19.1,
-      "forwardPE": 17.5,
+    "NVDA": {
+      "price": 225,
+      "target": 328,
+      "targetHigh": 515,
+      "targetLow": 180,
+      "consensus": "strong_buy",
+      "analysts": 61,
+      "pe": 28.5,
+      "forwardPE": 18.7,
       "source": "StockAnalysis + S&P Global 09/28",
-      "updated": "2026-09-28"
-    },
-    "ADBE": {
-      "price": 235,
-      "target": 278,
-      "targetHigh": 377,
-      "targetLow": 195,
-      "consensus": "hold",
-      "analysts": 39,
-      "pe": 13.1,
-      "forwardPE": 18.0,
-      "source": "StockAnalysis + S&P Global 09/28",
-      "updated": "2026-09-28"
-    },
-    "IBIT": {
-      "price": 48,
-      "target": null,
-      "targetHigh": null,
-      "targetLow": null,
-      "consensus": null,
-      "analysts": null,
-      "pe": null,
-      "forwardPE": null,
-      "source": "ETF sin target",
-      "updated": "2026-09-28"
-    },
-    "MCD": {
-      "price": 264,
-      "target": 337,
-      "targetHigh": 375,
-      "targetLow": 280,
-      "consensus": "buy",
-      "analysts": 41,
-      "pe": 24,
-      "forwardPE": 22,
-      "source": "Consenso Wall St 09/28",
-      "updated": "2026-09-28"
-    },
-    "MELI": {
-      "price": 1753,
-      "target": 2650,
-      "targetHigh": 3200,
-      "targetLow": 1800,
-      "consensus": "buy",
-      "analysts": 18,
-      "pe": 55,
-      "forwardPE": 40,
-      "source": "StockAnalysis 09/28",
       "updated": "2026-09-28"
     },
     "META": {
@@ -135,7 +87,7 @@
       "consensus": "strong_buy",
       "analysts": 62,
       "pe": 28.4,
-      "forwardPE": 22.0,
+      "forwardPE": 22,
       "source": "StockAnalysis + S&P Global 09/28",
       "updated": "2026-09-28"
     },
@@ -147,7 +99,19 @@
       "consensus": "strong_buy",
       "analysts": 55,
       "pe": 38.4,
-      "forwardPE": 28.0,
+      "forwardPE": 28,
+      "source": "StockAnalysis + S&P Global 09/28",
+      "updated": "2026-09-28"
+    },
+    "ADBE": {
+      "price": 235,
+      "target": 278,
+      "targetHigh": 377,
+      "targetLow": 195,
+      "consensus": "hold",
+      "analysts": 39,
+      "pe": 13.1,
+      "forwardPE": 18,
       "source": "StockAnalysis + S&P Global 09/28",
       "updated": "2026-09-28"
     },
@@ -163,42 +127,6 @@
       "source": "StockAnalysis 09/28",
       "updated": "2026-09-28"
     },
-    "NU": {
-      "price": 14,
-      "target": 17,
-      "targetHigh": 22,
-      "targetLow": 10,
-      "consensus": "buy",
-      "analysts": 14,
-      "pe": 28,
-      "forwardPE": 22,
-      "source": "StockAnalysis 09/28",
-      "updated": "2026-09-28"
-    },
-    "NVDA": {
-      "price": 225,
-      "target": 328,
-      "targetHigh": 515,
-      "targetLow": 180,
-      "consensus": "strong_buy",
-      "analysts": 61,
-      "pe": 28.5,
-      "forwardPE": 18.7,
-      "source": "StockAnalysis + S&P Global 09/28",
-      "updated": "2026-09-28"
-    },
-    "PAMP": {
-      "price": null,
-      "target": null,
-      "targetHigh": null,
-      "targetLow": null,
-      "consensus": null,
-      "analysts": null,
-      "pe": null,
-      "forwardPE": null,
-      "source": "Acción local AR sin cobertura intl",
-      "updated": "2026-09-28"
-    },
     "PANW": {
       "price": 325,
       "target": 380,
@@ -211,6 +139,18 @@
       "source": "StockAnalysis + S&P Global 09/28",
       "updated": "2026-09-28"
     },
+    "MELI": {
+      "price": 1753,
+      "target": 2650,
+      "targetHigh": 3200,
+      "targetLow": 1800,
+      "consensus": "buy",
+      "analysts": 18,
+      "pe": 55,
+      "forwardPE": 40,
+      "source": "StockAnalysis 09/28",
+      "updated": "2026-09-28"
+    },
     "SPY": {
       "price": 571,
       "target": null,
@@ -221,6 +161,66 @@
       "pe": 23,
       "forwardPE": 21,
       "source": "ETF sin target",
+      "updated": "2026-09-28"
+    },
+    "ACN": {
+      "price": 183,
+      "target": 185,
+      "targetHigh": 275,
+      "targetLow": 130,
+      "consensus": "buy",
+      "analysts": 27,
+      "pe": 19.1,
+      "forwardPE": 17.5,
+      "source": "StockAnalysis + S&P Global 09/28",
+      "updated": "2026-09-28"
+    },
+    "MCD": {
+      "price": 264,
+      "target": 337,
+      "targetHigh": 375,
+      "targetLow": 280,
+      "consensus": "buy",
+      "analysts": 41,
+      "pe": 24,
+      "forwardPE": 22,
+      "source": "Consenso Wall St 09/28",
+      "updated": "2026-09-28"
+    },
+    "IBIT": {
+      "price": 48,
+      "target": null,
+      "targetHigh": null,
+      "targetLow": null,
+      "consensus": null,
+      "analysts": null,
+      "pe": null,
+      "forwardPE": null,
+      "source": "ETF sin target",
+      "updated": "2026-09-28"
+    },
+    "NU": {
+      "price": 14,
+      "target": 17,
+      "targetHigh": 22,
+      "targetLow": 10,
+      "consensus": "buy",
+      "analysts": 14,
+      "pe": 28,
+      "forwardPE": 22,
+      "source": "StockAnalysis 09/28",
+      "updated": "2026-09-28"
+    },
+    "PAMP": {
+      "price": null,
+      "target": null,
+      "targetHigh": null,
+      "targetLow": null,
+      "consensus": null,
+      "analysts": null,
+      "pe": null,
+      "forwardPE": null,
+      "source": "Acción local AR sin cobertura intl",
       "updated": "2026-09-28"
     },
     "VIST": {
@@ -494,190 +494,211 @@
   "news": {
     "NVDA": [
       {
-        "title": "Nvidia launches AI safety platform after Jensen Huang calls Anthropic, OpenAI warnings 'odd'",
-        "url": "https://finance.yahoo.com/technology/article/nvidia-launches-ai-safety-platform-after-jensen-huang-calls-anthropic-openai-warnings-odd-103135599.html?.tsrc=rss",
+        "title": "Nvidia launches tool to keep AI from going rogue",
+        "url": "https://www.cnn.com/2026/09/28/business/video/nvidia-ai-safety-tool-duffy-live-092804pseg1-cnni-business-fast?cid=external-feeds_iluminar_yahoo&amp;.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 10:31:35 +0000",
-        "titleEs": "Nvidia launches AI safety platform after Jensen Huang calls Anthropic, OpenAI warnings 'odd'"
+        "published": "Mon, 28 Sep 2026 21:45:17 +0000",
+        "titleEs": "Nvidia launches tool to keep AI from going rogue"
       },
       {
-        "title": "Citi Sees $11 Billion Optical Networking Boom Driven By Google, Nvidia",
-        "url": "https://finance.yahoo.com/m/f387d56a-dad1-3509-8069-b2623a871c89/citi-sees-%2411-billion-optical.html?.tsrc=rss",
+        "title": "Gecko Robotics & Nvidia team up to put guardrails on AI",
+        "url": "https://www.cnn.com/2026/09/28/business/video/nvidia-gecko-robotics-ai-safety-loosararian-live-092804pseg2-cnni-business-fast?cid=external-feeds_iluminar_yahoo&amp;.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 11:42:25 +0000",
-        "titleEs": "Citi Sees $11 Billion Optical Networking Boom Driven By Google, Nvidia"
+        "published": "Mon, 28 Sep 2026 21:37:07 +0000",
+        "titleEs": "Gecko Robotics & Nvidia team up to put guardrails on AI"
       },
       {
-        "title": "Nscale secures $3.36bn in pre-IPO convertible loan round",
-        "url": "https://www.verdict.co.uk/nscale-secures-3-36bn-pre-ipo/?.tsrc=rss",
+        "title": "Nvidia stock sends investors a $150 billion signal",
+        "url": "https://www.thestreet.com/investing/stocks/nvidia-adds-150-billion-to-stock-buyback-investors?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 11:17:19 +0000",
-        "titleEs": "Nscale secures $3.36bn in pre-IPO convertible loan round"
+        "published": "Mon, 28 Sep 2026 21:32:12 +0000",
+        "titleEs": "Nvidia stock sends investors a $150 billion signal"
       },
       {
-        "title": "Nvidia Boosts Share Buyback Authorization by $150 Billion",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-boosts-share-buyback-authorization-111622118.html?.tsrc=rss",
+        "title": "What Nvidia's $150 billion stock buyback means for shareholders and potential investors",
+        "url": "https://finance.yahoo.com/personal-finance/investing/article/what-nvidias-150-billion-stock-buyback-means-for-shareholders-and-potential-investors-211828747.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 11:16:22 +0000",
-        "titleEs": "Nvidia Boosts Share Buyback Authorization by $150 Billion"
+        "published": "Mon, 28 Sep 2026 21:18:28 +0000",
+        "titleEs": "What Nvidia's $150 billion stock buyback means for shareholders and potential investors"
       },
       {
-        "title": "NVIDIA Announces a $150 Billion Share Repurchase Authorization Increase",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-announces-150-billion-share-110000738.html?.tsrc=rss",
+        "title": "Intel vs. Nvidia: Which Semiconductor Stock Is a Better Buy in 2026?",
+        "url": "https://www.fool.com/coverage/better-buy/2026/09/28/intel-vs-nvidia-which-semiconductor-stock-is-a-better-buy-in-2026/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 11:00:00 +0000",
-        "titleEs": "NVIDIA Announces a $150 Billion Share Repurchase Authorization Increase"
+        "published": "Mon, 28 Sep 2026 21:06:53 +0000",
+        "titleEs": "Intel vs. Nvidia: Which Semiconductor Stock Is a Better Buy in 2026?"
       }
     ],
     "META": [
       {
-        "title": "MAG 7 Voices: Jensen Huang, Elon Musk, Mark Zuckerberg Shape A Week Of AI Debate",
-        "url": "https://stocktwits.com/news-articles/markets/equity/mag-7-voices-jensen-huang-elon-musk-mark-zuckerberg-shape-week-of-ai/cZMSpltRBQ3?.tsrc=rss",
+        "title": "What Meta 'really' has to do to succeed at the enterprise this time around",
+        "url": "https://finance.yahoo.com/video/meta-really-succeed-enterprise-time-201018822.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 10:05:49 +0000",
-        "titleEs": "MAG 7 Voices: Jensen Huang, Elon Musk, Mark Zuckerberg Shape A Week Of AI Debate"
+        "published": "Mon, 28 Sep 2026 20:10:18 +0000",
+        "titleEs": "What Meta 'really' has to do to succeed at the enterprise this time around"
       },
       {
-        "title": "3 Market-Beating Stocks Worth Your Attention",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/3-market-beating-stocks-worth-094236228.html?.tsrc=rss",
+        "title": "Meta elevates Bounds to lead PR, shifts Ginsberg to AI unit - Axios",
+        "url": "https://finance.yahoo.com/technology/ai/articles/meta-elevates-bounds-lead-pr-213113892.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 09:42:36 +0000",
-        "titleEs": "3 Market-Beating Stocks Worth Your Attention"
+        "published": "Mon, 28 Sep 2026 21:31:13 +0000",
+        "titleEs": "Meta elevates Bounds to lead PR, shifts Ginsberg to AI unit - Axios"
       },
       {
-        "title": "How advertisers are adjusting to Meta’s ad creative diversification best practices",
-        "url": "https://www.marketingbrew.com/stories/meta-ad-creative-diversification-best-practices-advertiser-approach?utm_source=&amp;utm_medium=syndication&amp;utm_campaign=feed&amp;.tsrc=rss",
+        "title": "MongoDB Stock Crashes Nearly 20% After CEO Desai Leaves to Meta",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mongodb-stock-crashes-nearly-20-204547121.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 09:00:00 +0000",
-        "titleEs": "How advertisers are adjusting to Meta’s ad creative diversification best practices"
+        "published": "Mon, 28 Sep 2026 20:45:47 +0000",
+        "titleEs": "MongoDB Stock Crashes Nearly 20% After CEO Desai Leaves to Meta"
       },
       {
-        "title": "Mark Zuckerberg's Muse Remains Locked Out As Amazon Says Meta Never Got Permission; Cathie Wood's ARK Calls It A 'Great Test' For Loyalty",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/mark-zuckerbergs-muse-remains-locked-073441163.html?.tsrc=rss",
+        "title": "Meta’s Muse Is BLOWING Minds…. But At What Cost?",
+        "url": "https://247wallst.com/videos/metas-muse-is-blowing-minds-but-at-what-cost/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 07:34:41 +0000",
-        "titleEs": "Mark Zuckerberg's Muse Remains Locked Out As Amazon Says Meta Never Got Permission; Cathie Wood's ARK Calls It A 'Great Test' For Loyalty"
+        "published": "Mon, 28 Sep 2026 20:38:36 +0000",
+        "titleEs": "Meta’s Muse Is BLOWING Minds…. But At What Cost?"
       },
       {
-        "title": "Elon Musk Amplifies Privacy Concerns Over Meta’s Muse After Reports Emerge AI Agent Accessed Private Messages",
-        "url": "https://finance.yahoo.com/technology/ai/articles/elon-musk-amplifies-privacy-concerns-051747628.html?.tsrc=rss",
+        "title": "MongoDB Plunges 18% as Meta Taps CEO To Lead New AI Platform | Closing Bell",
+        "url": "https://finance.yahoo.com/video/mongodb-plunges-18-meta-taps-203513778.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 05:17:47 +0000",
-        "titleEs": "Elon Musk Amplifies Privacy Concerns Over Meta’s Muse After Reports Emerge AI Agent Accessed Private Messages"
+        "published": "Mon, 28 Sep 2026 20:35:13 +0000",
+        "titleEs": "MongoDB Plunges 18% as Meta Taps CEO To Lead New AI Platform | Closing Bell"
       }
     ],
     "MSFT": [
       {
-        "title": "Why most ads are terrible: Former Microsoft CSO",
-        "url": "https://finance.yahoo.com/video/why-most-ads-terrible-former-100000360.html?.tsrc=rss",
+        "title": "Former Microsoft strategy chief explains why most digital ads 'are not very good' — and how AI will help",
+        "url": "https://finance.yahoo.com/media-advertising/article/former-microsoft-strategy-chief-explains-why-most-digital-ads-are-not-very-good--and-how-ai-will-help-204809643.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 10:00:00 +0000",
-        "titleEs": "Why most ads are terrible: Former Microsoft CSO"
+        "published": "Mon, 28 Sep 2026 20:48:09 +0000",
+        "titleEs": "Former Microsoft strategy chief explains why most digital ads 'are not very good' — and how AI will help"
       },
       {
-        "title": "Computer Vision Global Market Report 2026: Secure Your Share of a $37.1 Billion Market Growing 15.9% Annually by 2030—Benchmark Microsoft, Sony, Intel, Texas Instruments and MediaTek as AI, Edge Vision and Automation Disrupt Operations",
-        "url": "https://finance.yahoo.com/technology/ai/articles/computer-vision-global-market-report-092800425.html?.tsrc=rss",
+        "title": "Nokia (NOK) and Microsoft (MSFT) are Expanding Their AI Reach. Can the Opportunity Translate into Returns?",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nokia-nok-microsoft-msft-expanding-214127241.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 09:28:00 +0000",
-        "titleEs": "Computer Vision Global Market Report 2026: Secure Your Share of a $37.1 Billion Market Growing 15.9% Annually by 2030—Benchmark Microsoft, Sony, Intel, Texas Instruments and MediaTek as AI, Edge Vision and Automation Disrupt Operations"
+        "published": "Mon, 28 Sep 2026 21:41:27 +0000",
+        "titleEs": "Nokia (NOK) and Microsoft (MSFT) are Expanding Their AI Reach. Can the Opportunity Translate into Returns?"
       },
       {
-        "title": "Virtual Desktop Infrastructure Market Report 2026: Capitalize on the $24.14 Billion Revenue Surge to $50.03 Billion by 2030—Benchmark AWS, Microsoft, VMware, Citrix and Nutanix to Capture Share in a 17.9% CAGR Market",
-        "url": "https://finance.yahoo.com/technology/articles/virtual-desktop-infrastructure-market-report-092600477.html?.tsrc=rss",
+        "title": "TTEC Digital achieves the 2026-2027 Microsoft AI Business Solutions Inner Circle award for 11th consecutive year",
+        "url": "https://finance.yahoo.com/technology/ai/articles/ttec-digital-achieves-2026-2027-210000436.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 09:26:00 +0000",
-        "titleEs": "Virtual Desktop Infrastructure Market Report 2026: Capitalize on the $24.14 Billion Revenue Surge to $50.03 Billion by 2030—Benchmark AWS, Microsoft, VMware, Citrix and Nutanix to Capture Share in a 17.9% CAGR Market"
+        "published": "Mon, 28 Sep 2026 21:00:00 +0000",
+        "titleEs": "TTEC Digital achieves the 2026-2027 Microsoft AI Business Solutions Inner Circle award for 11th consecutive year"
       },
       {
-        "title": "Enterprise Quantum Computing Global Market Report 2026: Capitalize on 31.1% CAGR as Revenue Hits $18.54B by 2030—Benchmark IBM, Google, Microsoft, AWS and IonQ to Secure Cloud Quantum ROI Before Rivals Scale",
-        "url": "https://finance.yahoo.com/technology/ai/articles/enterprise-quantum-computing-global-market-092400855.html?.tsrc=rss",
+        "title": "Here's Why Microsoft (MSFT) Fell More Than Broader Market",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-microsoft-msft-fell-204504302.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 09:24:00 +0000",
-        "titleEs": "Enterprise Quantum Computing Global Market Report 2026: Capitalize on 31.1% CAGR as Revenue Hits $18.54B by 2030—Benchmark IBM, Google, Microsoft, AWS and IonQ to Secure Cloud Quantum ROI Before Rivals Scale"
+        "published": "Mon, 28 Sep 2026 20:45:04 +0000",
+        "titleEs": "Here's Why Microsoft (MSFT) Fell More Than Broader Market"
       },
       {
-        "title": "Information Technology Market Report 2026: Capture the $3.76 Trillion Revenue Shift Through 2030 as AI, Cloud and Cybersecurity Disrupt Enterprise Spend—Benchmark Microsoft, Amazon, Alphabet, IBM and Oracle Before Competitors Seize the Advantage",
-        "url": "https://finance.yahoo.com/technology/articles/information-technology-market-report-2026-092200161.html?.tsrc=rss",
+        "title": "Meta Just Put Microsoft, Salesforce and ServiceNow on Notice",
+        "url": "https://finance.yahoo.com/technology/ai/articles/meta-just-put-microsoft-salesforce-193907867.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 09:22:00 +0000",
-        "titleEs": "Information Technology Market Report 2026: Capture the $3.76 Trillion Revenue Shift Through 2030 as AI, Cloud and Cybersecurity Disrupt Enterprise Spend—Benchmark Microsoft, Amazon, Alphabet, IBM and Oracle Before Competitors Seize the Advantage"
+        "published": "Mon, 28 Sep 2026 19:39:07 +0000",
+        "titleEs": "Meta Just Put Microsoft, Salesforce and ServiceNow on Notice"
       }
     ],
     "ADBE": [
+      {
+        "title": "Amazon Has a $10 Billion Holiday Catalyst Coming in October",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/amazon-10-billion-holiday-catalyst-194457409.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 19:44:57 +0000",
+        "titleEs": "Amazon Has a $10 Billion Holiday Catalyst Coming in October"
+      },
+      {
+        "title": "Adobe And 2 Other Top AI Stocks To Watch",
+        "url": "https://finance.yahoo.com/technology/ai/articles/adobe-2-other-top-ai-150942363.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 15:09:42 +0000",
+        "titleEs": "Adobe And 2 Other Top AI Stocks To Watch"
+      },
+      {
+        "title": "Adobe Report Reveals U.S. Online Holiday Spending Forecast to Hit Record $275.1 Billion",
+        "url": "https://finance.yahoo.com/video/adobe-report-reveals-u-online-150221131.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 15:02:21 +0000",
+        "titleEs": "Adobe Report Reveals U.S. Online Holiday Spending Forecast to Hit Record $275.1 Billion"
+      },
+      {
+        "title": "Adobe and the National Hockey League Partner to Deliver AI-Powered Fan Experiences Globally",
+        "url": "https://finance.yahoo.com/technology/ai/articles/adobe-national-hockey-league-partner-120000661.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 12:00:00 +0000",
+        "titleEs": "Adobe and the National Hockey League Partner to Deliver AI-Powered Fan Experiences Globally"
+      },
       {
         "title": "Consumer AI use a boon for the holidays as AI traffic doubles",
         "url": "https://www.customerexperiencedive.com/news/consumer-ai-use-boon-holidays-ai-traffic-doubles/831432/?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Mon, 28 Sep 2026 12:00:00 +0000",
         "titleEs": "Consumer AI use a boon for the holidays as AI traffic doubles"
-      },
-      {
-        "title": "Adobe’s Rollercoaster Ride Continues: Who’s Buying?",
-        "url": "https://247wallst.com/investing/2026/09/28/adobes-rollercoaster-ride-continues-whos-buying/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 11:26:06 +0000",
-        "titleEs": "Adobe’s Rollercoaster Ride Continues: Who’s Buying?"
-      },
-      {
-        "title": "Adobe Stock And 2 Other AI Stocks To Own",
-        "url": "https://finance.yahoo.com/technology/ai/articles/adobe-stock-2-other-ai-111256044.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 26 Sep 2026 11:12:56 +0000",
-        "titleEs": "Adobe Stock And 2 Other AI Stocks To Own"
-      },
-      {
-        "title": "Investors Heavily Search Adobe Inc. (ADBE): Here is What You Need to Know",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-adobe-inc-120008077.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 25 Sep 2026 12:00:08 +0000",
-        "titleEs": "Investors Heavily Search Adobe Inc. (ADBE): Here is What You Need to Know"
-      },
-      {
-        "title": "Prediction: Adobe Stock Trades Back Above $350 Before 2030",
-        "url": "https://www.fool.com/investing/2026/09/25/prediction-adobe-stock-trades-back-above-usd350-before-2030/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 25 Sep 2026 08:01:01 +0000",
-        "titleEs": "Prediction: Adobe Stock Trades Back Above $350 Before 2030"
       }
     ],
     "MU": [
       {
-        "title": "4 big stories markets will be watching next week",
-        "url": "https://finance.yahoo.com/video/4-big-stories-markets-watching-120000114.html?.tsrc=rss",
+        "title": "Is Micron Stock a Sell After This Weekend's Negative AI News?",
+        "url": "https://www.fool.com/investing/2026/09/28/is-micron-stock-a-sell-after-this-weekends-negativ/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 12:00:00 +0000",
-        "titleEs": "4 big stories markets will be watching next week"
+        "published": "Mon, 28 Sep 2026 22:18:51 +0000",
+        "titleEs": "Is Micron Stock a Sell After This Weekend's Negative AI News?"
       },
       {
-        "title": "MU Stock Slips Ahead Of Earnings, Baird Hikes Price Target On 'Surge In Agentic AI Demand'",
-        "url": "https://stocktwits.com/news-articles/markets/equity/mu-stock-slips-ahead-of-earnings-baird-hikes-price-target-on-surge-in-agentic-ai-demand/cZMSsO3RBQL?.tsrc=rss",
+        "title": "Michael Burry Swaps MU, NBIS, NVDA, PLTR Shorts For Puts — Says AI Bubble May Burst ‘Sooner Than Later’",
+        "url": "https://stocktwits.com/news-articles/markets/equity/michael-burry-swaps-mu-nbis-nvda-pltr-shorts-for-puts-says-ai-bubble-may-burst-sooner-than-later/cZMj3k9RBXa?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 11:49:55 +0000",
-        "titleEs": "MU Stock Slips Ahead Of Earnings, Baird Hikes Price Target On 'Surge In Agentic AI Demand'"
+        "published": "Mon, 28 Sep 2026 20:42:43 +0000",
+        "titleEs": "Michael Burry Swaps MU, NBIS, NVDA, PLTR Shorts For Puts — Says AI Bubble May Burst ‘Sooner Than Later’"
       },
       {
-        "title": "10-Year Yield Tops 5%, Mag 7 Lead Stocks, Oil Price Uncertainty: 3 Charts To Watch This Week",
-        "url": "https://stocktwits.com/news-articles/markets/equity/10-year-yield-mag-7-lead-stocks-oil-price-uncertainty-3-charts-to-watch/cZMSqz8RBQ7?.tsrc=rss",
+        "title": "Here’s How Much Traders Expect Micron Stock to Move After Earnings",
+        "url": "https://www.investopedia.com/here-is-how-much-traders-expect-micron-stock-to-move-after-earnings-mu-q4-fy2026-12136351?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 10:59:35 +0000",
-        "titleEs": "10-Year Yield Tops 5%, Mag 7 Lead Stocks, Oil Price Uncertainty: 3 Charts To Watch This Week"
+        "published": "Mon, 28 Sep 2026 20:41:22 +0000",
+        "titleEs": "Here’s How Much Traders Expect Micron Stock to Move After Earnings"
       },
       {
-        "title": "Micron Stock Is Falling but This Is the Next Catalyst",
-        "url": "https://finance.yahoo.com/m/0578f886-551c-3fac-afbf-4ac63039a210/micron-stock-is-falling-but.html?.tsrc=rss",
+        "title": "Micron (MU) Highlights Tech Earnings to Watch This Week",
+        "url": "https://finance.yahoo.com/technology/articles/micron-mu-highlights-tech-earnings-203400356.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 10:45:00 +0000",
-        "titleEs": "Micron Stock Is Falling but This Is the Next Catalyst"
+        "published": "Mon, 28 Sep 2026 20:34:00 +0000",
+        "titleEs": "Micron (MU) Highlights Tech Earnings to Watch This Week"
       },
       {
-        "title": "US Equity Investors to Focus on Surging Treasury Yields While Looking Out for Crude Oil Prices, Micron's Results This Week",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-investors-focus-surging-101358726.html?.tsrc=rss",
+        "title": "Nvidia, Micron, Meta, Kodiak Sciences, MongoDB, SpaceX, and More Stocks That Explain Today’s Market",
+        "url": "https://finance.yahoo.com/m/ba97269c-c17b-3431-8c63-dea920eefd66/nvidia%2C-micron%2C-meta%2C-kodiak.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 10:13:58 +0000",
-        "titleEs": "US Equity Investors to Focus on Surging Treasury Yields While Looking Out for Crude Oil Prices, Micron's Results This Week"
+        "published": "Mon, 28 Sep 2026 20:33:00 +0000",
+        "titleEs": "Nvidia, Micron, Meta, Kodiak Sciences, MongoDB, SpaceX, and More Stocks That Explain Today’s Market"
       }
     ],
     "PANW": [
+      {
+        "title": "Palo Alto Stock Gains 1.5% as Agent Security Adds Continuous Offense",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/palo-alto-stock-gains-1-165055884.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 16:50:55 +0000",
+        "titleEs": "Palo Alto Stock Gains 1.5% as Agent Security Adds Continuous Offense"
+      },
+      {
+        "title": "Palo Alto Networks (PANW) Brings Industrial Edge Connectivity To Its Firewall Ecosystem",
+        "url": "https://finance.yahoo.com/technology/articles/palo-alto-networks-panw-brings-140823802.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 14:08:23 +0000",
+        "titleEs": "Palo Alto Networks (PANW) Brings Industrial Edge Connectivity To Its Firewall Ecosystem"
+      },
+      {
+        "title": "Analysts Raise Palo Alto Networks Stock Price Targets - What's the Best PANW Play?",
+        "url": "https://www.barchart.com/story/news/4832135/analysts-raise-palo-alto-networks-stock-price-targets-what-s-the-best-panw-play?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 12:45:02 +0000",
+        "titleEs": "Analysts Raise Palo Alto Networks Stock Price Targets - What's the Best PANW Play?"
+      },
       {
         "title": "Virtualization Security Market Report 2026: Capitalize on 21.3% CAGR as revenue hits $9.68B by 2030—Benchmark VMware, Trend Micro, Palo Alto Networks, Crowdstrike and SentinelOne to Secure Cloud and Zero-Trust Advantage",
         "url": "https://finance.yahoo.com/technology/articles/virtualization-security-market-report-2026-092700358.html?.tsrc=rss",
@@ -691,27 +712,6 @@
         "source": "Yahoo Finance",
         "published": "Mon, 28 Sep 2026 06:41:12 +0000",
         "titleEs": "Palo Alto Networks (PANW) Lets Customers Pay Later. Is Credit Risk Rising?"
-      },
-      {
-        "title": "The AI Security Opportunity Emerging for Palo Alto Networks",
-        "url": "https://finance.yahoo.com/technology/ai/articles/ai-security-opportunity-emerging-palo-203429896.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 27 Sep 2026 20:33:08 +0000",
-        "titleEs": "The AI Security Opportunity Emerging for Palo Alto Networks"
-      },
-      {
-        "title": "Nvidia’s CEO Expects AI-Powered Cybersecurity to Boom. These 2 Companies Are Poised to Get a Big Boost From the Trend.",
-        "url": "https://www.barchart.com/story/news/4823607/nvidias-ceo-expects-ai-powered-cybersecurity-to-boom-these-2-companies-are-poised-to-get-a-big-boost-from-the-trend?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 27 Sep 2026 19:30:02 +0000",
-        "titleEs": "Nvidia’s CEO Expects AI-Powered Cybersecurity to Boom. These 2 Companies Are Poised to Get a Big Boost From the Trend."
-      },
-      {
-        "title": "AI Slowdown Push 'Unrealistic,' Says Palo Alto Networks CEO, AI Firms Trying to Seek Regulatory 'Sympathy'",
-        "url": "https://finance.yahoo.com/technology/ai/articles/ai-slowdown-push-unrealistic-says-233016758.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 26 Sep 2026 23:30:16 +0000",
-        "titleEs": "AI Slowdown Push 'Unrealistic,' Says Palo Alto Networks CEO, AI Firms Trying to Seek Regulatory 'Sympathy'"
       }
     ],
     "MELI": [
@@ -753,6 +753,20 @@
     ],
     "SPY": [
       {
+        "title": "Cleveland-Cliffs Sinks 9% as Selloff Outruns Steel Group; Nucor and Steel Dynamics Pull Back",
+        "url": "https://247wallst.com/investing/2026/09/28/cleveland-cliffs-sinks-9-as-selloff-outruns-steel-group-nucor-and-steel-dynamics-pull-back/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 17:46:31 +0000",
+        "titleEs": "Cleveland-Cliffs Sinks 9% as Selloff Outruns Steel Group; Nucor and Steel Dynamics Pull Back"
+      },
+      {
+        "title": "Roblox Sinks 6% as Jefferies Cuts to Underperform With $38 Price Target; Take-Two Holds Flat, GameStop Dips",
+        "url": "https://247wallst.com/investing/2026/09/28/roblox-sinks-6-as-jefferies-cuts-to-underperform-with-38-price-target-take-two-holds-flat-gamestop-dips/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 13:41:00 +0000",
+        "titleEs": "Roblox Sinks 6% as Jefferies Cuts to Underperform With $38 Price Target; Take-Two Holds Flat, GameStop Dips"
+      },
+      {
         "title": "Nasdaq, S&P 500 Futures Fall As Oil Spikes On Trump’s Snub To Iran: MU, NVDA, SKHY, SPCX, NIO Stocks In Focus",
         "url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-sp500-futures-fall-as-oil-spikes-on-trump-snub-to-iran-mu-nvda-skhy-spcx-nio-stocks-in-focus/cZMSFEIRBQR?.tsrc=rss",
         "source": "Yahoo Finance",
@@ -760,106 +774,92 @@
         "titleEs": "Nasdaq, S&P 500 Futures Fall As Oil Spikes On Trump’s Snub To Iran: MU, NVDA, SKHY, SPCX, NIO Stocks In Focus"
       },
       {
-        "title": "The S&P 500 Barely Yields Anything. This Vanguard ETF Pays Roughly Double It",
-        "url": "https://247wallst.com/investing/etf/2026/09/26/the-sp-500-barely-yields-anything-this-vanguard-etf-pays-roughly-double-it/?.tsrc=rss",
+        "title": "Forget SPY: Invesco’s Fund Gives the Smallest S&P 500 Company the Same Say as the Largest",
+        "url": "https://247wallst.com/investing/etf/2026/09/28/forget-spy-invescos-fund-gives-the-smallest-sp-500-company-the-same-say-as-the-largest/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sat, 26 Sep 2026 13:00:07 +0000",
-        "titleEs": "The S&P 500 Barely Yields Anything. This Vanguard ETF Pays Roughly Double It"
+        "published": "Mon, 28 Sep 2026 22:11:41 +0000",
+        "titleEs": "Forget SPY: Invesco’s Fund Gives the Smallest S&P 500 Company the Same Say as the Largest"
       },
       {
-        "title": "S&P 500, Dow, Nasdaq End Week Higher On Chipmaker Strength, Easing Oil Amid Signs Of Easing US-Iran Conflict — META, COST, MSFT, CRWD, SKHY In Focus",
-        "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-dow-nasdaq-end-week-higher-on-chipmaker-strength-easing-oil-amid-signs-of-easing-us-iran-conflict-meta-cost-msft-crwd-skhy-in-focus/cZMOFkXRBOV?.tsrc=rss",
+        "title": "MP Materials Just Sank 21% in a Month. Is It Time to Sell, or Is This a Prime Buying Opportunity?",
+        "url": "https://247wallst.com/investing/2026/09/28/mp-materials-just-sank-21-in-a-month-is-it-time-to-sell-or-is-this-a-prime-buying-opportunity/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Fri, 25 Sep 2026 22:51:48 +0000",
-        "titleEs": "S&P 500, Dow, Nasdaq End Week Higher On Chipmaker Strength, Easing Oil Amid Signs Of Easing US-Iran Conflict — META, COST, MSFT, CRWD, SKHY In Focus"
-      },
-      {
-        "title": "Dell Rises 7% as Morgan Stanley Lifts Odds on $756 Bull Case; Hewlett Packard Enterprise Edges Higher",
-        "url": "https://247wallst.com/investing/2026/09/25/dell-rises-7-as-morgan-stanley-lifts-odds-on-756-bull-case-hewlett-packard-enterprise-edges-higher/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 25 Sep 2026 17:51:27 +0000",
-        "titleEs": "Dell Rises 7% as Morgan Stanley Lifts Odds on $756 Bull Case; Hewlett Packard Enterprise Edges Higher"
-      },
-      {
-        "title": "Whether You Buy Tesla Depends On The Chances That Tesla Actually Becomes an AI Firm",
-        "url": "https://247wallst.com/investing/2026/09/25/whether-you-buy-tesla-depends-on-the-chances-that-tesla-actually-becomes-an-ai-firm/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 25 Sep 2026 16:44:41 +0000",
-        "titleEs": "Whether You Buy Tesla Depends On The Chances That Tesla Actually Becomes an AI Firm"
+        "published": "Mon, 28 Sep 2026 19:23:02 +0000",
+        "titleEs": "MP Materials Just Sank 21% in a Month. Is It Time to Sell, or Is This a Prime Buying Opportunity?"
       }
     ],
     "ACN": [
+      {
+        "title": "What Are Accenture Stock Bears Missing?",
+        "url": "https://www.trefis.com/articles/616809/what-are-accenture-stock-bears-missing/2026-09-28?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 22:04:18 +0000",
+        "titleEs": "What Are Accenture Stock Bears Missing?"
+      },
+      {
+        "title": "Accenture plc (ACN)’s Cash Machine Remains Strong. But Where Does Growth Come from?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/accenture-plc-acn-cash-machine-210339659.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 21:03:39 +0000",
+        "titleEs": "Accenture plc (ACN)’s Cash Machine Remains Strong. But Where Does Growth Come from?"
+      },
+      {
+        "title": "Accenture Earnings Due As Artificial Intelligence Looms As Double-Edged Sword",
+        "url": "https://finance.yahoo.com/m/63a48562-4857-3ee8-9c4c-bf63a0ee1ab2/accenture-earnings-due-as.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 14:06:36 +0000",
+        "titleEs": "Accenture Earnings Due As Artificial Intelligence Looms As Double-Edged Sword"
+      },
+      {
+        "title": "Accenture’s Q4 2026 Earnings: What to Expect",
+        "url": "https://www.barchart.com/story/news/4826824/accentures-q4-2026-earnings-what-to-expect?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 07:45:52 +0000",
+        "titleEs": "Accenture’s Q4 2026 Earnings: What to Expect"
+      },
       {
         "title": "Accenture and osapiens Make DS Smith’s Global Supply Chain More Transparent and Ready for Evolving EU Regulation",
         "url": "https://finance.yahoo.com/technology/articles/accenture-osapiens-ds-smith-global-065900529.html?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Mon, 28 Sep 2026 06:59:00 +0000",
         "titleEs": "Accenture and osapiens Make DS Smith’s Global Supply Chain More Transparent and Ready for Evolving EU Regulation"
-      },
-      {
-        "title": "The AI Fear That Crushed Accenture Just Created Its Biggest Opportunity. Here’s What The Anthropic Partnership Means.",
-        "url": "https://www.barchart.com/story/news/4824080/the-ai-fear-that-crushed-accenture-just-created-its-biggest-opportunity-heres-what-the-anthropic-partnership-means?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 27 Sep 2026 22:42:51 +0000",
-        "titleEs": "The AI Fear That Crushed Accenture Just Created Its Biggest Opportunity. Here’s What The Anthropic Partnership Means."
-      },
-      {
-        "title": "Here Is How to Play Accenture Stock After a New AWS Collaboration",
-        "url": "https://www.barchart.com/story/news/4817943/here-is-how-to-play-accenture-stock-after-a-new-aws-collaboration?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 26 Sep 2026 19:30:02 +0000",
-        "titleEs": "Here Is How to Play Accenture Stock After a New AWS Collaboration"
-      },
-      {
-        "title": "Accenture (ACN) Invests In AI Automation Deal To Deepen Enterprise Workflow Push",
-        "url": "https://finance.yahoo.com/technology/ai/articles/accenture-acn-invests-ai-automation-020845438.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 26 Sep 2026 02:08:45 +0000",
-        "titleEs": "Accenture (ACN) Invests In AI Automation Deal To Deepen Enterprise Workflow Push"
-      },
-      {
-        "title": "Accenture (ACN) Joins Anthropic’s AI Safety Effort. Can it Turn Evaluation into Profits?",
-        "url": "https://finance.yahoo.com/technology/ai/articles/accenture-acn-joins-anthropic-ai-233631025.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 25 Sep 2026 23:36:31 +0000",
-        "titleEs": "Accenture (ACN) Joins Anthropic’s AI Safety Effort. Can it Turn Evaluation into Profits?"
       }
     ],
     "MCD": [
       {
-        "title": "McDonald’s Dividend Is Funded by Something Other Than Burgers",
-        "url": "https://247wallst.com/investing/2026/09/28/mcdonalds-dividend-is-funded-by-something-other-than-burgers/?.tsrc=rss",
+        "title": "McDonald's US Comparable Sales Seen Pressured Through Year-End Amid Tough Comparisons, Morgan Stanley Says",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonald-apos-us-comparable-sales-193100785.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 28 Sep 2026 11:13:37 +0000",
-        "titleEs": "McDonald’s Dividend Is Funded by Something Other Than Burgers"
+        "published": "Mon, 28 Sep 2026 19:31:00 +0000",
+        "titleEs": "McDonald's US Comparable Sales Seen Pressured Through Year-End Amid Tough Comparisons, Morgan Stanley Says"
       },
       {
-        "title": "Is McDonald’s (MCD) Moat Narrowing as GLP-1 Drugs Reshape Menus?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonald-mcd-moat-narrowing-glp-205336615.html?.tsrc=rss",
+        "title": "How GLP-1 weight-loss drugs are changing fast-food menus",
+        "url": "https://www.cbsnews.com/news/fast-food-menus-glp-1-users/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sun, 27 Sep 2026 20:53:36 +0000",
-        "titleEs": "Is McDonald’s (MCD) Moat Narrowing as GLP-1 Drugs Reshape Menus?"
+        "published": "Mon, 28 Sep 2026 18:45:07 +0000",
+        "titleEs": "How GLP-1 weight-loss drugs are changing fast-food menus"
       },
       {
-        "title": "Can McDonald's Stock Reclaim Its All-Time High as Rising Prices Weigh on Consumers?",
-        "url": "https://www.fool.com/investing/2026/09/27/can-mcdonalds-stock-reclaim-its-all-time-high-as-r/?.tsrc=rss",
+        "title": "MCD Stock Gets Price Target Cuts From Morgan Stanley, Melius Research – A Look At Some Key Street Action Post Investor Day",
+        "url": "https://stocktwits.com/news-articles/markets/equity/mcd-stock-gets-price-target-cuts-from-morgan-stanley-melius-research-a-look-at-some-key-street-action-post-investor-day/cZMjR5WRBX4?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sun, 27 Sep 2026 12:45:00 +0000",
-        "titleEs": "Can McDonald's Stock Reclaim Its All-Time High as Rising Prices Weigh on Consumers?"
+        "published": "Mon, 28 Sep 2026 17:57:30 +0000",
+        "titleEs": "MCD Stock Gets Price Target Cuts From Morgan Stanley, Melius Research – A Look At Some Key Street Action Post Investor Day"
       },
       {
-        "title": "McDonald’s New Investment Plan Signals Long-Term Growth—and a Short-Term Reality Check",
-        "url": "https://finance.yahoo.com/m/ede450d1-fac9-3907-af37-4d79efa9386d/mcdonald%E2%80%99s-new-investment.html?.tsrc=rss",
+        "title": "McDonald's Just Announced a Big Move That Could Unlock a Billion-Dollar Growth Opportunity for Its Business",
+        "url": "https://www.fool.com/investing/2026/09/28/mcdonald-s-just-announced-a-big-move-that-could-unlock-a-billion-dollar-growth-opportunity-for-its-business/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sun, 27 Sep 2026 07:00:00 +0000",
-        "titleEs": "McDonald’s New Investment Plan Signals Long-Term Growth—and a Short-Term Reality Check"
+        "published": "Mon, 28 Sep 2026 17:50:01 +0000",
+        "titleEs": "McDonald's Just Announced a Big Move That Could Unlock a Billion-Dollar Growth Opportunity for Its Business"
       },
       {
-        "title": "At Age 52, A Traveling Salesman Pitching Milkshake Machines Walked Into A Restaurant That Would Change His Life Forever. Three Decades Later, There Were Over 7,500 McDonald’s Locations Worldwide, And Ray Kroc Left His Heirs A $600 Million Fortune.",
-        "url": "https://247wallst.com/investing/2026/09/26/at-age-52-a-traveling-salesman-pitching-milkshake-machines-walked-into-a-restaurant-that-would-change-his-life-forever-three-decades-later-there-were-over-7500-mcdonalds-locations-worldwide-and/?.tsrc=rss",
+        "title": "McDonald's launches media network with drive-thru ads",
+        "url": "https://qz.com/mcdonalds-media-network-drive-thru-ads-092826?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sun, 27 Sep 2026 00:29:37 +0000",
-        "titleEs": "At Age 52, A Traveling Salesman Pitching Milkshake Machines Walked Into A Restaurant That Would Change His Life Forever. Three Decades Later, There Were Over 7,500 McDonald’s Locations Worldwide, And Ray Kroc Left His Heirs A $600 Million Fortune."
+        "published": "Mon, 28 Sep 2026 17:22:59 +0000",
+        "titleEs": "McDonald's launches media network with drive-thru ads"
       }
     ],
     "IBIT": [
@@ -871,11 +871,11 @@
         "titleEs": "IBIT Owns Bitcoin Without the Wallet. That Convenience Costs You Every Year Whether Bitcoin Rises or Not"
       },
       {
-        "title": "Bloomberg’s ETF Analyst Says Bitcoin Funds Will Triple Gold Hours After Admitting They Burned Cash",
-        "url": "https://247wallst.com/investing/etf/2026/09/17/bloombergs-etf-analyst-says-bitcoin-funds-will-triple-gold-hours-after-admitting-they-burned-cash/?.tsrc=rss",
+        "title": "Has Bitcoin Found Its Place in the Portfolio Sun?",
+        "url": "https://www.thedailyupside.com/investments/cryptocurrency/has-bitcoin-found-its-place-in-the-portfolio-sun/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 17 Sep 2026 20:56:58 +0000",
-        "titleEs": "Bloomberg’s ETF Analyst Says Bitcoin Funds Will Triple Gold Hours After Admitting They Burned Cash"
+        "published": "Mon, 28 Sep 2026 04:03:00 +0000",
+        "titleEs": "Has Bitcoin Found Its Place in the Portfolio Sun?"
       },
       {
         "title": "Scaramucci: ‘Wall Street Got Bailed Out, Main Street Got Nothing’",
@@ -901,6 +901,20 @@
     ],
     "NU": [
       {
+        "title": "Nu Holdings Ltd. (NU) Declines More Than Market: Some Information for Investors",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nu-holdings-ltd-nu-declines-205003063.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 20:50:03 +0000",
+        "titleEs": "Nu Holdings Ltd. (NU) Declines More Than Market: Some Information for Investors"
+      },
+      {
+        "title": "Monzo in talks over potential sale to Brazil’s Nubank – report",
+        "url": "https://www.retailbankerinternational.com/news/monzo-potential-sale-nubank/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 28 Sep 2026 11:51:05 +0000",
+        "titleEs": "Monzo in talks over potential sale to Brazil’s Nubank – report"
+      },
+      {
         "title": "Why Is NU Stock Slipping In Premarket Trading Today?",
         "url": "https://stocktwits.com/news-articles/markets/equity/why-is-nu-stock-slipping-in-premarket-trading-today/cZMSnhNRBfU?.tsrc=rss",
         "source": "Yahoo Finance",
@@ -920,20 +934,6 @@
         "source": "Yahoo Finance",
         "published": "Sat, 26 Sep 2026 09:10:52 +0000",
         "titleEs": "Nu Holdings (NU) Appoints Sarah Wilson As Chief Legal Officer"
-      },
-      {
-        "title": "Monzo in talks about multibillion pound sale to Brazil's Nubank",
-        "url": "https://uk.finance.yahoo.com/news/monzo-talks-multibillion-pound-sale-131800079.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 25 Sep 2026 13:18:00 +0000",
-        "titleEs": "Monzo in talks about multibillion pound sale to Brazil's Nubank"
-      },
-      {
-        "title": "Nu Holdings Expands Lending: Can Credit Quality Hold Up?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/nu-holdings-expands-lending-credit-162600916.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 24 Sep 2026 16:26:00 +0000",
-        "titleEs": "Nu Holdings Expands Lending: Can Credit Quality Hold Up?"
       }
     ],
     "VIST": [
