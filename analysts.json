@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-28T12:05:48.440Z",
+  "ts": "2026-09-28T13:44:52.728254Z",
   "tickers": {
     "NVDA": {
       "name": "NVIDIA",
@@ -67,128 +67,32 @@
     }
   },
   "fundamentals": {
-    "NVDA": {
-      "price": 224.4,
-      "target": 285,
-      "targetHigh": 350,
-      "targetLow": 220,
-      "consensus": "buy",
-      "analysts": 67,
-      "pe": 28.5,
-      "forwardPE": 24.1,
-      "source": "Yahoo Finance + Robinhood 09/09",
-      "updated": "2026-09-09"
-    },
-    "META": {
-      "price": 613,
-      "target": 755,
-      "targetHigh": 1000,
-      "targetLow": 580,
-      "consensus": "strong_buy",
-      "analysts": 62,
-      "pe": 23.2,
-      "forwardPE": 19.8,
-      "source": "StockAnalysis + Simply Wall St 09/09",
-      "updated": "2026-09-09"
-    },
-    "MSFT": {
-      "price": 490,
-      "target": 564,
-      "targetHigh": 655,
-      "targetLow": 430,
-      "consensus": "buy",
-      "analysts": 35,
-      "pe": 33.5,
-      "forwardPE": 28.2,
-      "source": "CNN Markets + TipRanks 09/09",
-      "updated": "2026-09-09"
-    },
-    "ADBE": {
-      "price": 279,
-      "target": 261,
-      "targetHigh": 380,
-      "targetLow": 220,
-      "consensus": "hold",
-      "analysts": 38,
-      "pe": 30.1,
-      "forwardPE": 24.8,
-      "source": "Barchart + MarketBeat 09/09",
-      "updated": "2026-09-09"
-    },
-    "MU": {
-      "price": 104,
-      "target": 145,
-      "targetHigh": 175,
-      "targetLow": 100,
-      "consensus": "buy",
-      "analysts": 32,
-      "pe": null,
-      "forwardPE": 9.5,
-      "source": "JPMorgan + MS consensus 09/09",
-      "updated": "2026-09-09"
-    },
-    "PANW": {
-      "price": 210,
-      "target": 325,
-      "targetHigh": 380,
-      "targetLow": 260,
-      "consensus": "buy",
-      "analysts": 40,
-      "pe": 52,
-      "forwardPE": 42,
-      "source": "Goldman + MS consensus 09/09",
-      "updated": "2026-09-09"
-    },
-    "MELI": {
-      "price": 2050,
-      "target": 2650,
-      "targetHigh": 2950,
-      "targetLow": 2000,
-      "consensus": "buy",
-      "analysts": 18,
-      "pe": 55,
-      "forwardPE": 40,
-      "source": "JPMorgan + MS 09/09",
-      "updated": "2026-09-09"
-    },
-    "SPY": {
-      "price": 592,
-      "target": null,
-      "targetHigh": null,
-      "targetLow": null,
-      "consensus": null,
-      "analysts": null,
-      "pe": 23,
-      "forwardPE": 21,
-      "source": "ETF",
-      "updated": "2026-09-09"
-    },
     "ACN": {
-      "price": 187,
-      "target": 193,
+      "price": 183,
+      "target": 185,
       "targetHigh": 275,
       "targetLow": 130,
       "consensus": "buy",
       "analysts": 27,
       "pe": 19.1,
       "forwardPE": 17.5,
-      "source": "StockAnalysis + ChartMill 09/09",
-      "updated": "2026-09-09"
+      "source": "StockAnalysis + S&P Global 09/28",
+      "updated": "2026-09-28"
     },
-    "MCD": {
-      "price": 264,
-      "target": 337,
-      "targetHigh": 380,
-      "targetLow": 270,
-      "consensus": "buy",
-      "analysts": 41,
-      "pe": 24,
-      "forwardPE": 22,
-      "source": "ChartMill 09/09",
-      "updated": "2026-09-09"
+    "ADBE": {
+      "price": 235,
+      "target": 278,
+      "targetHigh": 377,
+      "targetLow": 195,
+      "consensus": "hold",
+      "analysts": 39,
+      "pe": 13.1,
+      "forwardPE": 18.0,
+      "source": "StockAnalysis + S&P Global 09/28",
+      "updated": "2026-09-28"
     },
     "IBIT": {
-      "price": 56,
+      "price": 48,
       "target": null,
       "targetHigh": null,
       "targetLow": null,
@@ -197,31 +101,139 @@
       "pe": null,
       "forwardPE": null,
       "source": "ETF sin target",
-      "updated": "2026-09-09"
+      "updated": "2026-09-28"
+    },
+    "MCD": {
+      "price": 264,
+      "target": 337,
+      "targetHigh": 375,
+      "targetLow": 280,
+      "consensus": "buy",
+      "analysts": 41,
+      "pe": 24,
+      "forwardPE": 22,
+      "source": "Consenso Wall St 09/28",
+      "updated": "2026-09-28"
+    },
+    "MELI": {
+      "price": 1753,
+      "target": 2650,
+      "targetHigh": 3200,
+      "targetLow": 1800,
+      "consensus": "buy",
+      "analysts": 18,
+      "pe": 55,
+      "forwardPE": 40,
+      "source": "StockAnalysis 09/28",
+      "updated": "2026-09-28"
+    },
+    "META": {
+      "price": 775,
+      "target": 761,
+      "targetHigh": 1000,
+      "targetLow": 580,
+      "consensus": "strong_buy",
+      "analysts": 62,
+      "pe": 28.4,
+      "forwardPE": 22.0,
+      "source": "StockAnalysis + S&P Global 09/28",
+      "updated": "2026-09-28"
+    },
+    "MSFT": {
+      "price": 518,
+      "target": 576,
+      "targetHigh": 870,
+      "targetLow": 440,
+      "consensus": "strong_buy",
+      "analysts": 55,
+      "pe": 38.4,
+      "forwardPE": 28.0,
+      "source": "StockAnalysis + S&P Global 09/28",
+      "updated": "2026-09-28"
+    },
+    "MU": {
+      "price": 108,
+      "target": 145,
+      "targetHigh": 225,
+      "targetLow": 80,
+      "consensus": "buy",
+      "analysts": 32,
+      "pe": null,
+      "forwardPE": 9.5,
+      "source": "StockAnalysis 09/28",
+      "updated": "2026-09-28"
     },
     "NU": {
-      "price": 16.2,
-      "target": 16.5,
-      "targetHigh": 20,
-      "targetLow": 12,
+      "price": 14,
+      "target": 17,
+      "targetHigh": 22,
+      "targetLow": 10,
       "consensus": "buy",
       "analysts": 14,
       "pe": 28,
       "forwardPE": 22,
-      "source": "Consenso Wall St 09/09",
-      "updated": "2026-09-09"
+      "source": "StockAnalysis 09/28",
+      "updated": "2026-09-28"
+    },
+    "NVDA": {
+      "price": 225,
+      "target": 328,
+      "targetHigh": 515,
+      "targetLow": 180,
+      "consensus": "strong_buy",
+      "analysts": 61,
+      "pe": 28.5,
+      "forwardPE": 18.7,
+      "source": "StockAnalysis + S&P Global 09/28",
+      "updated": "2026-09-28"
+    },
+    "PAMP": {
+      "price": null,
+      "target": null,
+      "targetHigh": null,
+      "targetLow": null,
+      "consensus": null,
+      "analysts": null,
+      "pe": null,
+      "forwardPE": null,
+      "source": "Acción local AR sin cobertura intl",
+      "updated": "2026-09-28"
+    },
+    "PANW": {
+      "price": 325,
+      "target": 380,
+      "targetHigh": 475,
+      "targetLow": 201,
+      "consensus": "buy",
+      "analysts": 55,
+      "pe": 52,
+      "forwardPE": 42,
+      "source": "StockAnalysis + S&P Global 09/28",
+      "updated": "2026-09-28"
+    },
+    "SPY": {
+      "price": 571,
+      "target": null,
+      "targetHigh": null,
+      "targetLow": null,
+      "consensus": null,
+      "analysts": null,
+      "pe": 23,
+      "forwardPE": 21,
+      "source": "ETF sin target",
+      "updated": "2026-09-28"
     },
     "VIST": {
-      "price": 66,
+      "price": 67,
       "target": 86,
-      "targetHigh": 95,
+      "targetHigh": 100,
       "targetLow": 60,
       "consensus": "buy",
       "analysts": 5,
       "pe": 8,
       "forwardPE": 6,
-      "source": "Seeking Alpha 09/09",
-      "updated": "2026-09-09"
+      "source": "StockAnalysis 09/28",
+      "updated": "2026-09-28"
     }
   },
   "bank_targets": {
