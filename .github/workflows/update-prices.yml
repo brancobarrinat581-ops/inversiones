@@ -33,11 +33,19 @@ jobs:
       - name: Fetch Prices
         run: node scripts/fetch-prices.js
 
+      # Si los precios quedaron mal, la corrida falla y no se guarda nada.
+      - name: Validar datos
+        run: node scripts/validate-ops.js
+
+      # Foto diaria de la cartera: es lo que alimenta la curva de evolucion.
+      - name: Snapshot
+        run: node scripts/snapshot.js
+
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add prices.json
+          git add prices.json history.json
           if git diff --staged --quiet; then
             echo "No changes"
           else

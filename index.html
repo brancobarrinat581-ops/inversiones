@@ -35,31 +35,52 @@
   })();
 </script>
   <script>
-  // 2. AUTH BRIDGE
+  // 2. AUTH BRIDGE — le da sesion a app.js sin depender del JWT roto de Supabase.
+  // OJO: esto NO es seguridad. La validacion corre en el navegador y los datos del repo
+  // son publicos. Sirve para que la app arranque y para saber quien entro, nada mas.
   (function(){
-    function sha256(t){return crypto.subtle.digest('SHA-256',new TextEncoder().encode(t)).then(function(b){return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('')});}
-    var U={"brancobarrinat581@gmail.com":{p:"b7bef4c1d9d83520b27d807ca0689f7b60ab5c3bc3cfede619e044b13560b931",u:"dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06"},"corina.pacini77@gmail.com":{p:"b7bef4c1d9d83520b27d807ca0689f7b60ab5c3bc3cfede619e044b13560b931",u:"ca7f985f-4b40-41da-b55b-86b5bc045bcb"}};
+    var ITER=250000;
+    var U={
+      "brancobarrinat581@gmail.com":{u:"dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",s:"37ff3382b9fac2fb3a7db4d9142cd6d1",h:"7075d32ab530b1840d13f798f0c80d35787e58fcb97b976a2ad9f5dab37d0d12"},
+      "corina.pacini77@gmail.com":{u:"ca7f985f-4b40-41da-b55b-86b5bc045bcb",s:"0aa298a0ffacfe11192ccbf78ddbd035",h:"0f81617b93c5ba47f6d11fd4b77974fa0946ff3ba3b9f05229e91522f864adbd"}
+    };
+    function bytes(hex){var a=new Uint8Array(hex.length/2);for(var i=0;i<a.length;i++)a[i]=parseInt(hex.substr(i*2,2),16);return a;}
+    function hex(buf){return Array.from(new Uint8Array(buf)).map(function(x){return x.toString(16).padStart(2,"0")}).join("");}
+    // PBKDF2 con salt distinto por usuario: si alguien lee el hash del HTML,
+    // no lo puede revertir con tablas publicas como pasaba con el SHA-256 pelado.
+    function derivar(pw,salt){
+      return crypto.subtle.importKey("raw",new TextEncoder().encode(pw),"PBKDF2",false,["deriveBits"])
+        .then(function(k){return crypto.subtle.deriveBits({name:"PBKDF2",salt:bytes(salt),iterations:ITER,hash:"SHA-256"},k,256);})
+        .then(hex);
+    }
     function ok(b){return new Response(JSON.stringify(b),{status:200,headers:{"Content-Type":"application/json"}});}
     function er(m){return new Response(JSON.stringify({error:"invalid_credentials",error_description:m}),{status:400,headers:{"Content-Type":"application/json"}});}
-    function lo(e,u){var n=Math.floor(Date.now()/1000);return ok({access_token:"local-token-"+u,token_type:"bearer",expires_in:86400,expires_at:n+86400,refresh_token:"local-refresh-"+u,user:{id:u,aud:"authenticated",role:"authenticated",email:e,email_confirmed_at:"2025-01-01T00:00:00Z",app_metadata:{provider:"email",providers:["email"]},user_metadata:{},identities:[],created_at:"2025-01-01T00:00:00Z",updated_at:"2025-01-01T00:00:00Z"}});}
+    function perfil(e,u){return {id:u,aud:"authenticated",role:"authenticated",email:e,email_confirmed_at:"2025-01-01T00:00:00Z",app_metadata:{provider:"email",providers:["email"]},user_metadata:{},identities:[],created_at:"2025-01-01T00:00:00Z",updated_at:"2025-01-01T00:00:00Z"};}
+    function lo(e,u){var n=Math.floor(Date.now()/1000);try{localStorage.setItem("__sess",e);}catch(x){}
+      return ok({access_token:"local-token-"+u,token_type:"bearer",expires_in:86400,expires_at:n+86400,refresh_token:"local-refresh-"+u,user:perfil(e,u)});}
+    function sesion(){try{var e=localStorage.getItem("__sess");return e&&U[e]?e:null;}catch(x){return null;}}
     var of_=window.fetch;
     window.fetch=function(url,opts){
       if(typeof url!=="string")return of_.apply(this,arguments);
       if(url.indexOf("/auth/v1/signup")!==-1)return Promise.resolve(er("Registro deshabilitado"));
       if(url.indexOf("/auth/v1/token")!==-1){
         var b;try{b=(opts&&opts.body)?JSON.parse(opts.body):{};}catch(e){b={};}
-        if(url.indexOf("grant_type=refresh_token")!==-1||b.grant_type==="refresh_token"){var k=Object.keys(U)[0];return Promise.resolve(lo(k,U[k].u));}
-        var em=(b.email||"").toLowerCase(),pw=b.password||"";
+        if(url.indexOf("grant_type=refresh_token")!==-1||b.grant_type==="refresh_token"){
+          // Antes esto devolvia siempre el PRIMER usuario, entrara quien entrara:
+          // cualquiera quedaba logueado sin contrasena y Corina aparecia como Branco.
+          var em0=sesion();
+          return Promise.resolve(em0?lo(em0,U[em0].u):er("Sesion expirada"));
+        }
+        var em=(b.email||"").toLowerCase().trim(),pw=b.password||"";
         if(!U[em])return Promise.resolve(er("Email no registrado"));
-        return sha256(pw).then(function(h){return h!==U[em].p?er("Credenciales invalidas"):lo(em,U[em].u);});
+        return derivar(pw,U[em].s).then(function(h){return h!==U[em].h?er("Credenciales invalidas"):lo(em,U[em].u);});
       }
       if(url.indexOf("/auth/v1/user")!==-1){
-        var au="";if(opts&&opts.headers){if(opts.headers instanceof Headers)au=opts.headers.get("Authorization")||"";else if(typeof opts.headers==="object")au=opts.headers.Authorization||opts.headers.authorization||"";}
-        var tk=au.replace("Bearer ","");
-        if(tk&&tk.length>5){var f2=null,u2=null;Object.keys(U).forEach(function(em){if(tk.indexOf(U[em].u)!==-1){f2=em;u2=U[em].u;}});if(!f2){f2=Object.keys(U)[0];u2=U[f2].u;}return Promise.resolve(ok({id:u2,aud:"authenticated",role:"authenticated",email:f2,email_confirmed_at:"2025-01-01T00:00:00Z",app_metadata:{provider:"email"},user_metadata:{},identities:[],created_at:"2025-01-01T00:00:00Z",updated_at:"2025-01-01T00:00:00Z"}));}
+        var em1=sesion();
+        if(em1)return Promise.resolve(ok(perfil(em1,U[em1].u)));
         return Promise.resolve(new Response(JSON.stringify({error:"not_authenticated"}),{status:401,headers:{"Content-Type":"application/json"}}));
       }
-      if(url.indexOf("/auth/v1/logout")!==-1)return Promise.resolve(ok({}));
+      if(url.indexOf("/auth/v1/logout")!==-1){try{localStorage.removeItem("__sess");}catch(x){}return Promise.resolve(ok({}));}
       return of_.apply(this,arguments);
     };
   })();
@@ -75,6 +96,8 @@
   <script src="analysis.js"></script>
   <script src="catalysts-ui.js"></script>
   <script src="comision-patch.js"></script>
+  <script src="scripts/lib/portfolio.js"></script>
+  <script src="metrics-ui.js"></script>
   <script src="groq-proxy.js"></script>
 </body>
 </html>

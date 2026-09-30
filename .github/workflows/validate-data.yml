@@ -1,0 +1,27 @@
+name: Validar datos
+
+# Corre en cada commit que toque los datos. Si algo esta mal, el commit queda
+# marcado en rojo en GitHub y llega un mail, en vez de romper el dashboard en silencio.
+on:
+  push:
+    paths:
+      - 'operaciones.json'
+      - 'prices.json'
+      - 'precios-manuales.json'
+      - 'scripts/**'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validar operaciones y precios
+        run: node scripts/validate-ops.js
