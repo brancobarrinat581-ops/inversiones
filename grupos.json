@@ -1,0 +1,13 @@
+{
+  "_ayuda": "Grupos de la cartera y objetivo de asignacion. 'objetivo' es el % que querés tener en cada grupo; poné null si no querés fijar uno. Los grupos salen de la hoja 4 de tu Excel. 'pais' sirve para medir exposicion a Argentina.",
+  "grupos": {
+    "Nucleo": { "objetivo": 20, "tickers": ["SPY"] },
+    "Tecnologia e IA": { "objetivo": 35, "tickers": ["NVDA", "MSFT", "META", "ADBE", "PANW", "MU", "ACN"] },
+    "Emergentes (Latam)": { "objetivo": 10, "tickers": ["EWZ", "NU", "MELI", "ILF"] },
+    "Energia y Valor": { "objetivo": 10, "tickers": ["VIST", "PAMP", "BMA"] },
+    "Consumo": { "objetivo": 10, "tickers": ["MCD"] },
+    "Cripto": { "objetivo": 5, "tickers": ["IBIT"] },
+    "Fondos IOL": { "objetivo": 10, "tickers": ["IOLCAMA", "IOLDOLD"] }
+  },
+  "argentina": ["PAMP", "VIST", "BMA", "IOLCAMA", "IOLDOLD"]
+}

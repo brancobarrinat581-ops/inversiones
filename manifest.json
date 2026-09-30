@@ -1,0 +1,13 @@
+{
+  "name": "Inversiones",
+  "short_name": "Inversiones",
+  "description": "Seguimiento de la cartera de CEDEARs y fondos IOL",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "icons": [
+    { "src": "icono.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

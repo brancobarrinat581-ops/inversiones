@@ -6,7 +6,7 @@
   var PF = window.__PF;
   if (!PF) { console.warn("metrics-ui: falta scripts/lib/portfolio.js"); return; }
 
-  var HIST = null, DIV = [];
+  var HIST = null, DIV = [], GRUPOS = null;
 
   function getJSON(u, cb) {
     try {
@@ -20,8 +20,8 @@
 
   function ls(k, def) { try { return JSON.parse(localStorage.getItem(k)) || def; } catch (e) { return def; } }
 
-  var f0 = function (n) { return "$" + Math.round(n).toLocaleString("es-AR"); };
-  var fUSD = function (n) { return "US$" + Math.round(n).toLocaleString("es-AR"); };
+  var f0 = function (n) { var v = Math.round(n); return (v < 0 ? "-$" : "$") + Math.abs(v).toLocaleString("es-AR"); };
+  var fUSD = function (n) { var v = Math.round(n); return (v < 0 ? "-US$" : "US$") + Math.abs(v).toLocaleString("es-AR"); };
   var fPct = function (n, d) { return (n >= 0 ? "+" : "") + n.toFixed(d == null ? 1 : d) + "%"; };
   var col = function (n) { return n >= 0 ? "#4CAF50" : "#F44336"; };
 
@@ -181,6 +181,94 @@
       }
     }
 
+    // ---------- diversificacion ----------
+    h += '<h3 style="color:#fff;margin:16px 0 8px;font-size:15px">\uD83E\uDDE9 Diversificacion</h3>';
+    var barra = function (pct, color) {
+      return '<div style="background:#000;border-radius:3px;height:6px;overflow:hidden;margin-top:4px">' +
+        '<div style="width:' + Math.min(100, pct) + '%;height:100%;background:' + color + '"></div></div>';
+    };
+
+    var mayor = r.posiciones[0];
+    var pesoMayor = r.valor > 0 ? mayor.valor / r.valor * 100 : 0;
+    h += '<div style="background:#0d1117;border-radius:8px;padding:12px;margin-bottom:8px">';
+    h += '<div style="color:#888;font-size:12px;margin-bottom:8px">Posicion mas grande: <b style="color:#fff">' +
+      mayor.ticker + "</b> con el " + pesoMayor.toFixed(1) + "% de la cartera" +
+      (pesoMayor > 20 ? ' <span style="color:#FF9800">— concentracion alta</span>' : "") + "</div>";
+    r.posiciones.slice(0, 6).forEach(function (p) {
+      var w = r.valor > 0 ? p.valor / r.valor * 100 : 0;
+      h += '<div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px">' +
+        '<span style="color:#fff">' + p.ticker + '</span><span style="color:#888">' + w.toFixed(1) + "%</span></div>" +
+        barra(w * 3, "#64B5F6") + "</div>";
+    });
+    h += "</div>";
+
+    if (GRUPOS && GRUPOS.grupos) {
+      var deTicker = {};
+      Object.keys(GRUPOS.grupos).forEach(function (g) {
+        (GRUPOS.grupos[g].tickers || []).forEach(function (t) { deTicker[t] = g; });
+      });
+      var porGrupo = {}, sinGrupo = [];
+      r.posiciones.forEach(function (p) {
+        var g = deTicker[p.ticker];
+        if (!g) { sinGrupo.push(p.ticker); g = "Sin grupo"; }
+        porGrupo[g] = (porGrupo[g] || 0) + p.valor;
+      });
+
+      h += '<div style="background:#0d1117;border-radius:8px;padding:12px;margin-bottom:8px">';
+      h += '<div style="color:#888;font-size:12px;margin-bottom:8px">Por grupo, contra tu objetivo</div>';
+      Object.keys(porGrupo).sort(function (a, b) { return porGrupo[b] - porGrupo[a]; }).forEach(function (g) {
+        var w = r.valor > 0 ? porGrupo[g] / r.valor * 100 : 0;
+        var obj = GRUPOS.grupos[g] && GRUPOS.grupos[g].objetivo;
+        var txt = w.toFixed(1) + "%";
+        if (obj != null) {
+          var dif = w - obj;
+          var monto = (obj / 100) * r.valor - porGrupo[g];
+          txt += ' <span style="color:' + (Math.abs(dif) < 3 ? "#888" : dif > 0 ? "#FF9800" : "#64B5F6") + '">' +
+            "(objetivo " + obj + "%" + (Math.abs(dif) >= 3 ? ", " + (monto > 0 ? "faltan " : "sobran ") + f0(Math.abs(monto)) : "") + ")</span>";
+        }
+        h += '<div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px">' +
+          '<span style="color:#fff">' + g + '</span><span style="color:#888">' + txt + "</span></div>" +
+          barra(w * 2, obj != null && Math.abs(w - obj) >= 3 ? "#FF9800" : "#4CAF50") + "</div>";
+      });
+      if (sinGrupo.length)
+        h += '<div style="color:#FF9800;font-size:11px;margin-top:6px">Sin grupo asignado: ' + sinGrupo.join(", ") +
+          ". Agregalos en grupos.json.</div>";
+      h += "</div>";
+
+      if (GRUPOS.argentina) {
+        var arg = 0;
+        r.posiciones.forEach(function (p) { if (GRUPOS.argentina.indexOf(p.ticker) !== -1) arg += p.valor; });
+        var pa = r.valor > 0 ? arg / r.valor * 100 : 0;
+        h += '<div style="background:#0d1117;border-radius:8px;padding:12px;margin-bottom:8px">' +
+          '<div style="display:flex;justify-content:space-between;font-size:13px">' +
+          '<span style="color:#fff">Riesgo argentino</span>' +
+          '<span style="color:' + (pa > 30 ? "#FF9800" : "#4CAF50") + ';font-weight:700">' + pa.toFixed(1) + "%</span></div>" +
+          barra(pa * 2, pa > 30 ? "#FF9800" : "#4CAF50") +
+          '<div style="color:#888;font-size:11px;margin-top:6px">' + f0(arg) + " en activos argentinos. " +
+          "El resto son empresas del exterior via CEDEAR, aunque liquiden en el mercado local.</div></div>";
+      }
+    }
+
+    // ---------- operaciones cerradas ----------
+    var cer = PF.cerradas(ls("operaciones_raw", []));
+    h += '<h3 style="color:#fff;margin:16px 0 8px;font-size:15px">\uD83D\uDCCB Operaciones cerradas</h3>';
+    h += '<div style="background:#0d1117;border-radius:8px;padding:12px;margin-bottom:8px">';
+    if (!cer.ventas.length) {
+      h += '<div style="color:#888;font-size:13px">Todavia no vendiste nada.</div>';
+    } else {
+      cer.ventas.slice().sort(function (a, b) { return b.resultado - a.resultado; }).forEach(function (v) {
+        h += '<div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;' +
+          'padding:5px 0;border-bottom:1px solid #1f2430">' +
+          '<span style="color:#fff">' + v.ticker + ' <span style="color:#666">' + v.cantidad + " el " + v.fecha + "</span></span>" +
+          '<span style="color:' + col(v.resultado) + ';font-weight:700">' + f0(v.resultado) + " (" + fPct(v.pct) + ")</span></div>";
+      });
+    }
+    h += '<div style="display:flex;justify-content:space-between;font-size:12px;margin-top:10px">' +
+      '<span style="color:#888">Comisiones pagadas en total</span>' +
+      '<span style="color:#FF9800;font-weight:700">' + f0(cer.comisiones) +
+      (r.invertido > 0 ? " (" + (cer.comisiones / r.invertido * 100).toFixed(2) + "% de lo invertido)" : "") +
+      "</span></div></div>";
+
     if (r.sinPrecio.length) {
       h += '<div style="background:#F4433622;border-left:3px solid #F44336;color:#F44336;padding:8px 10px;' +
         'border-radius:4px;margin-top:12px;font-size:12px">Sin precio, valuados en 0: ' + r.sinPrecio.join(", ") + "</div>";
@@ -217,6 +305,7 @@
   }
 
   getJSON("history.json", function (d) { HIST = d; });
+  getJSON("grupos.json", function (d) { GRUPOS = d; });
   getJSON("dividendos.json", function (d) { DIV = Array.isArray(d) ? d : (d && d.dividendos) || []; });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boton);

@@ -117,9 +117,38 @@ function xirr(flujos, valorFinal, fechaFinal) {
   return isFinite(r) ? r * 100 : null;
 }
 
+// Detalle de cada venta: cuanto costo lo vendido y cuanto resultado dejo.
+// Sirve para ver que operaciones salieron bien y cuales no.
+function cerradas(ops) {
+  var pos = {}, out = [], comisiones = 0;
+  normalize(ops).forEach(function (o) {
+    if (!pos[o.ticker]) pos[o.ticker] = { cantidad: 0, costo: 0 };
+    var p = pos[o.ticker];
+    comisiones += o.comision;
+    if (o.tipo === "COMPRA") {
+      p.cantidad += o.cantidad;
+      p.costo += o.cantidad * o.ppc + o.comision;
+    } else if (o.tipo === "VENTA") {
+      var unitario = p.cantidad > 0 ? p.costo / p.cantidad : 0;
+      var vendido = Math.min(o.cantidad, p.cantidad);
+      var ingreso = o.cantidad * o.ppc - o.comision;
+      var costo = vendido * unitario;
+      out.push({
+        fecha: o.fecha, ticker: o.ticker, cantidad: o.cantidad,
+        ingreso: ingreso, costo: costo, resultado: ingreso - costo,
+        pct: costo > 0 ? (ingreso - costo) / costo * 100 : 0
+      });
+      p.cantidad -= vendido;
+      p.costo -= costo;
+      if (p.cantidad < 1e-9) { p.cantidad = 0; p.costo = 0; }
+    }
+  });
+  return { ventas: out, comisiones: comisiones };
+}
+
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = { computePortfolio: computePortfolio, xirr: xirr, normalize: normalize, build: build };
+  module.exports = { computePortfolio: computePortfolio, xirr: xirr, normalize: normalize, build: build, cerradas: cerradas };
 }
 if (typeof window !== "undefined") {
-  window.__PF = { computePortfolio: computePortfolio, xirr: xirr, normalize: normalize, build: build };
+  window.__PF = { computePortfolio: computePortfolio, xirr: xirr, normalize: normalize, build: build, cerradas: cerradas };
 }

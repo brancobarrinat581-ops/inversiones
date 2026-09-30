@@ -1,0 +1,49 @@
+name: Importar Excel
+
+# Subis el .xlsx a la carpeta datos/ y este workflow regenera operaciones.json.
+# Se termina el circuito de cargar a mano, exportar, renombrar y volver a subir.
+on:
+  push:
+    paths:
+      - 'datos/*.xlsx'
+      - 'importar-overrides.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar lector de Excel
+        run: npm install xlsx@0.18.5 --no-save
+
+      - name: Importar operaciones
+        run: node scripts/import-excel.js
+
+      # Si el Excel trajo algo incoherente, la corrida falla y no se commitea nada.
+      - name: Validar datos
+        run: node scripts/validate-ops.js
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add operaciones.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios en operaciones.json"
+          else
+            git commit -m "📗 Operaciones importadas del Excel $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git pull --rebase origin main || true
+            git push || (sleep 5 && git pull --rebase origin main && git push)
+          fi
