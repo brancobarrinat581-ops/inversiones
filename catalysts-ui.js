@@ -10,15 +10,16 @@
   function pct(a,b){if(!b||!a||isNaN(a)||isNaN(b))return null;return((a-b)/b*100).toFixed(1)}
   function getCCL(){try{var p=JSON.parse(localStorage.getItem("prices_data"));return p&&p.ccl?p.ccl:1560;}catch(e){return 1560;}}
   function u2a(usd,tk){return Math.round(usd/(RATIO[tk]||1)*getCCL());}
-  function realUSD(tk){var f=(D&&D.fundamentals||{})[tk];if(f&&f.price>0)return f.price;try{var p=JSON.parse(localStorage.getItem("prices_data"));var x=(p&&p.prices||{})[tk];if(x&&x.ars>0)return Math.round(x.ars*(RATIO[tk]||1)/(p.ccl||1560)*100)/100;}catch(e){}return 0;}
+  function realUSD(tk){try{var p=JSON.parse(localStorage.getItem("prices_data"));var x=(p&&p.prices||{})[tk];if(x&&x.src!=="Manual"){if(x.usd>0)return x.usd;if(x.ars>0)return Math.round(x.ars*(RATIO[tk]||1)/(p.ccl||1560)*100)/100;}}catch(e){}var f=(D&&D.fundamentals||{})[tk];if(f&&f.price>0)return f.price;return 0;}
+  // Posicion (cantidad y PPC) calculada desde las operaciones, igual que app.js (costo promedio ponderado)
+  function posFromOps(tk){try{var ops=JSON.parse(localStorage.getItem("operaciones_raw")||"[]").filter(function(o){return o.ticker===tk;}).sort(function(a,b){return a.fecha<b.fecha?-1:a.fecha>b.fecha?1:0;});var cant=0,cost=0;ops.forEach(function(o){var q=Math.abs(Number(o.cantidad)||0),px=Number(o.ppc||o.precio)||0,com=Number(o.comision)||0;if(String(o.tipo).toUpperCase()==="COMPRA"){cost+=q*px+com;cant+=q;}else{var avg=cant>0?cost/cant:0;cost-=q*avg;cant-=q;}});return cant>0.001?{ticker:tk,cantidad:cant,ppc:cost/cant}:null;}catch(e){return null;}}
 
   function evalModal(tk){
     var old=document.getElementById("eval-modal");if(old)old.remove();
     var f=(D&&D.fundamentals||{})[tk]||{},bk=(D&&D.bank_targets||{})[tk]||[];
     var cats=(D&&D.catalysts||{})[tk]||[],nw=(D&&D.news||{})[tk]||[];
     var info=(D&&D.tickers||{})[tk]||{};
-    var port;try{port=JSON.parse(localStorage.getItem("portfolio_iol"));}catch(e){}
-    var pos=(port&&port.positions||[]).find(function(p){return p.ticker===tk});
+    var pos=posFromOps(tk);
     var prices;try{prices=JSON.parse(localStorage.getItem("prices_data"));}catch(e){}
     var px=(prices&&prices.prices||{})[tk],arsN=px?px.ars:0,uR=realUSD(tk);
     var tgt=f.target,tH=f.targetHigh,tL=f.targetLow;
@@ -49,7 +50,7 @@
       if(f.forwardPE)h+='<div><span style="color:#888;font-size:11px">P/E Fwd</span><div style="color:#fff;font-weight:700">'+f.forwardPE.toFixed(1)+"x</div></div>";
       h+='<div style="width:100%;color:#555;font-size:10px">Fuente: '+(f.source||"Yahoo Finance")+"</div></div>";}
     if(bk.length){h+='<h3 style="color:#fff;margin:14px 0 8px;font-size:15px">\ud83c\udfe6 Bancos de Inversi\u00f3n</h3><div style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px">';
-      bk.forEach(function(b){var bA=u2a(b.target,tk);var up=uR>0?pct(b.target,uR):null;var c=/Buy|Overweight|Outperform/.test(b.rating)?"#4CAF50":/Hold|Neutral/.test(b.rating)?"#FFD700":"#F44336";
+      bk.forEach(function(b){var bA=u2a(b.target,tk);var up=uR>0?pct(b.target,uR):null;var c=/Buy|Overweight|Outperform|Positive|Accumulate/i.test(b.rating)?"#4CAF50":/Sell|Underweight|Underperform|Reduce|Negative/i.test(b.rating)?"#F44336":"#FFD700";
         h+='<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:#0d1117;border-radius:6px;border-left:3px solid '+c+'"><div><div style="color:#fff;font-weight:600;font-size:13px">'+b.bank+"</div>"+'<div style="color:#888;font-size:11px">'+(b.analyst?b.analyst+" \u00b7 ":"")+trR(b.rating)+" \u00b7 "+b.date+"</div></div>"+'<div style="text-align:right"><div style="color:#fff;font-weight:700;font-size:15px">'+fmt(bA)+"</div>"+'<div style="color:#666;font-size:11px">'+fU(b.target)+" USD</div>"+(up?'<div style="color:'+(up>0?"#4CAF50":"#F44336")+';font-size:11px">'+(up>0?"+":"")+up+"%</div>":"")+"</div></div>";});
       h+="</div>";}
     if(cats.length){h+='<h3 style="color:#fff;margin:14px 0 8px;font-size:15px">\ud83d\udcc5 Pr\u00f3ximos Eventos</h3>';
@@ -84,7 +85,8 @@
     m.querySelector("#disc-close2").onclick=function(){m.remove();};
   }
 
-  function banner(){var msgs=[];try{var pr=JSON.parse(localStorage.getItem("prices_data"));if(pr){var v=Object.keys(pr.prices||{}).filter(function(k){return pr.prices[k].stale;});var hr=pr.ts?(Date.now()-new Date(pr.ts).getTime())/3600000:999;if(v.length)msgs.push({t:"warn",x:"\u26a0 Precio desactualizado en "+v.length+" activo"+(v.length>1?"s":"")});else if(hr>24)msgs.push({t:"warn",x:"\u26a0 Precios sin actualizar hace "+Math.round(hr)+" horas"});}}catch(e){}
+  function badge(){try{var pr=JSON.parse(localStorage.getItem("prices_data"));if(!pr||!pr.ts)return;var d=new Date(pr.ts);var b=document.getElementById("px-badge");if(!b){b=document.createElement("div");b.id="px-badge";b.style.cssText="position:fixed;bottom:16px;right:16px;z-index:9997;background:#15151fcc;border:1px solid #2a2a3a;color:#888;font-size:11px;padding:4px 8px;border-radius:6px;pointer-events:none";document.body.appendChild(b);}b.textContent="Precios: "+d.toLocaleString("es-AR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})+" · CCL $"+Math.round(pr.ccl||0);}catch(e){}}
+  function banner(){badge();var msgs=[];try{var pr=JSON.parse(localStorage.getItem("prices_data"));if(pr){var v=Object.keys(pr.prices||{}).filter(function(k){return pr.prices[k].stale&&pr.prices[k].src!=="Manual";});var hr=pr.ts?(Date.now()-new Date(pr.ts).getTime())/3600000:999;if(v.length)msgs.push({t:"warn",x:"\u26a0 Precio desactualizado en "+v.length+" activo"+(v.length>1?"s":"")});else if(hr>24)msgs.push({t:"warn",x:"\u26a0 Precios sin actualizar hace "+Math.round(hr)+" horas"});}}catch(e){}
     if(D&&D.catalysts){var hoy=new Date();hoy.setHours(0,0,0,0);Object.keys(D.catalysts).forEach(function(tk){(D.catalysts[tk]||[]).forEach(function(ev){var dias=Math.round((new Date(ev.date+"T00:00:00")-hoy)/86400000);if(dias>=0&&dias<=3)msgs.push({t:"info",x:"\ud83d\udcc5 "+tk+" reporta "+(dias===0?"HOY":dias===1?"ma\u00f1ana":"en "+dias+" d\u00edas")+" ("+ev.event+")"});});});}
     var old=document.getElementById("inv-banner");if(old)old.remove();if(!msgs.length)return;
     var d=document.createElement("div");d.id="inv-banner";d.style.cssText="position:sticky;top:0;z-index:9998;display:flex;flex-direction:column;gap:4px;padding:8px 12px;font-size:13px";d.innerHTML=msgs.map(function(m){var c=m.t==="warn"?"#FF9800":"#64B5F6";return'<div style="background:'+c+'22;border-left:3px solid '+c+';color:'+c+';padding:6px 10px;border-radius:4px">'+m.x+"</div>";}).join("");document.body.insertBefore(d,document.body.firstChild);}

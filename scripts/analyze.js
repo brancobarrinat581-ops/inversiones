@@ -1,6 +1,8 @@
-// scripts/analyze.js — Backend en GitHub Actions
-// Genera analysts.json con: noticias traducidas, targets por banco, fundamentals de Yahoo
-// REGLA: nunca pisa datos buenos. Si falla, conserva lo anterior.
+// scripts/analyze.js v4 — Backend en GitHub Actions
+// Genera analysts.json con: fundamentals + consenso, targets por banco y fechas de balances (Yahoo con crumb),
+// noticias (Yahoo RSS) traducidas al español.
+// REGLAS: nunca pisa datos buenos con vacios; y NUNCA muestra datos que no cierran con el precio real
+// (si un target/precio guardado difiere demasiado del precio en vivo de prices.json, se descarta).
 const fs = require('fs');
 
 const TICKERS = {
@@ -22,24 +24,30 @@ const TICKERS = {
   YPF:{name:"YPF",sector:"Energía Argentina"}
 };
 
-const CATALYSTS = {
-  ADBE:[{date:"2026-09-10",event:"Q3 FY2026 Earnings",type:"earnings",importance:"high"}],
-  ACN:[{date:"2026-09-24",event:"Q4 FY2026 Earnings",type:"earnings",importance:"high"}],
-  MSFT:[{date:"2026-10-27",event:"Q1 FY2027 Earnings",type:"earnings",importance:"high"}],
-  META:[{date:"2026-10-28",event:"Q3 2026 Earnings",type:"earnings",importance:"high"}],
-  MCD:[{date:"2026-10-28",event:"Q3 2026 Earnings",type:"earnings",importance:"medium"}],
-  MELI:[{date:"2026-11-05",event:"Q3 2026 Earnings",type:"earnings",importance:"high"}],
-  VIST:[{date:"2026-11-10",event:"Q3 2026 Earnings",type:"earnings",importance:"medium"}],
-  NU:[{date:"2026-11-12",event:"Q3 2026 Earnings",type:"earnings",importance:"high"}],
-  PAMP:[{date:"2026-11-12",event:"Q3 2026 Earnings",type:"earnings",importance:"medium"}],
-  PANW:[{date:"2026-11-19",event:"Q1 FY2027 Earnings",type:"earnings",importance:"high"}],
-  NVDA:[{date:"2026-11-25",event:"Q3 FY2027 Earnings",type:"earnings",importance:"high"}],
-  MU:[{date:"2026-12-18",event:"Q1 FY2027 Earnings",type:"earnings",importance:"high"}]
+// Simbolo en Yahoo cuando difiere del ticker local
+const YSYM = { PAMP: 'PAM' };
+const ysym = tk => YSYM[tk] || tk;
+
+// Respaldo si Yahoo no responde. Se descartan solos cuando la fecha ya paso.
+const CATALYSTS_FALLBACK = {
+  MU:[{date:"2026-09-30",event:"Balance Q4 FY2026",type:"earnings",importance:"high"}],
+  ACN:[{date:"2026-10-01",event:"Balance Q4 FY2026",type:"earnings",importance:"high"}],
+  MSFT:[{date:"2026-10-27",event:"Balance Q1 FY2027 (estimado)",type:"earnings",importance:"high"}],
+  META:[{date:"2026-10-28",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"high"}],
+  MCD:[{date:"2026-10-28",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"medium"}],
+  MELI:[{date:"2026-11-05",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"high"}],
+  VIST:[{date:"2026-11-10",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"medium"}],
+  NU:[{date:"2026-11-12",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"high"}],
+  PAMP:[{date:"2026-11-12",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"medium"}],
+  PANW:[{date:"2026-11-19",event:"Balance Q1 FY2027 (estimado)",type:"earnings",importance:"high"}],
+  NVDA:[{date:"2026-11-25",event:"Balance Q3 FY2027 (estimado)",type:"earnings",importance:"high"}],
+  ADBE:[{date:"2026-12-10",event:"Balance Q4 FY2026 (estimado)",type:"earnings",importance:"high"}]
 };
+const HIGH = new Set(['NVDA','META','MSFT','ADBE','MU','PANW','MELI','ACN','NU']);
 
 // TARGETS POR BANCO — Datos verificados de TipRanks, CNBC, Yahoo Finance, MarketBeat.
 // Fecha de cada estimación incluida. Se actualizan cuando salen nuevos informes.
-const BANK_TARGETS = {
+const BANK_TARGETS_FALLBACK = {
   NVDA: [
     {bank:"Goldman Sachs",analyst:"Toshiya Hari",target:285,rating:"Buy",date:"2026-06"},
     {bank:"Morgan Stanley",analyst:"Joseph Moore",target:288,rating:"Overweight",date:"2026-06"},
@@ -97,17 +105,135 @@ const BANK_TARGETS = {
   ]
 };
 
-// === HELPERS ===
-async function get(url, timeout=10000) {
-  const c=new AbortController(); const id=setTimeout(()=>c.abort(),timeout);
+
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+async function get(url, timeout = 12000, headers = {}) {
+  const c = new AbortController(); const id = setTimeout(() => c.abort(), timeout);
   try {
-    const r=await fetch(url,{signal:c.signal,headers:{'User-Agent':'Mozilla/5.0 (compatible; InvBot/2.0)','Accept':'*/*'}});
+    const r = await fetch(url, { signal: c.signal, headers: { 'User-Agent': UA, 'Accept': '*/*', ...headers } });
     clearTimeout(id);
-    if(!r.ok) throw new Error('HTTP '+r.status);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
     return r;
-  } catch(e){ clearTimeout(id); throw e; }
+  } catch (e) { clearTimeout(id); throw e; }
 }
 
+// ---------- Precio en vivo (para validar) ----------
+let LIVE = {};
+try { const p = JSON.parse(fs.readFileSync('prices.json', 'utf8')); Object.entries(p.prices || {}).forEach(([k, v]) => { if (v.usd > 0 && v.src !== 'Manual') LIVE[k] = v.usd; }); } catch (e) {}
+function sane(tk, value, lo = 0.3, hi = 3) {
+  const px = LIVE[tk]; if (!px || !(value > 0)) return true;   // sin referencia no se puede validar
+  return value >= px * lo && value <= px * hi;
+}
+
+// ---------- Yahoo: cookie + crumb (obligatorio para quoteSummary desde 2023) ----------
+let YS = null;
+async function yahooSession() {
+  if (YS) return YS;
+  let cookie = '';
+  for (const u of ['https://fc.yahoo.com/', 'https://finance.yahoo.com/', 'https://login.yahoo.com/']) {
+    try {
+      const r = await fetch(u, { headers: { 'User-Agent': UA }, redirect: 'manual' });
+      const sc = typeof r.headers.getSetCookie === 'function' ? r.headers.getSetCookie() : [r.headers.get('set-cookie')].filter(Boolean);
+      const c = sc.map(x => x.split(';')[0]).filter(Boolean).join('; ');
+      if (c) { cookie = c; break; }
+    } catch (e) {}
+  }
+  for (const h of ['query2', 'query1']) {
+    try {
+      const r = await fetch(`https://${h}.finance.yahoo.com/v1/test/getcrumb`, { headers: { 'User-Agent': UA, 'Cookie': cookie } });
+      const t = (await r.text()).trim();
+      if (r.ok && t && t.length < 40 && !/[<{\s]/.test(t)) { YS = { cookie, crumb: t }; console.log('Yahoo crumb OK'); return YS; }
+    } catch (e) {}
+  }
+  throw new Error('Yahoo no entrego crumb');
+}
+
+async function quoteSummary(sym, modules) {
+  const s = await yahooSession(); let last;
+  for (const h of ['query2', 'query1']) {
+    try {
+      const r = await get(`https://${h}.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(sym)}?modules=${modules}&crumb=${encodeURIComponent(s.crumb)}`,
+        12000, { 'Cookie': s.cookie, 'Accept': 'application/json' });
+      const res = (await r.json())?.quoteSummary?.result?.[0];
+      if (res) return res;
+      throw new Error('sin datos');
+    } catch (e) { last = e; }
+  }
+  throw last;
+}
+
+const raw = x => (x && typeof x === 'object' && 'raw' in x) ? x.raw : (typeof x === 'number' ? x : null);
+const ym = sec => { const d = new Date(sec * 1000); return d.getUTCFullYear() + '-' + String(d.getUTCMonth() + 1).padStart(2, '0'); };
+
+// ---------- 1. Fundamentals + bancos + fechas de balance ----------
+async function fetchYahooData(prev) {
+  const fundamentals = {}, banks = {}, cats = {};
+  let ok = 0, fail = 0, yahooCaido = false;
+  const today = new Date(); today.setUTCHours(0, 0, 0, 0);
+
+  for (const tk of Object.keys(TICKERS)) {
+    let res = null;
+    if (!yahooCaido) {
+      try { res = await quoteSummary(ysym(tk), 'financialData,summaryDetail,defaultKeyStatistics,upgradeDowngradeHistory,calendarEvents'); }
+      catch (e) { console.log(`  ${tk}: Yahoo fallo (${e.message})`); if (/crumb/.test(e.message)) yahooCaido = true; }
+    }
+    if (res) {
+      const fd = res.financialData || {}, sd = res.summaryDetail || {}, dks = res.defaultKeyStatistics || {};
+      const row = {
+        price: raw(fd.currentPrice), target: raw(fd.targetMeanPrice), targetHigh: raw(fd.targetHighPrice), targetLow: raw(fd.targetLowPrice),
+        consensus: fd.recommendationKey && fd.recommendationKey !== 'none' ? fd.recommendationKey : null,
+        analysts: raw(fd.numberOfAnalystOpinions), pe: raw(sd.trailingPE), forwardPE: raw(sd.forwardPE) ?? raw(dks.forwardPE),
+        peg: raw(dks.pegRatio), source: 'Yahoo Finance', updated: new Date().toISOString()
+      };
+      if (row.target != null || row.pe != null || row.forwardPE != null) { fundamentals[tk] = row; ok++; }
+
+      // Targets por banco: ultima nota de cada firma en los ultimos 6 meses, con precio objetivo
+      const hist = (res.upgradeDowngradeHistory && res.upgradeDowngradeHistory.history) || [];
+      const desde = Date.now() / 1000 - 183 * 86400, visto = new Set(), lista = [];
+      hist.filter(h => h.epochGradeDate >= desde).sort((a, b) => b.epochGradeDate - a.epochGradeDate).forEach(h => {
+        const tgt = raw(h.currentPriceTarget);
+        if (visto.has(h.firm) || !(tgt > 0) || !sane(tk, tgt)) return;
+        visto.add(h.firm);
+        lista.push({ bank: h.firm, analyst: '', target: tgt, rating: h.toGrade || '', date: ym(h.epochGradeDate), action: h.priceTargetAction || h.action || '' });
+      });
+      if (lista.length) banks[tk] = lista.slice(0, 8);
+
+      // Proxima fecha de balance
+      const ed = ((res.calendarEvents && res.calendarEvents.earnings && res.calendarEvents.earnings.earningsDate) || [])
+        .map(raw).filter(Boolean).map(s => new Date(s * 1000)).filter(d => d >= today).sort((a, b) => a - b)[0];
+      if (ed) cats[tk] = [{ date: ed.toISOString().slice(0, 10), event: 'Presenta balance', type: 'earnings', importance: HIGH.has(tk) ? 'high' : 'medium' }];
+
+      console.log(`  ${tk}: target=${row.target} cons=${row.consensus} bancos=${lista.length} balance=${ed ? ed.toISOString().slice(0, 10) : '-'}`);
+    } else fail++;
+
+    // Respaldo: dato anterior SOLO si sigue cerrando con el precio real
+    if (!fundamentals[tk] && prev && prev[tk]) {
+      const p = prev[tk];
+      if (sane(tk, p.price, 0.8, 1.25) && sane(tk, p.target)) fundamentals[tk] = p;
+      else console.log(`  ${tk}: descarto fundamentals viejos (precio ${p.price} vs vivo ${LIVE[tk]})`);
+    }
+    if (!banks[tk] && BANK_TARGETS_FALLBACK[tk]) {
+      const l = BANK_TARGETS_FALLBACK[tk].filter(b => sane(tk, b.target));
+      if (l.length) banks[tk] = l;
+    }
+    await sleep(350);
+  }
+
+  // Catalysts: Yahoo > respaldo; se eliminan eventos de hace mas de 2 dias
+  const lim = new Date(today.getTime() - 2 * 86400000).toISOString().slice(0, 10);
+  const catalysts = {};
+  new Set([...Object.keys(CATALYSTS_FALLBACK), ...Object.keys(cats)]).forEach(tk => {
+    const l = (cats[tk] || CATALYSTS_FALLBACK[tk] || []).filter(e => e.date >= lim);
+    if (l.length) catalysts[tk] = l;
+  });
+
+  console.log(`Yahoo: ${ok} ok / ${fail} fallidos`);
+  return { fundamentals, banks, catalysts, ok };
+}
+
+// ---------- 2. Noticias (Yahoo RSS) ----------
 function parseRSS(xml){
   const out=[]; const re=/<item>([\s\S]*?)<\/item>/g; let m;
   while((m=re.exec(xml))!==null){
@@ -122,106 +248,54 @@ function parseRSS(xml){
   return out;
 }
 
-// === 1. NOTICIAS (Yahoo RSS) ===
-async function fetchNews(prev){
-  const news={}; let ok=0,fail=0;
-  for(const tk of Object.keys(TICKERS)){
-    try{
-      const r=await get(`https://feeds.finance.yahoo.com/rss/2.0/headline?s=${tk}&region=US&lang=en-US`);
-      const items=parseRSS(await r.text()).slice(0,5);
-      if(items.length){news[tk]=items;ok++;console.log(`  news ${tk}: ${items.length}`);}
-      else throw new Error('feed vacío');
-    }catch(e){
-      fail++;
-      if(prev&&prev[tk]&&prev[tk].length) news[tk]=prev[tk];
-    }
-    await new Promise(r=>setTimeout(r,300));
+
+async function fetchNewsFor(list, prev, n) {
+  const news = {}; let ok = 0;
+  for (const tk of list) {
+    try {
+      const r = await get(`https://feeds.finance.yahoo.com/rss/2.0/headline?s=${ysym(tk)}&region=US&lang=en-US`);
+      const items = parseRSS(await r.text()).slice(0, n);
+      if (!items.length) throw new Error('vacio');
+      news[tk] = items; ok++;
+    } catch (e) { if (prev && prev[tk] && prev[tk].length) news[tk] = prev[tk]; }
+    await sleep(300);
   }
-  console.log(`Noticias: ${ok} ok / ${fail} fallidas`);
+  console.log(`  noticias: ${ok}/${list.length}`);
   return news;
 }
 
-// === 2. TRADUCIR CON GOOGLE TRANSLATE (sin key, no expira) ===
-async function translateBatch(titles){
-  if(!titles.length) return [];
-  const results = [];
-  for(const t of titles){
-    try {
-      const url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=es&dt=t&q=" + encodeURIComponent(t);
-      const r = await fetch(url);
-      const data = await r.json();
-      // data[0] es array de traducciones, cada una es [traducido, original, ...]
-      const translated = data[0].map(x => x[0]).join("");
-      results.push(translated);
-    } catch(e) {
-      results.push(t); // Si falla, devuelve original
-    }
-    await new Promise(r=>setTimeout(r,200)); // Rate limit
-  }
-  return results;
+// ---------- 3. Traduccion (Google gtx -> Google dict -> MyMemory), con cache ----------
+async function tr1(t) {
+  const q = encodeURIComponent(t);
+  try {
+    const d = await (await get('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=es&dt=t&q=' + q, 8000)).json();
+    const s = (d[0] || []).map(x => x[0]).join('').trim(); if (s && s !== t) return s;
+  } catch (e) {}
+  try {
+    const d = await (await get('https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=en&tl=es&q=' + q, 8000)).json();
+    const s = (Array.isArray(d) ? (Array.isArray(d[0]) ? d[0][0] : d[0]) : '') || ''; if (s && s !== t) return String(s).trim();
+  } catch (e) {}
+  try {
+    const d = await (await get('https://api.mymemory.translated.net/get?langpair=en|es&q=' + q, 8000)).json();
+    const s = d && d.responseData && d.responseData.translatedText;
+    if (s && s !== t && !/MYMEMORY WARNING|QUERY LENGTH LIMIT/i.test(s)) return s;
+  } catch (e) {}
+  return null;
 }
 
-async function translateNews(news){
-  const allT=[],map=[];
-  Object.entries(news).forEach(([tk,items])=>{
-    (items||[]).forEach((item,i)=>{
-      if(item.title&&!/[áéíóúñ¿¡]/.test(item.title)){
-        allT.push(item.title); map.push({tk,i});
-      }
-    });
-  });
-  if(!allT.length) return;
-  console.log(`Traduciendo ${allT.length} títulos...`);
-  for(let b=0;b<allT.length;b+=10){
-    const batch=allT.slice(b,b+10);
-    const tr=await translateBatch(batch);
-    tr.forEach((t,j)=>{
-      const{tk,i}=map[b+j];
-      if(news[tk]&&news[tk][i]) news[tk][i].titleEs=t;
-    });
-    if(b+10<allT.length) await new Promise(r=>setTimeout(r,500));
+async function translate(groups, prevGroups) {
+  const cache = {};
+  prevGroups.forEach(g => Object.values(g || {}).flat().forEach(n => { if (n && n.titleEs && n.titleEs !== n.title) cache[n.title] = n.titleEs; }));
+  let hit = 0, ok = 0, fail = 0;
+  for (const g of groups) for (const items of Object.values(g)) for (const n of items) {
+    if (cache[n.title]) { n.titleEs = cache[n.title]; hit++; continue; }
+    const s = await tr1(n.title);
+    if (s) { n.titleEs = s; cache[n.title] = s; ok++; } else { delete n.titleEs; fail++; }
+    await sleep(150);
   }
-  const ok=Object.values(news).flat().filter(n=>n.titleEs).length;
-  console.log(`Traducidas: ${ok} de ${allT.length}`);
+  console.log(`  traduccion: ${ok} nuevas, ${hit} de cache, ${fail} sin traducir`);
 }
 
-// === 3. FUNDAMENTALS (Yahoo quoteSummary) ===
-async function fetchFundamentals(prev){
-  const f={}; let ok=0,fail=0;
-  for(const tk of Object.keys(TICKERS)){
-    try{
-      const r=await get(`https://query1.finance.yahoo.com/v10/finance/quoteSummary/${tk}?modules=financialData,defaultKeyStatistics,summaryDetail`);
-      const res=(await r.json())?.quoteSummary?.result?.[0];
-      if(!res) throw new Error('sin datos');
-      const fd=res.financialData||{},dks=res.defaultKeyStatistics||{},sd=res.summaryDetail||{};
-      const row={
-        price:fd.currentPrice?.raw??null,
-        target:fd.targetMeanPrice?.raw??null,
-        targetHigh:fd.targetHighPrice?.raw??null,
-        targetLow:fd.targetLowPrice?.raw??null,
-        consensus:fd.recommendationKey??null,
-        analysts:fd.numberOfAnalystOpinions?.raw??null,
-        pe:sd.trailingPE?.raw??null,
-        forwardPE:sd.forwardPE?.raw??null,
-        peg:dks.pegRatio?.raw??null,
-        source:'Yahoo Finance',
-        updated:new Date().toISOString()
-      };
-      if(row.target==null&&row.pe==null) throw new Error('campos vacíos');
-      f[tk]=row; ok++;
-      console.log(`  fund ${tk}: target=$${row.target} pe=${row.pe?.toFixed(1)} cons=${row.consensus}`);
-    }catch(e){
-      fail++;
-      if(prev&&prev[tk]) f[tk]=prev[tk];
-    }
-    await new Promise(r=>setTimeout(r,400));
-  }
-  console.log(`Fundamentals: ${ok} ok / ${fail} fallidas`);
-  return f;
-}
-
-// === MAIN ===
-// === EMPRESAS DISCOVERY (fuera de cartera, para ampliar panorama) ===
 const DISCOVERY = {
   TSLA:{name:"Tesla",sector:"EV / IA / Robotaxi"},
   AMZN:{name:"Amazon",sector:"E-commerce / Cloud"},
@@ -235,65 +309,39 @@ const DISCOVERY = {
   ARM:{name:"ARM Holdings",sector:"Chips / Licencias"}
 };
 
-async function fetchDiscoveryNews(prev){
-  const news={};
-  let ok=0;
-  for(const tk of Object.keys(DISCOVERY)){
-    try{
-      const r=await get(`https://feeds.finance.yahoo.com/rss/2.0/headline?s=${tk}&region=US&lang=en-US`);
-      const items=parseRSS(await r.text()).slice(0,4);
-      if(items.length){news[tk]=items;ok++;}
-    }catch(e){
-      if(prev&&prev[tk])news[tk]=prev[tk];
-    }
-    await new Promise(r=>setTimeout(r,300));
-  }
-  console.log(`Discovery news: ${ok} tickers`);
-  return news;
-}
 
+async function main() {
+  console.log('=== Backend Analisis v4 ===', new Date().toISOString());
+  let prev = {};
+  try { prev = JSON.parse(fs.readFileSync('analysts.json', 'utf8')); } catch (e) {}
 
-async function main(){
-  console.log('=== Backend Análisis ===', new Date().toISOString());
+  console.log('\n[1/3] Yahoo: fundamentals, bancos, balances');
+  const y = await fetchYahooData(prev.fundamentals);
 
-  let prev={};
-  try{prev=JSON.parse(fs.readFileSync('analysts.json','utf8'));console.log('Previo cargado');}
-  catch(e){console.log('Sin previo');}
+  console.log('\n[2/3] Noticias');
+  const news = await fetchNewsFor(Object.keys(TICKERS), prev.news, 5);
+  const discoveryNews = await fetchNewsFor(Object.keys(DISCOVERY), prev.discovery_news, 4);
 
-  console.log('\n[1/4] Noticias cartera (Yahoo RSS)');
-  const news=await fetchNews(prev.news);
+  console.log('\n[3/3] Traduccion');
+  await translate([news, discoveryNews], [prev.news, prev.discovery_news]);
 
-  console.log('\n[2/4] Noticias discovery');
-  const discoveryNews=await fetchDiscoveryNews((prev.discovery_news||{}));
-
-  console.log('\n[3/4] Traducción (Groq)');
-  await translateNews(news);
-  await translateNews(discoveryNews);
-
-  console.log('\n[4/4] Fundamentals (Yahoo)');
-  const fundamentals=await fetchFundamentals(prev.fundamentals);
-
-  const out={
-    ts:new Date().toISOString(),
-    tickers:TICKERS,
-    fundamentals,
-    bank_targets:BANK_TARGETS,
+  const out = {
+    ts: new Date().toISOString(),
+    tickers: TICKERS,
+    fundamentals: y.fundamentals,
+    bank_targets: y.banks,
+    catalysts: y.catalysts,
     news,
-    catalysts:CATALYSTS,
-    version:'3.0',
-    source:'Yahoo Finance + Groq + Bancos verificados'
+    discovery: { tickers: Object.keys(DISCOVERY), info: DISCOVERY },
+    discovery_news: discoveryNews,
+    yahoo_ok: y.ok,
+    version: '4.0',
+    source: y.ok ? 'Yahoo Finance (en vivo)' : 'Respaldo validado contra precio en vivo'
   };
-
-  const cn=Object.values(news).filter(v=>v&&v.length).length;
-  const cf=Object.values(fundamentals).filter(v=>v&&v.target!=null).length;
-
-  if(cn===0&&cf===0&&prev.ts){
-    console.log('\nTodo falló. No sobrescribo.');
-    process.exit(0);
-  }
-
-  fs.writeFileSync('analysts.json',JSON.stringify(out,null,2));
-  console.log(`\nOK -> analysts.json | ${cn} noticias, ${cf} fundamentals, ${Object.keys(BANK_TARGETS).length} con bancos`);
+  const cn = Object.values(news).filter(v => v && v.length).length;
+  if (cn === 0 && y.ok === 0 && prev.ts) { console.log('Todo fallo. No sobrescribo.'); return; }
+  fs.writeFileSync('analysts.json', JSON.stringify(out, null, 2));
+  console.log(`\nOK -> analysts.json | yahoo ${y.ok} | ${Object.keys(y.fundamentals).length} fundamentals | ${Object.keys(y.banks).length} con bancos | ${cn} con noticias`);
 }
 
-main().catch(e=>{console.error('ERROR',e);process.exit(1);});
+main().catch(e => { console.error('ERROR', e); process.exit(1); });

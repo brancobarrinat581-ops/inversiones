@@ -1,4 +1,4 @@
-name: Backup Operaciones
+name: Backup Supabase (no toca operaciones.json)
 
 on:
   schedule:
@@ -7,6 +7,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
 
 jobs:
   backup:
@@ -36,15 +40,15 @@ jobs:
           echo "Corina: ${CORINA} operaciones"
 
           if [ "$BRANCO" -gt "0" ] 2>/dev/null; then
-            # Combinar en operaciones.json
+            # Combinar (backup aparte, operaciones.json es la fuente unica)
             node -e "
               const b = require('/tmp/branco_ops.json');
               const c = require('/tmp/corina_ops.json');
               const all = [...(Array.isArray(b)?b:[]), ...(Array.isArray(c)?c:[])];
               all.sort((a,b) => new Date(a.fecha) - new Date(b.fecha));
               const out = { ts: new Date().toISOString(), total: all.length, operaciones: all };
-              require('fs').writeFileSync('operaciones.json', JSON.stringify(out, null, 2));
-              console.log('operaciones.json escrito:', all.length, 'operaciones');
+              require('fs').mkdirSync('backup',{recursive:true});require('fs').writeFileSync('backup/supabase-ops.json', JSON.stringify(out, null, 2));
+              console.log('backup/supabase-ops.json escrito:', all.length, 'operaciones');
             "
           else
             echo "Supabase no respondió o 0 operaciones. No sobrescribo."
@@ -55,11 +59,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add operaciones.json
+          git add backup/supabase-ops.json
           if git diff --staged --quiet; then
             echo "Sin cambios en operaciones"
           else
             git commit -m "💾 Backup operaciones $(date -u +'%Y-%m-%d')"
-            git push
+            git pull --rebase origin main || true
+            git push || (sleep 5 && git pull --rebase origin main && git push)
             echo "Backup guardado"
           fi

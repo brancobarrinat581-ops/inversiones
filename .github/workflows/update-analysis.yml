@@ -2,11 +2,15 @@ name: Update Analysis Data
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '23 1,11,15,19,23 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
 
 jobs:
   analyze:
@@ -36,5 +40,6 @@ jobs:
             echo "No changes"
           else
             git commit -m "📊 Update analysis data $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-            git push
+            git pull --rebase origin main || true
+            git push || (sleep 5 && git pull --rebase origin main && git push)
           fi

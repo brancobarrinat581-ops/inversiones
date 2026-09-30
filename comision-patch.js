@@ -1,4 +1,4 @@
-// comision-patch.js v4 — Portfolio desde operaciones + uppercase tipo + ppc + autocomplete + tabla mejorada
+// comision-patch.js v5 (comision_monto->comision, ops _local, no pisa con Supabase) — Portfolio desde operaciones + uppercase tipo + ppc + autocomplete + tabla mejorada
 (function(){
   "use strict";
   var DEFAULT_PCT = 0.6;
@@ -214,6 +214,7 @@
 
   function normalizeOp(op){
     if((!op.ppc || op.ppc === 0) && op.precio > 0) op.ppc = op.precio;
+    if(op.comision == null && op.comision_monto != null) op.comision = Number(op.comision_monto) || 0;
     if(op.tipo) op.tipo = op.tipo.toUpperCase();
     if(!op.invertido_ars && op.ppc > 0 && op.cantidad > 0) op.invertido_ars = op.cantidad * op.ppc;
     return op;
@@ -264,7 +265,7 @@
 
       var localId = Date.now() + Math.floor(Math.random()*1000);
       var localOp = normalizeOp(Object.assign({}, body, {
-        id: localId, ppc: body.precio,
+        id: localId, ppc: body.precio, _local: true,
         invertido_ars: (body.cantidad||0) * (body.precio||0)
       }));
 
@@ -279,7 +280,7 @@
             var ops2 = getOps();
             var ix = ops2.findIndex(function(o){ return o.id===localId; });
             if(ix>=0){
-              ops2[ix] = normalizeOp(Object.assign({}, data[0]));
+              ops2[ix] = normalizeOp(Object.assign({}, data[0], { _local: true }));
               _setItem("operaciones_raw", JSON.stringify(ops2));
             }
           }
@@ -342,10 +343,7 @@
           return res.json().then(function(data){
             if(Array.isArray(data) && data.length > 0){
               data.forEach(function(op){ normalizeOp(op); });
-              var local = getOps();
-              if(data.length >= local.length){
-                _setItem("operaciones_raw", JSON.stringify(data));
-              }
+              // Supabase tiene datos viejos: operaciones.json es la fuente unica, no se pisa
             }
           });
         }).catch(function(){});
@@ -358,5 +356,5 @@
     return _real.apply(this, arguments);
   };
 
-  console.log("💰 comision-patch v4: portfolio desde ops + uppercase + ppc + autocomplete");
+  console.log("💰 comision-patch v5");
 })();

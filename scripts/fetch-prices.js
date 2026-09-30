@@ -1,4 +1,4 @@
-// scripts/fetch-prices.js  v2
+// scripts/fetch-prices.js  v3  (fondos IOL desde precios-manuales.json, no se marcan como desactualizados)
 // Fuente 1: Yahoo Finance chart API  -> ARS reales de BYMA (tickers .BA) y USD (ticker plano)
 // Fuente 2: Open BYMA Data           -> respaldo ARS
 // CCL:      dolarapi.com
@@ -127,9 +127,18 @@ async function main() {
     await new Promise(r => setTimeout(r, 250));
   }
 
-  // FCIs: valor cargado a mano, se arrastra tal cual y siempre marcado como manual
+  // FCIs: valor cargado a mano en precios-manuales.json (si no existe, se arrastra el anterior)
+  let man = {};
+  try { man = JSON.parse(fs.readFileSync('precios-manuales.json', 'utf8')); } catch (e) { console.log('sin precios-manuales.json'); }
   MANUALES.forEach(tk => {
-    if (prevP[tk]) prices[tk] = { ...prevP[tk], src: 'Manual', stale: true };
+    const m = man[tk];
+    if (m && m.ars > 0) {
+      const usd = m.usd > 0 ? m.usd : (cclUsado ? Math.round(m.ars / cclUsado * 100) / 100 : 0);
+      prices[tk] = { usd, ars: m.ars, changePct: 0, src: 'Manual', stale: false, asOf: man.fecha || now };
+    } else if (prevP[tk]) {
+      prices[tk] = { ...prevP[tk], src: 'Manual', stale: false };
+    }
+    if (prices[tk]) console.log(`  ${tk}: ARS ${prices[tk].ars} [Manual ${prices[tk].asOf}]`);
   });
 
   if (real === 0) {

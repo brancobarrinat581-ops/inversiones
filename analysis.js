@@ -35,7 +35,7 @@
   }
 
   function tickers() {
-    try { return (JSON.parse(localStorage.getItem("portfolio_iol")).positions || []).map(function (p) { return p.ticker; }); }
+    try { var o = JSON.parse(localStorage.getItem("operaciones_raw") || "[]"); return Array.from(new Set(o.map(function (p) { return p.ticker; }))); }
     catch (e) { return []; }
   }
 
