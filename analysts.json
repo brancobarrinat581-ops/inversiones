@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-01T17:25:57.625Z",
+  "ts": "2026-10-01T23:15:36.728Z",
   "tickers": {
     "NVDA": {
       "name": "NVIDIA",
@@ -68,95 +68,95 @@
   },
   "fundamentals": {
     "NVDA": {
-      "price": 230.77,
+      "price": 230.86,
       "target": 327.7,
       "targetHigh": 515,
       "targetLow": 180,
       "consensus": "strong_buy",
       "analysts": 59,
-      "pe": 29.211393,
-      "forwardPE": 14.703334,
+      "pe": 29.222784,
+      "forwardPE": 14.709068,
       "peg": 0.48,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:44.629Z"
+      "updated": "2026-10-01T23:14:35.688Z"
     },
     "META": {
-      "price": 727.55,
-      "target": 793.90735,
+      "price": 725.93,
+      "target": 794.9607,
       "targetHigh": 1000,
       "targetLow": 580,
       "consensus": "strong_buy",
-      "analysts": 57,
-      "pe": 27.413338,
-      "forwardPE": 20.885208,
-      "peg": 0.98,
+      "analysts": 58,
+      "pe": 26.484129,
+      "forwardPE": 20.838705,
+      "peg": 0.96,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:45.045Z"
+      "updated": "2026-10-01T23:14:36.096Z"
     },
     "MSFT": {
-      "price": 514.9625,
-      "target": 578.41516,
+      "price": 512.8,
+      "target": 578.89594,
       "targetHigh": 870,
       "targetLow": 440,
       "consensus": "strong_buy",
       "analysts": 52,
-      "pe": 28.688719,
-      "forwardPE": 21.776781,
-      "peg": 1.65,
+      "pe": 28.315845,
+      "forwardPE": 21.688478,
+      "peg": 1.67,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:45.483Z"
+      "updated": "2026-10-01T23:14:36.519Z"
     },
     "ADBE": {
-      "price": 239.875,
+      "price": 241.28,
       "target": 275.06375,
       "targetHigh": 373,
       "targetLow": 195,
       "consensus": "hold",
       "analysts": 32,
-      "pe": 13.400838,
-      "forwardPE": 8.668109,
-      "peg": 0.56,
+      "pe": 13.47933,
+      "forwardPE": 8.71888,
+      "peg": 0.58,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:45.905Z"
+      "updated": "2026-10-01T23:14:36.940Z"
     },
     "MU": {
-      "price": 1072.2,
+      "price": 1097.39,
       "target": 1533.8043,
       "targetHigh": 2200,
       "targetLow": 361,
       "consensus": "strong_buy",
       "analysts": 46,
-      "pe": 14.422922,
-      "forwardPE": 5.266873,
+      "pe": 14.761771,
+      "forwardPE": 5.345326,
       "peg": 0.16,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:46.356Z"
+      "updated": "2026-10-01T23:14:37.373Z"
     },
     "PANW": {
-      "price": 392.5,
+      "price": 396.25,
       "target": 396.12,
       "targetHigh": 475,
       "targetLow": 190,
       "consensus": "buy",
       "analysts": 50,
-      "pe": 981.25,
-      "forwardPE": 80.44566,
-      "peg": 1.98,
+      "pe": 990.625,
+      "forwardPE": 81.21425,
+      "peg": 2.03,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:46.783Z"
+      "updated": "2026-10-01T23:14:37.803Z"
     },
     "MELI": {
-      "price": 1699.45,
+      "price": 1685.12,
       "target": 2266.0928,
       "targetHigh": 2800,
       "targetLow": 1750,
       "consensus": "strong_buy",
       "analysts": 26,
-      "pe": 46.15562,
-      "forwardPE": 30.40138,
+      "pe": 45.76643,
+      "forwardPE": 30.145033,
       "peg": 0.95,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:47.194Z"
+      "updated": "2026-10-01T23:14:38.211Z"
     },
     "SPY": {
       "price": null,
@@ -165,37 +165,37 @@
       "targetLow": null,
       "consensus": null,
       "analysts": null,
-      "pe": 24.672646,
+      "pe": 24.684277,
       "forwardPE": null,
       "peg": null,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:47.605Z"
+      "updated": "2026-10-01T23:14:38.615Z"
     },
     "ACN": {
-      "price": 216.5,
-      "target": 193.02959,
+      "price": 212.3,
+      "target": 210.94624,
       "targetHigh": 275,
       "targetLow": 130,
       "consensus": "buy",
       "analysts": 24,
-      "pe": 17.292332,
-      "forwardPE": 14.763897,
+      "pe": 16.95687,
+      "forwardPE": 14.476428,
       "peg": 1.33,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:48.022Z"
+      "updated": "2026-10-01T23:14:39.046Z"
     },
     "MCD": {
-      "price": 231.61,
+      "price": 231.83,
       "target": 297.2069,
       "targetHigh": 390,
       "targetLow": 230,
       "consensus": "buy",
       "analysts": 29,
-      "pe": 18.814785,
-      "forwardPE": 16.755419,
-      "peg": 2.02,
+      "pe": 18.832655,
+      "forwardPE": 16.771336,
+      "peg": 2,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:48.445Z"
+      "updated": "2026-10-01T23:14:39.477Z"
     },
     "IBIT": {
       "price": 48,
@@ -210,56 +210,56 @@
       "updated": "2026-09-28"
     },
     "NU": {
-      "price": 13.1666,
+      "price": 13.29,
       "target": 18.63636,
       "targetHigh": 23,
       "targetLow": 12,
       "consensus": "buy",
       "analysts": 22,
-      "pe": 18.036438,
-      "forwardPE": 11.653405,
-      "peg": 0.57,
+      "pe": 18.205479,
+      "forwardPE": 11.762623,
+      "peg": 0.58,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:49.263Z"
+      "updated": "2026-10-01T23:14:40.295Z"
     },
     "PAMP": {
-      "price": 76.2565,
+      "price": 76.09,
       "target": 121.09091,
       "targetHigh": 160,
       "targetLow": 100,
       "consensus": "buy",
       "analysts": 11,
-      "pe": 6.845287,
-      "forwardPE": 6.4974465,
+      "pe": 6.9172726,
+      "forwardPE": 6.4832597,
       "peg": null,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:49.675Z"
+      "updated": "2026-10-01T23:14:40.759Z"
     },
     "VIST": {
-      "price": 64.69,
-      "target": 91.29298,
-      "targetHigh": 113.94838,
-      "targetLow": 75.79046,
+      "price": 64.63,
+      "target": 91.60224,
+      "targetHigh": 114.3344,
+      "targetLow": 76.04721,
       "consensus": "strong_buy",
       "analysts": 12,
-      "pe": 8.511843,
-      "forwardPE": 6.549173,
+      "pe": 8.503947,
+      "forwardPE": 6.745342,
       "peg": null,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:50.084Z"
+      "updated": "2026-10-01T23:14:41.166Z"
     },
     "GGAL": {
-      "price": 36.04,
+      "price": 36.07,
       "target": 66.5742,
       "targetHigh": 103,
       "targetLow": 50,
       "consensus": "buy",
       "analysts": 10,
-      "pe": 102.971436,
-      "forwardPE": 5.200833,
+      "pe": 103.057144,
+      "forwardPE": 5.2051616,
       "peg": 0.18,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:50.531Z"
+      "updated": "2026-10-01T23:14:41.573Z"
     },
     "YPF": {
       "price": 49.27,
@@ -272,7 +272,7 @@
       "forwardPE": 8.982581,
       "peg": 0.1,
       "source": "Yahoo Finance",
-      "updated": "2026-10-01T17:24:50.934Z"
+      "updated": "2026-10-01T23:14:42.033Z"
     }
   },
   "bank_targets": {
@@ -1067,116 +1067,123 @@
   "news": {
     "NVDA": [
       {
-        "title": "Chip stocks set for $229 billion payday before Nvidia ships a GPU",
-        "url": "https://www.thestreet.com/investing/ai-chip-equipment-stocks-asml-amat-lrcx-klac?.tsrc=rss",
+        "title": "Prediction: Taiwan Semiconductor Manufacturing Stock Will Skyrocket After Oct. 15",
+        "url": "https://www.fool.com/investing/2026/10/01/prediction-taiwan-semiconductor-stock-will-skyrock/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 17:17:00 +0000",
-        "titleEs": "Las acciones de chips alcanzarán un valor de 229 mil millones de dólares antes de que Nvidia envíe una GPU"
+        "published": "Thu, 01 Oct 2026 22:50:00 +0000",
+        "titleEs": "Predicción: Las existencias de fabricación de semiconductores de Taiwán se dispararán después del 15 de octubre"
       },
       {
-        "title": "Tavus Introduces Griffin, the First Face-to-Face Human Interaction Model, Unlocking the Future of Conversational AI",
-        "url": "https://finance.yahoo.com/technology/ai/articles/tavus-introduces-griffin-first-face-163000466.html?.tsrc=rss",
+        "title": "What Is the Worst-Performing \"Magnificent Seven\" Stock in 2026?",
+        "url": "https://www.fool.com/investing/2026/10/01/worst-performing-magnificent-seven-stock-2026/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:30:00 +0000",
-        "titleEs": "Tavus presenta Griffin, el primer modelo de interacción humana cara a cara, que abre el futuro de la IA conversacional"
+        "published": "Thu, 01 Oct 2026 22:25:00 +0000",
+        "titleEs": "¿Cuál será la acción de los \"Siete Magníficos\" con peor rendimiento en 2026?"
       },
       {
-        "title": "AMD Doesn’t Need to Beat Nvidia to Be a Big AI Winner",
-        "url": "https://247wallst.com/investing/2026/10/01/amd-doesnt-need-to-beat-nvidia-to-be-a-big-ai-winner/?.tsrc=rss",
+        "title": "Nvidia (NVDA) Stock Gets Fair Value Boost As AI Demand And Analyst Views Shift",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-stock-gets-fair-220550617.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:00:53 +0000",
-        "titleEs": "AMD no necesita vencer a Nvidia para ser un gran ganador de la IA"
+        "published": "Thu, 01 Oct 2026 22:05:50 +0000",
+        "titleEs": "Las acciones de Nvidia (NVDA) obtienen un impulso en su valor razonable a medida que cambian la demanda de IA y las opiniones de los analistas"
       },
       {
-        "title": "UBS Gets Told to Pack Its Bags",
-        "url": "https://app.moby.co/home/news/news-ubs-gets-told-to-pack-its-bags?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss",
+        "title": "Chinese state funds backed purchases of restricted Nvidia AI chips, report says",
+        "url": "https://finance.yahoo.com/technology/ai/articles/chinese-state-funds-backed-purchases-215942410.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 15:46:36 +0000",
-        "titleEs": "A la UBS le dicen que haga las maletas"
+        "published": "Thu, 01 Oct 2026 21:59:42 +0000",
+        "titleEs": "Los fondos estatales chinos respaldaron las compras de chips restringidos de inteligencia artificial de Nvidia, según un informe"
       },
       {
-        "title": "Royalty Pharma Owns a Piece of 16 Blockbuster Drugs -- Is the Stock a Buy?",
-        "url": "https://www.fool.com/investing/2026/10/01/royalty-pharma-owns-a-piece-of-16-blockbuster-drug/?.tsrc=rss",
+        "title": "Amazon Signs 20 Year Nuclear Power Deal. That's Great News for This Nuclear Stock",
+        "url": "https://www.fool.com/investing/2026/10/01/amazon-signs-20-year-nuclear-power-deal-that-s-great-news-for-this-nuclear-stock/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:50:00 +0000",
-        "titleEs": "Royalty Pharma posee una parte de 16 medicamentos de gran éxito: ¿es la acción una compra?"
+        "published": "Thu, 01 Oct 2026 21:57:43 +0000",
+        "titleEs": "Amazon firma un acuerdo de energía nuclear por 20 años. Es una gran noticia para este parque nuclear"
       }
     ],
     "META": [
       {
-        "title": "Anthropic CEO Dario Amodei is warning about AI risks the wrong way: Meta's former CTO",
-        "url": "https://finance.yahoo.com/technology/article/anthropic-ceo-dario-amodei-is-warning-about-ai-risks-the-wrong-way-metas-former-cto-154838915.html?.tsrc=rss",
+        "title": "Dow Jones Futures: Stocks Rise Off Support As Yields Tumble, Micron, Meta In Focus; Tesla, Jobs Report Due",
+        "url": "https://finance.yahoo.com/m/f6c899dd-7f15-3879-b266-51980008982d/dow-jones-futures%3A-stocks.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 15:48:38 +0000",
-        "titleEs": "El CEO de Anthropic, Dario Amodei, advierte sobre los riesgos de la IA de manera equivocada: ex CTO de Meta"
+        "published": "Thu, 01 Oct 2026 23:03:46 +0000",
+        "titleEs": "Futuros del Dow Jones: las acciones se alejan del soporte a medida que caen los rendimientos, Micron y Meta en el foco; Tesla y el informe de empleo vencen"
       },
       {
-        "title": "Former Meta CTO on Zuckerberg’s talent machine and the AI risks ahead",
-        "url": "https://finance.yahoo.com/video/former-meta-cto-zuckerberg-talent-152500058.html?.tsrc=rss",
+        "title": "Mark Zuckerberg's Muse Could Charge You for Saving You Money — META President Reveals AI Agent's Potential Monetization Model",
+        "url": "https://finance.yahoo.com/technology/ai/articles/mark-zuckerbergs-muse-could-charge-220010918.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 15:25:00 +0000",
-        "titleEs": "El ex CTO de Meta habla sobre la máquina de talentos de Zuckerberg y los riesgos de la IA que se avecinan"
+        "published": "Thu, 01 Oct 2026 22:00:10 +0000",
+        "titleEs": "La musa de Mark Zuckerberg podría cobrarle por ahorrarle dinero: el presidente de META revela el modelo de monetización potencial del agente de IA"
       },
       {
-        "title": "Sozzi weighs in on Micron's blowout quarter, chats with Meta's former CTO, & more",
-        "url": "https://finance.yahoo.com/video/sozzi-weighs-microns-blowout-quarter-144315562.html?.tsrc=rss",
+        "title": "Can Reality Labs Ever Earn Enough to Justify Meta’s Spending?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/reality-labs-ever-earn-enough-213913507.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 14:43:15 +0000",
-        "titleEs": "Sozzi opina sobre el excelente trimestre de Micron, conversa con el ex CTO de Meta y más"
+        "published": "Thu, 01 Oct 2026 21:39:13 +0000",
+        "titleEs": "¿Podrán Reality Labs ganar lo suficiente para justificar el gasto de Meta?"
       },
       {
-        "title": "Meta Platforms, IBD Stock Of The Day, Forges New Buy Point After Muse Rally",
-        "url": "https://finance.yahoo.com/m/a8d992f5-c3d8-3bb6-adc9-9ca4d950e9d8/meta-platforms%2C-ibd-stock-of.html?.tsrc=rss",
+        "title": "Neptune Makes Flood Insurance Ready for the AI Agent Era",
+        "url": "https://finance.yahoo.com/technology/ai/articles/neptune-makes-flood-insurance-ready-213000570.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 17:08:38 +0000",
-        "titleEs": "Meta Platforms, acción del día de IBD, forja un nuevo punto de compra después del rally de Muse"
+        "published": "Thu, 01 Oct 2026 21:30:00 +0000",
+        "titleEs": "Neptune prepara el seguro contra inundaciones para la era de los agentes de IA"
       },
       {
-        "title": "OpenAI, Google and Meta pledge outside AI audits under voluntary White House deal",
-        "url": "http://videos.coindesk.com/previews/D4SYEFld?.tsrc=rss",
+        "title": "Zuckerberg’s Free AI Agent Hit 5 Million Downloads And Google Still Has Its Own Locked Behind A Paywall",
+        "url": "https://247wallst.com/investing/2026/10/01/zuckerbergs-free-ai-agent-hit-5-million-downloads-and-google-still-has-its-own-locked-behind-a-paywall/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:06:06 +0000",
-        "titleEs": "OpenAI, Google y Meta se comprometen a realizar auditorías externas de IA en virtud de un acuerdo voluntario con la Casa Blanca"
+        "published": "Thu, 01 Oct 2026 21:03:43 +0000",
+        "titleEs": "El agente de inteligencia artificial gratuito de Zuckerberg alcanzó los 5 millones de descargas y Google todavía tiene el suyo propio bloqueado detrás de un muro de pago"
       }
     ],
     "MSFT": [
+      {
+        "title": "NexusTek Announces a New AI Strategy Assessment to Close the Gap Between AI Ideas and Actionable Investments",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nexustek-announces-ai-strategy-assessment-190800902.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 19:08:00 +0000",
+        "titleEs": "NexusTek anuncia una nueva evaluación de la estrategia de IA para cerrar la brecha entre las ideas de IA y las inversiones viables"
+      },
+      {
+        "title": "MSFT’s LinkedIn Chief Ryan Roslansky To Exit As AI Leadership Shake-Up Continues",
+        "url": "https://stocktwits.com/news-articles/markets/equity/msft-linked-in-chief-ryan-roslansky-to-exit-as-ai-leadership-shake-up-continues/cZD0XBSRB0B?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 18:15:43 +0000",
+        "titleEs": "El jefe de LinkedIn de MSFT, Ryan Roslansky, se marchará mientras continúa la reestructuración del liderazgo en IA"
+      },
+      {
+        "title": "Alphabet Slips After Gemini 4 Argon Launch as Tech Sector Rises; Microsoft Holds Steady, Amazon Dips",
+        "url": "https://247wallst.com/investing/2026/10/01/alphabet-slips-after-gemini-4-argon-launch-as-tech-sector-rises-microsoft-holds-steady-amazon-dips/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 17:51:48 +0000",
+        "titleEs": "Alphabet cae después del lanzamiento de Gemini 4 Argon a medida que aumenta el sector tecnológico; Microsoft se mantiene estable, Amazon cae"
+      },
+      {
+        "title": "Alphabet vs. Amazon vs. Microsoft: Which \"Magnificent Seven\" Stock Is the Better Buy Right Now?",
+        "url": "https://www.fool.com/investing/2026/10/01/alphabet-vs-amazon-vs-microsoft-which-magnificent/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 17:37:00 +0000",
+        "titleEs": "Alphabet, Amazon y Microsoft: ¿Qué acción de los \"Siete Magníficos\" es la mejor compra en este momento?"
+      },
       {
         "title": "MSFT Stock Lands On Wells Fargo’s Q4 ‘Tactical Ideas List’ – Analyst Sees A 41% Upside Potential",
         "url": "https://stocktwits.com/news-articles/markets/equity/msft-stock-lands-on-wells-fargo-q4-tactical-ideas-list/cZD0ONWRB0E?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Thu, 01 Oct 2026 17:13:06 +0000",
         "titleEs": "Las acciones de MSFT aterrizan en la 'lista de ideas tácticas' del cuarto trimestre de Wells Fargo: el analista ve un potencial de mejora del 41%"
-      },
-      {
-        "title": "Ryan Roslansky leaving Microsoft amid executive departures",
-        "url": "https://qz.com/microsoft-linkedin-ryan-roslansky-departure-100126?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 17:04:16 +0000",
-        "titleEs": "Ryan Roslansky deja Microsoft en medio de salidas de ejecutivos"
-      },
-      {
-        "title": "How Has Microsoft's Story Changed In A Year?",
-        "url": "https://www.trefis.com/articles/617307/how-has-microsofts-story-changed-in-a-year/2026-10-01?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 15:27:24 +0000",
-        "titleEs": "¿Cómo ha cambiado la historia de Microsoft en un año?"
-      },
-      {
-        "title": "askpolly Now Integrated With Microsoft Copilot Cowork to Connect Social Insights With Sales Data",
-        "url": "https://finance.yahoo.com/technology/ai/articles/askpolly-now-integrated-microsoft-copilot-130000493.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 13:00:00 +0000",
-        "titleEs": "Askpolly ahora se integra con Microsoft Copilot Cowork para conectar información social con datos de ventas"
-      },
-      {
-        "title": "Dow Jones Futures Rise, S&P 500 Finds Key Support As Micron Earnings Crush Views; Oil Prices, Treasury Yields In Focus",
-        "url": "https://finance.yahoo.com/m/958fb542-74b3-3d16-bde8-baba1e31461e/dow-jones-futures-rise%2C-s%26p.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 12:16:26 +0000",
-        "titleEs": "Los futuros del Dow Jones suben, el S&P 500 encuentra soporte clave a medida que las ganancias de Micron aplastan las vistas; Los precios del petróleo y los rendimientos de los bonos del Tesoro en la mira"
       }
     ],
     "ADBE": [
+      {
+        "title": "Is Adobe Stock A Real Bargain?",
+        "url": "https://www.trefis.com/articles/617282/is-adobe-stock-a-real-bargain/2026-10-01?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 17:32:44 +0000",
+        "titleEs": "¿Es Adobe Stock una verdadera ganga?"
+      },
       {
         "title": "Unity Software Surges 5% as Traders Weigh Meta Platforms VR Glasses Support; Adobe Rises 3%, Intuit Adds 2%",
         "url": "https://247wallst.com/investing/2026/09/30/unity-software-surges-5-as-traders-weigh-meta-platforms-vr-glasses-support-adobe-rises-3-intuit-adds-2/?.tsrc=rss",
@@ -1204,53 +1211,53 @@
         "source": "Yahoo Finance",
         "published": "Wed, 30 Sep 2026 08:10:36 +0000",
         "titleEs": "Adobe (ADBE) cierra un nuevo acuerdo para fans de IA que alcanza los 200 millones de seguidores"
-      },
-      {
-        "title": "Where Could Adobe's Next Growth Come From?",
-        "url": "https://www.trefis.com/articles/616935/where-could-adobes-next-growth-come-from/2026-09-29?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Tue, 29 Sep 2026 19:03:42 +0000",
-        "titleEs": "¿De dónde podría venir el próximo crecimiento de Adobe?"
       }
     ],
     "MU": [
       {
-        "title": "Micron CFO: No 'line of sight' for when memory shortage will end",
-        "url": "https://finance.yahoo.com/technology/article/micron-cfo-no-line-of-sight-for-when-memory-shortage-will-end-165934130.html?.tsrc=rss",
+        "title": "Should Apple join the consumer AI agent race? And should Big Tech self-police on AI?",
+        "url": "https://finance.yahoo.com/video/apple-join-consumer-ai-agent-182722480.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:59:34 +0000",
-        "titleEs": "Director financiero de Micron: No hay una 'línea de visión' para saber cuándo terminará la escasez de memoria"
+        "published": "Thu, 01 Oct 2026 18:27:22 +0000",
+        "titleEs": "¿Debería Apple unirse a la carrera de agentes de IA para el consumidor? ¿Y las grandes empresas tecnológicas deberían autocontrolarse la IA?"
       },
       {
-        "title": "Stock Market Today: S&P 500 Breaks Key Level As Micron Falls; Lumentum Soars (Live Coverage)",
-        "url": "https://finance.yahoo.com/m/5f6e8554-d4a8-3f1c-bce8-2f5074e2e587/stock-market-today%3A-s%26p-500.html?.tsrc=rss",
+        "title": "Dow Jones Futures: Stocks Rise Off Support As Yields Tumble, Micron, Meta In Focus; Tesla, Jobs Report Due",
+        "url": "https://finance.yahoo.com/m/f6c899dd-7f15-3879-b266-51980008982d/dow-jones-futures%3A-stocks.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:41:42 +0000",
-        "titleEs": "Mercado de valores hoy: el S&P 500 supera el nivel clave a medida que cae Micron; Lumentum se eleva (cobertura en vivo)"
+        "published": "Thu, 01 Oct 2026 23:03:46 +0000",
+        "titleEs": "Futuros del Dow Jones: las acciones se alejan del soporte a medida que caen los rendimientos, Micron y Meta en el foco; Tesla y el informe de empleo vencen"
       },
       {
-        "title": "Stocks Fall as Bond Selloff Eases",
-        "url": "https://www.wsj.com/finance/ai-stock-rally-checked-by-relentless-treasury-selloff-c434b12e?.tsrc=rss",
+        "title": "Micron's Bull Run Isn't Over",
+        "url": "https://www.fool.com/investing/2026/10/01/micron-s-bull-run-isn-t-over/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:40:00 +0000",
-        "titleEs": "Las acciones caen a medida que disminuye la liquidación de bonos"
+        "published": "Thu, 01 Oct 2026 21:05:01 +0000",
+        "titleEs": "La carrera alcista de Micron no ha terminado"
       },
       {
-        "title": "Micron Stock Slips Despite Record Q4, Analyst Price Hikes. Here’s Why MU Stock Is Still a Buy",
-        "url": "https://247wallst.com/investing/2026/10/01/micron-stock-slips-despite-record-q4-analyst-price-hikes-heres-why-mu-stock-is-still-a-buy/?.tsrc=rss",
+        "title": "Stock Market Today: S&P Climbs To Start October, Micron Gains; Barbie Maker Soars On Deal News",
+        "url": "https://finance.yahoo.com/m/5f6e8554-d4a8-3f1c-bce8-2f5074e2e587/stock-market-today%3A-s%26p.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:32:43 +0000",
-        "titleEs": "Las acciones de Micron caen a pesar del récord del cuarto trimestre y los aumentos de precios de los analistas. He aquí por qué las acciones de MU siguen siendo una compra"
+        "published": "Thu, 01 Oct 2026 20:42:04 +0000",
+        "titleEs": "Mercado de valores hoy: S&P sube para comenzar octubre, Micron gana; Barbie Maker se dispara con las noticias sobre ofertas"
       },
       {
-        "title": "Micron, Accenture, Google, IBM, Fair Isaac, Synopsys, and More Stocks That Explain Today’s Market",
-        "url": "https://finance.yahoo.com/m/ff733662-6b3b-3329-895d-f9bd4d70a5b2/micron%2C-accenture%2C-google%2C.html?.tsrc=rss",
+        "title": "Micron Reverses Higher After Fiscal Q4 Beat-And-Raise Report",
+        "url": "https://finance.yahoo.com/m/50ce89fb-2ca7-3d2b-988b-d3e6f9409abc/micron-reverses-higher-after.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:29:00 +0000",
-        "titleEs": "Micron, Accenture, Google, IBM, Fair Isaac, Synopsys y más acciones que explican el mercado actual"
+        "published": "Thu, 01 Oct 2026 20:20:56 +0000",
+        "titleEs": "Micron retrocede al alza después del informe de superación y aumento del cuarto trimestre fiscal"
       }
     ],
     "PANW": [
+      {
+        "title": "These Telltale Clues Shine A Spotlight On Palo Alto Networks",
+        "url": "https://finance.yahoo.com/m/d941026c-847f-3623-ace5-c1bb7e445ad3/these-telltale-clues-shine-a.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 20:00:43 +0000",
+        "titleEs": "Estas pistas reveladoras destacan Palo Alto Networks"
+      },
       {
         "title": "PANW Stock Rises 21% in a Month: Should You Hold or Book Profits?",
         "url": "https://finance.yahoo.com/markets/stocks/articles/panw-stock-rises-21-month-142200611.html?.tsrc=rss",
@@ -1264,13 +1271,6 @@
         "source": "Yahoo Finance",
         "published": "Thu, 01 Oct 2026 13:00:00 +0000",
         "titleEs": "Cyderes se asocia con Palo Alto Networks para acelerar las operaciones de seguridad impulsadas por IA para empresas globales"
-      },
-      {
-        "title": "These Telltale Clues Shine A Spotlight On Palo Alto Networks",
-        "url": "https://finance.yahoo.com/m/d941026c-847f-3623-ace5-c1bb7e445ad3/these-telltale-clues-shine-a.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 11:30:36 +0000",
-        "titleEs": "Estas pistas reveladoras destacan Palo Alto Networks"
       },
       {
         "title": "Industrial Control System Security Market Forecasts Growth from $17.91B (2026) to $38.48B by 2031, Profiling Cisco, Fortinet & Palo Alto Networks",
@@ -1288,6 +1288,13 @@
       }
     ],
     "MELI": [
+      {
+        "title": "MercadoLibre (MELI) Stock Falls Amid Market Uptick: What Investors Need to Know",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mercadolibre-meli-stock-falls-amid-205004724.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 20:50:04 +0000",
+        "titleEs": "Las acciones de MercadoLibre (MELI) caen en medio del repunte del mercado: lo que los inversores deben saber"
+      },
       {
         "title": "3 Profitable Stocks Worth Investigating",
         "url": "https://finance.yahoo.com/markets/stocks/articles/3-profitable-stocks-worth-investigating-101602369.html?.tsrc=rss",
@@ -1315,13 +1322,6 @@
         "source": "Yahoo Finance",
         "published": "Fri, 25 Sep 2026 01:14:01 +0000",
         "titleEs": "Las acciones de MercadoLibre (MELI) lucen ricas en relación con sus ganancias"
-      },
-      {
-        "title": "MercadoLibre (MELI) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/mercadolibre-meli-sees-more-significant-205004165.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 24 Sep 2026 20:50:04 +0000",
-        "titleEs": "MercadoLibre (MELI) ve una caída más significativa que el mercado en general: algunos datos que debe saber"
       }
     ],
     "SPY": [
@@ -1340,62 +1340,62 @@
         "titleEs": "Los fondos cotizados en bolsa y los futuros de acciones subieron antes de la campana del jueves mientras los operadores evalúan los resultados del cuarto trimestre fiscal de Micron"
       },
       {
-        "title": "AMC Sinks 9% as Cinema Stocks Sell Off Together; IMAX Drops 4%, Cinemark Slides 3%",
-        "url": "https://247wallst.com/investing/2026/10/01/amc-sinks-9-as-cinema-stocks-sell-off-together-imax-drops-4-cinemark-slides-3/?.tsrc=rss",
+        "title": "Tesla Is Down 20% in 2026. These Two Other EV Makers Are Doing Even Worse.",
+        "url": "https://247wallst.com/investing/2026/10/01/tesla-is-down-20-in-2026-these-two-other-ev-makers-are-doing-even-worse/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 17:09:45 +0000",
-        "titleEs": "AMC se hunde un 9% mientras las acciones de cine se venden juntas; IMAX cae un 4%, Cinemark baja un 3%"
+        "published": "Thu, 01 Oct 2026 19:13:17 +0000",
+        "titleEs": "Tesla ha bajado un 20% en 2026. A estos otros dos fabricantes de vehículos eléctricos les está yendo aún peor."
       },
       {
-        "title": "Unity Software Rallies 5% as Meta VR Support Extends Into a Second Session; Roblox Inches Higher, Take-Two Slides 3%",
-        "url": "https://247wallst.com/investing/2026/10/01/unity-software-rallies-5-as-meta-vr-support-extends-into-a-second-session-roblox-inches-higher-take-two-slides-3/?.tsrc=rss",
+        "title": "Snap Is Down 32% in 2026: Overlooked Bargain or Toxic Stock?",
+        "url": "https://247wallst.com/investing/2026/10/01/snap-is-down-32-in-2026-overlooked-bargain-or-toxic-stock/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:54:59 +0000",
-        "titleEs": "Unity Software aumenta un 5 % a medida que el soporte de Meta VR se extiende a una segunda sesión; Roblox pulgadas más alto, Take-Two Slides 3%"
+        "published": "Thu, 01 Oct 2026 19:02:17 +0000",
+        "titleEs": "Snap ha bajado un 32% en 2026: ¿oferta pasada por alto o acción tóxica?"
       },
       {
-        "title": "Unusual Machines Tumbles 8% Despite Pentagon’s Autonomous Warfare Push; AeroVironment Eases, Red Cat Pulls Back",
-        "url": "https://247wallst.com/investing/2026/10/01/unusual-machines-tumbles-8-despite-pentagons-autonomous-warfare-push-aerovironment-eases-red-cat-pulls-back/?.tsrc=rss",
+        "title": "Applied Optoelectronics Is Up 205% This Year. Is It Too Late to Buy AAOI Stock Now?",
+        "url": "https://247wallst.com/investing/2026/10/01/applied-optoelectronics-is-up-205-this-year-is-it-too-late-to-buy-aaoi-stock-now/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:49:23 +0000",
-        "titleEs": "Las máquinas inusuales caen un 8% a pesar del impulso de la guerra autónoma del Pentágono; AeroVironment cede, Red Cat retrocede"
+        "published": "Thu, 01 Oct 2026 18:55:11 +0000",
+        "titleEs": "La optoelectrónica aplicada ha aumentado un 205% este año. ¿Es demasiado tarde para comprar acciones de AAOI ahora?"
       }
     ],
     "ACN": [
       {
-        "title": "Accenture stock skyrockets on record bookings, easing investors' AI-driven fears",
-        "url": "https://finance.yahoo.com/video/accenture-stock-skyrockets-record-bookings-140136517.html?.tsrc=rss",
+        "title": "EPAM, DXC, Everforth, EXL, and Grid Dynamics Stocks Trade Up, What You Need To Know",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/epam-dxc-everforth-exl-grid-224507189.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 14:01:36 +0000",
-        "titleEs": "Las acciones de Accenture se disparan con reservas récord, aliviando los temores de los inversores impulsados ​​por la IA"
+        "published": "Thu, 01 Oct 2026 22:45:07 +0000",
+        "titleEs": "Las acciones de EPAM, DXC, Everforth, EXL y Grid Dynamics suben, lo que necesita saber"
       },
       {
-        "title": "Accenture stock surges as record bookings dispel AI fears",
-        "url": "https://finance.yahoo.com/markets/stocks/article/accenture-stock-surges-as-record-bookings-dispel-ai-fears-133857510.html?.tsrc=rss",
+        "title": "Concentrix, Huron, and TaskUs Shares Skyrocket, What You Need To Know",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/concentrix-huron-taskus-shares-skyrocket-222907764.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 13:38:57 +0000",
-        "titleEs": "Las acciones de Accenture suben a medida que las reservas récord disipan los temores sobre la IA"
+        "published": "Thu, 01 Oct 2026 22:29:07 +0000",
+        "titleEs": "Concentrix, Huron y TaskUs comparten Skyrocket, lo que necesita saber"
+      },
+      {
+        "title": "Why IBM Stock Is Getting a Much-Needed Boost From Accenture Earnings",
+        "url": "https://finance.yahoo.com/m/5ef0359e-b826-39c2-bb3d-48a3aab0029e/why-ibm-stock-is-getting-a.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 21:13:00 +0000",
+        "titleEs": "Por qué las acciones de IBM están recibiendo un impulso muy necesario gracias a las ganancias de Accenture"
       },
       {
         "title": "Micron, Accenture, Google, IBM, Fair Isaac, Synopsys, and More Stocks That Explain Today’s Market",
         "url": "https://finance.yahoo.com/m/ff733662-6b3b-3329-895d-f9bd4d70a5b2/micron%2C-accenture%2C-google%2C.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:29:00 +0000",
+        "published": "Thu, 01 Oct 2026 20:15:00 +0000",
         "titleEs": "Micron, Accenture, Google, IBM, Fair Isaac, Synopsys y más acciones que explican el mercado actual"
       },
       {
-        "title": "Stock Market Midday, Oct. 1: Stocks Edge Lower as Treasury Yields Surge to 24-Year High",
-        "url": "https://www.fool.com/coverage/stock-market-today/2026/10/01/stock-market-midday-oct-1-stocks-edge-lower-as-treasury-yields-surge-to-24-year-high/?.tsrc=rss",
+        "title": "Sector Update: Tech Stocks Gain Late Afternoon",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/sector-tech-stocks-gain-afternoon-195143826.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:20:33 +0000",
-        "titleEs": "Mediodía del mercado de valores, 1 de octubre: Las acciones bajan a medida que los rendimientos de los bonos del Tesoro aumentan a su máximo en 24 años"
-      },
-      {
-        "title": "Accenture Stock Is Heading for Its Best Day Ever. AI Isn’t the Threat Everyone Thought.",
-        "url": "https://finance.yahoo.com/m/04891e51-9028-320c-a3b9-5b0bf03975b0/accenture-stock-is-heading.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 15:45:00 +0000",
-        "titleEs": "Las acciones de Accenture se dirigen a su mejor día. La IA no es la amenaza que todos pensaban."
+        "published": "Thu, 01 Oct 2026 19:51:43 +0000",
+        "titleEs": "Actualización del sector: las acciones tecnológicas ganan al final de la tarde"
       }
     ],
     "MCD": [
@@ -1407,6 +1407,13 @@
         "titleEs": "Sozzi opina sobre el excelente trimestre de Micron, conversa con el ex CTO de Meta y más"
       },
       {
+        "title": "McDonald’s (MCD) Launches a Media Network and Starts Selling Drive-Thru Ads",
+        "url": "https://finance.yahoo.com/media-advertising/articles/mcdonald-mcd-launches-media-network-202945306.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 20:29:45 +0000",
+        "titleEs": "McDonald's (MCD) lanza una red de medios y comienza a vender anuncios Drive-Thru"
+      },
+      {
         "title": "Here's Why McDonald's (MCD) Fell More Than Broader Market",
         "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-mcdonalds-mcd-fell-205004434.html?.tsrc=rss",
         "source": "Yahoo Finance",
@@ -1414,25 +1421,18 @@
         "titleEs": "He aquí por qué McDonald's (MCD) cayó más que el mercado en general"
       },
       {
+        "title": "McDonald’s Stock Slump Makes Its AI Pricing Bet Even Riskier",
+        "url": "https://www.marketbeat.com/articles/mcdonalds-stock-slump-makes-its-ai-pricing-bet-even-riskier/?utm_source=yahoofinance&amp;utm_medium=yahoofinance&amp;.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Wed, 30 Sep 2026 17:55:00 +0000",
+        "titleEs": "La caída de las acciones de McDonald's hace que su apuesta por la fijación de precios por IA sea aún más riesgosa"
+      },
+      {
         "title": "McDonald's is trying AI drive-thrus again with Archy, part of an $8.5-billion plan — 2 years after it ended its IBM test",
         "url": "https://finance.yahoo.com/technology/ai/articles/mcdonalds-spending-8-5-billion-153000377.html?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Wed, 30 Sep 2026 15:30:00 +0000",
         "titleEs": "McDonald's está probando de nuevo el servicio de autoservicio con IA con Archy, como parte de un plan de 8.500 millones de dólares, dos años después de finalizar su prueba con IBM."
-      },
-      {
-        "title": "Can McDonald's Beverage Expansion Become Its Next Global Growth Wave?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonalds-beverage-expansion-become-next-152800383.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Wed, 30 Sep 2026 15:28:00 +0000",
-        "titleEs": "¿Puede la expansión de las bebidas de McDonald's convertirse en su próxima ola de crecimiento global?"
-      },
-      {
-        "title": "McDonald’s stock slide reveals surprising Treasury link",
-        "url": "https://www.thestreet.com/investing/stocks/mcdonalds-stock-dividend-treasury?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Wed, 30 Sep 2026 14:17:00 +0000",
-        "titleEs": "La caída de las acciones de McDonald's revela un sorprendente vínculo con el Tesoro"
       }
     ],
     "IBIT": [
@@ -1474,6 +1474,20 @@
     ],
     "NU": [
       {
+        "title": "Is Nu Holdings a Millionaire-Maker Stock?",
+        "url": "https://www.fool.com/investing/2026/10/01/is-fintech-stock-a-millionaire-maker-stock/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 21:25:00 +0000",
+        "titleEs": "¿Es Nu Holdings una acción millonaria?"
+      },
+      {
+        "title": "Why Nubank (NU) Stock Is Trading Up Today",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/why-nubank-nu-stock-trading-205307384.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 20:53:07 +0000",
+        "titleEs": "Por qué las acciones de Nubank (NU) están subiendo hoy"
+      },
+      {
         "title": "Nu Holdings Jumps 3% After Ruling Out Monzo Deal; SoFi and Robinhood Sit Out the Rally",
         "url": "https://247wallst.com/investing/2026/10/01/nu-holdings-jumps-3-after-ruling-out-monzo-deal-sofi-and-robinhood-sit-out-the-rally/?.tsrc=rss",
         "source": "Yahoo Finance",
@@ -1493,20 +1507,6 @@
         "source": "Yahoo Finance",
         "published": "Wed, 30 Sep 2026 22:29:47 +0000",
         "titleEs": "Las acciones de NU aparecen fuera de horario: el susto del acuerdo de Monzo se encuentra con la negación de la empresa"
-      },
-      {
-        "title": "Nu Holdings Ltd. Statement Regarding Media Reports",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/nu-holdings-ltd-statement-regarding-210200899.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Wed, 30 Sep 2026 21:02:00 +0000",
-        "titleEs": "Declaración de Nu Holdings Ltd. sobre los informes de los medios"
-      },
-      {
-        "title": "Ownership of Europe's biggest startup acquisitions is shifting abroad",
-        "url": "https://pitchbook.com/news/articles/ownership-of-europes-biggest-startup-acquisitions-is-shifting-abroad?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Wed, 30 Sep 2026 11:33:00 +0000",
-        "titleEs": "La propiedad de las mayores adquisiciones de startups de Europa se está trasladando al extranjero"
       }
     ],
     "PAMP": [
@@ -1622,6 +1622,13 @@
     ],
     "YPF": [
       {
+        "title": "YPF's $24B Argentina LNG Project Gains U.S. Financing Support",
+        "url": "https://finance.yahoo.com/energy/articles/ypfs-24b-argentina-lng-project-164200199.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 16:42:00 +0000",
+        "titleEs": "El proyecto de GNL de YPF en Argentina, valorado en 24.000 millones de dólares, obtiene apoyo financiero de EE.UU."
+      },
+      {
         "title": "YPF Sociedad Anonima (YPF) Just Flashed Golden Cross Signal: Do You Buy?",
         "url": "https://finance.yahoo.com/markets/stocks/articles/ypf-sociedad-anonima-ypf-just-123502454.html?.tsrc=rss",
         "source": "Yahoo Finance",
@@ -1648,13 +1655,6 @@
         "source": "Yahoo Finance",
         "published": "Tue, 18 Aug 2026 12:52:00 +0000",
         "titleEs": "¿Es YPF una compra mientras el crecimiento del esquisto choca con el creciente riesgo de ejecución?"
-      },
-      {
-        "title": "YPF Q2 Earnings Beat Estimates on Shale Growth & Strong Pricing",
-        "url": "https://finance.yahoo.com/energy/articles/ypf-q2-earnings-beat-estimates-142000061.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 13 Aug 2026 14:20:00 +0000",
-        "titleEs": "Las ganancias del segundo trimestre de YPF superan las estimaciones sobre el crecimiento del esquisto y los fuertes precios"
       }
     ]
   },
@@ -1717,71 +1717,78 @@
   "discovery_news": {
     "TSLA": [
       {
-        "title": "4 Experts Weigh In on How Tesla's Next Chapter Could Make or Break the Stock",
-        "url": "https://moneylion.com/trending/money/experts-tesla-next-chapter-make-or-break-stock?.tsrc=rss",
+        "title": "Dow Jones Futures: Stocks Rise Off Support As Yields Tumble, Micron, Meta In Focus; Tesla, Jobs Report Due",
+        "url": "https://finance.yahoo.com/m/f6c899dd-7f15-3879-b266-51980008982d/dow-jones-futures%3A-stocks.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 17:00:24 +0000",
-        "titleEs": "Cuatro expertos opinan sobre cómo el próximo capítulo de Tesla podría hacer o deshacer las acciones"
+        "published": "Thu, 01 Oct 2026 23:03:46 +0000",
+        "titleEs": "Futuros del Dow Jones: las acciones se alejan del soporte a medida que caen los rendimientos, Micron y Meta en el foco; Tesla y el informe de empleo vencen"
       },
       {
-        "title": "Tesla Bears Retreat as Musk's AI Strategy Gains Traction",
-        "url": "https://finance.yahoo.com/technology/ai/articles/tesla-bears-retreat-musks-ai-161957304.html?.tsrc=rss",
+        "title": "Why the Tesla Roadster Event Was Delayed—and What It Means for the Stock",
+        "url": "https://finance.yahoo.com/m/4b02c8ad-796e-30b5-9372-114e987d0f1f/why-the-tesla-roadster-event.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:19:57 +0000",
-        "titleEs": "Los osos de Tesla se retiran a medida que la estrategia de inteligencia artificial de Musk gana terreno"
+        "published": "Thu, 01 Oct 2026 20:18:00 +0000",
+        "titleEs": "Por qué se retrasó el evento Tesla Roadster y qué significa para las acciones"
       },
       {
-        "title": "BYD Proves Lead Over Tesla Won’t Stop",
-        "url": "https://247wallst.com/investing/2026/10/01/byd-proves-lead-over-tesla-wont-stop/?.tsrc=rss",
+        "title": "Tesla Delivery Results Are Coming. What to Expect.",
+        "url": "https://finance.yahoo.com/m/0a387351-56c1-3305-ab21-7d8b302ab338/tesla-delivery-results-are.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 15:52:02 +0000",
-        "titleEs": "BYD demuestra que el liderazgo sobre Tesla no se detendrá"
+        "published": "Thu, 01 Oct 2026 20:06:00 +0000",
+        "titleEs": "Los resultados de la entrega de Tesla están a la vuelta de la esquina. Qué esperar."
       },
       {
-        "title": "4 Tesla Entry Points Show the Milestones Investors Cheered Were Not Always the Best Times to Buy",
-        "url": "https://247wallst.com/investing/2026/10/01/4-tesla-entry-points-show-the-milestones-investors-cheered-were-not-always-the-best-times-to-buy/?.tsrc=rss",
+        "title": "Tesla Is Down 20% in 2026. These Two Other EV Makers Are Doing Even Worse.",
+        "url": "https://247wallst.com/investing/2026/10/01/tesla-is-down-20-in-2026-these-two-other-ev-makers-are-doing-even-worse/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 15:35:22 +0000",
-        "titleEs": "4 puntos de entrada de Tesla muestran que los hitos que los inversores celebraron no siempre fueron los mejores momentos para comprar"
+        "published": "Thu, 01 Oct 2026 19:13:17 +0000",
+        "titleEs": "Tesla ha bajado un 20% en 2026. A estos otros dos fabricantes de vehículos eléctricos les está yendo aún peor."
       }
     ],
     "AMZN": [
       {
-        "title": "3 Dividend REITs Built Around Warehouses America Cannot Stop Building",
-        "url": "https://247wallst.com/investing/2026/10/01/3-dividend-reits-built-around-warehouses-america-cannot-stop-building/?.tsrc=rss",
+        "title": "Synopsys is becoming a major AI player: CEO discusses OpenAI, Amazon deals",
+        "url": "https://finance.yahoo.com/video/synopsys-becoming-major-ai-player-202701381.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:45:21 +0000",
-        "titleEs": "Tres REIT de dividendos construidos alrededor de almacenes que Estados Unidos no puede dejar de construir"
+        "published": "Thu, 01 Oct 2026 20:27:01 +0000",
+        "titleEs": "Synopsys se está convirtiendo en un importante actor de IA: el CEO analiza los acuerdos de OpenAI y Amazon"
       },
       {
-        "title": "Amazon Inks $1B SNPS Deal to Power AWS Custom Chips: Should You Hold?",
-        "url": "https://finance.yahoo.com/technology/articles/amazon-inks-1b-snps-deal-153700037.html?.tsrc=rss",
+        "title": "Amazon (AMZN) and GoodRx (GDRX) Chase Prescription Subscribers as Insurance Coverage Slips",
+        "url": "https://finance.yahoo.com/healthcare/articles/amazon-amzn-goodrx-gdrx-chase-203853895.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 15:37:00 +0000",
-        "titleEs": "Amazon firma un acuerdo SNPS de mil millones de dólares para impulsar chips personalizados de AWS: ¿debería esperar?"
+        "published": "Thu, 01 Oct 2026 20:38:53 +0000",
+        "titleEs": "Amazon (AMZN) y GoodRx (GDRX) persiguen a los suscriptores de medicamentos recetados a medida que disminuye la cobertura del seguro"
       },
       {
-        "title": "Why Amazon’s (AMZN) Infrastructure Investment Sets Up Record Downstream FCF",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/why-amazon-amzn-infrastructure-investment-145348361.html?.tsrc=rss",
+        "title": "Outdoors retailer files Chapter 11 after 80 stores closed in 2026",
+        "url": "https://www.thestreet.com/retail/63-year-old-retailer-leslies-pools-files-chapter-11-closing-76-more-stores?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 14:53:48 +0000",
-        "titleEs": "Por qué la inversión en infraestructura de Amazon (AMZN) establece un FCF récord en el sector downstream"
+        "published": "Thu, 01 Oct 2026 18:34:15 +0000",
+        "titleEs": "El minorista de actividades al aire libre presenta el Capítulo 11 después de que 80 tiendas cerraron en 2026"
       },
       {
-        "title": "Synopsys Is the Top Stock in the Nasdaq 100 Today. Here’s Why.",
-        "url": "https://finance.yahoo.com/m/c06fb1de-c01e-34de-8e4f-2e66a1459c7c/synopsys-is-the-top-stock-in.html?.tsrc=rss",
+        "title": "Amazon, Top Warship Builder Added To Goldman's Conviction List",
+        "url": "https://finance.yahoo.com/m/08cb7c46-4dcd-346f-b6ec-913413d38dbe/amazon%2C-top-warship-builder.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 14:33:00 +0000",
-        "titleEs": "Synopsys es la principal acción del Nasdaq 100 en la actualidad. He aquí por qué."
+        "published": "Thu, 01 Oct 2026 18:26:52 +0000",
+        "titleEs": "Amazon y el principal constructor de buques de guerra añadidos a la lista de condenas de Goldman"
       }
     ],
     "AAPL": [
       {
-        "title": "Apple's smart hub shows its new view of the tech consumer — and its ambition",
-        "url": "https://finance.yahoo.com/technology/article/apples-smart-hub-shows-its-new-view-of-the-tech-consumer--and-its-ambition-100000906.html?.tsrc=rss",
+        "title": "Apple's new CEO plans to send shocking memo to Apple employees",
+        "url": "https://www.thestreet.com/employment/apples-new-ceo-plans-to-send-shocking-memo-to-apple-employees?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 10:00:00 +0000",
-        "titleEs": "El centro inteligente de Apple muestra su nueva visión del consumidor tecnológico y su ambición"
+        "published": "Thu, 01 Oct 2026 17:47:00 +0000",
+        "titleEs": "El nuevo CEO de Apple planea enviar un memorando impactante a los empleados de Apple"
+      },
+      {
+        "title": "Apple Stock’s Upside May Be Limited as AI Agents Could Disrupt Business",
+        "url": "https://finance.yahoo.com/m/c9e39f15-a9aa-3eff-b90c-a1ec91a03885/apple-stock%E2%80%99s-upside-may-be.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 17:19:00 +0000",
+        "titleEs": "La ventaja de las acciones de Apple puede ser limitada ya que los agentes de inteligencia artificial podrían perturbar el negocio"
       },
       {
         "title": "Warren Buffett's Successor Has Billions Invested in These 2 Tech Stocks. Here's the Better Buy.",
@@ -1791,88 +1798,74 @@
         "titleEs": "El sucesor de Warren Buffett ha invertido miles de millones en estas dos acciones tecnológicas. Aquí está la mejor compra."
       },
       {
-        "title": "Apple Stock’s Upside May Be Limited as AI Agents Could Disrupt Business",
-        "url": "https://finance.yahoo.com/m/c9e39f15-a9aa-3eff-b90c-a1ec91a03885/apple-stock%E2%80%99s-upside-may-be.html?.tsrc=rss",
+        "title": "Apple Is Betting Improved Heart and Health Insights Will Boost Watch Sales",
+        "url": "https://finance.yahoo.com/m/402cdc14-15f3-33c8-aa3c-ad53abb53d21/apple-is-betting-improved.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 13:45:00 +0000",
-        "titleEs": "La ventaja de las acciones de Apple puede ser limitada ya que los agentes de inteligencia artificial podrían perturbar el negocio"
-      },
-      {
-        "title": "Apple’s Fall Product Cycle Could Support Revenue Growth, Says Morgan Stanley — Sees Memory Costs As An Offsetting Factor",
-        "url": "https://stocktwits.com/news-articles/markets/equity/apple-s-fall-product-cycle-could-support-revenue-growth-says-morgan-stanley-sees-memory-costs-as-an-offsetting-factor/cZD0dCTRBiA?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 13:04:27 +0000",
-        "titleEs": "El ciclo de otoño del producto de Apple podría respaldar el crecimiento de los ingresos, dice Morgan Stanley: ve los costos de la memoria como un factor compensador"
+        "published": "Thu, 01 Oct 2026 16:04:00 +0000",
+        "titleEs": "Apple apuesta a que una mejor información sobre el corazón y la salud impulsará las ventas de relojes"
       }
     ],
     "GOOGL": [
       {
-        "title": "Google unveils Gemini 4 Argon, its first flagship AI model since February",
-        "url": "https://www.proactiveinvestors.com/companies/news/1099473/google-unveils-gemini-4-argon-its-first-flagship-ai-model-since-february-1099473.html?.tsrc=rss",
+        "title": "Uptober is Here: 5 Reasons for Optimism",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/uptober-5-reasons-optimism-191500442.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:05:00 +0000",
-        "titleEs": "Google presenta Gemini 4 Argon, su primer modelo insignia de IA desde febrero"
+        "published": "Thu, 01 Oct 2026 19:15:00 +0000",
+        "titleEs": "Uptober ya está aquí: 5 razones para el optimismo"
       },
       {
-        "title": "Amazon Inks $1B SNPS Deal to Power AWS Custom Chips: Should You Hold?",
-        "url": "https://finance.yahoo.com/technology/articles/amazon-inks-1b-snps-deal-153700037.html?.tsrc=rss",
+        "title": "Planet Launches Suncatcher, Tanager-2, and 18 SuperDove Satellites",
+        "url": "https://finance.yahoo.com/technology/articles/planet-launches-suncatcher-tanager-2-224200368.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 15:37:00 +0000",
-        "titleEs": "Amazon firma un acuerdo SNPS de mil millones de dólares para impulsar chips personalizados de AWS: ¿debería esperar?"
+        "published": "Thu, 01 Oct 2026 22:42:00 +0000",
+        "titleEs": "Planet lanza los satélites Suncatcher, Tanager-2 y 18 SuperDove"
       },
       {
-        "title": "Micron CFO: No 'line of sight' for when memory shortage will end",
-        "url": "https://finance.yahoo.com/technology/article/micron-cfo-no-line-of-sight-for-when-memory-shortage-will-end-165934130.html?.tsrc=rss",
+        "title": "Can Reality Labs Ever Earn Enough to Justify Meta’s Spending?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/reality-labs-ever-earn-enough-213913507.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:59:34 +0000",
-        "titleEs": "Director financiero de Micron: No hay una 'línea de visión' para saber cuándo terminará la escasez de memoria"
+        "published": "Thu, 01 Oct 2026 21:39:13 +0000",
+        "titleEs": "¿Podrán Reality Labs ganar lo suficiente para justificar el gasto de Meta?"
       },
       {
-        "title": "Stock Market Today: S&P 500 Breaks Key Level As Micron Falls; Lumentum Soars (Live Coverage)",
-        "url": "https://finance.yahoo.com/m/5f6e8554-d4a8-3f1c-bce8-2f5074e2e587/stock-market-today%3A-s%26p-500.html?.tsrc=rss",
+        "title": "Better Quantum Computing Stock: IonQ vs. D-Wave",
+        "url": "https://www.fool.com/investing/2026/10/01/better-quantum-computing-stock-ionq-vs-d-wave/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:41:42 +0000",
-        "titleEs": "Mercado de valores hoy: el S&P 500 supera el nivel clave a medida que cae Micron; Lumentum se eleva (cobertura en vivo)"
+        "published": "Thu, 01 Oct 2026 21:35:00 +0000",
+        "titleEs": "Mejor stock de computación cuántica: IonQ frente a D-Wave"
       }
     ],
     "AMD": [
+      {
+        "title": "Applied Materials vs. AMD: Which AI Semiconductor Stock Is a Better Buy in 2026?",
+        "url": "https://www.fool.com/coverage/better-buy/2026/10/01/applied-materials-vs-advanced-micro-devices-ai-semiconductor-stock-better-buy-2026/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 19:28:01 +0000",
+        "titleEs": "Materiales aplicados frente a AMD: ¿Qué acción de semiconductores de IA es una mejor compra en 2026?"
+      },
+      {
+        "title": "Advanced Micro Devices (AMD) Benefit from Surging CPU Demand in Autonomous AI",
+        "url": "https://finance.yahoo.com/technology/ai/articles/advanced-micro-devices-amd-benefit-174606152.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 17:46:06 +0000",
+        "titleEs": "Los microdispositivos avanzados (AMD) se benefician de la creciente demanda de CPU en la IA autónoma"
+      },
+      {
+        "title": "AMD Just Bought the Research That Defines What Its Chips Are For",
+        "url": "https://finance.yahoo.com/technology/ai/articles/amd-just-bought-research-defines-174221101.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 17:42:21 +0000",
+        "titleEs": "AMD acaba de comprar la investigación que define para qué sirven sus chips"
+      },
       {
         "title": "Advanced Micro Devices (AMD) Could Be 33% Undervalued Following Its World Labs Deal",
         "url": "https://finance.yahoo.com/markets/stocks/articles/advanced-micro-devices-amd-could-171050511.html?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Thu, 01 Oct 2026 17:10:50 +0000",
         "titleEs": "Los microdispositivos avanzados (AMD) podrían estar infravalorados un 33% tras su acuerdo con World Labs"
-      },
-      {
-        "title": "AMD Doesn’t Need to Beat Nvidia to Be a Big AI Winner",
-        "url": "https://247wallst.com/investing/2026/10/01/amd-doesnt-need-to-beat-nvidia-to-be-a-big-ai-winner/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 16:00:53 +0000",
-        "titleEs": "AMD no necesita vencer a Nvidia para ser un gran ganador de la IA"
-      },
-      {
-        "title": "3 Top AI Stocks for October",
-        "url": "https://www.fool.com/investing/2026/10/01/3-top-ai-stocks-for-october/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 14:35:00 +0000",
-        "titleEs": "Las 3 principales acciones de IA de octubre"
-      },
-      {
-        "title": "The Hyperscaler CPU Threat to AMD No One Is Talking About",
-        "url": "https://247wallst.com/investing/2026/10/01/the-hyperscaler-cpu-threat-to-amd-no-one-is-talking-about/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 11:15:41 +0000",
-        "titleEs": "La amenaza de la CPU Hyperscaler para AMD de la que nadie habla"
       }
     ],
     "AVGO": [
-      {
-        "title": "Broadcom to lend Anthropic up to $42 billion to lease chips, in latest circular investing deal",
-        "url": "https://finance.yahoo.com/technology/article/broadcom-to-lend-anthropic-up-to-42-billion-to-lease-chips-in-latest-circular-investing-deal-121617505.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 12:16:17 +0000",
-        "titleEs": "Broadcom prestará a Anthropic hasta 42.000 millones de dólares para arrendar chips, en el último acuerdo de inversión circular"
-      },
       {
         "title": "Broadcom lends Anthropic $42B, Nike releases Caitlin 1s, and Micron earnings takeaways",
         "url": "https://finance.yahoo.com/video/broadcom-lends-anthropic-42b-nike-141320810.html?.tsrc=rss",
@@ -1888,11 +1881,18 @@
         "titleEs": "Broadcom prestará a Anthropic 42.000 millones de dólares para financiar gastos en infraestructura"
       },
       {
-        "title": "Broadcom to provide Anthropic with up to $42 billion in financing, Reuters reports",
-        "url": "https://www.proactiveinvestors.com/companies/news/1099472/broadcom-to-provide-anthropic-with-up-to-42-billion-in-financing-reuters-reports-1099472.html?.tsrc=rss",
+        "title": "Anthropic and Broadcom Are Becoming More Intertwined. What It Means for Broadcom Stock.",
+        "url": "https://finance.yahoo.com/m/ea49aba6-700c-36b3-aecb-a1ee3f6dbcd8/anthropic-and-broadcom-are.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 15:55:00 +0000",
-        "titleEs": "Broadcom proporcionará a Anthropic hasta 42.000 millones de dólares en financiación, informa Reuters"
+        "published": "Thu, 01 Oct 2026 19:13:00 +0000",
+        "titleEs": "Anthropic y Broadcom están cada vez más entrelazados. Qué significa para las acciones de Broadcom."
+      },
+      {
+        "title": "Applied Materials vs. Broadcom: Which Semiconductor Stock Is a Better Buy in 2026?",
+        "url": "https://www.fool.com/coverage/better-buy/2026/10/01/applied-materials-vs-broadcom-which-semiconductor-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 18:29:42 +0000",
+        "titleEs": "Materiales aplicados frente a Broadcom: ¿Qué acción de semiconductores es una mejor compra en 2026?"
       }
     ],
     "SNOW": [
@@ -1927,6 +1927,13 @@
     ],
     "PLTR": [
       {
+        "title": "Where Will Palantir Stock Be in 5 Years?",
+        "url": "https://www.fool.com/investing/2026/10/01/where-will-palantir-stock-be-in-5-years/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 18:51:00 +0000",
+        "titleEs": "¿Dónde estarán las acciones de Palantir dentro de 5 años?"
+      },
+      {
         "title": "IBM Jumps 5% as Bob Coding Agent Gains Self-Hosted Deployment; Salesforce Rises 3%, Palantir Inches Higher",
         "url": "https://247wallst.com/investing/2026/10/01/ibm-jumps-5-as-bob-coding-agent-gains-self-hosted-deployment-salesforce-rises-3-palantir-inches-higher/?.tsrc=rss",
         "source": "Yahoo Finance",
@@ -1934,25 +1941,18 @@
         "titleEs": "IBM aumenta un 5 % a medida que Bob Coding Agent obtiene una implementación autohospedada; Salesforce sube un 3%, Palantir avanza unos centímetros"
       },
       {
+        "title": "Here’s What Michael Burry Sees in His Palantir Short That Others Don’t",
+        "url": "https://www.barchart.com/story/news/4903531/heres-what-michael-burry-sees-in-his-palantir-short-that-others-dont?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 12:17:55 +0000",
+        "titleEs": "Esto es lo que Michael Burry ve en su corto Palantir que otros no ven"
+      },
+      {
         "title": "Palantir’s CEO Bought 37,000 Acres of Swedish Forestland and Hunting Leases Vanished. Five Years of Rent Can Count as $0 Toward Social Security’s Earnings Test",
         "url": "https://247wallst.com/personal-finance/social-security/2026/10/01/palantirs-ceo-bought-37000-acres-of-swedish-forestland-and-hunting-leases-vanished-five-years-of-rent-can-count-as-0-toward-social-securitys-earnings-test/?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Thu, 01 Oct 2026 08:51:20 +0000",
         "titleEs": "El director ejecutivo de Palantir compró 37.000 acres de tierras forestales suecas y los arrendamientos de caza desaparecieron. Cinco años de alquiler pueden contar como $0 para la prueba de ingresos del Seguro Social"
-      },
-      {
-        "title": "ServiceNow vs. Palantir Technologies: Which Tech Stock Is a Better Buy in 2026?",
-        "url": "https://www.fool.com/coverage/better-buy/2026/09/30/servicenow-vs-palantir-technologies-which-tech-stock-is-a-better-buy-in-2026/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Wed, 30 Sep 2026 23:55:05 +0000",
-        "titleEs": "ServiceNow frente a Palantir Technologies: ¿Qué acciones tecnológicas son una mejor compra en 2026?"
-      },
-      {
-        "title": "Palantir CEO Karp drops \"Warfighter\" hot take before super intelligence meeting at White House",
-        "url": "https://www.thestreet.com/investing/stocks/palantir-karp-ai-strategy-investors-superintelligence-meeting-white-house?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Wed, 30 Sep 2026 20:33:00 +0000",
-        "titleEs": "Karp, director ejecutivo de Palantir, lanza una buena toma de \"Warfighter\" antes de la reunión de súper inteligencia en la Casa Blanca"
       }
     ],
     "COIN": [
@@ -1987,6 +1987,13 @@
     ],
     "ARM": [
       {
+        "title": "Munro Partners Sees Arm Holdings (ARM) as a Key Beneficiary of Agentic AI",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/munro-partners-sees-arm-holdings-175235226.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Thu, 01 Oct 2026 17:52:35 +0000",
+        "titleEs": "Munro Partners ve a Arm Holdings (ARM) como un beneficiario clave de la IA agente"
+      },
+      {
         "title": "Arm Stock Surges 5.24% as Agent Safety Needs Two Silicon Layers",
         "url": "https://finance.yahoo.com/markets/stocks/articles/arm-stock-surges-5-24-184931840.html?.tsrc=rss",
         "source": "Yahoo Finance",
@@ -2006,13 +2013,6 @@
         "source": "Yahoo Finance",
         "published": "Tue, 29 Sep 2026 09:09:11 +0000",
         "titleEs": "Arm Holdings (ARM) podría estar infravalorada un 34% en su narrativa de crecimiento de la IA"
-      },
-      {
-        "title": "Is Arm (ARM) Quietly Becoming the Linchpin of Nvidia’s AI Security and Compute Strategy?",
-        "url": "https://finance.yahoo.com/technology/ai/articles/arm-arm-quietly-becoming-linchpin-060935833.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Tue, 29 Sep 2026 06:09:35 +0000",
-        "titleEs": "¿Arm (ARM) se está convirtiendo silenciosamente en el eje de la estrategia informática y de seguridad de IA de Nvidia?"
       }
     ]
   },
