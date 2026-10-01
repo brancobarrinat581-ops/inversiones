@@ -1,0 +1,75 @@
+name: Precios en vivo
+
+# Por que esto existe:
+# GitHub ejecuta los cron de repos gratuitos "cuando puede": de ~25 horarios
+# programados por dia terminaba corriendo 2 o 3, y en horarios que no coincidian
+# con el cron. Resultado: precios de cierre, nunca precios del dia.
+#
+# La vuelta: en lugar de pedir muchas corridas cortas, pedimos pocas corridas
+# LARGAS. Una sola que arranque cubre varias horas actualizando cada 15 minutos.
+# Si GitHub descarta un arranque, el siguiente levanta igual, y si llegan a
+# arrancar dos, la cola los encadena en vez de pisarse.
+on:
+  schedule:
+    - cron: '9 13 * * 1-5'
+    - cron: '9 15 * * 1-5'
+    - cron: '9 17 * * 1-5'
+    - cron: '9 19 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Compartido con "Update Prices" para que nunca commiteen los dos a la vez.
+concurrency:
+  group: precios
+  cancel-in-progress: false
+
+jobs:
+  vivo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Actualizar precios cada 15 minutos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Corta a las 21:00 UTC (18:00 AR, con la rueda ya cerrada) o a las
+          # 5 horas y media, lo que pase primero. Nunca queda dando vueltas de noche.
+          FIN=$(( $(date -u +%s) + 19800 ))
+          VUELTA=0
+
+          while true; do
+            VUELTA=$((VUELTA+1))
+            echo "::group::Vuelta $VUELTA — $(date -u +'%H:%M UTC')"
+
+            if node scripts/fetch-prices.js && node scripts/validate-ops.js; then
+              node scripts/snapshot.js || true
+              git add prices.json history.json
+              if git diff --staged --quiet; then
+                echo "Sin cambios"
+              else
+                git commit -m "💰 Precios $(date -u +'%Y-%m-%d %H:%M UTC')"
+                git pull --rebase origin main || true
+                git push || (sleep 10 && git pull --rebase origin main && git push) || echo "push fallido, sigo"
+              fi
+            else
+              echo "⚠️ Los precios no pasaron la validacion, no commiteo esta vuelta"
+              git checkout -- prices.json || true
+            fi
+            echo "::endgroup::"
+
+            AHORA=$(date -u +%s)
+            HORA=$(date -u +%H)
+            if [ "$AHORA" -ge "$FIN" ] || [ "$HORA" -ge 21 ]; then
+              echo "Listo: $VUELTA actualizaciones."
+              break
+            fi
+            sleep 900
+          done
