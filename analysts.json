@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T15:50:22.170Z",
+  "ts": "2026-10-04T22:22:03.747Z",
   "tickers": {
     "NVDA": {
       "name": "NVIDIA",
@@ -78,7 +78,7 @@
       "forwardPE": 14.905945,
       "peg": 0.29,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:45.142Z"
+      "updated": "2026-10-04T22:21:29.205Z"
     },
     "META": {
       "price": 728.08,
@@ -91,7 +91,7 @@
       "forwardPE": 20.858347,
       "peg": 0.96,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:45.555Z"
+      "updated": "2026-10-04T22:21:29.657Z"
     },
     "MSFT": {
       "price": 517.53,
@@ -104,7 +104,7 @@
       "forwardPE": 21.885357,
       "peg": 1.68,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:45.998Z"
+      "updated": "2026-10-04T22:21:30.086Z"
     },
     "ADBE": {
       "price": 237.69,
@@ -117,7 +117,7 @@
       "forwardPE": 8.589151,
       "peg": 0.57,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:46.415Z"
+      "updated": "2026-10-04T22:21:30.537Z"
     },
     "MU": {
       "price": 1074.89,
@@ -130,7 +130,7 @@
       "forwardPE": 5.219066,
       "peg": 0.16,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:46.888Z"
+      "updated": "2026-10-04T22:21:30.979Z"
     },
     "PANW": {
       "price": 403.24,
@@ -143,7 +143,7 @@
       "forwardPE": 82.6469,
       "peg": 2.06,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:47.329Z"
+      "updated": "2026-10-04T22:21:31.403Z"
     },
     "MELI": {
       "price": 1696.56,
@@ -152,11 +152,11 @@
       "targetLow": 1750,
       "consensus": "strong_buy",
       "analysts": 26,
-      "pe": 45.865368,
+      "pe": 46.077133,
       "forwardPE": 29.948912,
       "peg": 0.93,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:47.735Z"
+      "updated": "2026-10-04T22:21:31.811Z"
     },
     "SPY": {
       "price": null,
@@ -169,7 +169,7 @@
       "forwardPE": null,
       "peg": null,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:48.144Z"
+      "updated": "2026-10-04T22:21:32.242Z"
     },
     "ACN": {
       "price": 198.9,
@@ -179,10 +179,10 @@
       "consensus": "buy",
       "analysts": 24,
       "pe": 15.89928,
-      "forwardPE": 13.56369,
+      "forwardPE": 12.451811,
       "peg": 1.45,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:48.567Z"
+      "updated": "2026-10-04T22:21:32.704Z"
     },
     "MCD": {
       "price": 231.89,
@@ -195,7 +195,7 @@
       "forwardPE": 16.775675,
       "peg": 2.45,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:48.984Z"
+      "updated": "2026-10-04T22:21:33.132Z"
     },
     "IBIT": {
       "price": 48,
@@ -220,7 +220,7 @@
       "forwardPE": 11.886534,
       "peg": 0.62,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:49.797Z"
+      "updated": "2026-10-04T22:21:33.962Z"
     },
     "PAMP": {
       "price": 76.39,
@@ -233,20 +233,20 @@
       "forwardPE": 6.5088215,
       "peg": null,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:50.204Z"
+      "updated": "2026-10-04T22:21:34.366Z"
     },
     "VIST": {
       "price": 64.25,
-      "target": 92.39483,
-      "targetHigh": 115.32367,
-      "targetLow": 76.70521,
+      "target": 92.45292,
+      "targetHigh": 115.39617,
+      "targetLow": 76.75343,
       "consensus": "strong_buy",
       "analysts": 12,
       "pe": 8.453947,
       "forwardPE": 6.5506186,
       "peg": null,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:50.644Z"
+      "updated": "2026-10-04T22:21:34.806Z"
     },
     "GGAL": {
       "price": 35.89,
@@ -259,7 +259,7 @@
       "forwardPE": 5.1791863,
       "peg": 0.18,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:51.060Z"
+      "updated": "2026-10-04T22:21:35.208Z"
     },
     "YPF": {
       "price": 49.67,
@@ -272,7 +272,7 @@
       "forwardPE": 9.055507,
       "peg": 0.1,
       "source": "Yahoo Finance",
-      "updated": "2026-10-04T15:49:51.475Z"
+      "updated": "2026-10-04T22:21:35.611Z"
     }
   },
   "bank_targets": {
@@ -1067,42 +1067,56 @@
   "news": {
     "NVDA": [
       {
-        "title": "Amazon Wants to Move $8 Billion in Nvidia Chips Off Its Books. Is AI’s Financing Model Starting to Change?",
-        "url": "https://247wallst.com/investing/2026/10/04/amazon-wants-to-move-8-billion-in-nvidia-chips-off-its-books-is-ais-financing-model-starting-to-change/?.tsrc=rss",
+        "title": "'The market has had every reason to sell off' — and it hasn't",
+        "url": "https://finance.yahoo.com/markets/article/the-market-has-had-every-reason-to-sell-off--and-it-hasnt-184848621.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 15:38:29 +0000",
-        "titleEs": "Amazon quiere sacar 8 mil millones de dólares en chips Nvidia de sus libros. ¿Está empezando a cambiar el modelo de financiación de la IA?"
+        "published": "Sun, 04 Oct 2026 18:48:48 +0000",
+        "titleEs": "\"El mercado ha tenido todos los motivos para vender\", y no lo ha hecho"
       },
       {
-        "title": "AMD Reaches a $1 Trillion Market Cap. Can It Finally Dethrone Nvidia?",
-        "url": "https://www.fool.com/investing/2026/10/04/amd-reaches-a-1-trillion-market-cap-can-it-finally/?.tsrc=rss",
+        "title": "Nvidia’s AI boom revives a Warren Buffett warning for investors",
+        "url": "https://www.thestreet.com/investing/stocks/nvidia-ai-buffett-warning?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 13:34:00 +0000",
-        "titleEs": "AMD alcanza una capitalización de mercado de 1 billón de dólares. ¿Podrá finalmente destronar a Nvidia?"
+        "published": "Sun, 04 Oct 2026 21:47:00 +0000",
+        "titleEs": "El auge de la IA de Nvidia revive una advertencia de Warren Buffett para los inversores"
       },
       {
-        "title": "Dow Jones Futures Loom With Nasdaq At High, Nvidia And SpaceX Buys, But Note These Risks",
-        "url": "https://finance.yahoo.com/m/b98e0c13-f78a-3e19-ad93-12d5a340e701/dow-jones-futures-loom-with.html?.tsrc=rss",
+        "title": "Nvidia’s AI Safety Push Could Strengthen Its Moat. But Is It a Stock Catalyst Yet?",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-ai-safety-push-could-211400839.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 13:06:59 +0000",
-        "titleEs": "Los futuros del Dow Jones se avecinan con Nasdaq en máximos, compras de Nvidia y SpaceX, pero tenga en cuenta estos riesgos"
+        "published": "Sun, 04 Oct 2026 21:14:00 +0000",
+        "titleEs": "El impulso de seguridad de la IA de Nvidia podría fortalecer su foso. ¿Pero es todavía un catalizador bursátil?"
       },
       {
-        "title": "Did CIBC’s New Senior Notes and Strong Quarter Just Shift Canadian Imperial Bank of Commerce's (TSX:CM) Investment Narrative?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/did-cibc-senior-notes-strong-150904897.html?.tsrc=rss",
+        "title": "Dow Jones Futures Loom; Nasdaq At Highs With Nvidia, SpaceX Buys, But Note These Risks",
+        "url": "https://finance.yahoo.com/m/b98e0c13-f78a-3e19-ad93-12d5a340e701/dow-jones-futures-loom%3B.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 15:09:04 +0000",
-        "titleEs": "¿Las nuevas notas senior de CIBC y el buen trimestre cambiaron la narrativa de inversión del Canadian Imperial Bank of Commerce (TSX:CM)?"
+        "published": "Sun, 04 Oct 2026 21:13:09 +0000",
+        "titleEs": "Los futuros del Dow Jones se avecinan; Nasdaq en máximos con Nvidia, SpaceX compra, pero tenga en cuenta estos riesgos"
       },
       {
-        "title": "Everyone's Watching Oklo and NuScale for Nuclear Exposure. This Company Actually Fuels Them.",
-        "url": "https://www.fool.com/investing/2026/10/04/everyone-s-watching-oklo-and-nuscale-for-nuclear-exposure-this-company-actually-fuels-them/?.tsrc=rss",
+        "title": "Can NVIDIA’s Valuation Withstand a Slowdown in Customer Spending?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-valuation-withstand-slowdown-customer-203035416.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 14:57:01 +0000",
-        "titleEs": "Todo el mundo está atento a Oklo y NuScale en busca de exposición nuclear. Esta empresa realmente los impulsa."
+        "published": "Sun, 04 Oct 2026 20:30:35 +0000",
+        "titleEs": "¿Puede la valoración de NVIDIA resistir una desaceleración en el gasto de los clientes?"
       }
     ],
     "META": [
+      {
+        "title": "$13k MRR game app founder explains why gaming is a $100B industry...",
+        "url": "https://starterstory.videonest.co/videos/2238819/13k-mrr-game-app-founder-explains-why-gaming-is-a-uWQKZeqGRu?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 16:32:50 +0000",
+        "titleEs": "El fundador de la aplicación de juegos MRR de 13.000 dólares explica por qué los juegos son una industria de 100.000 millones de dólares..."
+      },
+      {
+        "title": "Meta vs. Microsoft: One AI Agent Has a Problem the Other Doesn’t.",
+        "url": "https://www.barchart.com/story/news/4950763/meta-vs-microsoft-one-ai-agent-has-a-problem-the-other-doesnt?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 12:36:26 +0000",
+        "titleEs": "Meta versus Microsoft: un agente de IA tiene un problema y el otro no."
+      },
       {
         "title": "2 Magnificent Seven Stocks to Buy and Hold for the Rest of the Decade",
         "url": "https://www.fool.com/investing/2026/10/04/2-magnificent-seven-stocks-to-buy-and-hold-for-the-rest-of-the-decade/?.tsrc=rss",
@@ -1123,23 +1137,30 @@
         "source": "Yahoo Finance",
         "published": "Sat, 03 Oct 2026 22:54:00 +0000",
         "titleEs": "Cómo se compara Muse vs. Puntos OpenAI"
-      },
-      {
-        "title": "Meta's Muse AI: Good or Bad for E-Commerce? Shopify and Amazon Are Taking Opposite Approaches.",
-        "url": "https://www.fool.com/investing/2026/10/03/metas-muse-ai-good-or-bad-for-e-commerce-shopify-a/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 22:50:00 +0000",
-        "titleEs": "Muse AI de Meta: ¿buena o mala para el comercio electrónico? Shopify y Amazon están adoptando enfoques opuestos."
-      },
-      {
-        "title": "The simple reason Meta CEO Mark Zuckerberg is winning for investors again",
-        "url": "https://finance.yahoo.com/technology/article/the-simple-reason-meta-ceo-mark-zuckerberg-is-winning-for-investors-again-121030964.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 12:10:30 +0000",
-        "titleEs": "La sencilla razón por la que el CEO de Meta, Mark Zuckerberg, vuelve a ganar para los inversores"
       }
     ],
     "MSFT": [
+      {
+        "title": "Is Copilot Microsoft's Secret Weapon in the AI Arms Race?",
+        "url": "https://www.fool.com/investing/2026/10/04/is-copilot-microsofts-secret-weapon-in-the-ai-arms/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 18:20:00 +0000",
+        "titleEs": "¿Es Copilot el arma secreta de Microsoft en la carrera armamentista de la IA?"
+      },
+      {
+        "title": "Accenture vs. Microsoft: Which Technology Stock Is a Better Buy in 2026?",
+        "url": "https://www.fool.com/coverage/better-buy/2026/10/04/accenture-vs-microsoft-which-technology-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 15:58:44 +0000",
+        "titleEs": "Accenture frente a Microsoft: ¿Qué acción tecnológica es una mejor compra en 2026?"
+      },
+      {
+        "title": "Meta vs. Microsoft: One AI Agent Has a Problem the Other Doesn’t.",
+        "url": "https://www.barchart.com/story/news/4950763/meta-vs-microsoft-one-ai-agent-has-a-problem-the-other-doesnt?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 12:36:26 +0000",
+        "titleEs": "Meta versus Microsoft: un agente de IA tiene un problema y el otro no."
+      },
       {
         "title": "How Much Revenue Visibility Does Microsoft’s Backlog Really Provide?",
         "url": "https://finance.yahoo.com/markets/stocks/articles/much-revenue-visibility-does-microsoft-023534508.html?.tsrc=rss",
@@ -1153,30 +1174,23 @@
         "source": "Yahoo Finance",
         "published": "Sat, 03 Oct 2026 18:34:30 +0000",
         "titleEs": "¿Tu trabajo también te deja perplejo?"
-      },
-      {
-        "title": "LinkDaddy Reports 1.52M AI Crawler Requests to AI Verified Registry",
-        "url": "https://finance.yahoo.com/technology/ai/articles/linkdaddy-reports-1-52m-ai-141900806.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 14:19:00 +0000",
-        "titleEs": "LinkDaddy informa 1,52 millones de solicitudes de rastreadores de IA al registro verificado por IA"
-      },
-      {
-        "title": "Here's How Much You'd Need to Invest in VGT to Generate $500 per Month in Dividends",
-        "url": "https://www.fool.com/investing/2026/10/04/how-much-need-to-invest-vgt-for-passive-income/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 12:59:00 +0000",
-        "titleEs": "Esto es lo que necesitaría invertir en VGT para generar $500 por mes en dividendos"
-      },
-      {
-        "title": "Gary Shapiro: why trade shows matter and how to get them right",
-        "url": "https://finance.yahoo.com/media-advertising/articles/gary-shapiro-why-trade-shows-113000904.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 11:30:00 +0000",
-        "titleEs": "Gary Shapiro: por qué son importantes las ferias comerciales y cómo hacerlas bien"
       }
     ],
     "ADBE": [
+      {
+        "title": "Adobe stock: Here are 5 strategic questions into new leadership",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/adobe-stock-5-strategic-questions-221112913.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 22:11:12 +0000",
+        "titleEs": "Adobe stock: aquí hay cinco preguntas estratégicas para un nuevo liderazgo"
+      },
+      {
+        "title": "How Investors Are Reacting To Adobe (ADBE) Expanding AI CX With NHL And Jet2 Partnerships",
+        "url": "https://finance.yahoo.com/technology/ai/articles/investors-reacting-adobe-adbe-expanding-200707732.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 20:07:07 +0000",
+        "titleEs": "Cómo están reaccionando los inversores ante la expansión de AI CX de Adobe (ADBE) con asociaciones entre NHL y Jet2"
+      },
       {
         "title": "Adobe Still Has $24.5 Billion Left for Buybacks. That's About a Quarter of the Company.",
         "url": "https://www.fool.com/investing/2026/10/04/adobe-still-has-usd24-5-billion-left-for-buybacks-that-s-about-a-quarter-of-the-company/?.tsrc=rss",
@@ -1197,20 +1211,6 @@
         "source": "Yahoo Finance",
         "published": "Fri, 02 Oct 2026 17:30:48 +0000",
         "titleEs": "El debate sobre Adobe Stock está a punto de volverse interesante"
-      },
-      {
-        "title": "Is Adobe Stock A Real Bargain?",
-        "url": "https://www.trefis.com/articles/617282/is-adobe-stock-a-real-bargain/2026-10-01?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Thu, 01 Oct 2026 17:32:44 +0000",
-        "titleEs": "¿Es Adobe Stock una verdadera ganga?"
-      },
-      {
-        "title": "Unity Software Surges 5% as Traders Weigh Meta Platforms VR Glasses Support; Adobe Rises 3%, Intuit Adds 2%",
-        "url": "https://247wallst.com/investing/2026/09/30/unity-software-surges-5-as-traders-weigh-meta-platforms-vr-glasses-support-adobe-rises-3-intuit-adds-2/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Wed, 30 Sep 2026 18:12:02 +0000",
-        "titleEs": "El software Unity aumenta un 5% a medida que los comerciantes sopesan el soporte de gafas VR de metaplataformas; Adobe sube un 3%, Intuit suma un 2%"
       }
     ],
     "MU": [
@@ -1220,6 +1220,20 @@
         "source": "Yahoo Finance",
         "published": "Sun, 04 Oct 2026 12:00:00 +0000",
         "titleEs": "Las acciones de Micron ofrecen un recordatorio importante para los inversores"
+      },
+      {
+        "title": "Investors Had a Tepid Reaction to Micron's Latest Earnings Report. An Overlooked Headwind May Explain Why.",
+        "url": "https://www.fool.com/investing/2026/10/04/investors-had-tepid-reaction-to-microns-earnings/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 16:39:54 +0000",
+        "titleEs": "Los inversores tuvieron una reacción tibia al último informe de ganancias de Micron. Un viento en contra que se pasa por alto puede explicar por qué."
+      },
+      {
+        "title": "Jordi Visser Says Crypto Is At Its 'Micron Moment,' Sees Token Volumes Going 'Through The Roof'",
+        "url": "https://stocktwits.com/news-articles/markets/cryptocurrency/jordi-visser-says-crypto-is-at-its-micron-moment-sees-token-volumes-going-through-the-roof/cZDFvD2RB1H?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 16:30:35 +0000",
+        "titleEs": "Jordi Visser dice que las criptomonedas están en su 'momento del micrón' y ve que los volúmenes de tokens se están disparando 'por las nubes'"
       },
       {
         "title": "Is It Too Late to Buy Micron Technology Stock After Its 12-Month Gain of 500%?",
@@ -1234,20 +1248,6 @@
         "source": "Yahoo Finance",
         "published": "Sun, 04 Oct 2026 13:16:00 +0000",
         "titleEs": "Micron o Sandisk: si solo pudiera tener uno durante los próximos 5 años, sería este"
-      },
-      {
-        "title": "Micron Technology vs. Qualcomm: What Revenue Trends Tell Investors About These Tech Companies",
-        "url": "https://www.fool.com/coverage/charts/2026/10/04/micron-technology-vs-qualcomm-what-revenue-trends-tell-investors-about-these-tech-companies/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 05:40:12 +0000",
-        "titleEs": "Micron Technology frente a Qualcomm: lo que las tendencias de ingresos les dicen a los inversores sobre estas empresas tecnológicas"
-      },
-      {
-        "title": "A chipmaker's boom is quietly raising the price of your electronics",
-        "url": "https://www.thestreet.com/investing/micron-mu-boom-memory-chip-shortage-raising-price-of-electronics?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 21:17:00 +0000",
-        "titleEs": "El auge de un fabricante de chips está elevando silenciosamente el precio de sus productos electrónicos"
       }
     ],
     "PANW": [
@@ -1326,6 +1326,13 @@
     ],
     "SPY": [
       {
+        "title": "Forget the S&P 500: SCHD Is Beating It by Nearly 10 Points in 2026 and Its Dividend Just Grew",
+        "url": "https://247wallst.com/investing/etf/2026/10/04/forget-the-sp-500-schd-is-beating-it-by-nearly-10-points-in-2026-and-its-dividend-just-grew/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 21:03:17 +0000",
+        "titleEs": "Olvídese del S&P 500: SCHD lo está superando por casi 10 puntos en 2026 y su dividendo acaba de crecer"
+      },
+      {
         "title": "Michael Saylor Says Strategy's STRC Is Now Steadier Than The S&P 500's Biggest Tracker: ‘A Milestone For Digital Credit’",
         "url": "https://stocktwits.com/news-articles/markets/equity/michael-saylor-mstr-strc-steady-sp-500-tracker-digital-credit/cZDZpACRB1h?.tsrc=rss",
         "source": "Yahoo Finance",
@@ -1352,16 +1359,23 @@
         "source": "Yahoo Finance",
         "published": "Fri, 02 Oct 2026 16:59:07 +0000",
         "titleEs": "Dell aumenta un 4 % la cartera de pedidos de servidores de IA; Hewlett Packard Enterprise salta un 8%"
-      },
-      {
-        "title": "Citadel’s Strategist Says History Favors a Year-End Rally. Here’s the Catch",
-        "url": "https://247wallst.com/investing/etf/2026/10/02/citadels-strategist-says-history-favors-a-year-end-rally-heres-the-catch/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 02 Oct 2026 15:25:16 +0000",
-        "titleEs": "El estratega de Citadel dice que la historia favorece un repunte de fin de año. Aquí está el truco"
       }
     ],
     "ACN": [
+      {
+        "title": "Is Accenture (ACN) Really Priced Like Its Best Days Are Over?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/accenture-acn-really-priced-best-173337701.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 17:33:37 +0000",
+        "titleEs": "¿Accenture (ACN) tiene realmente un precio como si sus mejores días hubieran terminado?"
+      },
+      {
+        "title": "Accenture vs. Microsoft: Which Technology Stock Is a Better Buy in 2026?",
+        "url": "https://www.fool.com/coverage/better-buy/2026/10/04/accenture-vs-microsoft-which-technology-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 15:58:44 +0000",
+        "titleEs": "Accenture frente a Microsoft: ¿Qué acción tecnológica es una mejor compra en 2026?"
+      },
       {
         "title": "Accenture (ACN) Was Supposed to Be an AI Casualty. Is the Market Changing Its Mind?",
         "url": "https://finance.yahoo.com/technology/ai/articles/accenture-acn-supposed-ai-casualty-043234381.html?.tsrc=rss",
@@ -1382,20 +1396,6 @@
         "source": "Yahoo Finance",
         "published": "Fri, 02 Oct 2026 22:05:19 +0000",
         "titleEs": "Las acciones de Accenture (ACN) podrían estar infravaloradas en una caída del 33% en cinco años"
-      },
-      {
-        "title": "Accenture Stock Pulls Back as Investors Book Profits",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/accenture-stock-pulls-back-investors-180020984.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 02 Oct 2026 18:00:20 +0000",
-        "titleEs": "Las acciones de Accenture retroceden a medida que los inversores obtienen ganancias"
-      },
-      {
-        "title": "Accenture Q4 Earnings Call Sees AI Demand Broaden Into FY27",
-        "url": "https://finance.yahoo.com/technology/ai/articles/accenture-q4-earnings-call-sees-130000263.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 02 Oct 2026 13:00:00 +0000",
-        "titleEs": "La convocatoria de resultados del cuarto trimestre de Accenture ve cómo la demanda de IA se amplía hasta el año fiscal 27"
       }
     ],
     "MCD": [
@@ -1717,35 +1717,49 @@
   "discovery_news": {
     "TSLA": [
       {
+        "title": "“Without AI and Robots, We’re Totally Screwed,” Elon Musk Warns on National Debt Crisis",
+        "url": "https://247wallst.com/investing/2026/10/04/without-ai-and-robots-were-totally-screwed-elon-musk-warns-on-national-debt-crisis/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 20:00:01 +0000",
+        "titleEs": "“Sin IA y robots, estamos totalmente jodidos”, advierte Elon Musk sobre la crisis de la deuda nacional"
+      },
+      {
+        "title": "You Can Do Better Than Tesla. Buy Micron Instead.",
+        "url": "https://www.fool.com/investing/2026/10/04/you-can-do-better-than-tesla-buy-micron-instead/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 17:50:00 +0000",
+        "titleEs": "Puedes hacerlo mejor que Tesla. Compre Micron en su lugar."
+      },
+      {
+        "title": "Tesla Delivered 22,141 More Vehicles Than It Built in Q3. Here’s the Production Number That Decides What Comes Next",
+        "url": "https://www.tikr.com/blog/tesla-delivered-22141-more-vehicles-than-it-built-in-q3-heres-the-production-number-that-decides-what-comes-next?ref=yahoofinance&amp;.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 15:48:41 +0000",
+        "titleEs": "Tesla entregó 22.141 vehículos más de los que construyó en el tercer trimestre. Aquí está el número de producción que decide lo que viene después"
+      },
+      {
         "title": "Tesla. SpaceX. Starlink. James Altucher Says the Experts Called All Three Dead, and They're Doing It Again",
         "url": "https://finance.yahoo.com/technology/ai/articles/tesla-spacex-starlink-james-altucher-130000928.html?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Sun, 04 Oct 2026 13:00:00 +0000",
         "titleEs": "Tesla. EspacioX. Enlace estelar. James Altucher dice que los expertos dieron por muertos a los tres y lo están haciendo de nuevo"
-      },
-      {
-        "title": "Gary Black Flags Waymo Is Leaving TSLA Behind On Autonomy Even As Tesla Beats Delivery Estimates In Q3",
-        "url": "https://stocktwits.com/news-articles/markets/equity/tsla-gary-black-waymo-robotaxi-autonomous-driving-tesla-q3-deliveries/cZDFVH6RB1V?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 10:52:45 +0000",
-        "titleEs": "Gary Black Flags Waymo está dejando atrás a TSLA en materia de autonomía incluso cuando Tesla supera las estimaciones de entrega en el tercer trimestre"
-      },
-      {
-        "title": "Elon Musk: America is ‘1,000% going to go bankrupt’ and ‘fail as a country’ — but he says 1 powerful force can save us",
-        "url": "https://finance.yahoo.com/economy/policy/articles/elon-musk-america-1-000-113500310.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 11:35:00 +0000",
-        "titleEs": "Elon Musk: Estados Unidos \"va a ir a la quiebra en un 1.000%\" y \"fracasará como país\", pero dice que una fuerza poderosa puede salvarnos"
-      },
-      {
-        "title": "Dan Ives Says Tesla Could Have A ‘Golden Year’ In 2027 — Robotaxis, Optimus And Cybercab In Focus",
-        "url": "https://stocktwits.com/news-articles/markets/equity/dan-ives-tesla-big-ai-pivot-golden-year-2027-robotaxi-optimus-cybercab/cZDZ9s8RBKC?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 07:09:41 +0000",
-        "titleEs": "Dan Ives dice que Tesla podría tener un \"año dorado\" en 2027: Robotaxis, Optimus y Cybercab en foco"
       }
     ],
     "AMZN": [
+      {
+        "title": "Amazon AWS CEO reveals surprising risk to AI stocks and U.S. economy",
+        "url": "https://www.thestreet.com/investing/stocks/amazon-ai-data-center-backlash?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 16:03:00 +0000",
+        "titleEs": "El CEO de Amazon AWS revela un riesgo sorprendente para las acciones de IA y la economía de EE. UU."
+      },
+      {
+        "title": "Jim Cramer Says He May Quit Amazon for the Rival That Jumped 24% in a Month",
+        "url": "https://247wallst.com/investing/2026/10/04/jim-cramer-says-he-may-quit-amazon-for-the-rival-that-jumped-24-in-a-month/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 15:58:25 +0000",
+        "titleEs": "Jim Cramer dice que podría dejar Amazon por el rival que saltó un 24% en un mes"
+      },
       {
         "title": "Amazon Wants to Move $8 Billion in Nvidia Chips Off Its Books. Is AI’s Financing Model Starting to Change?",
         "url": "https://247wallst.com/investing/2026/10/04/amazon-wants-to-move-8-billion-in-nvidia-chips-off-its-books-is-ais-financing-model-starting-to-change/?.tsrc=rss",
@@ -1754,28 +1768,28 @@
         "titleEs": "Amazon quiere sacar 8 mil millones de dólares en chips Nvidia de sus libros. ¿Está empezando a cambiar el modelo de financiación de la IA?"
       },
       {
-        "title": "Amazon Is Spending Another $1 Billion on AI Data Centers — But This Time, It’s Not Buying a Single GPU",
-        "url": "https://247wallst.com/investing/2026/10/04/amazon-is-spending-another-1-billion-on-ai-data-centers-but-this-time-its-not-buying-a-single-gpu/?.tsrc=rss",
+        "title": "Amazon Stock Is Underperforming Amid Agentic AI Fears. How to Play AMZN Here.",
+        "url": "https://www.barchart.com/story/news/4951543/amazon-stock-is-underperforming-amid-agentic-ai-fears-how-to-play-amzn-here?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 15:16:34 +0000",
-        "titleEs": "Amazon está gastando otros mil millones de dólares en centros de datos de inteligencia artificial, pero esta vez no comprará una sola GPU"
-      },
-      {
-        "title": "Amazon responds to data center backlash, says it no longer uses NDAs",
-        "url": "https://finance.yahoo.com/technology/articles/amazon-responds-data-center-backlash-184357944.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 18:43:57 +0000",
-        "titleEs": "Amazon responde a la reacción violenta del centro de datos y dice que ya no utiliza acuerdos de confidencialidad"
-      },
-      {
-        "title": "\"Boy Room\" made about $15,000 on TikTok before Amazon partnership",
-        "url": "https://finance.yahoo.com/video/boy-room-made-15-000-110013783.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 11:00:13 +0000",
-        "titleEs": "\"Boy Room\" ganó alrededor de $ 15,000 en TikTok antes de asociarse con Amazon"
+        "published": "Sun, 04 Oct 2026 15:30:02 +0000",
+        "titleEs": "Las acciones de Amazon tienen un rendimiento inferior en medio de los temores de la IA agente. Cómo jugar AMZN aquí."
       }
     ],
     "AAPL": [
+      {
+        "title": "Apple's biggest AI advantage may face new privacy challenge",
+        "url": "https://www.thestreet.com/technology/apple-biggest-ai-agent-advantage-new-data-privacy-challenge?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 18:03:00 +0000",
+        "titleEs": "La mayor ventaja de la IA de Apple puede enfrentar un nuevo desafío de privacidad"
+      },
+      {
+        "title": "Analyst Sees 6 Million iPhone Duo Sales This Year. Why That’s Not Enough to Move AAPL Stock.",
+        "url": "https://www.barchart.com/story/news/4950850/analyst-sees-6-million-iphone-duo-sales-this-year-why-thats-not-enough-to-move-aapl-stock?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 12:57:13 +0000",
+        "titleEs": "Un analista prevé 6 millones de ventas de iPhone Duo este año. Por qué eso no es suficiente para mover las acciones de AAPL."
+      },
       {
         "title": "How Supreme Court Battles Involving Apple, Exxon, and Intel Could Hit Your Portfolio",
         "url": "https://finance.yahoo.com/m/73cd22ed-bdb4-3144-b852-c95810d02024/how-supreme-court-battles.html?.tsrc=rss",
@@ -1789,23 +1803,16 @@
         "source": "Yahoo Finance",
         "published": "Sat, 03 Oct 2026 18:30:02 +0000",
         "titleEs": "Estimados fanáticos de las acciones de Apple, marquen sus calendarios para el 13 de octubre"
-      },
-      {
-        "title": "Apple Says Some AT&T iPhone 18 Pro Max Users Must Replace Phones After Service-Loss Bug",
-        "url": "https://finance.yahoo.com/technology/articles/apple-says-t-iphone-18-230333132.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 02 Oct 2026 23:03:33 +0000",
-        "titleEs": "Apple dice que algunos usuarios de AT&T iPhone 18 Pro Max deben reemplazar sus teléfonos después de un error de pérdida de servicio"
-      },
-      {
-        "title": "Apple iPhone 18 Pro Max AT&T Glitch Requires Device Replacements",
-        "url": "https://finance.yahoo.com/technology/articles/apple-iphone-18-pro-max-220128822.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 02 Oct 2026 22:01:28 +0000",
-        "titleEs": "Apple iPhone 18 Pro Max AT&T Glitch Requiere Reemplazo de Dispositivo"
       }
     ],
     "GOOGL": [
+      {
+        "title": "AI Is Burning Through More Money Than Any Technology Boom in History — Now Comes the Hard Part",
+        "url": "https://247wallst.com/investing/2026/10/04/ai-is-burning-through-more-money-than-any-technology-boom-in-history-now-comes-the-hard-part/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 15:53:19 +0000",
+        "titleEs": "La IA está quemando más dinero que cualquier auge tecnológico de la historia: ahora viene la parte difícil"
+      },
       {
         "title": "LinkDaddy Reports 1.52M AI Crawler Requests to AI Verified Registry",
         "url": "https://finance.yahoo.com/technology/ai/articles/linkdaddy-reports-1-52m-ai-141900806.html?.tsrc=rss",
@@ -1826,16 +1833,16 @@
         "source": "Yahoo Finance",
         "published": "Sun, 04 Oct 2026 11:37:13 +0000",
         "titleEs": "¿Por qué se ha acelerado el comercio electrónico y quién está ganando?"
-      },
-      {
-        "title": "Gary Black Flags Waymo Is Leaving TSLA Behind On Autonomy Even As Tesla Beats Delivery Estimates In Q3",
-        "url": "https://stocktwits.com/news-articles/markets/equity/tsla-gary-black-waymo-robotaxi-autonomous-driving-tesla-q3-deliveries/cZDFVH6RB1V?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 10:52:45 +0000",
-        "titleEs": "Gary Black Flags Waymo está dejando atrás a TSLA en materia de autonomía incluso cuando Tesla supera las estimaciones de entrega en el tercer trimestre"
       }
     ],
     "AMD": [
+      {
+        "title": "AMD’s $8.2 Billion AI Bet Comes With a $1 Trillion Valuation Problem",
+        "url": "https://finance.yahoo.com/technology/ai/articles/amd-8-2-billion-ai-190159237.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 19:01:59 +0000",
+        "titleEs": "La apuesta de AMD por 8.200 millones de dólares en IA conlleva un problema de valoración de 1 billón de dólares"
+      },
       {
         "title": "AMD Reaches a $1 Trillion Market Cap. Can It Finally Dethrone Nvidia?",
         "url": "https://www.fool.com/investing/2026/10/04/amd-reaches-a-1-trillion-market-cap-can-it-finally/?.tsrc=rss",
@@ -1856,16 +1863,23 @@
         "source": "Yahoo Finance",
         "published": "Sat, 03 Oct 2026 15:22:36 +0000",
         "titleEs": "¿Puede el negocio de CPU de AMD financiar sus ambiciones de chips de IA?"
-      },
-      {
-        "title": "Prediction: This AI Chip Stock Will Be the Biggest Winner of 2027 (Hint: It’s Not Nvidia, AMD, or Broadcom)",
-        "url": "https://www.fool.com/investing/2026/10/03/prediction-this-ai-chip-stock-will-be-the-biggest-winner-of-2027-hint-it-s-not-nvidia-amd-or-broadcom/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 09:40:01 +0000",
-        "titleEs": "Predicción: este chip de IA será el mayor ganador de 2027 (pista: no es Nvidia, AMD o Broadcom)"
       }
     ],
     "AVGO": [
+      {
+        "title": "Can Broadcom Keep Growing Its Dividend as AI Customers Gain Power?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/broadcom-keep-growing-dividend-ai-203334720.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 20:33:34 +0000",
+        "titleEs": "¿Puede Broadcom seguir aumentando sus dividendos a medida que los clientes de IA ganan poder?"
+      },
+      {
+        "title": "Here is Why Broadcom (AVGO) is a Good Investment at Today’s Price",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/why-broadcom-avgo-good-investment-201656820.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 20:16:56 +0000",
+        "titleEs": "He aquí por qué Broadcom (AVGO) es una buena inversión al precio actual"
+      },
       {
         "title": "Broadcom’s Massive $42 Billion Chip-Buying Deal with Anthropic Raises Circular Financing Worries",
         "url": "https://247wallst.com/investing/2026/10/04/broadcoms-massive-42-billion-chip-buying-deal-with-anthropic-raises-circular-financing-worries/?.tsrc=rss",
@@ -1879,20 +1893,6 @@
         "source": "Yahoo Finance",
         "published": "Sun, 04 Oct 2026 13:04:00 +0000",
         "titleEs": "La proyección de Broadcom para 2028 convierte las acciones en una compra espectacular"
-      },
-      {
-        "title": "What a $10,000 Investment Split Between Nvidia and Broadcom Could Be Worth by 2030",
-        "url": "https://www.fool.com/investing/2026/10/04/what-10k-investment-split-nvidia-broadcom-ai/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 12:45:00 +0000",
-        "titleEs": "Lo que podría valer una inversión de 10.000 dólares dividida entre Nvidia y Broadcom para 2030"
-      },
-      {
-        "title": "Broadcom vs. Micron: Which Semiconductor Stock Is the Better AI Buy over the Next 3 Years?",
-        "url": "https://www.fool.com/investing/2026/10/04/broadcom-vs-micron-which-semiconductor-stock-is-th/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 09:59:00 +0000",
-        "titleEs": "Broadcom frente a Micron: ¿Qué acción de semiconductores es la mejor compra de IA en los próximos 3 años?"
       }
     ],
     "SNOW": [
@@ -1957,6 +1957,13 @@
     ],
     "COIN": [
       {
+        "title": "Coinbase Stock Got a $200 Target From Wells Fargo. Here’s How Its CFO’s Cost Pledge Changes the Math",
+        "url": "https://www.tikr.com/blog/coinbase-stock-got-a-200-target-from-wells-fargo-heres-how-its-cfos-cost-pledge-changes-the-math?ref=yahoofinance&amp;.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 15:41:57 +0000",
+        "titleEs": "Las acciones de Coinbase obtuvieron un objetivo de $ 200 de Wells Fargo. Así es como la promesa de costos de su director financiero cambia las matemáticas"
+      },
+      {
         "title": "Visa, Mastercard, Stripe, and Coinbase Commit $1 Billion to New Stablecoin: Is Open USD a Challenge to Tether, USDC, and RLUSD?",
         "url": "https://247wallst.com/investing/cryptocurrency/2026/10/04/visa-mastercard-stripe-and-coinbase-commit-1-billion-to-new-stablecoin-is-open-usd-a-challenge-to-tether-usdc-and-rlusd/?.tsrc=rss",
         "source": "Yahoo Finance",
@@ -1976,16 +1983,16 @@
         "source": "Yahoo Finance",
         "published": "Sun, 04 Oct 2026 02:09:24 +0000",
         "titleEs": "¿Puede Coinbase (COIN) convertir la asociación Stablecoin de Citi en una ventaja institucional duradera?"
-      },
-      {
-        "title": "Coinbase CEO Brian Armstrong Says Bitcoin Has Hit a Bottom. History Says He's Close.",
-        "url": "https://www.fool.com/investing/2026/10/03/coinbase-ceo-brian-armstrong-calls-bitcoin-bottom/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 18:03:00 +0000",
-        "titleEs": "El director ejecutivo de Coinbase, Brian Armstrong, dice que Bitcoin ha tocado fondo. La historia dice que está cerca."
       }
     ],
     "ARM": [
+      {
+        "title": "Arm Holdings Stock Closed Above Wall Street’s $289 Target. Here’s the Margin Math That Decides What Comes Next",
+        "url": "https://www.tikr.com/blog/arm-holdings-stock-closed-above-wall-streets-289-target-heres-the-margin-math-that-decides-what-comes-next?ref=yahoofinance&amp;.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Sun, 04 Oct 2026 15:45:16 +0000",
+        "titleEs": "Las acciones de Arm Holdings cerraron por encima del objetivo de 289 dólares de Wall Street. Aquí está la matemática de márgenes que decide lo que viene después"
+      },
       {
         "title": "Will Selling Chips Strengthen Arm’s Moat or Put It at Risk?",
         "url": "https://finance.yahoo.com/technology/ai/articles/selling-chips-strengthen-arm-moat-023431652.html?.tsrc=rss",
@@ -2006,13 +2013,6 @@
         "source": "Yahoo Finance",
         "published": "Tue, 29 Sep 2026 18:49:31 +0000",
         "titleEs": "Las existencias de brazos aumentan un 5,24 % debido a que la seguridad de los agentes necesita dos capas de silicio"
-      },
-      {
-        "title": "Astera Labs vs. Arm: Which Semiconductor Stock Is a Better Buy in 2026?",
-        "url": "https://www.fool.com/coverage/better-buy/2026/10/04/astera-labs-vs-arm-which-semiconductor-stock-is-a-better-buy-in-2026/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 15:27:49 +0000",
-        "titleEs": "Astera Labs frente a Arm: ¿Qué acción de semiconductores es una mejor compra en 2026?"
       }
     ]
   },
