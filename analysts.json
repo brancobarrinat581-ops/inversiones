@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-06T03:06:31.068Z",
+  "ts": "2026-10-06T17:17:09.326Z",
   "tickers": {
     "NVDA": {
       "name": "NVIDIA",
@@ -68,95 +68,95 @@
   },
   "fundamentals": {
     "NVDA": {
-      "price": 238.9,
+      "price": 240.08,
       "target": 328.71695,
       "targetHigh": 515,
       "targetLow": 180,
       "consensus": "strong_buy",
       "analysts": 59,
-      "pe": 30.202276,
-      "forwardPE": 15.12099,
+      "pe": 30.351454,
+      "forwardPE": 15.195678,
       "peg": 0.29,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:04.764Z"
+      "updated": "2026-10-06T17:15:51.227Z"
     },
     "META": {
-      "price": 741.9,
+      "price": 740.98,
       "target": 794.9607,
       "targetHigh": 1000,
       "targetLow": 580,
       "consensus": "strong_buy",
       "analysts": 58,
-      "pe": 27.954031,
-      "forwardPE": 21.254269,
+      "pe": 27.919365,
+      "forwardPE": 21.227911,
       "peg": 0.96,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:05.176Z"
+      "updated": "2026-10-06T17:15:51.620Z"
     },
     "MSFT": {
-      "price": 525.18,
+      "price": 532.22,
       "target": 582.59607,
       "targetHigh": 870,
       "targetLow": 440,
       "consensus": "strong_buy",
       "analysts": 53,
-      "pe": 29.257936,
-      "forwardPE": 22.181002,
+      "pe": 29.650137,
+      "forwardPE": 22.478334,
       "peg": 1.68,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:05.586Z"
+      "updated": "2026-10-06T17:15:52.035Z"
     },
     "ADBE": {
-      "price": 238.785,
+      "price": 237.295,
       "target": 275.06375,
       "targetHigh": 373,
       "targetLow": 195,
       "consensus": "hold",
       "analysts": 32,
-      "pe": 13.332496,
-      "forwardPE": 8.62872,
+      "pe": 13.249302,
+      "forwardPE": 8.574878,
       "peg": 0.57,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:05.993Z"
+      "updated": "2026-10-06T17:15:52.446Z"
     },
     "MU": {
-      "price": 1063.96,
+      "price": 1063.515,
       "target": 1535.5652,
       "targetHigh": 2200,
       "targetLow": 361,
       "consensus": "strong_buy",
       "analysts": 46,
-      "pe": 14.314004,
-      "forwardPE": 5.1479435,
+      "pe": 14.308018,
+      "forwardPE": 5.1349344,
       "peg": 0.16,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:06.401Z"
+      "updated": "2026-10-06T17:15:52.855Z"
     },
     "PANW": {
-      "price": 406.76,
+      "price": 418.8,
       "target": 396.92,
       "targetHigh": 475,
       "targetLow": 190,
       "consensus": "buy",
       "analysts": 50,
-      "pe": 1016.9,
-      "forwardPE": 83.368355,
+      "pe": 1047,
+      "forwardPE": 85.83603,
       "peg": 2.06,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:06.810Z"
+      "updated": "2026-10-06T17:15:53.274Z"
     },
     "MELI": {
-      "price": 1860.61,
+      "price": 1842.5778,
       "target": 2269.939,
       "targetHigh": 2800,
       "targetLow": 1750,
       "consensus": "strong_buy",
       "analysts": 26,
-      "pe": 50.601303,
-      "forwardPE": 32.84484,
+      "pe": 50.110897,
+      "forwardPE": 32.526524,
       "peg": 0.93,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:07.224Z"
+      "updated": "2026-10-06T17:15:53.665Z"
     },
     "SPY": {
       "price": null,
@@ -165,37 +165,37 @@
       "targetLow": null,
       "consensus": null,
       "analysts": null,
-      "pe": 25.034515,
+      "pe": 25.187016,
       "forwardPE": null,
       "peg": null,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:07.610Z"
+      "updated": "2026-10-06T17:15:54.058Z"
     },
     "ACN": {
-      "price": 195.05,
+      "price": 194.37,
       "target": 223.02959,
       "targetHigh": 275,
       "targetLow": 163,
       "consensus": "buy",
       "analysts": 24,
-      "pe": 15.579073,
-      "forwardPE": 12.242572,
+      "pe": 14.33407,
+      "forwardPE": 12.19989,
       "peg": 1.45,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:08.008Z"
+      "updated": "2026-10-06T17:15:54.462Z"
     },
     "MCD": {
-      "price": 233.04,
+      "price": 233.09,
       "target": 294.6207,
       "targetHigh": 390,
       "targetLow": 230,
       "consensus": "buy",
       "analysts": 29,
-      "pe": 18.93095,
-      "forwardPE": 16.868217,
+      "pe": 18.93501,
+      "forwardPE": 16.871838,
       "peg": 2.45,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:08.403Z"
+      "updated": "2026-10-06T17:15:54.874Z"
     },
     "IBIT": {
       "price": 48,
@@ -210,69 +210,69 @@
       "updated": "2026-09-28"
     },
     "NU": {
-      "price": 15.18,
+      "price": 15.495,
       "target": 18.63636,
       "targetHigh": 23,
       "targetLow": 12,
       "consensus": "buy",
       "analysts": 22,
-      "pe": 20.794521,
-      "forwardPE": 13.435411,
+      "pe": 21.226027,
+      "forwardPE": 13.71421,
       "peg": 0.62,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:09.175Z"
+      "updated": "2026-10-06T17:15:55.651Z"
     },
     "PAMP": {
-      "price": 79.99,
+      "price": 81.49,
       "target": 121.09091,
       "targetHigh": 160,
       "targetLow": 100,
       "consensus": null,
       "analysts": 11,
-      "pe": 7.271818,
-      "forwardPE": 6.81556,
+      "pe": 7.4081817,
+      "forwardPE": 6.9433675,
       "peg": null,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:09.565Z"
+      "updated": "2026-10-06T17:15:56.040Z"
     },
     "VIST": {
-      "price": 66.54,
-      "target": 92.76702,
-      "targetHigh": 115.78822,
-      "targetLow": 77.0142,
+      "price": 66.405,
+      "target": 93.26399,
+      "targetHigh": 116.40852,
+      "targetLow": 77.42677,
       "consensus": "strong_buy",
       "analysts": 12,
-      "pe": 8.801587,
-      "forwardPE": 6.780645,
+      "pe": 8.7837305,
+      "forwardPE": 6.766888,
       "peg": null,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:09.959Z"
+      "updated": "2026-10-06T17:15:56.430Z"
     },
     "GGAL": {
-      "price": 38.25,
+      "price": 38.515,
       "target": 66.5742,
       "targetHigh": 103,
       "targetLow": 50,
       "consensus": "buy",
       "analysts": 10,
-      "pe": 42.977528,
-      "forwardPE": 5.5197515,
+      "pe": 43.27528,
+      "forwardPE": 5.557993,
       "peg": 0.18,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:10.347Z"
+      "updated": "2026-10-06T17:15:56.817Z"
     },
     "YPF": {
-      "price": 51.24,
+      "price": 50.95,
       "target": 61.38333,
       "targetHigh": 78,
       "targetLow": 50,
       "consensus": "buy",
       "analysts": 12,
-      "pe": 26.968422,
-      "forwardPE": 9.341739,
+      "pe": 26.81579,
+      "forwardPE": 9.288868,
       "peg": 0.1,
       "source": "Yahoo Finance",
-      "updated": "2026-10-06T03:05:10.735Z"
+      "updated": "2026-10-06T17:15:57.210Z"
     }
   },
   "bank_targets": {
@@ -631,6 +631,14 @@
     ],
     "MELI": [
       {
+        "bank": "Susquehanna",
+        "analyst": "",
+        "target": 2500,
+        "rating": "Positive",
+        "date": "2026-10",
+        "action": "Raises"
+      },
+      {
         "bank": "BTIG",
         "analyst": "",
         "target": 2150,
@@ -685,17 +693,17 @@
         "rating": "Overweight",
         "date": "2026-05",
         "action": "Lowers"
-      },
-      {
-        "bank": "Benchmark",
-        "analyst": "",
-        "target": 2380,
-        "rating": "Buy",
-        "date": "2026-05",
-        "action": "Lowers"
       }
     ],
     "ACN": [
+      {
+        "bank": "Mizuho",
+        "analyst": "",
+        "target": 241,
+        "rating": "Outperform",
+        "date": "2026-10",
+        "action": "Raises"
+      },
       {
         "bank": "Goldman Sachs",
         "analyst": "",
@@ -751,17 +759,17 @@
         "rating": "Buy",
         "date": "2026-10",
         "action": "Raises"
-      },
-      {
-        "bank": "Susquehanna",
-        "analyst": "",
-        "target": 210,
-        "rating": "Neutral",
-        "date": "2026-10",
-        "action": "Raises"
       }
     ],
     "MCD": [
+      {
+        "bank": "Keybanc",
+        "analyst": "",
+        "target": 280,
+        "rating": "Overweight",
+        "date": "2026-10",
+        "action": "Lowers"
+      },
       {
         "bank": "Wells Fargo",
         "analyst": "",
@@ -815,14 +823,6 @@
         "analyst": "",
         "target": 300,
         "rating": "Outperform",
-        "date": "2026-09",
-        "action": "Lowers"
-      },
-      {
-        "bank": "RBC Capital",
-        "analyst": "",
-        "target": 285,
-        "rating": "Sector Perform",
         "date": "2026-09",
         "action": "Lowers"
       }
@@ -985,7 +985,7 @@
     ],
     "MCD": [
       {
-        "date": "2026-11-05",
+        "date": "2026-11-04",
         "event": "Presenta balance",
         "type": "earnings",
         "importance": "medium"
@@ -1067,116 +1067,137 @@
   "news": {
     "NVDA": [
       {
-        "title": "NYSE’s Parent Just Filed to Tokenize 63 US Stocks on a Crypto-Native Exchange — And the SEC Already Gave It Permission",
-        "url": "https://finance.yahoo.com/markets/crypto/articles/nyse-parent-just-filed-tokenize-025259404.html?.tsrc=rss",
+        "title": "As AI bubble fears circulate, remember the railroad bust of 1873",
+        "url": "https://finance.yahoo.com/markets/article/as-ai-bubble-fears-circulate-remember-the-railroad-bust-of-1873-165422026.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Tue, 06 Oct 2026 02:52:59 +0000",
-        "titleEs": "La empresa matriz de la Bolsa de Nueva York acaba de presentar una solicitud para tokenizar 63 acciones estadounidenses en un intercambio criptonativo, y la SEC ya le dio permiso"
+        "published": "Tue, 06 Oct 2026 16:54:22 +0000",
+        "titleEs": "Mientras circulan los temores de la burbuja de la IA, recuerde la quiebra del ferrocarril de 1873"
       },
       {
-        "title": "Dan Ives Says Nvidia Fuels AI Market, But What If It Has a Lehman Moment?",
-        "url": "https://beincrypto.com/dan-ives-nvidia-lehman-moment-risk/?.tsrc=rss",
+        "title": "Why Marvell Stock Rallied Tuesday Morning",
+        "url": "https://www.fool.com/investing/2026/10/06/why-marvell-stock-rallied-tuesday-morning/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Tue, 06 Oct 2026 02:38:21 +0000",
-        "titleEs": "Dan Ives dice que Nvidia impulsa el mercado de la IA, pero ¿y si tiene un momento Lehman?"
+        "published": "Tue, 06 Oct 2026 16:57:12 +0000",
+        "titleEs": "Por qué las acciones de Marvell se recuperaron el martes por la mañana"
       },
       {
-        "title": "Nvidia vs. Taiwan Semiconductor Manufacturing: Which Technology Stock Is a Better Buy in 2026?",
-        "url": "https://www.fool.com/coverage/better-buy/2026/10/05/nvidia-vs-taiwan-semiconductor-manufacturing-which-technology-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+        "title": "History Says Infrastructure Booms Create Winners and Losers. Here Are 3 AI Cloud Stocks to Watch.",
+        "url": "https://www.fool.com/investing/2026/10/06/history-says-infrastructure-booms-create-winners-a/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Tue, 06 Oct 2026 00:03:54 +0000",
-        "titleEs": "Nvidia frente a la fabricación de semiconductores de Taiwán: ¿Qué acción tecnológica es una mejor compra en 2026?"
+        "published": "Tue, 06 Oct 2026 16:55:00 +0000",
+        "titleEs": "La historia dice que los auges de la infraestructura crean ganadores y perdedores. Aquí hay tres acciones de nube de IA a tener en cuenta."
       },
       {
-        "title": "Dow Jones Futures: Nasdaq Hits Record Highs; TSMC, Nvidia, Elon Musk-Led SpaceX, Tesla Rally",
-        "url": "https://finance.yahoo.com/m/9c90b53b-8f8f-31da-a2bd-40e22a1f7b08/dow-jones-futures%3A-nasdaq.html?.tsrc=rss",
+        "title": "Apogee Enterprises, Inc. Q2 2027 Earnings Call Summary",
+        "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-apogee-enterprises-inc-q2-2027-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 22:35:32 +0000",
-        "titleEs": "Futuros del Dow Jones: Nasdaq alcanza máximos históricos; TSMC, Nvidia, SpaceX liderado por Elon Musk, Tesla Rally"
+        "published": "Tue, 06 Oct 2026 16:52:45 +0000",
+        "titleEs": "Apogee Enterprises, Inc. Resumen de la llamada de resultados del segundo trimestre de 2027"
       },
       {
-        "title": "This \"Magnificent Seven\" Stock Could Be Overdue for a Big Rally",
-        "url": "https://www.fool.com/investing/2026/10/05/this-magnificent-seven-stock-could-be-overdue-for-a-big-rally/?.tsrc=rss",
+        "title": "3 of the Best Dividend Stocks to Buy in October 2026",
+        "url": "https://www.fool.com/investing/2026/10/06/3-of-the-best-dividend-stocks-to-buy-in-october-2026/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 21:15:02 +0000",
-        "titleEs": "Esta acción de los \"Siete Magníficos\" podría estar retrasada para un gran repunte"
+        "published": "Tue, 06 Oct 2026 16:50:02 +0000",
+        "titleEs": "3 de las mejores acciones de dividendos para comprar en octubre de 2026"
       }
     ],
     "META": [
       {
-        "title": "Meta And Microsoft Reportedly Trim Anthropic Reliance as Internal AI Tools Take Center Stage",
-        "url": "https://stocktwits.com/news-articles/markets/equity/meta-and-microsoft-reportedly-trim-anthropic-reliance-as-internal-ai-tools-take-center-stage/cZDqQVcRBjr?.tsrc=rss",
+        "title": "Ofcom investigates Meta amid High Court showdown",
+        "url": "https://uk.finance.yahoo.com/news/ofcom-investigates-meta-amid-high-161046533.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 23:06:12 +0000",
-        "titleEs": "Se informa que Meta y Microsoft reducen la dependencia antrópica a medida que las herramientas internas de inteligencia artificial ocupan un lugar central"
+        "published": "Tue, 06 Oct 2026 16:10:46 +0000",
+        "titleEs": "Ofcom investiga a Meta en medio de un enfrentamiento en el Tribunal Superior"
       },
       {
-        "title": "Jim Cramer Believes META Muse Will “Have Much More Market Share Than OpenAI”",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-believes-meta-muse-202506581.html?.tsrc=rss",
+        "title": "Nvidia  Is Now Worth More Than META , AMZN  and AMD — Combined!",
+        "url": "https://247wallst.com/investing/2026/10/06/nvidia-is-now-worth-more-than-meta-amzn-and-amd-combined/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 20:25:06 +0000",
-        "titleEs": "Jim Cramer cree que META Muse “tendrá mucha más participación de mercado que OpenAI”"
+        "published": "Tue, 06 Oct 2026 15:51:19 +0000",
+        "titleEs": "Nvidia ahora vale más que META, AMZN y AMD, ¡combinados!"
       },
       {
-        "title": "Here’s Why I’m Very Skeptical of the META Stock Rally (And You Should Be Too)",
-        "url": "https://www.barchart.com/story/news/4969241/heres-why-im-very-skeptical-of-the-meta-stock-rally-and-you-should-be-too?.tsrc=rss",
+        "title": "Why This Analyst Sees a Massive AI Payoff for Meta—Just Not Right Away",
+        "url": "https://finance.yahoo.com/m/07c63a1d-b53a-3de6-8c87-9058604404e1/why-this-analyst-sees-a.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 20:19:03 +0000",
-        "titleEs": "He aquí por qué soy muy escéptico ante el repunte de las acciones de META (y usted también debería serlo)"
+        "published": "Tue, 06 Oct 2026 15:39:00 +0000",
+        "titleEs": "Por qué este analista ve una enorme recompensa por parte de la IA para Meta, pero no de inmediato"
       },
       {
-        "title": "The Simple Reason Meta and Google Will Win AI: Only “2% of US Households” Pay for It.",
-        "url": "https://www.tikr.com/blog/the-simple-reason-meta-and-google-will-win-ai-only-2-of-us-households-pay-for-it?ref=yahoofinance&amp;.tsrc=rss",
+        "title": "Meta Gets A $1,000 Target From Wells Fargo — Says Enthusiasm Around Muse Product Cycle Is Warranted",
+        "url": "https://stocktwits.com/news-articles/markets/equity/meta-gets-a-1-000-target-from-wells-fargo-says-enthusiasm-around-muse-product-cycle-is-warranted/cZDtePHRBl5?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 19:42:12 +0000",
-        "titleEs": "La sencilla razón por la que Meta y Google ganarán en IA: sólo el “2% de los hogares estadounidenses” pagan por ella."
+        "published": "Tue, 06 Oct 2026 15:12:36 +0000",
+        "titleEs": "Meta obtiene un objetivo de $1000 de Wells Fargo: dice que el entusiasmo en torno al ciclo del producto Muse está justificado"
       },
       {
-        "title": "“Zuck Is the Winner” of the White House AI Accord, and Meta’s Open-Source Risk Just Shrank",
-        "url": "https://www.tikr.com/blog/zuck-is-the-winner-of-the-white-house-ai-accord-and-metas-open-source-risk-just-shrank?ref=yahoofinance&amp;.tsrc=rss",
+        "title": "Meta Platforms (META) Advances Following Record Launch of Muse Personal AI Agent",
+        "url": "https://finance.yahoo.com/technology/ai/articles/meta-platforms-meta-advances-following-142225738.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 19:33:08 +0000",
-        "titleEs": "\"Zuck es el ganador\" del acuerdo de inteligencia artificial de la Casa Blanca, y el riesgo de código abierto de Meta simplemente se redujo"
+        "published": "Tue, 06 Oct 2026 14:22:25 +0000",
+        "titleEs": "Las metaplataformas (META) avanzan tras el lanzamiento récord de Muse Personal AI Agent"
       }
     ],
     "MSFT": [
       {
-        "title": "What Anthropic and Microsoft are saying about 'AI consciousness'",
-        "url": "https://finance.yahoo.com/video/anthropic-microsoft-saying-ai-consciousness-205547406.html?.tsrc=rss",
+        "title": "Marvell stock surges after company raises 2028 revenue outlook to $20 billion",
+        "url": "https://finance.yahoo.com/markets/stocks/article/marvell-stock-surges-after-company-raises-2028-revenue-outlook-to-20-billion-155038471.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 20:55:47 +0000",
-        "titleEs": "Lo que Anthropic y Microsoft dicen sobre la 'conciencia de la IA'"
+        "published": "Tue, 06 Oct 2026 15:50:38 +0000",
+        "titleEs": "Las acciones de Marvell aumentan después de que la compañía eleva la perspectiva de ingresos para 2028 a 20 mil millones de dólares"
       },
       {
-        "title": "MSFT Stock Gains: Melius Research Calls Microsoft ‘Adults In Charge’ Of AI, Upgrades To ‘Buy’",
-        "url": "https://stocktwits.com/news-articles/markets/equity/msft-stock-gains-melius-research-calls-microsoft-adults-in-charge-of-ai-upgrades-to-buy/cZDsnwvRBjw?.tsrc=rss",
+        "title": "Not Microsoft. Not Google. Analysts Call This $2.7 Trillion Tech Titan the Most Undervalued AI Play.",
+        "url": "https://www.fool.com/investing/2026/10/06/not-microsoft-not-google-the-2-trillion-tech-titan/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Tue, 06 Oct 2026 01:58:29 +0000",
-        "titleEs": "Ganancias de acciones de MSFT: Melius Research llama a Microsoft 'adultos a cargo' de la IA y actualiza para 'comprar'"
+        "published": "Tue, 06 Oct 2026 16:41:00 +0000",
+        "titleEs": "No Microsoft. No Google. Los analistas consideran que este titán tecnológico de 2,7 billones de dólares es el juego de IA más infravalorado."
       },
       {
-        "title": "Microsoft cutting off a best-seller with no extension on Oct. 13",
-        "url": "https://www.thestreet.com/technology/microsoft-ending-support-for-a-beloved-best-seller-on-oct-13?.tsrc=rss",
+        "title": "M365 Con 27 Brings 120+ Microsoft Experts Together — Including 90+ Microsoft MVPs — for a Global Conference on AI, Copilot and the Future of Work",
+        "url": "https://finance.yahoo.com/technology/ai/articles/m365-con-27-brings-120-163500054.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 23:12:00 +0000",
-        "titleEs": "Microsoft cortará un best-seller sin extensión el 13 de octubre"
+        "published": "Tue, 06 Oct 2026 16:35:00 +0000",
+        "titleEs": "M365 Con 27 reúne a más de 120 expertos de Microsoft, incluidos más de 90 MVP de Microsoft, para una conferencia global sobre IA, Copilot y el futuro del trabajo"
       },
       {
-        "title": "Meta And Microsoft Reportedly Trim Anthropic Reliance as Internal AI Tools Take Center Stage",
-        "url": "https://stocktwits.com/news-articles/markets/equity/meta-and-microsoft-reportedly-trim-anthropic-reliance-as-internal-ai-tools-take-center-stage/cZDqQVcRBjr?.tsrc=rss",
+        "title": "MSFT Rises 41% in 6 Months on Solid AI Demand: Should You Hold Now?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/msft-rises-41-6-months-141900418.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 23:06:12 +0000",
-        "titleEs": "Se informa que Meta y Microsoft reducen la dependencia antrópica a medida que las herramientas internas de inteligencia artificial ocupan un lugar central"
+        "published": "Tue, 06 Oct 2026 14:19:00 +0000",
+        "titleEs": "MSFT aumenta un 41% en 6 meses gracias a una sólida demanda de IA: ¿debería esperar ahora?"
       },
       {
-        "title": "Microsoft (MSFT) Exceeds Market Returns: Some Facts to Consider",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/microsoft-msft-exceeds-market-returns-204502810.html?.tsrc=rss",
+        "title": "Jensen Huang Vs. Satya Nadella: Whose Promises About AI Better Approximate The ‘Truth’?",
+        "url": "https://247wallst.com/investing/2026/10/06/jensen-huang-vs-satya-nadella-whose-promises-about-ai-better-approximate-the-truth/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 20:45:02 +0000",
-        "titleEs": "Microsoft (MSFT) supera los rendimientos del mercado: algunos hechos a considerar"
+        "published": "Tue, 06 Oct 2026 16:45:38 +0000",
+        "titleEs": "Jensen Huang vs. Satya Nadella: ¿De quién son las promesas sobre la IA que se aproximan mejor a la “verdad”?"
       }
     ],
     "ADBE": [
+      {
+        "title": "SwishX Appoints Melonie Warfel as Chief Commercial Officer to Accelerate AI-Powered Content Creation for Life Sciences",
+        "url": "https://finance.yahoo.com/technology/ai/articles/swishx-appoints-melonie-warfel-chief-123800914.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 12:38:00 +0000",
+        "titleEs": "SwishX nombra a Melonie Warfel como directora comercial para acelerar la creación de contenido impulsado por inteligencia artificial para ciencias biológicas"
+      },
+      {
+        "title": "How Much Downside Is Left In Adobe Stock?",
+        "url": "https://www.trefis.com/articles/617685/how-much-downside-is-left-in-adobe-stock/2026-10-06?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 12:02:48 +0000",
+        "titleEs": "¿Cuántas desventajas quedan en Adobe Stock?"
+      },
+      {
+        "title": "Adobe Inc. (ADBE) Is a Trending Stock: Facts to Know Before Betting on It",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/adobe-inc-adbe-trending-stock-120005434.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 12:00:05 +0000",
+        "titleEs": "Adobe Inc. (ADBE) es una acción de tendencia: datos que debe saber antes de apostar por ella"
+      },
       {
         "title": "Adobe stock: Here are 5 strategic questions into new leadership",
         "url": "https://finance.yahoo.com/markets/stocks/articles/adobe-stock-5-strategic-questions-221112913.html?.tsrc=rss",
@@ -1190,104 +1211,104 @@
         "source": "Yahoo Finance",
         "published": "Sun, 04 Oct 2026 20:07:07 +0000",
         "titleEs": "Cómo están reaccionando los inversores ante la expansión de AI CX de Adobe (ADBE) con asociaciones entre NHL y Jet2"
-      },
-      {
-        "title": "Adobe Still Has $24.5 Billion Left for Buybacks. That's About a Quarter of the Company.",
-        "url": "https://www.fool.com/investing/2026/10/04/adobe-still-has-usd24-5-billion-left-for-buybacks-that-s-about-a-quarter-of-the-company/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sun, 04 Oct 2026 10:43:01 +0000",
-        "titleEs": "A Adobe todavía le quedan 24.500 millones de dólares para recompras. Eso es aproximadamente una cuarta parte de la empresa."
-      },
-      {
-        "title": "Adobe Forecasts 130% Surge in AI-Driven Retail Traffic During US Holiday Season",
-        "url": "https://investorshub.advfn.com/market-news/article/37352/adobe-forecasts-130-surge-in-ai-driven-retail-traffic-during-us-holiday-season?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 13:41:00 +0000",
-        "titleEs": "Adobe prevé un aumento del 130% en el tráfico minorista impulsado por la IA durante la temporada navideña en EE. UU."
-      },
-      {
-        "title": "The Adobe Stock Debate Is About to Get Interesting",
-        "url": "https://247wallst.com/investing/2026/10/02/the-adobe-stock-debate-is-about-to-get-interesting/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 02 Oct 2026 17:30:48 +0000",
-        "titleEs": "El debate sobre Adobe Stock está a punto de volverse interesante"
       }
     ],
     "MU": [
       {
-        "title": "Sozzi talks with Zscaler CEO about AI cybersecurity, while Nvidia & AMD stocks rip higher",
-        "url": "https://finance.yahoo.com/video/sozzi-talks-zscaler-ceo-ai-151212213.html?.tsrc=rss",
+        "title": "Citi raises AMD price target — and it's because of Meta Muse",
+        "url": "https://finance.yahoo.com/video/citi-raises-amd-price-target-152026862.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 15:12:12 +0000",
-        "titleEs": "Sozzi habla con el CEO de Zscaler sobre la ciberseguridad de la IA, mientras las acciones de Nvidia y AMD suben"
+        "published": "Tue, 06 Oct 2026 15:20:26 +0000",
+        "titleEs": "Citi aumenta el precio objetivo de AMD, y es gracias a Meta Muse"
       },
       {
-        "title": "Why investors should be watching this date for Micron",
-        "url": "https://finance.yahoo.com/video/why-investors-should-be-watching-this-date-for-micron-142500220.html?.tsrc=rss",
+        "title": "SK Hynix Falls 4% on Earnings Caution Before a Rebalancing Goldman Says Favors It; SanDisk Slips 2%, Micron Holds Firm",
+        "url": "https://247wallst.com/investing/2026/10/06/sk-hynix-falls-4-on-earnings-caution-before-a-rebalancing-goldman-says-favors-it-sandisk-slips-2-micron-holds-firm/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 14:25:00 +0000",
-        "titleEs": "Por qué los inversores deberían estar atentos a esta fecha para Micron"
+        "published": "Tue, 06 Oct 2026 16:59:39 +0000",
+        "titleEs": "SK Hynix cae un 4% por precaución sobre las ganancias antes de que un Goldman reequilibre diga que está a favor; SanDisk cae un 2%, Micron se mantiene firme"
       },
       {
-        "title": "Why the AI stock rally depends on cloud growth this earnings season: Goldman analyst",
-        "url": "https://finance.yahoo.com/markets/article/why-the-ai-stock-rally-depends-on-cloud-growth-this-earnings-season-goldman-analyst-135838244.html?.tsrc=rss",
+        "title": "Western Digital Sinks 6% as Toshiba’s Drive Expansion Hits the Group; Seagate Drops 8%, Micron Holds Flat",
+        "url": "https://247wallst.com/investing/2026/10/06/western-digital-sinks-6-as-toshibas-drive-expansion-hits-the-group-seagate-drops-8-micron-holds-flat/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 13:58:38 +0000",
-        "titleEs": "Por qué el repunte de las acciones de IA depende del crecimiento de la nube en esta temporada de resultados: analista de Goldman"
+        "published": "Tue, 06 Oct 2026 15:52:09 +0000",
+        "titleEs": "Western Digital se hunde un 6% a medida que la expansión de unidades de Toshiba llega al grupo; Seagate cae un 8%, Micron se mantiene plano"
       },
       {
-        "title": "Micron (MU): AI Memory Boom Could Outlast Your Expectations",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/micron-mu-ai-memory-boom-211707590.html?.tsrc=rss",
+        "title": "How Has Micron's Story Changed?",
+        "url": "https://www.trefis.com/articles/617672/how-has-microns-story-changed/2026-10-06?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 21:17:07 +0000",
-        "titleEs": "Micron (MU): el auge de la memoria de IA podría superar sus expectativas"
+        "published": "Tue, 06 Oct 2026 14:18:43 +0000",
+        "titleEs": "¿Cómo ha cambiado la historia de Micron?"
       },
       {
-        "title": "Morgan Stanley revisits Micron stock price target amid stellar growth",
-        "url": "https://www.thestreet.com/investing/stocks/mu-morgan-stanley-maintains-micron-stock-price-target-ai-memory-growth?.tsrc=rss",
+        "title": "Micron Stock Drops. Why It Needs a Memory Price Test.",
+        "url": "https://finance.yahoo.com/m/2a003763-34ba-3048-b95d-81b76986c0a0/micron-stock-drops.-why-it.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 19:13:00 +0000",
-        "titleEs": "Morgan Stanley revisa el precio objetivo de las acciones de Micron en medio de un crecimiento estelar"
+        "published": "Tue, 06 Oct 2026 13:44:00 +0000",
+        "titleEs": "Caídas de existencias de micrones. Por qué necesita una prueba de precio de la memoria."
       }
     ],
     "PANW": [
+      {
+        "title": "Cybersecurity stocks hit new highs as AI agents spark 'biggest risk today': Chart of the Day",
+        "url": "https://finance.yahoo.com/markets/stocks/article/cybersecurity-stocks-hit-new-highs-as-ai-agents-spark-biggest-risk-today-chart-of-the-day-115446641.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 11:54:46 +0000",
+        "titleEs": "Las acciones de ciberseguridad alcanzan nuevos máximos a medida que los agentes de inteligencia artificial generan el \"mayor riesgo actual\": gráfico del día"
+      },
+      {
+        "title": "Palo Alto Stock Is Ideal For This Long-Term Options Trade",
+        "url": "https://finance.yahoo.com/m/b0220078-fef6-396f-be6e-437b4edcbd10/palo-alto-stock-is-ideal-for.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 16:06:25 +0000",
+        "titleEs": "Las acciones de Palo Alto son ideales para esta operación de opciones a largo plazo"
+      },
+      {
+        "title": "CrowdStrike Advances 3% on Agentic Security Accelerator With Amazon and NVIDIA; Palo Alto and Zscaler Gain 4%",
+        "url": "https://247wallst.com/investing/2026/10/06/crowdstrike-advances-3-on-agentic-security-accelerator-with-amazon-and-nvidia-palo-alto-networks-and-zscaler-gain-4/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 15:00:00 +0000",
+        "titleEs": "CrowdStrike avanza un 3 % en Agentic Security Accelerator con Amazon y NVIDIA; Palo Alto y Zscaler ganan un 4%"
+      },
+      {
+        "title": "Informa TechTarget Announces Winners of the First-Ever Archer Awards for GTM Excellence In the Middle East and North Africa (MENA)",
+        "url": "https://finance.yahoo.com/media-advertising/articles/informa-techtarget-announces-winners-first-080000015.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 08:00:00 +0000",
+        "titleEs": "Informa TechTarget anuncia los ganadores de los primeros premios Archer a la excelencia de GTM en Medio Oriente y África del Norte (MENA)"
+      },
       {
         "title": "Is Palo Alto Networks (PANW) a Good Stock To Buy This Year?",
         "url": "https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-panw-good-132417551.html?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Mon, 05 Oct 2026 13:24:17 +0000",
         "titleEs": "¿Es Palo Alto Networks (PANW) una buena acción para comprar este año?"
-      },
-      {
-        "title": "2 Cybersecurity Stocks With Serious Long-Term Wealth-Building Potential",
-        "url": "https://www.fool.com/investing/2026/10/03/2-cybersecurity-stocks-with-serious-long-term-weal/?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 07:35:00 +0000",
-        "titleEs": "2 Acciones de ciberseguridad con un gran potencial de creación de riqueza a largo plazo"
-      },
-      {
-        "title": "Palo Alto Networks (PANW) Is a Good Business. But Can Its Growth Justify the Valuation?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-panw-good-020611875.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 02:06:11 +0000",
-        "titleEs": "Palo Alto Networks (PANW) es un buen negocio. Pero, ¿puede su crecimiento justificar la valoración?"
-      },
-      {
-        "title": "Palo Alto Networks (PANW) Rises Higher Than Market: Key Facts",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-panw-rises-204502614.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 02 Oct 2026 20:45:02 +0000",
-        "titleEs": "Palo Alto Networks (PANW) sube más que el mercado: hechos clave"
-      },
-      {
-        "title": "These Telltale Clues Shine A Spotlight On Palo Alto Networks",
-        "url": "https://finance.yahoo.com/m/d941026c-847f-3623-ace5-c1bb7e445ad3/these-telltale-clues-shine-a.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 02 Oct 2026 20:03:16 +0000",
-        "titleEs": "Estas pistas reveladoras destacan Palo Alto Networks"
       }
     ],
     "MELI": [
+      {
+        "title": "MercadoLibre (MELI) Capitalizes on Early-Stage E-Commerce and Digital Finance",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mercadolibre-meli-capitalizes-early-stage-135146620.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 13:51:46 +0000",
+        "titleEs": "MercadoLibre (MELI) capitaliza el comercio electrónico y las finanzas digitales en sus primeras etapas"
+      },
+      {
+        "title": "MercadoLibre Fell 15% Over 12 Months: 50% Gains Coming in The Next 12 Says Wall Street Pro",
+        "url": "https://247wallst.com/investing/2026/10/06/mercadolibre-fell-15-over-12-months-50-gains-coming-in-the-next-12-says-wall-street-pro/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 11:15:59 +0000",
+        "titleEs": "MercadoLibre cayó un 15% en 12 meses: 50% de ganancias en los próximos 12, dice Wall Street Pro"
+      },
+      {
+        "title": "Is Michael Burry Right About MercadoLibre?",
+        "url": "https://www.fool.com/investing/2026/10/05/is-michael-burry-right-about-mercadolibre/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 03:25:02 +0000",
+        "titleEs": "¿Tiene razón Michael Burry sobre MercadoLibre?"
+      },
       {
         "title": "Brazilian stocks soar as Flávio Bolsonaro takes surprise election lead",
         "url": "https://finance.yahoo.com/markets/article/brazilian-stocks-soar-as-flavio-bolsonaro-takes-surprise-election-lead-160951504.html?.tsrc=rss",
@@ -1301,36 +1322,22 @@
         "source": "Yahoo Finance",
         "published": "Mon, 05 Oct 2026 15:41:47 +0000",
         "titleEs": "¿MercadoLibre finalmente está listo para cumplir su promesa?"
-      },
-      {
-        "title": "What Could Send MercadoLibre Stock Higher?",
-        "url": "https://www.trefis.com/articles/617532/what-could-send-mercadolibre-stock-higher/2026-10-05?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 15:40:54 +0000",
-        "titleEs": "¿Qué podría hacer subir las acciones de MercadoLibre?"
-      },
-      {
-        "title": "MercadoLibre's GMV Growth Has More Room to Run Across Markets",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/mercadolibres-gmv-growth-more-room-144200925.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 14:42:00 +0000",
-        "titleEs": "El crecimiento de GMV de MercadoLibre tiene más espacio para expandirse en todos los mercados"
-      },
-      {
-        "title": "MercadoLibre, XP, Embraer Take Off On Brazil Election Results",
-        "url": "https://finance.yahoo.com/m/3b8dfa7d-4454-3dcd-bb17-0841835bf413/mercadolibre%2C-xp%2C-embraer.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 13:38:37 +0000",
-        "titleEs": "MercadoLibre, XP y Embraer despegan con los resultados de las elecciones en Brasil"
       }
     ],
     "SPY": [
       {
-        "title": "Applied Digital Falls 4% Despite Bringing 75 MW Online at Polaris Forge 1; IREN and Cipher Digital Also Slide 4%",
-        "url": "https://247wallst.com/investing/2026/10/05/applied-digital-falls-4-despite-bringing-75-mw-online-at-polaris-forge-1-iren-and-cipher-digital-also-slide-4/?.tsrc=rss",
+        "title": "Applied Optoelectronics Surges 6% as $600M Share Sale Program Closes; Lumentum Sits Out the Rally, Corning Edges Higher",
+        "url": "https://247wallst.com/investing/2026/10/06/applied-optoelectronics-surges-6-as-600m-share-sale-program-closes-lumentum-sits-out-the-rally-corning-edges-higher/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 16:08:40 +0000",
-        "titleEs": "Applied Digital cae un 4% a pesar de poner en línea 75 MW en Polaris Forge 1; IREN y Cipher Digital también caen un 4%"
+        "published": "Tue, 06 Oct 2026 13:52:57 +0000",
+        "titleEs": "La optoelectrónica aplicada aumenta un 6% a medida que se cierra el programa de venta de acciones por valor de 600 millones de dólares; Lumentum se queda fuera del rally, Corning sube más"
+      },
+      {
+        "title": "AbbVie Rewarded Patient Investors but Punished Those Who Bought on Good News",
+        "url": "https://247wallst.com/investing/2026/10/06/abbvie-rewarded-patient-investors-but-punished-those-who-bought-on-good-news/?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 12:25:48 +0000",
+        "titleEs": "AbbVie recompensó a los inversores pacientes pero castigó a quienes compraron con buenas noticias"
       },
       {
         "title": "A New ETF Is Betting the S&P 500 Hits 10,000 and Almost Nobody Is Buying It",
@@ -1340,28 +1347,28 @@
         "titleEs": "Un nuevo ETF apuesta a que el S&P 500 alcanza los 10.000 y casi nadie lo compra"
       },
       {
-        "title": "Affirm Climbs 5% as Buy Now Pay Later Group Rallies Together; Klarna Rises 5%, PayPal Ticks Up",
-        "url": "https://247wallst.com/investing/2026/10/05/affirm-climbs-5-as-buy-now-pay-later-group-rallies-together-klarna-rises-5-paypal-ticks-up/?.tsrc=rss",
+        "title": "Arista Networks Advances 4% While Ciena Soars 11% on AI Networking Demand; Cisco Rises 3%",
+        "url": "https://247wallst.com/investing/2026/10/06/arista-networks-advances-4-while-ciena-soars-11-on-ai-networking-demand-cisco-rises-3/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 16:54:09 +0000",
-        "titleEs": "Affirm sube un 5 % a medida que el grupo Compre ahora, pague después se recupera; Klarna sube un 5%, PayPal sube"
+        "published": "Tue, 06 Oct 2026 16:56:34 +0000",
+        "titleEs": "Arista Networks avanza un 4 % mientras que Ciena se dispara un 11 % gracias a la demanda de redes de IA; Cisco sube un 3%"
       },
       {
-        "title": "TeraWulf Slides 5% Despite Doubling Muskie Power Contract to 1 Gigawatt; Core Scientific Drops 3%, Riot Eases",
-        "url": "https://247wallst.com/investing/2026/10/05/terawulf-slides-5-despite-doubling-muskie-power-contract-to-1-gigawatt-core-scientific-drops-3-riot-eases/?.tsrc=rss",
+        "title": "FuelCell Energy Surges 11% on Fit Energy’s Pennsylvania Data Center Plan; Bloom Energy Climbs 4%, Plug Power Barely Budges",
+        "url": "https://247wallst.com/investing/2026/10/06/fuelcell-energy-surges-11-on-fit-energys-pennsylvania-data-center-plan-bloom-energy-climbs-4-plug-power-barely-budges/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 14:40:18 +0000",
-        "titleEs": "TeraWulf cae un 5% a pesar de duplicar el contrato de energía de Muskie a 1 gigavatio; Core Scientific cae un 3%, Riot disminuye"
-      },
-      {
-        "title": "Nasdaq 100 Hits Record Highs As Investors Shrug Off Pressure From Soaring Yields — NVDA, SPCX, CRML, TSLA, QCOM In Focus",
-        "url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-100-hits-record-highs-as-investors-shrug-off-pressure-from-soaring-yields-nvda-spcx-crml-tsla-qcom-in-focus/cZDqO2yRBjp?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 22:09:32 +0000",
-        "titleEs": "Nasdaq 100 alcanza máximos históricos a medida que los inversores hacen caso omiso de la presión del aumento de los rendimientos: NVDA, SPCX, CRML, TSLA, QCOM en foco"
+        "published": "Tue, 06 Oct 2026 16:48:06 +0000",
+        "titleEs": "FuelCell Energy aumenta un 11 % con el plan de centro de datos de Pensilvania de Fit Energy; La energía de la floración sube un 4%, la energía eléctrica apenas cede"
       }
     ],
     "ACN": [
+      {
+        "title": "What Did Accenture's Quarter Change For Its Stock?",
+        "url": "https://www.trefis.com/articles/617681/what-did-accentures-quarter-change-for-its-stock/2026-10-06?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 12:54:05 +0000",
+        "titleEs": "¿Qué cambió el trimestre de Accenture para sus acciones?"
+      },
       {
         "title": "Why Accenture (ACN) International Revenue Trends Deserve Your Attention",
         "url": "https://finance.yahoo.com/markets/stocks/articles/why-accenture-acn-international-revenue-121510547.html?.tsrc=rss",
@@ -1389,50 +1396,43 @@
         "source": "Yahoo Finance",
         "published": "Sat, 03 Oct 2026 04:32:34 +0000",
         "titleEs": "Se suponía que Accenture (ACN) era una víctima de IA. ¿Está cambiando de opinión el mercado?"
-      },
-      {
-        "title": "What is Accenture’s (ACN) Economic Moat, and is it Widening or Narrowing?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/accenture-acn-economic-moat-widening-003604766.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 00:36:04 +0000",
-        "titleEs": "¿Qué es el foso económico de Accenture (ACN)? ¿Se está ampliando o reduciendo?"
       }
     ],
     "MCD": [
       {
-        "title": "McDonald's stock sell-off refuses to stop",
-        "url": "https://finance.yahoo.com/markets/stocks/article/mcdonalds-stock-sell-off-refuses-to-stop-180132415.html?.tsrc=rss",
+        "title": "Lamb Weston Cost-Savings Measures Boost Earnings and the Stock",
+        "url": "https://finance.yahoo.com/m/50cdfc7a-d91c-30ab-8034-8524ca32b101/lamb-weston-cost-savings.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 18:01:32 +0000",
-        "titleEs": "La venta masiva de acciones de McDonald's se niega a detenerse"
+        "published": "Tue, 06 Oct 2026 16:59:00 +0000",
+        "titleEs": "Las medidas de ahorro de costes de Lamb Weston impulsan los beneficios y las acciones"
       },
       {
-        "title": "Higher rates are pummeling consumer discretionary stocks — here's the damage: Chart of the Day",
-        "url": "https://finance.yahoo.com/markets/article/higher-rates-are-pummeling-consumer-discretionary-stocks--heres-the-damage-chart-of-the-day-161008955.html?.tsrc=rss",
+        "title": "McDonald’s stock gains 0.3% despite franchisee pushback over store upgrades",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonald-stock-gains-0-3-165806620.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 16:10:08 +0000",
-        "titleEs": "Las tasas más altas están golpeando a las acciones de consumo discrecional; aquí está el daño: Gráfico del día"
+        "published": "Tue, 06 Oct 2026 16:58:06 +0000",
+        "titleEs": "Las acciones de McDonald's ganan un 0,3% a pesar del rechazo de los franquiciados por las mejoras de las tiendas"
       },
       {
-        "title": "Chick-fil-A draws hard line as McDonald’s pushes drive-thru AI",
-        "url": "https://www.thestreet.com/restaurants/chick-fil-a-prioritizes-human-order-takers-as-mcdonalds-pushes-drive-thru-ai?.tsrc=rss",
+        "title": "McDonald’s Sued Over AI-Powered Menu Price-Fixing",
+        "url": "https://247wallst.com/investing/2026/10/06/mcdonalds-sued-over-ai-powered-menu-price-fixing/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Tue, 06 Oct 2026 01:37:00 +0000",
-        "titleEs": "Chick-fil-A traza una línea dura mientras McDonald's impulsa la IA para autoservicio"
+        "published": "Tue, 06 Oct 2026 15:01:13 +0000",
+        "titleEs": "McDonald's demandada por fijación de precios de menú basada en inteligencia artificial"
       },
       {
-        "title": "McDonald’s Franchisee Model Is Under Pressure. Here’s Why Investors Should Stay Away",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonald-franchisee-model-under-pressure-002243351.html?.tsrc=rss",
+        "title": "McDonald's antitrust lawsuit AI pricing franchises",
+        "url": "https://qz.com/mcdonalds-antitrust-lawsuit-ai-pricing-franchises-100626?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Tue, 06 Oct 2026 00:22:43 +0000",
-        "titleEs": "El modelo de franquicia de McDonald's está bajo presión. He aquí por qué los inversores deberían mantenerse alejados"
+        "published": "Tue, 06 Oct 2026 13:58:29 +0000",
+        "titleEs": "Demanda antimonopolio de McDonald's sobre franquicias de fijación de precios de IA"
       },
       {
-        "title": "McDonald's Sued Over Alleged Algorithmic Price-Fixing With Franchisees",
-        "url": "https://finance.yahoo.com/technology/ai/articles/mcdonald-apos-sued-over-alleged-191809480.html?.tsrc=rss",
+        "title": "McDonald’s now faces a lawsuit over its pricing recommendations",
+        "url": "https://www.nrn.com/quick-service/mcdonald-s-now-faces-a-lawsuit-over-its-pricing-recommendations?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 19:18:09 +0000",
-        "titleEs": "McDonald's demandada por supuesta fijación algorítmica de precios con franquiciados"
+        "published": "Tue, 06 Oct 2026 13:18:23 +0000",
+        "titleEs": "McDonald's ahora enfrenta una demanda por sus recomendaciones de precios"
       }
     ],
     "IBIT": [
@@ -1465,20 +1465,20 @@
         "titleEs": "IBIT posee Bitcoin sin billetera. Esa comodidad le cuesta cada año, ya sea que Bitcoin suba o no"
       },
       {
-        "title": "Scaramucci: ‘Wall Street Got Bailed Out, Main Street Got Nothing’",
-        "url": "https://247wallst.com/investing/2026/09/25/scaramucci-wall-street-got-bailed-out-main-street-got-nothing/?.tsrc=rss",
+        "title": "Bitcoin Investors Pull $3.3B From Binance In 15 Days — But ETF Flows, Futures Positioning Flash Caution",
+        "url": "https://stocktwits.com/news-articles/markets/cryptocurrency/bitcoin-binance-outflows-etf-flows-futures-open-interest-btc/cZDtGasRBkV?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Fri, 25 Sep 2026 12:00:42 +0000",
-        "titleEs": "Scaramucci: “Wall Street fue rescatado, Main Street no obtuvo nada”"
+        "published": "Tue, 06 Oct 2026 10:20:04 +0000",
+        "titleEs": "Los inversores de Bitcoin retiran 3.300 millones de dólares de Binance en 15 días, pero los flujos de ETF y el posicionamiento de futuros son cautelosos"
       }
     ],
     "NU": [
       {
-        "title": "Brazilian stocks soar as Flávio Bolsonaro takes surprise election lead",
-        "url": "https://finance.yahoo.com/markets/article/brazilian-stocks-soar-as-flavio-bolsonaro-takes-surprise-election-lead-160951504.html?.tsrc=rss",
+        "title": "Nu  (NU) Surges 13.0%: Is This an Indication of Further Gains?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/nu-nu-surges-13-0-102600777.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 16:09:51 +0000",
-        "titleEs": "Las acciones brasileñas se disparan mientras Flávio Bolsonaro toma sorpresiva ventaja electoral"
+        "published": "Tue, 06 Oct 2026 10:26:00 +0000",
+        "titleEs": "Nu (NU) aumenta un 13,0%: ¿Es esto una indicación de mayores ganancias?"
       },
       {
         "title": "Why Nu Holdings Stock Rallied Today",
@@ -1486,6 +1486,13 @@
         "source": "Yahoo Finance",
         "published": "Mon, 05 Oct 2026 17:38:30 +0000",
         "titleEs": "Por qué las acciones de Nu Holdings se recuperaron hoy"
+      },
+      {
+        "title": "Brazilian stocks soar as Flávio Bolsonaro takes surprise election lead",
+        "url": "https://finance.yahoo.com/markets/article/brazilian-stocks-soar-as-flavio-bolsonaro-takes-surprise-election-lead-160951504.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Mon, 05 Oct 2026 16:09:51 +0000",
+        "titleEs": "Las acciones brasileñas se disparan mientras Flávio Bolsonaro toma sorpresiva ventaja electoral"
       },
       {
         "title": "Nu Holdings shares jump after Bolsonaro election upset",
@@ -1500,13 +1507,6 @@
         "source": "Yahoo Finance",
         "published": "Mon, 05 Oct 2026 12:45:25 +0000",
         "titleEs": "Nu Holdings sube un 12% a medida que el revés electoral en Brasil impulsa el repunte de los activos brasileños; Robinhood sube más, SoFi se mantiene"
-      },
-      {
-        "title": "Why Is NU Stock Surging Nearly 9% In Overnight Trading?",
-        "url": "https://stocktwits.com/news-articles/markets/equity/why-is-nu-stock-surging-nearly-9-in-overnight-trading/cZDp0DGRB1z?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 02:02:42 +0000",
-        "titleEs": "¿Por qué las acciones de NU están aumentando casi un 9% en las operaciones nocturnas?"
       }
     ],
     "PAMP": [
@@ -1717,242 +1717,242 @@
   "discovery_news": {
     "TSLA": [
       {
-        "title": "Wall Street bank makes radical Tesla call after Q3 deliveries news",
-        "url": "https://www.thestreet.com/investing/deutsche-bank-raises-tesla-price-target?.tsrc=rss",
+        "title": "Stellantis N.V. vs. Tesla: Which Consumer Stock Is a Better Buy in 2026?",
+        "url": "https://www.fool.com/coverage/better-buy/2026/10/06/stellantis-nv-vs-tesla-which-consumer-stock-is-a-better-buy-in-2026/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Tue, 06 Oct 2026 01:47:00 +0000",
-        "titleEs": "El banco de Wall Street hace una llamada radical a Tesla después de las noticias de entregas del tercer trimestre"
+        "published": "Tue, 06 Oct 2026 15:22:32 +0000",
+        "titleEs": "Stellantis N.V. vs. Tesla: ¿Qué acciones de consumo son una mejor compra en 2026?"
       },
       {
-        "title": "LCID Stock Stays Flat After-Hours On Q3 Sales Dip While TSLA, RIVN Beat Estimates",
-        "url": "https://stocktwits.com/news-articles/markets/equity/lcid-stock-stays-flat-after-hours-on-q3-sales-dip-while-tsla-rivn-beat-estimates/cZDqXBjRBjs?.tsrc=rss",
+        "title": "Tesla vs. Waymo: A Face-Off Between the Two Robotaxi Giants",
+        "url": "https://finance.yahoo.com/technology/articles/tesla-vs-waymo-face-off-141900186.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 23:31:20 +0000",
-        "titleEs": "Las acciones de LCID se mantienen estables fuera de horario debido a la caída de las ventas del tercer trimestre, mientras que TSLA y RIVN superan las estimaciones"
+        "published": "Tue, 06 Oct 2026 14:19:00 +0000",
+        "titleEs": "Tesla vs. Waymo: un enfrentamiento entre los dos gigantes de Robotaxi"
       },
       {
-        "title": "Elon Musk Agrees Tesla's Early Custom AI Chit Bet May be More Important Than Ever, Backs TSLA Engineer's Warning: ‘Current Compute Shortage Is Only the Tip of the Iceberg’",
-        "url": "https://finance.yahoo.com/technology/ai/articles/elon-musk-agrees-teslas-early-220005902.html?.tsrc=rss",
+        "title": "3 Growth Stocks To Watch With Revenue Growth Up To 43%",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/3-growth-stocks-watch-revenue-140937404.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 22:00:05 +0000",
-        "titleEs": "Elon Musk está de acuerdo en que la temprana apuesta de fichas de IA personalizada de Tesla puede ser más importante que nunca y respalda la advertencia del ingeniero de TSLA: \"La actual escasez de computación es solo la punta del iceberg\""
+        "published": "Tue, 06 Oct 2026 14:09:37 +0000",
+        "titleEs": "Tres acciones de crecimiento a tener en cuenta con un crecimiento de ingresos de hasta el 43%"
       },
       {
-        "title": "Tesla (TSLA) Laps the Stock Market: Here's Why",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-tsla-laps-stock-market-204503032.html?.tsrc=rss",
+        "title": "Tesla and SpaceX Are Surging Together. What It Says About a Future Merger.",
+        "url": "https://finance.yahoo.com/m/068fb5cc-343c-3692-b684-6cbd05d47d51/tesla-and-spacex-are-surging.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 20:45:03 +0000",
-        "titleEs": "Tesla (TSLA) gana el mercado de valores: este es el motivo"
+        "published": "Tue, 06 Oct 2026 14:05:00 +0000",
+        "titleEs": "Tesla y SpaceX están surgiendo juntos. Lo que dice sobre una futura fusión."
       }
     ],
     "AMZN": [
       {
-        "title": "Amazon, LA Olympics Organizer Take Over 39-Acre Site Formerly Home To Forever 21",
-        "url": "https://www.bisnow.com/news/los-angeles/industrial/with-a-lease-to-la28-and-a-sale-to-amazon-former-forever-21-hq-is-no-longer-vacant?.tsrc=rss",
+        "title": "Marvell stock surges after company raises 2028 revenue outlook to $20 billion",
+        "url": "https://finance.yahoo.com/markets/stocks/article/marvell-stock-surges-after-company-raises-2028-revenue-outlook-to-20-billion-155038471.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 21:42:26 +0000",
-        "titleEs": "Amazon y el organizador de los Juegos Olímpicos de Los Ángeles se apoderan del sitio de 39 acres que anteriormente albergaba Forever 21"
+        "published": "Tue, 06 Oct 2026 15:50:38 +0000",
+        "titleEs": "Las acciones de Marvell aumentan después de que la compañía eleva la perspectiva de ingresos para 2028 a 20 mil millones de dólares"
       },
       {
-        "title": "Pinterest stock dips as company names Amazon veteran as CFO",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/pinterest-stock-dips-company-names-205412517.html?.tsrc=rss",
+        "title": "Stock Market Today: Dow Rises As S&P 500 Hits High; Zebra, This AI Stock Clear Entries (Live Coverage)",
+        "url": "https://finance.yahoo.com/m/23879019-ae2b-39de-9232-cdfcba882196/stock-market-today%3A-dow-rises.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 20:54:12 +0000",
-        "titleEs": "Las acciones de Pinterest caen cuando la empresa nombra a un veterano de Amazon como director financiero"
+        "published": "Tue, 06 Oct 2026 17:02:43 +0000",
+        "titleEs": "Mercado de valores hoy: el Dow sube a medida que el S&P 500 alcanza su máximo; Zebra, esta acción de IA borra entradas (cobertura en vivo)"
       },
       {
-        "title": "Pinterest Appoints James Dibbo Chief Financial Officer",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/pinterest-appoints-james-dibbo-chief-201500959.html?.tsrc=rss",
+        "title": "Amazon at $250: $1 billion “Built Together” Data Center Push Is Already Backfiring",
+        "url": "https://247wallst.com/investing/2026/10/06/amazon-at-250-1-billion-built-together-data-center-push-is-already-backfiring/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 20:15:00 +0000",
-        "titleEs": "Pinterest nombra a James Dibbo director financiero"
+        "published": "Tue, 06 Oct 2026 16:45:22 +0000",
+        "titleEs": "Amazon a 250 dólares: el impulso de un centro de datos “construido juntos” por valor de 1.000 millones de dólares ya está resultando contraproducente"
       },
       {
-        "title": "Amazon’s answer to data center backlash: $1 billion for community college and home energy upgrades",
-        "url": "https://finance.yahoo.com/technology/articles/amazon-answer-data-center-backlash-174616376.html?.tsrc=rss",
+        "title": "Not Microsoft. Not Google. Analysts Call This $2.7 Trillion Tech Titan the Most Undervalued AI Play.",
+        "url": "https://www.fool.com/investing/2026/10/06/not-microsoft-not-google-the-2-trillion-tech-titan/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 17:46:16 +0000",
-        "titleEs": "La respuesta de Amazon a la reacción violenta de los centros de datos: mil millones de dólares para colegios comunitarios y mejoras energéticas en el hogar"
+        "published": "Tue, 06 Oct 2026 16:41:00 +0000",
+        "titleEs": "No Microsoft. No Google. Los analistas consideran que este titán tecnológico de 2,7 billones de dólares es el juego de IA más infravalorado."
       }
     ],
     "AAPL": [
       {
-        "title": "TSMC stock hits all-time high after Elon Musk confirms early Terafab talks",
-        "url": "https://finance.yahoo.com/markets/stocks/article/tsmc-stock-hits-all-time-high-after-elon-musk-confirms-early-terafab-talks-162904771.html?.tsrc=rss",
+        "title": "Nvidia, Apple, and Microsoft are keeping the stock market afloat",
+        "url": "https://finance.yahoo.com/markets/article/nvidia-apple-and-microsoft-are-keeping-the-stock-market-afloat-140845362.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 16:29:04 +0000",
-        "titleEs": "Las acciones de TSMC alcanzan un máximo histórico después de que Elon Musk confirmara las primeras conversaciones con Terafab"
+        "published": "Tue, 06 Oct 2026 14:08:45 +0000",
+        "titleEs": "Nvidia, Apple y Microsoft mantienen a flote el mercado de valores"
       },
       {
-        "title": "Apple New CEO Ternus Puts Focus Back on Design",
-        "url": "https://finance.yahoo.com/video/apple-ceo-ternus-puts-focus-175425627.html?.tsrc=rss",
+        "title": "Apple's App Store Growth Rebounds in September; Sees Solid iPhone Demand, UBS Says",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/apple-apos-app-store-growth-153931266.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 17:54:25 +0000",
-        "titleEs": "El nuevo CEO de Apple, Ternus, vuelve a centrarse en el diseño"
+        "published": "Tue, 06 Oct 2026 15:39:31 +0000",
+        "titleEs": "El crecimiento de la App Store de Apple se recupera en septiembre; Ve una sólida demanda de iPhone, dice UBS"
       },
       {
-        "title": "Apple Changes Mac OS to Warn Users About Aggressive AI Agents",
-        "url": "https://www.tikr.com/blog/apple-mac-os-full-disk-access-ai-agents-warning?ref=yahoofinance&amp;.tsrc=rss",
+        "title": "Can Apple’s (AAPL) Record Quarter Justify Its Multiple?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/apple-aapl-record-quarter-justify-142700423.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 15:16:10 +0000",
-        "titleEs": "Apple cambia Mac OS para advertir a los usuarios sobre agentes agresivos de IA"
+        "published": "Tue, 06 Oct 2026 14:27:00 +0000",
+        "titleEs": "¿Puede el trimestre récord de Apple (AAPL) justificar su múltiplo?"
       },
       {
-        "title": "Prediction: By the End of 2027, Microsoft Will Be More Valuable Than Apple",
-        "url": "https://www.fool.com/investing/2026/10/05/prediction-by-the-end-of-2027-microsoft-will-be-more-valuable-than-apple/?.tsrc=rss",
+        "title": "What Would It Take For Apple Stock To Move Higher?",
+        "url": "https://www.trefis.com/articles/617679/what-would-it-take-for-apple-stock-to-move-higher/2026-10-06?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 14:50:02 +0000",
-        "titleEs": "Predicción: para finales de 2027, Microsoft será más valioso que Apple"
+        "published": "Tue, 06 Oct 2026 14:26:32 +0000",
+        "titleEs": "¿Qué se necesitaría para que las acciones de Apple subieran?"
       }
     ],
     "GOOGL": [
       {
-        "title": "Why Is CEG Stock Surging More Than 4% In Overnight Trading?",
-        "url": "https://stocktwits.com/news-articles/markets/equity/why-is-ceg-stock-surging-more-than-4-in-overnight-trading/cZDsnsdRBjH?.tsrc=rss",
+        "title": "Marvell stock surges after company raises 2028 revenue outlook to $20 billion",
+        "url": "https://finance.yahoo.com/markets/stocks/article/marvell-stock-surges-after-company-raises-2028-revenue-outlook-to-20-billion-155038471.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Tue, 06 Oct 2026 01:54:12 +0000",
-        "titleEs": "¿Por qué las acciones de CEG están aumentando más del 4% en las operaciones nocturnas?"
+        "published": "Tue, 06 Oct 2026 15:50:38 +0000",
+        "titleEs": "Las acciones de Marvell aumentan después de que la compañía eleva la perspectiva de ingresos para 2028 a 20 mil millones de dólares"
       },
       {
-        "title": "AI borrowing binge rattles US markets",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/ai-borrowing-binge-rattles-us-011432895.html?.tsrc=rss",
+        "title": "Marvell Stock Rises After CEO Announces Huge Long-Term Revenue Target",
+        "url": "https://finance.yahoo.com/m/0fc09310-da9b-31d8-8fb6-f906c9d743ad/marvell-stock-rises-after-ceo.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Tue, 06 Oct 2026 01:14:32 +0000",
-        "titleEs": "El exceso de préstamos de IA sacude los mercados estadounidenses"
+        "published": "Tue, 06 Oct 2026 16:51:00 +0000",
+        "titleEs": "Las acciones de Marvell suben después de que el director ejecutivo anunciara un enorme objetivo de ingresos a largo plazo"
       },
       {
-        "title": "Microsoft cutting off a best-seller with no extension on Oct. 13",
-        "url": "https://www.thestreet.com/technology/microsoft-ending-support-for-a-beloved-best-seller-on-oct-13?.tsrc=rss",
+        "title": "Here’s Why I’m Buying Broadcom Even As Concerns About Circular Financing With Anthropic Mount",
+        "url": "https://247wallst.com/investing/2026/10/06/heres-why-im-buying-broadcom-even-as-concerns-about-circular-financing-with-anthropic-mount/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 23:12:00 +0000",
-        "titleEs": "Microsoft cortará un best-seller sin extensión el 13 de octubre"
+        "published": "Tue, 06 Oct 2026 16:45:04 +0000",
+        "titleEs": "He aquí por qué estoy comprando Broadcom incluso cuando me preocupa la financiación circular con Anthropic Mount"
       },
       {
-        "title": "Wall Street tests lender appetite with $60 billion Broadcom-Anthropic deal - FT",
-        "url": "https://finance.yahoo.com/technology/ai/articles/wall-street-tests-lender-appetite-214705266.html?.tsrc=rss",
+        "title": "Not Microsoft. Not Google. Analysts Call This $2.7 Trillion Tech Titan the Most Undervalued AI Play.",
+        "url": "https://www.fool.com/investing/2026/10/06/not-microsoft-not-google-the-2-trillion-tech-titan/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 21:47:05 +0000",
-        "titleEs": "Wall Street pone a prueba el apetito de los prestamistas con un acuerdo Broadcom-Anthropic de 60.000 millones de dólares: FT"
+        "published": "Tue, 06 Oct 2026 16:41:00 +0000",
+        "titleEs": "No Microsoft. No Google. Los analistas consideran que este titán tecnológico de 2,7 billones de dólares es el juego de IA más infravalorado."
       }
     ],
     "AMD": [
       {
-        "title": "Are stocks expensive? This 30-year-low stat says otherwise.",
-        "url": "https://finance.yahoo.com/markets/article/are-stocks-expensive-this-30-year-low-stat-says-otherwise-200519109.html?.tsrc=rss",
+        "title": "As AI bubble fears circulate, remember the railroad bust of 1873",
+        "url": "https://finance.yahoo.com/markets/article/as-ai-bubble-fears-circulate-remember-the-railroad-bust-of-1873-165422026.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 20:05:19 +0000",
-        "titleEs": "¿Están caras las acciones? Esta estadística, la más baja en 30 años, dice lo contrario."
+        "published": "Tue, 06 Oct 2026 16:54:22 +0000",
+        "titleEs": "Mientras circulan los temores de la burbuja de la IA, recuerde la quiebra del ferrocarril de 1873"
       },
       {
-        "title": "TSMC stock hits all-time high after Elon Musk confirms early Terafab talks",
-        "url": "https://finance.yahoo.com/markets/stocks/article/tsmc-stock-hits-all-time-high-after-elon-musk-confirms-early-terafab-talks-162904771.html?.tsrc=rss",
+        "title": "Citi raises AMD price target — and it's because of Meta Muse",
+        "url": "https://finance.yahoo.com/video/citi-raises-amd-price-target-152026862.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 16:29:04 +0000",
-        "titleEs": "Las acciones de TSMC alcanzan un máximo histórico después de que Elon Musk confirmara las primeras conversaciones con Terafab"
+        "published": "Tue, 06 Oct 2026 15:20:26 +0000",
+        "titleEs": "Citi aumenta el precio objetivo de AMD, y es gracias a Meta Muse"
       },
       {
-        "title": "Amazon stock is trading at its lowest valuation ever as a public company, despite AI boom",
-        "url": "https://finance.yahoo.com/markets/stocks/article/amazon-stock-is-trading-at-its-lowest-valuation-ever-as-a-public-company-despite-ai-boom-154718912.html?.tsrc=rss",
+        "title": "Sozzi talks SpaceX, takes a look at Nike, and chats with the Conference Board CEO",
+        "url": "https://finance.yahoo.com/video/sozzi-talks-spacex-takes-look-145100672.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 15:47:18 +0000",
-        "titleEs": "Las acciones de Amazon cotizan a su valoración más baja como empresa pública, a pesar del auge de la IA"
+        "published": "Tue, 06 Oct 2026 14:51:00 +0000",
+        "titleEs": "Sozzi habla de SpaceX, echa un vistazo a Nike y conversa con el director ejecutivo del Conference Board"
       },
       {
-        "title": "Sozzi talks with Zscaler CEO about AI cybersecurity, while Nvidia & AMD stocks rip higher",
-        "url": "https://finance.yahoo.com/video/sozzi-talks-zscaler-ceo-ai-151212213.html?.tsrc=rss",
+        "title": "Paramount–Warner Bros. deal finally closes: Stocks to watch on Tuesday",
+        "url": "https://finance.yahoo.com/video/paramount-warner-bros-deal-finally-143143885.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 15:12:12 +0000",
-        "titleEs": "Sozzi habla con el CEO de Zscaler sobre la ciberseguridad de la IA, mientras las acciones de Nvidia y AMD suben"
+        "published": "Tue, 06 Oct 2026 14:31:43 +0000",
+        "titleEs": "El acuerdo entre Paramount y Warner Bros. finalmente se cierra: las acciones a seguir el martes"
       }
     ],
     "AVGO": [
       {
-        "title": "Wall Street tests lender appetite with $60 billion Broadcom-Anthropic deal - FT",
-        "url": "https://finance.yahoo.com/technology/ai/articles/wall-street-tests-lender-appetite-214705266.html?.tsrc=rss",
+        "title": "Marvell stock surges after company raises 2028 revenue outlook to $20 billion",
+        "url": "https://finance.yahoo.com/markets/stocks/article/marvell-stock-surges-after-company-raises-2028-revenue-outlook-to-20-billion-155038471.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 21:47:05 +0000",
-        "titleEs": "Wall Street pone a prueba el apetito de los prestamistas con un acuerdo Broadcom-Anthropic de 60.000 millones de dólares: FT"
+        "published": "Tue, 06 Oct 2026 15:50:38 +0000",
+        "titleEs": "Las acciones de Marvell aumentan después de que la compañía eleva la perspectiva de ingresos para 2028 a 20 mil millones de dólares"
       },
       {
-        "title": "Nvidia, Broadcom May Be Surprisingly Safe From a 32-GW Hole in the AI Boom, Morgan Stanley Says",
-        "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62174172/nvidia-broadcom-ai-power-shortage?utm_source=yahooFinance&amp;utm_campaign=partner_feed&amp;utm_medium=referral&amp;.tsrc=rss",
+        "title": "Here’s Why I’m Buying Broadcom Even As Concerns About Circular Financing With Anthropic Mount",
+        "url": "https://247wallst.com/investing/2026/10/06/heres-why-im-buying-broadcom-even-as-concerns-about-circular-financing-with-anthropic-mount/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 18:51:53 +0000",
-        "titleEs": "Nvidia y Broadcom pueden estar sorprendentemente a salvo de un agujero de 32 GW en el auge de la IA, dice Morgan Stanley"
+        "published": "Tue, 06 Oct 2026 16:45:04 +0000",
+        "titleEs": "He aquí por qué estoy comprando Broadcom incluso cuando me preocupa la financiación circular con Anthropic Mount"
       },
       {
-        "title": "Why It’s Time to Load Up on Broadcom Stock Before It Touches $523",
-        "url": "https://www.barchart.com/story/news/4966789/why-its-time-to-load-up-on-broadcom-stock-before-it-touches-523?.tsrc=rss",
+        "title": "What Will $5,000 Invested in Broadcom Stock Be Worth in 5 Years?",
+        "url": "https://247wallst.com/investing/2026/10/06/what-will-5000-invested-in-broadcom-stock-be-worth-in-5-years/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 17:36:28 +0000",
-        "titleEs": "Por qué es hora de adquirir acciones de Broadcom antes de que alcancen los 523 dólares"
+        "published": "Tue, 06 Oct 2026 15:30:03 +0000",
+        "titleEs": "¿Cuánto valdrán 5.000 dólares invertidos en acciones de Broadcom en 5 años?"
       },
       {
-        "title": "Taiwan Semiconductor Gains 2% to Record as Musk Confirms Early Terafab Talks; Broadcom Rises 2%, Qualcomm Pulls Back",
-        "url": "https://247wallst.com/investing/2026/10/05/taiwan-semiconductor-gains-2-to-record-as-musk-confirms-early-terafab-talks-broadcom-rises-2-qualcomm-pulls-back/?.tsrc=rss",
+        "title": "Amkor Surges 84% in a Year: Should You Hold or Fold the Stock?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/amkor-surges-84-hold-fold-143300194.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 17:02:39 +0000",
-        "titleEs": "Taiwan Semiconductor gana un 2% hasta alcanzar un récord mientras Musk confirma las primeras conversaciones sobre Terafab; Broadcom sube un 2%, Qualcomm retrocede"
+        "published": "Tue, 06 Oct 2026 14:33:00 +0000",
+        "titleEs": "Amkor aumenta un 84% en un año: ¿Debería mantener o retirar las acciones?"
       }
     ],
     "SNOW": [
+      {
+        "title": "Bedrock Data Names AWS and Snowflake Data Governance Veteran Sanjay Srivastava VP of Product",
+        "url": "https://finance.yahoo.com/technology/ai/articles/bedrock-data-names-aws-snowflake-130000586.html?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 13:00:00 +0000",
+        "titleEs": "Bedrock Data nombra vicepresidente de producto al veterano de gobernanza de datos de AWS y Snowflake, Sanjay Srivastava"
+      },
+      {
+        "title": "Snowflake Shares Fall After Unverified Breach Claim Appears in Asos App",
+        "url": "https://investorshub.advfn.com/market-news/article/37550/snowflake-shares-fall-after-unverified-breach-claim-appears-in-asos-app?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 12:46:27 +0000",
+        "titleEs": "Las acciones de Snowflake caen después de que aparece un reclamo por incumplimiento no verificado en la aplicación de Asos"
+      },
+      {
+        "title": "ASOS stock drops 13% after hacker push notification",
+        "url": "https://qz.com/asos-stock-drops-hacker-push-notification-snowflake-100626?.tsrc=rss",
+        "source": "Yahoo Finance",
+        "published": "Tue, 06 Oct 2026 11:28:23 +0000",
+        "titleEs": "Las acciones de ASOS caen un 13% tras la notificación push de un hacker"
+      },
       {
         "title": "Snowflake to Showcase Enterprise-Wide Agentic Transformation at EXPEDITION 2026, with Industry Speakers Including Satya Nadella",
         "url": "https://finance.yahoo.com/technology/ai/articles/snowflake-showcase-enterprise-wide-agentic-130100497.html?.tsrc=rss",
         "source": "Yahoo Finance",
         "published": "Mon, 05 Oct 2026 13:01:00 +0000",
         "titleEs": "Snowflake presentará la transformación agente en toda la empresa en EXPEDITION 2026, con oradores de la industria como Satya Nadella"
-      },
-      {
-        "title": "The Zacks Analyst Blog Highlights TotalEnergies, Snowflake, Marathon, MIND and Zeo Energy",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-totalenergies-122100709.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 12:21:00 +0000",
-        "titleEs": "El blog de analistas de Zacks destaca TotalEnergies, Snowflake, Marathon, MIND y Zeo Energy"
-      },
-      {
-        "title": "Micron, Snowflake Lead Techs Near Buy Points. Two Consumer Plays Also Are Stocks To Watch.",
-        "url": "https://finance.yahoo.com/m/5f063bc5-34a9-328a-8a05-d2a0656c5806/micron%2C-snowflake-lead-techs.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Sat, 03 Oct 2026 12:00:02 +0000",
-        "titleEs": "Micron, Snowflake Lead Techs Near Buy Points. Dos juegos de consumo también son acciones a tener en cuenta."
-      },
-      {
-        "title": "Top Stock Reports for TotalEnergies, Snowflake & Marathon",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/top-stock-reports-totalenergies-snowflake-201100251.html?.tsrc=rss",
-        "source": "Yahoo Finance",
-        "published": "Fri, 02 Oct 2026 20:11:00 +0000",
-        "titleEs": "Principales informes de acciones de TotalEnergies, Snowflake y Marathon"
       }
     ],
     "PLTR": [
       {
-        "title": "Gorilla Slides 5% Despite Northland Buy Rating and $40 Price Target; Palantir Holds Flat, BigBear.ai Holdings Slips",
-        "url": "https://247wallst.com/investing/2026/10/05/gorilla-slides-5-despite-northland-buy-rating-and-40-price-target-palantir-holds-flat-bigbear-ai-holdings-slips/?.tsrc=rss",
+        "title": "What Are Palantir Stock Bulls Not Worried About?",
+        "url": "https://www.trefis.com/articles/617673/what-are-palantir-stock-bulls-not-worried-about/2026-10-06?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 18:13:13 +0000",
-        "titleEs": "Gorilla se desliza un 5% a pesar de la calificación de compra de Northland y el precio objetivo de $40; Palantir se mantiene plano, BigBear.ai Holdings cae"
+        "published": "Tue, 06 Oct 2026 14:34:18 +0000",
+        "titleEs": "¿Qué no les preocupa a los toros de las acciones de Palantir?"
       },
       {
-        "title": "Palantir Stock Surges 42% in 3 Months: Is PLTR Worth Buying?",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-stock-surges-42-3-171300350.html?.tsrc=rss",
+        "title": "Can Palantir (PLTR) Justify a Multiple that’s 5 Times the Sector’s?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-pltr-justify-multiple-5-142603719.html?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 17:13:00 +0000",
-        "titleEs": "Las acciones de Palantir aumentan un 42% en 3 meses: ¿Vale la pena comprar PLTR?"
+        "published": "Tue, 06 Oct 2026 14:26:03 +0000",
+        "titleEs": "¿Puede Palantir (PLTR) justificar un múltiplo cinco veces mayor que el del sector?"
       },
       {
-        "title": "Palantir Technologies Inc. (PLTR) Is a Trending Stock: Facts to Know Before Betting on It",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-technologies-inc-pltr-trending-120007873.html?.tsrc=rss",
+        "title": "Palantir Just Had Its Best Quarter in a Year, Up 60%",
+        "url": "https://247wallst.com/investing/2026/10/06/palantir-just-had-its-best-quarter-in-a-year-up-60/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 12:00:07 +0000",
-        "titleEs": "Palantir Technologies Inc. (PLTR) es una acción de tendencia: datos que debe saber antes de apostar en ella"
+        "published": "Tue, 06 Oct 2026 12:21:41 +0000",
+        "titleEs": "Palantir acaba de tener su mejor trimestre en un año, un 60% más"
       },
       {
-        "title": "Palantir's 93% Revenue Growth Is Colliding With Michael Burry's Bear Case -- Here's Who Has the Stronger Argument",
-        "url": "https://www.fool.com/investing/2026/10/05/palantir-revenue-growth-michael-burry-bear/?.tsrc=rss",
+        "title": "Nvidia, Palantir, and Alphabet Are Sending Shockwaves Through Wall Street With This $17.5 Billion Warning",
+        "url": "https://www.fool.com/investing/2026/10/06/nvidia-palantir-alphabet-send-shockwaves-through-wall-street-with-17-billion-warning/?.tsrc=rss",
         "source": "Yahoo Finance",
-        "published": "Mon, 05 Oct 2026 10:55:00 +0000",
-        "titleEs": "El crecimiento del 93% de los ingresos de Palantir está chocando con el caso Bear de Michael Burry: aquí está quién tiene el argumento más sólido"
+        "published": "Tue, 06 Oct 2026 09:26:01 +0000",
+        "titleEs": "Nvidia, Palantir y Alphabet están causando conmoción en Wall Street con esta advertencia de 17.500 millones de dólares"
       }
     ],
     "COIN": [
