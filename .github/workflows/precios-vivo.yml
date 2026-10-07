@@ -11,10 +11,18 @@ name: Precios en vivo
 # arrancar dos, la cola los encadena en vez de pisarse.
 on:
   schedule:
-    - cron: '9 13 * * 1-5'
-    - cron: '9 15 * * 1-5'
-    - cron: '9 17 * * 1-5'
-    - cron: '9 19 * * 1-5'
+    # GitHub dispara estos cron con 1 a 2 horas de atraso. Con arranques cada hora
+    # desde temprano, aunque se atrasen, alguno cae dentro de la rueda argentina
+    # (14:00 a 20:00 UTC). El grupo de concurrencia evita que se pisen: mientras
+    # uno corre, el siguiente espera y arranca apenas termina.
+    - cron: '5 11 * * 1-5'
+    - cron: '5 12 * * 1-5'
+    - cron: '5 13 * * 1-5'
+    - cron: '5 14 * * 1-5'
+    - cron: '5 15 * * 1-5'
+    - cron: '5 16 * * 1-5'
+    - cron: '5 17 * * 1-5'
+    - cron: '5 18 * * 1-5'
   workflow_dispatch:
 
 permissions:
@@ -44,7 +52,7 @@ jobs:
 
           # Corta a las 21:00 UTC (18:00 AR, con la rueda ya cerrada) o a las
           # 5 horas y media, lo que pase primero. Nunca queda dando vueltas de noche.
-          FIN=$(( $(date -u +%s) + 19800 ))
+          FIN=$(( $(date -u +%s) + 18000 ))
           VUELTA=0
 
           while true; do
@@ -65,7 +73,9 @@ jobs:
               else
                 git commit -m "💰 Precios $(date -u +'%Y-%m-%d %H:%M UTC')"
                 git pull --rebase origin main || true
-                git push || (sleep 10 && git pull --rebase origin main && git push) || echo "push fallido, sigo"
+                git push || (sleep 10 && git fetch origin main && git rebase origin/main && git push) \
+                  || (sleep 30 && git fetch origin main && git rebase origin/main && git push) \
+                  || { echo "push fallido, descarto y sigo"; git rebase --abort 2>/dev/null || true; git reset --hard origin/main; }
               fi
             else
               echo "⚠️ Los precios no pasaron la validacion, no commiteo esta vuelta"
@@ -75,9 +85,11 @@ jobs:
 
             AHORA=$(date -u +%s)
             HORA=$(date -u +%H)
-            if [ "$AHORA" -ge "$FIN" ] || [ "$HORA" -ge 21 ]; then
+            # Fuera de la rueda no tiene sentido seguir despierto: se actualiza una
+            # vez y se corta, asi el proximo arranque encuentra el lugar libre.
+            if [ "$AHORA" -ge "$FIN" ] || [ "$HORA" -ge 21 ] || [ "$HORA" -lt 11 ]; then
               echo "Listo: $VUELTA actualizaciones."
               break
             fi
-            sleep 900
+            sleep 600
           done
