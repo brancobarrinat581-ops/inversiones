@@ -25,7 +25,11 @@ const MAP = {
   GGAL: ['GGAL.BA','GGAL', 10],
   YPF:  ['YPFD.BA','YPF',   1],
   BMA:  ['BMA.BA', 'BMA',  10],
-  VIST: ['VIST.BA','VIST',  3]
+  VIST: ['VIST.BA','VIST',  3],
+  // Ratios verificados contra la tabla de CEDEARs de BYMA / Caja de Valores
+  NFLX: ['NFLX.BA','NFLX', 48],
+  UBER: ['UBER.BA','UBER',  2],
+  VST:  ['VST.BA', 'VST',  26]
 };
 // FCIs de IOL: no cotizan, no hay fuente publica. Se conserva el ultimo valor cargado a mano.
 const MANUALES = ['IOLCAMA','IOLDOLD'];

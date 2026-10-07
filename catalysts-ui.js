@@ -1,7 +1,7 @@
 (function(){
   "use strict";
   var D=null;
-  var RATIO={ADBE:44,MELI:120,MSFT:30,MU:5,NVDA:24,PANW:50,SPY:60,ACN:75,MCD:24,META:24,NU:2,IBIT:10,ICLN:5,PAMP:25,GGAL:10,YPF:1,BMA:10,VIST:3,IOLCAMA:1,IOLDOLD:1,AL30D:1};
+  var RATIO={ADBE:44,MELI:120,MSFT:30,MU:5,NVDA:24,PANW:50,SPY:60,ACN:75,MCD:24,META:24,NU:2,IBIT:10,ICLN:5,PAMP:25,GGAL:10,YPF:1,BMA:10,VIST:3,NFLX:48,UBER:2,VST:26,IOLCAMA:1,IOLDOLD:1,AL30D:1};
   var RE={"Buy":"Comprar","Strong Buy":"Compra Fuerte","Overweight":"Sobreponderar","Outperform":"Superar","Hold":"Mantener","Neutral":"Neutral","Underweight":"Infraponderar","Sell":"Vender","Reduce":"Reducir","strong_buy":"Compra Fuerte","buy":"Comprar","hold":"Mantener","underperform":"Bajo Rendimiento","sell":"Vender"};
   function trR(r){return RE[r]||r||"—"}
   async function load(){try{var r=await fetch("analysts.json?t="+Date.now());if(r.ok)D=await r.json();}catch(e){}}

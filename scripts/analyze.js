@@ -21,7 +21,10 @@ const TICKERS = {
   PAMP:{name:"Pampa Energía",sector:"Energía Argentina"},
   VIST:{name:"Vista Energy",sector:"Oil & Gas Argentina"},
   GGAL:{name:"Grupo Galicia",sector:"Bancos Argentina"},
-  YPF:{name:"YPF",sector:"Energía Argentina"}
+  YPF:{name:"YPF",sector:"Energía Argentina"},
+  NFLX:{name:"Netflix",sector:"Streaming"},
+  UBER:{name:"Uber Technologies",sector:"Movilidad / Delivery"},
+  VST:{name:"Vistra",sector:"Energía / Nuclear EEUU"}
 };
 
 // Simbolo en Yahoo cuando difiere del ticker local
