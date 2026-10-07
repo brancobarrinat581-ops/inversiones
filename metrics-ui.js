@@ -8,7 +8,7 @@
   if (!PF) { console.warn("metrics-ui: falta scripts/lib/portfolio.js"); return; }
   if (!UI) { console.warn("metrics-ui: falta ui-kit.js"); return; }
 
-  var HIST = null, DIV = [], GRUPOS = null, WLIST = [], PERF = null;
+  var HIST = null, DIV = [], GRUPOS = null, WLIST = [], PERF = null, MACRO = null;
 
   function getJSON(u, cb) {
     try {
@@ -171,7 +171,33 @@
         'no solo cuanto. Es el equivalente a la funcion TIR.NO.PER de Excel. ' +
         'El ' + fPct(r.gananciaPct) + ' de arriba compara totales y no mira fechas.</div>' +
         '<div style="color:#FF9800;font-size:12px;margin-top:6px">Esta en pesos, asi que incluye inflacion y ' +
-        'devaluacion: no es rendimiento real.</div></div>';
+        'devaluacion: no es rendimiento real.</div>';
+
+      // Comparacion contra inflacion y plazo fijo: datos oficiales del BCRA.
+      if (MACRO && (MACRO.inflacion12m || MACRO.plazoFijo)) {
+        h += '<div style="border-top:1px solid #1f2430;margin-top:10px;padding-top:8px">';
+        if (MACRO.inflacion12m) {
+          var real = (1 + r.tir / 100) / (1 + MACRO.inflacion12m / 100) - 1;
+          h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:2px 0">' +
+            '<span style="color:#aaa">Inflacion ultimos 12 meses</span>' +
+            '<span style="color:#fff">' + MACRO.inflacion12m.toFixed(1) + "%</span></div>";
+          h += '<div style="display:flex;justify-content:space-between;font-size:13px;padding:4px 0">' +
+            '<span style="color:#fff;font-weight:700">Rendimiento real</span>' +
+            '<span style="color:' + col(real * 100) + ';font-weight:900">' + fPct(real * 100) + "</span></div>";
+          h += '<div style="color:#8b93a7;font-size:11px">Lo que te quedo despues de descontar la inflacion. ' +
+            "Es el unico numero que dice si tenes mas poder de compra que antes.</div>";
+        }
+        if (MACRO.plazoFijo) {
+          var pf = MACRO.plazoFijo.valor;
+          h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;margin-top:4px">' +
+            '<span style="color:#aaa">Plazo fijo (BADLAR)</span>' +
+            '<span style="color:' + col(r.tir - pf) + '">' + pf.toFixed(1) + "% · " +
+            (r.tir > pf ? "le ganas por " + (r.tir - pf).toFixed(1) : "te gana por " + (pf - r.tir).toFixed(1)) +
+            " puntos</span></div>";
+        }
+        h += '<div style="color:#5c6478;font-size:10px;margin-top:6px">Fuente: BCRA</div></div>';
+      }
+      h += "</div>";
     }
 
     // Evolucion
@@ -435,6 +461,7 @@
   getJSON("grupos.json", function (d) { GRUPOS = d; });
   getJSON("watchlist.json", function (d) { WLIST = (d && (Array.isArray(d) ? d : d.watchlist)) || []; });
   getJSON("perfiles.json", function (d) { PERF = d; });
+  getJSON("macro.json", function (d) { MACRO = d; });
   getJSON("dividendos.json", function (d) { DIV = Array.isArray(d) ? d : (d && d.dividendos) || []; });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boton);

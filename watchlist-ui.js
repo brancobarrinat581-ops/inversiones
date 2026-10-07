@@ -109,6 +109,34 @@
     return h + "</div>";
   }
 
+  // Donde esta parado el precio respecto de su propio año. No pronostica: ubica.
+  function bloqueTecnico(t) {
+    if (!t) return "";
+    var colorZona = t.zona === "compra" ? "#4CAF50" : t.zona === "venta" ? "#FF9800" : "#64B5F6";
+    var titulo = t.zona === "compra" ? "Zona de compra" : t.zona === "venta" ? "Zona de venta" : "Zona neutral";
+    var tono = { compra: "#4CAF50", venta: "#FF9800", neutro: "#8b93a7" };
+
+    var h = '<div style="margin-top:8px;background:#1a1a2e;border-radius:6px;padding:10px;border-left:3px solid ' + colorZona + '">';
+    h += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">' +
+      '<span style="color:' + colorZona + ';font-size:13px;font-weight:700">' + titulo + "</span>" +
+      '<span style="color:#8b93a7;font-size:11px">' + t.desdeMax + "% del maximo del año</span></div>";
+
+    // Barra: donde cae el precio entre el minimo y el maximo de 52 semanas.
+    h += '<div style="position:relative;background:#000;border-radius:3px;height:8px;margin:8px 0">' +
+      '<div style="position:absolute;left:' + Math.max(0, Math.min(98, t.posicion52)) + '%;top:-3px;width:3px;height:14px;' +
+      "background:" + colorZona + ';border-radius:2px"></div></div>';
+    h += '<div style="display:flex;justify-content:space-between;color:#5c6478;font-size:10px;margin-bottom:6px">' +
+      "<span>min " + fUSD(t.min52) + "</span><span>max " + fUSD(t.max52) + "</span></div>";
+
+    (t["señales"] || []).forEach(function (s) {
+      h += '<div style="color:' + (tono[s.tono] || "#8b93a7") + ';font-size:12px;padding:2px 0">• ' + s.texto + "</div>";
+    });
+    if (t.sma200)
+      h += '<div style="color:#5c6478;font-size:11px;margin-top:4px">Media 200 dias: ' + fUSD(t.sma200) +
+        (t.sma50 ? " · 50 dias: " + fUSD(t.sma50) : "") + "</div>";
+    return h + "</div>";
+  }
+
   function tarjeta(it, precios, an, enCartera) {
     var tk = it.ticker;
     var px = (precios && precios.prices && precios.prices[tk]) || null;
@@ -154,6 +182,7 @@
     }
 
     h += bloqueEntrada(f, px, it.objetivo, (WLCFG && WLCFG.margen_seguridad) || 20);
+    h += bloqueTecnico((an && an.tecnicos && an.tecnicos[tk]) || null);
     h += bloqueFundamentos(tk, f);
 
     if (bancos.length) {
