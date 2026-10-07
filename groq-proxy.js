@@ -64,14 +64,24 @@
       return Promise.resolve(respuesta("⚠️ Falta la clave del asistente. Pegala en la ventana que se abrio y volve a preguntar."));
     }
 
-    if (opts && opts.headers) {
-      if (opts.headers instanceof Headers) {
-        opts.headers.set("Authorization", "Bearer " + key);
-      } else if (typeof opts.headers === "object") {
-        opts.headers.Authorization = "Bearer " + key;
-        opts.headers.authorization = "Bearer " + key;
-      }
+    // Cuidado con esto: si el objeto de headers queda con "Authorization" y
+    // "authorization" a la vez, fetch no pisa uno con el otro, los CONCATENA, y
+    // termina viajando "Bearer X, Bearer X". Groq lo rechaza con 401 y parece
+    // que la clave estuviera revocada aunque sea nueva. Hay que dejar una sola.
+    if (!opts) opts = {};
+    var hs = opts.headers;
+    if (hs instanceof Headers) {
+      hs.set("Authorization", "Bearer " + key);
+    } else if (Array.isArray(hs)) {
+      opts.headers = hs.filter(function (par) { return !/^authorization$/i.test(par[0]); })
+        .concat([["Authorization", "Bearer " + key]]);
+    } else if (hs && typeof hs === "object") {
+      Object.keys(hs).forEach(function (k) { if (/^authorization$/i.test(k)) delete hs[k]; });
+      hs.Authorization = "Bearer " + key;
+    } else {
+      opts.headers = { "Content-Type": "application/json", Authorization: "Bearer " + key };
     }
+    arguments[1] = opts;
 
     return _fetch.apply(this, arguments)
       .then(function (resp) {
@@ -94,5 +104,5 @@
       });
   };
 
-  console.log("🔍 groq-proxy v7: clave desde el navegador, no desde el repo");
+  console.log("🔍 groq-proxy v8: clave desde el navegador + header Authorization unico");
 })();
