@@ -17,7 +17,11 @@
         "PANW",
         "MU",
         "ACN",
-        "UBER"
+        "UBER",
+        "GOOGL",
+        "ORCL",
+        "PLTR",
+        "AMD"
       ]
     },
     "Emergentes (Latam)": {
@@ -42,7 +46,11 @@
       "objetivo": 10,
       "tickers": [
         "MCD",
-        "NFLX"
+        "NFLX",
+        "KO",
+        "PG",
+        "WMT",
+        "COST"
       ]
     },
     "Cripto": {
@@ -56,6 +64,20 @@
       "tickers": [
         "IOLCAMA",
         "IOLDOLD"
+      ]
+    },
+    "Salud": {
+      "objetivo": null,
+      "tickers": [
+        "JNJ"
+      ]
+    },
+    "Financiero": {
+      "objetivo": null,
+      "tickers": [
+        "V",
+        "JPM",
+        "COIN"
       ]
     }
   },

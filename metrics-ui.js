@@ -4,9 +4,11 @@
   "use strict";
 
   var PF = window.__PF;
+  var UI = window.__UI;
   if (!PF) { console.warn("metrics-ui: falta scripts/lib/portfolio.js"); return; }
+  if (!UI) { console.warn("metrics-ui: falta ui-kit.js"); return; }
 
-  var HIST = null, DIV = [], GRUPOS = null, WLIST = [];
+  var HIST = null, DIV = [], GRUPOS = null, WLIST = [], PERF = null;
 
   function getJSON(u, cb) {
     try {
@@ -143,11 +145,8 @@
     var t = twr(serie, ls("operaciones_raw", []));
     var bm = benchmark(serie);
 
-    var h = '<div style="position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:10002;overflow-y:auto;padding:12px">' +
-      '<div style="max-width:640px;margin:0 auto;background:#1a1a2e;border-radius:16px;padding:20px">';
-    h += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">' +
-      '<h2 style="color:#fff;margin:0;font-size:20px">\uD83D\uDCCA Rendimiento</h2>' +
-      '<button id="met-close" style="background:#ff4444;color:#fff;border:none;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer">\u2715</button></div>';
+    var SEC = {};
+    var h = "";
 
     // Resultado total
     h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">';
@@ -176,6 +175,7 @@
     }
 
     // Evolucion
+    SEC["RESUMEN"] = h; h = "";
     h += '<h3 style="color:#fff;margin:16px 0 8px;font-size:15px">\uD83D\uDCC8 Evolucion</h3>';
     if (serie.length < 2) {
       h += '<div style="background:#0d1117;border-radius:8px;padding:12px;color:#888;font-size:13px">' +
@@ -218,6 +218,7 @@
       }
     }
 
+    SEC["EVOLUCION"] = h; h = "";
     // ---------- diversificacion ----------
     h += '<h3 style="color:#fff;margin:16px 0 8px;font-size:15px">\uD83E\uDDE9 Diversificacion</h3>';
     var barra = function (pct, color) {
@@ -286,6 +287,7 @@
       }
     }
 
+    SEC["DIVERSIFICACION"] = h; h = "";
     // ---------- simulador de compra ----------
     h += '<h3 style="color:#fff;margin:16px 0 8px;font-size:15px">\uD83E\uDDEE Simulador de compra</h3>';
     h += '<div style="background:#0d1117;border-radius:8px;padding:12px;margin-bottom:8px">';
@@ -300,6 +302,7 @@
     h += '<div id="sim-out" style="margin-top:10px;color:#666;font-size:12px">Elegi un ticker y un monto.</div>';
     h += "</div>";
 
+    SEC["SIMULADOR"] = h; h = "";
     // ---------- operaciones cerradas ----------
     var cer = PF.cerradas(ls("operaciones_raw", []));
     h += '<h3 style="color:#fff;margin:16px 0 8px;font-size:15px">\uD83D\uDCCB Operaciones cerradas</h3>';
@@ -329,19 +332,15 @@
         "<b>dividendos.json</b> del repo.</div>";
     }
 
-    h += '<button id="met-close2" style="width:100%;padding:10px;background:#333;color:#fff;border:none;' +
-      'border-radius:8px;font-size:14px;cursor:pointer;margin-top:14px">Cerrar</button></div></div>';
+    SEC["CERRADAS"] = h;
 
-    var m = document.createElement("div");
-    m.id = "met-modal";
-    m.innerHTML = h;
-    document.body.appendChild(m);
-    var cerrar = function () { var n = document.getElementById("met-modal"); if (n) n.remove(); };
-    var a = document.getElementById("met-close"), b = document.getElementById("met-close2");
-    if (a) a.onclick = cerrar;
-    if (b) b.onclick = cerrar;
-
-    armarSimulador(r);
+    UI.modal("met-modal", "\uD83D\uDCCA Rendimiento", [
+      { nombre: "Resumen", html: SEC.RESUMEN },
+      { nombre: "Evolucion", html: SEC.EVOLUCION },
+      { nombre: "Diversificacion", html: SEC.DIVERSIFICACION },
+      { nombre: "Simulador", html: SEC.SIMULADOR, alArmar: function () { armarSimulador(r); } },
+      { nombre: "Cerradas", html: SEC.CERRADAS }
+    ]);
   }
 
   function armarSimulador(r) {
@@ -352,8 +351,12 @@
 
     // Lo que ya tenes mas lo que estas siguiendo, sin repetir.
     var opciones = r.posiciones.map(function (p) { return p.ticker; });
-    var wl = (WLIST || []).map(function (x) { return x.ticker; });
-    wl.forEach(function (t) { if (opciones.indexOf(t) === -1) opciones.push(t); });
+    var candidatos = (WLIST || []).map(function (x) { return x.ticker; });
+    if (PERF && PERF.perfiles)
+      Object.keys(PERF.perfiles).forEach(function (g) {
+        (PERF.perfiles[g].tickers || []).forEach(function (t) { candidatos.push(t.ticker); });
+      });
+    candidatos.forEach(function (t) { if (opciones.indexOf(t) === -1) opciones.push(t); });
     sel.innerHTML = '<option value="">Que comprarias…</option>' +
       opciones.map(function (t) { return '<option value="' + t + '">' + t + "</option>"; }).join("");
 
@@ -425,21 +428,13 @@
   }
 
   function boton() {
-    if (document.getElementById("met-btn")) return;
-    var b = document.createElement("button");
-    b.id = "met-btn";
-    b.textContent = "\uD83D\uDCCA";
-    b.title = "Rendimiento";
-    b.style.cssText = "position:fixed;bottom:144px;left:16px;z-index:9999;background:#2E7D32;color:#fff;" +
-      "border:none;border-radius:50%;width:48px;height:48px;font-size:22px;cursor:pointer;" +
-      "box-shadow:0 2px 8px rgba(0,0,0,.4)";
-    b.onclick = abrir;
-    document.body.appendChild(b);
+    UI.registrar("\uD83D\uDCCA", "Rendimiento", abrir, "TIR, evolucion, diversificacion y simulador");
   }
 
   getJSON("history.json", function (d) { HIST = d; });
   getJSON("grupos.json", function (d) { GRUPOS = d; });
   getJSON("watchlist.json", function (d) { WLIST = (d && (Array.isArray(d) ? d : d.watchlist)) || []; });
+  getJSON("perfiles.json", function (d) { PERF = d; });
   getJSON("dividendos.json", function (d) { DIV = Array.isArray(d) ? d : (d && d.dividendos) || []; });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boton);

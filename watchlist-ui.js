@@ -4,6 +4,7 @@
 (function () {
   "use strict";
 
+  var UI = window.__UI;
   var WL = [], AN = null, WLCFG = null, PERF = null;
 
   function getJSON(u, cb) {
@@ -192,11 +193,8 @@
     var enCartera = {};
     ops.forEach(function (o) { enCartera[String(o.ticker).toUpperCase()] = true; });
 
-    var h = '<div style="position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:10002;overflow-y:auto;padding:12px">' +
-      '<div style="max-width:640px;margin:0 auto;background:#1a1a2e;border-radius:16px;padding:20px">';
-    h += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">' +
-      '<h2 style="color:#fff;margin:0;font-size:20px">\uD83D\uDC40 En seguimiento</h2>' +
-      '<button id="wl-close" style="background:#ff4444;color:#fff;border:none;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer">\u2715</button></div>';
+    var SEC = {};
+    var h = "";
     h += '<div style="color:#888;font-size:12px;margin-bottom:14px">Acciones que mirás sin tenerlas. ' +
       "Editá la lista y tu precio de entrada en <b>watchlist.json</b>.</div>";
 
@@ -206,11 +204,12 @@
       WL.forEach(function (it) { h += tarjeta(it, precios, AN, enCartera[it.ticker]); });
     }
 
+    SEC["SEGUIMIENTO"] = h; h = "";
+
     // Candidatos agrupados por perfil de riesgo.
     if (PERF && PERF.perfiles) {
-      h += '<h3 style="color:#fff;margin:18px 0 6px;font-size:15px">\uD83C\uDFAF Candidatos por perfil</h3>';
       h += '<div style="color:#888;font-size:12px;margin-bottom:10px">No son recomendaciones de compra: son candidatos ' +
-        "para pasar por el analisis de fundamentos de arriba y decidir vos.</div>";
+        "para pasar por el analisis de fundamentos de cada ficha y decidir vos.</div>";
       Object.keys(PERF.perfiles).forEach(function (nombre) {
         var pf = PERF.perfiles[nombre];
         h += '<div style="margin-bottom:6px;padding:10px;background:' + pf.color + '18;border-left:3px solid ' +
@@ -224,42 +223,31 @@
       });
     }
 
+    SEC["PERFILES"] = h; h = "";
+
     // Las que ya tenes, con los mismos criterios: sirve tanto para decidir una
     // compra nueva como para revisar si lo que tenes sigue teniendo sentido.
     var propias = Object.keys(enCartera).filter(function (t) {
       return (AN && AN.fundamentals && AN.fundamentals[t]) || SIN_BALANCE.indexOf(t) !== -1;
     }).sort();
     if (propias.length) {
-      h += '<h3 style="color:#fff;margin:18px 0 8px;font-size:15px">\uD83D\uDCBC Tus posiciones</h3>';
       propias.forEach(function (t) {
         h += tarjeta({ ticker: t, objetivo: null, nota: "" }, precios, AN, true);
       });
     }
 
-    h += '<button id="wl-close2" style="width:100%;padding:10px;background:#333;color:#fff;border:none;' +
-      'border-radius:8px;font-size:14px;cursor:pointer;margin-top:10px">Cerrar</button></div></div>';
+    SEC["PROPIAS"] = h;
 
-    var m = document.createElement("div");
-    m.id = "wl-modal";
-    m.innerHTML = h;
-    document.body.appendChild(m);
-    var cerrar = function () { var n = document.getElementById("wl-modal"); if (n) n.remove(); };
-    var a = document.getElementById("wl-close"), b = document.getElementById("wl-close2");
-    if (a) a.onclick = cerrar;
-    if (b) b.onclick = cerrar;
+    UI.modal("wl-modal", "\uD83D\uDC40 Acciones", [
+      { nombre: "En seguimiento", html: SEC.SEGUIMIENTO },
+      { nombre: "Por perfil", html: SEC.PERFILES },
+      { nombre: "Mis posiciones", html: SEC.PROPIAS }
+    ]);
   }
 
   function boton() {
-    if (document.getElementById("wl-btn")) return;
-    var b = document.createElement("button");
-    b.id = "wl-btn";
-    b.textContent = "\uD83D\uDC40";
-    b.title = "En seguimiento";
-    b.style.cssText = "position:fixed;bottom:208px;left:16px;z-index:9999;background:#5E35B1;color:#fff;" +
-      "border:none;border-radius:50%;width:48px;height:48px;font-size:22px;cursor:pointer;" +
-      "box-shadow:0 2px 8px rgba(0,0,0,.4)";
-    b.onclick = abrir;
-    document.body.appendChild(b);
+    if (!UI) return;
+    UI.registrar("\uD83D\uDC40", "Seguimiento", abrir, "Fundamentos, precio de entrada y candidatos");
   }
 
   getJSON("watchlist.json", function (d) {
