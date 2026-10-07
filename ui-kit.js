@@ -82,7 +82,7 @@
 
     var cont = document.createElement("div");
     cont.id = id;
-    cont.innerHTML = '<div style="position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:10002;overflow-y:auto;' +
+    cont.innerHTML = '<div class="ui-fondo" style="position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:10002;overflow-y:auto;' +
       'padding:12px;padding-top:calc(12px + env(safe-area-inset-top,0px))">' +
       '<div style="max-width:640px;margin:0 auto;background:' + C.fondo + ';border-radius:16px;padding:16px">' +
       '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">' +
@@ -120,6 +120,12 @@
 
     Array.prototype.forEach.call(cont.querySelectorAll(".ui-cerrar"), function (b) {
       b.onclick = function () { cont.remove(); };
+    });
+    // Tocar fuera del panel tambien cierra: en el celular es lo que uno espera.
+    var fondo = cont.querySelector(".ui-fondo");
+    if (fondo) fondo.onclick = function (e) { if (e.target === fondo) cont.remove(); };
+    document.addEventListener("keydown", function esc(e) {
+      if (e.key === "Escape") { cont.remove(); document.removeEventListener("keydown", esc); }
     });
   }
 
