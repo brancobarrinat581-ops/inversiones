@@ -54,9 +54,20 @@
       { status: 200, headers: { "Content-Type": "application/json" } });
   }
 
+  // Modelos que Groq dio de baja. El nombre esta escrito dentro de app.js, que
+  // esta minificado y no conviene tocar, asi que lo cambiamos aca al vuelo por el
+  // reemplazo que recomienda Groq. llama-3.3-70b-versatile murio el 16/08/2026.
+  var BAJA = {
+    "llama-3.3-70b-versatile": "openai/gpt-oss-120b",
+    "llama-3.1-8b-instant": "openai/gpt-oss-20b",
+    "qwen/qwen3-32b": "openai/gpt-oss-120b",
+    "meta-llama/llama-4-scout-17b-16e-instruct": "openai/gpt-oss-120b"
+  };
+
   window.fetch = function (url, opts) {
-    if (typeof url !== "string" || url.indexOf("api.groq.com") === -1)
+    if (typeof url !== "string" || url.indexOf("api.groq.com") === -1) {
       return _fetch.apply(this, arguments);
+    }
 
     var key = leer();
     if (!key) {
@@ -81,6 +92,16 @@
     } else {
       opts.headers = { "Content-Type": "application/json", Authorization: "Bearer " + key };
     }
+
+    if (opts.body && typeof opts.body === "string") {
+      try {
+        var cuerpo = JSON.parse(opts.body);
+        if (cuerpo.model && BAJA[cuerpo.model]) {
+          cuerpo.model = BAJA[cuerpo.model];
+          opts.body = JSON.stringify(cuerpo);
+        }
+      } catch (e) {}
+    }
     arguments[1] = opts;
 
     return _fetch.apply(this, arguments)
@@ -89,10 +110,16 @@
           return resp.clone().text().then(function (body) {
             var msg = "Error del asistente (HTTP " + resp.status + ")";
             try { var e = JSON.parse(body); if (e.error && e.error.message) msg = e.error.message; } catch (x) {}
+            // Solo 401/403 significan problema de clave. Un 404 es modelo inexistente
+            // y un 429 es exceso de uso: borrar la clave ahi solo confunde.
             if (resp.status === 401 || resp.status === 403) {
               try { localStorage.removeItem(CLAVE); } catch (x) {}
               pedir();
               msg = "La clave no es valida o fue revocada. Pegá una nueva en la ventana que se abrio.";
+            } else if (resp.status === 404) {
+              msg = "El modelo que pide la app ya no existe en Groq. " + msg;
+            } else if (resp.status === 429) {
+              msg = "Llegaste al limite de uso gratuito de Groq por ahora. Probá en unos minutos.";
             }
             return respuesta("⚠️ " + msg);
           });
@@ -104,5 +131,5 @@
       });
   };
 
-  console.log("🔍 groq-proxy v8: clave desde el navegador + header Authorization unico");
+  console.log("🔍 groq-proxy v9: clave del navegador, header unico y modelo vigente");
 })();
