@@ -1,0 +1,35 @@
+{
+  "_ayuda": "CEDEARs agrupados por perfil de riesgo, para evaluar. NO son recomendaciones de compra: son candidatos para mirar con el analisis de fundamentos del panel. Los ratios estan verificados contra la tabla de BYMA (actualizada 05/10/2026) y pueden cambiar por splits: conviene revisarlos antes de operar.",
+  "perfiles": {
+    "Tranquilo": {
+      "descripcion": "Empresas grandes, demanda estable y dividendos. Suben menos en los buenos años y caen menos en los malos.",
+      "color": "#4CAF50",
+      "tickers": [
+        { "ticker": "KO", "nota": "Coca-Cola. Marca y distribucion dificiles de replicar, demanda que casi no cambia con el ciclo. Paga dividendo hace decadas." },
+        { "ticker": "JNJ", "nota": "Johnson & Johnson. Salud diversificada: farma, dispositivos medicos. Muy poco sensible a recesiones." },
+        { "ticker": "PG", "nota": "Procter & Gamble. Productos de consumo diario. Crece poco, pero crece casi siempre." },
+        { "ticker": "WMT", "nota": "Walmart. En recesion le va bien porque la gente busca precio. Esta creciendo fuerte en comercio online." }
+      ]
+    },
+    "Moderado": {
+      "descripcion": "Negocios de calidad que todavia crecen. Mas volatilidad que el grupo tranquilo, a cambio de mas crecimiento.",
+      "color": "#64B5F6",
+      "tickers": [
+        { "ticker": "GOOGL", "nota": "Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir." },
+        { "ticker": "V", "nota": "Visa. Cobra un peaje de cada pago con tarjeta del mundo. Margenes altisimos y poca inversion necesaria." },
+        { "ticker": "COST", "nota": "Costco. Gana con las membresias mas que con lo que vende. Clientes que renuevan casi siempre. Suele cotizar caro." },
+        { "ticker": "JPM", "nota": "JPMorgan. El banco mas solido de Estados Unidos. Le va bien con tasas altas, sufre si hay recesion." }
+      ]
+    },
+    "Agresivo": {
+      "descripcion": "Mucha volatilidad. Pueden multiplicar o caer a la mitad. Van con una porcion chica de la cartera, la que podrias perder sin que te cambie el plan.",
+      "color": "#FF9800",
+      "tickers": [
+        { "ticker": "ORCL", "nota": "Oracle. El caso tipico de apuesta: se endeudo fuerte para construir centros de datos de IA. Si los contratos se cumplen, la suba es grande; si no, queda con mucha deuda y poco crecimiento. Los fundamentos hoy no la respaldan, la tesis es la remontada." },
+        { "ticker": "PLTR", "nota": "Palantir. Crece rapido y ya gana plata, pero cotiza a multiplos altisimos. Cualquier trimestre flojo la castiga mucho." },
+        { "ticker": "AMD", "nota": "AMD. El competidor de Nvidia en chips de IA. Si gana participacion, el salto es grande; si no, queda segunda." },
+        { "ticker": "COIN", "nota": "Coinbase. Sus ingresos siguen al precio de las criptomonedas. Muy ciclica. Ojo: ya tenes IBIT, asi que se superpone." }
+      ]
+    }
+  }
+}

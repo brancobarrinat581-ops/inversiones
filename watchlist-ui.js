@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  var WL = [], AN = null, WLCFG = null;
+  var WL = [], AN = null, WLCFG = null, PERF = null;
 
   function getJSON(u, cb) {
     try {
@@ -206,6 +206,24 @@
       WL.forEach(function (it) { h += tarjeta(it, precios, AN, enCartera[it.ticker]); });
     }
 
+    // Candidatos agrupados por perfil de riesgo.
+    if (PERF && PERF.perfiles) {
+      h += '<h3 style="color:#fff;margin:18px 0 6px;font-size:15px">\uD83C\uDFAF Candidatos por perfil</h3>';
+      h += '<div style="color:#888;font-size:12px;margin-bottom:10px">No son recomendaciones de compra: son candidatos ' +
+        "para pasar por el analisis de fundamentos de arriba y decidir vos.</div>";
+      Object.keys(PERF.perfiles).forEach(function (nombre) {
+        var pf = PERF.perfiles[nombre];
+        h += '<div style="margin-bottom:6px;padding:10px;background:' + pf.color + '18;border-left:3px solid ' +
+          pf.color + ';border-radius:6px">' +
+          '<div style="color:' + pf.color + ';font-weight:700;font-size:15px">' + nombre + "</div>" +
+          '<div style="color:#aaa;font-size:12px;margin-top:2px">' + (pf.descripcion || "") + "</div></div>";
+        (pf.tickers || []).forEach(function (t) {
+          h += tarjeta({ ticker: t.ticker, objetivo: t.objetivo != null ? t.objetivo : null, nota: t.nota },
+            precios, AN, enCartera[t.ticker]);
+        });
+      });
+    }
+
     // Las que ya tenes, con los mismos criterios: sirve tanto para decidir una
     // compra nueva como para revisar si lo que tenes sigue teniendo sentido.
     var propias = Object.keys(enCartera).filter(function (t) {
@@ -249,6 +267,7 @@
     WL = (d && (Array.isArray(d) ? d : d.watchlist)) || [];
   });
   getJSON("analysts.json", function (d) { AN = d; });
+  getJSON("perfiles.json", function (d) { PERF = d; });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boton);
   else boton();

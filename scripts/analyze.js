@@ -24,7 +24,19 @@ const TICKERS = {
   YPF:{name:"YPF",sector:"Energía Argentina"},
   NFLX:{name:"Netflix",sector:"Streaming"},
   UBER:{name:"Uber Technologies",sector:"Movilidad / Delivery"},
-  VST:{name:"Vistra",sector:"Energía / Nuclear EEUU"}
+  VST:{name:"Vistra",sector:"Energía / Nuclear EEUU"},
+  KO:{name:"Coca-Cola",sector:"Consumo defensivo"},
+  JNJ:{name:"Johnson & Johnson",sector:"Salud"},
+  PG:{name:"Procter & Gamble",sector:"Consumo defensivo"},
+  WMT:{name:"Walmart",sector:"Retail"},
+  GOOGL:{name:"Alphabet (Google)",sector:"Ads / IA / Cloud"},
+  V:{name:"Visa",sector:"Pagos"},
+  COST:{name:"Costco",sector:"Retail por membresia"},
+  JPM:{name:"JPMorgan",sector:"Bancos EEUU"},
+  ORCL:{name:"Oracle",sector:"Software / Nube IA"},
+  PLTR:{name:"Palantir",sector:"IA / Defensa"},
+  AMD:{name:"AMD",sector:"Semiconductores"},
+  COIN:{name:"Coinbase",sector:"Crypto"}
 };
 
 // Simbolo en Yahoo cuando difiere del ticker local

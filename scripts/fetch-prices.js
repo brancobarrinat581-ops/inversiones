@@ -29,7 +29,20 @@ const MAP = {
   // Ratios verificados contra la tabla de CEDEARs de BYMA / Caja de Valores
   NFLX: ['NFLX.BA','NFLX', 48],
   UBER: ['UBER.BA','UBER',  2],
-  VST:  ['VST.BA', 'VST',  26]
+  VST:  ['VST.BA', 'VST',  26],
+  // Candidatos por perfil de riesgo (perfiles.json)
+  KO:    ['KO.BA','KO',  5],
+  JNJ:   ['JNJ.BA','JNJ', 15],
+  PG:    ['PG.BA','PG', 15],
+  WMT:   ['WMT.BA','WMT', 18],
+  GOOGL: ['GOOGL.BA','GOOGL', 58],
+  V:     ['V.BA','V', 18],
+  COST:  ['COST.BA','COST', 48],
+  JPM:   ['JPM.BA','JPM', 15],
+  ORCL:  ['ORCL.BA','ORCL',  3],
+  PLTR:  ['PLTR.BA','PLTR',  3],
+  AMD:   ['AMD.BA','AMD', 10],
+  COIN:  ['COIN.BA','COIN', 27]
 };
 // FCIs de IOL: no cotizan, no hay fuente publica. Se conserva el ultimo valor cargado a mano.
 const MANUALES = ['IOLCAMA','IOLDOLD'];

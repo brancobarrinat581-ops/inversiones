@@ -33,6 +33,34 @@ const alertas = [];
     });
 });
 
+// 1b) Precio justo: cotiza por debajo de la referencia (el mas conservador entre
+// el objetivo mas bajo de los analistas y el promedio con margen de seguridad).
+const margen = Number(wl.margen_seguridad) || 20;
+const candidatos = [];
+((wl && wl.watchlist) || []).forEach((x) => candidatos.push({ ticker: x.ticker, nota: x.nota }));
+const pf = leer("perfiles.json", {});
+Object.keys((pf && pf.perfiles) || {}).forEach((g) => {
+  ((pf.perfiles[g].tickers) || []).forEach((t) => candidatos.push({ ticker: t.ticker, perfil: g, nota: t.nota }));
+});
+const vistos = new Set();
+candidatos.forEach((c) => {
+  if (vistos.has(c.ticker)) return;
+  vistos.add(c.ticker);
+  const px = pj.prices[c.ticker];
+  const f = (an.fundamentals || {})[c.ticker];
+  if (!px || !(px.usd > 0) || !f || !(f.target > 0)) return;
+  const piso = f.targetLow > 0 ? f.targetLow : f.target * 0.8;
+  const referencia = Math.min(piso, f.target * (1 - margen / 100));
+  if (px.usd > referencia) return;
+  alertas.push({
+    tipo: "precio-justo", clave: `justo-${c.ticker}-${referencia.toFixed(0)}`,
+    titulo: `${c.ticker} esta en precio de compra`,
+    texto: `Cotiza US$${px.usd} y la referencia con ${margen}% de margen de seguridad es US$${referencia.toFixed(2)}. ` +
+      `El objetivo promedio de los analistas es US$${f.target}.` + (c.perfil ? ` Perfil ${c.perfil}.` : "") +
+      (c.nota ? ` ${c.nota}` : "")
+  });
+});
+
 // 2) Movimiento fuerte del dia en algo que tenes
 r.posiciones.forEach((p) => {
   const px = pj.prices[p.ticker] || {};
