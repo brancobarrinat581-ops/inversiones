@@ -137,6 +137,58 @@
     return h + "</div>";
   }
 
+  var fM = function (n) {
+    var v = Math.abs(n);
+    if (v >= 1e6) return "US$ " + (n / 1e6).toFixed(1) + " M";
+    if (v >= 1e3) return "US$ " + Math.round(n / 1e3) + " mil";
+    return "US$ " + Math.round(n);
+  };
+
+  // Compras y ventas de los propios ejecutivos. Las compras pesan; las ventas casi
+  // nada, porque se vende por impuestos, por diversificar o por comprarse una casa.
+  function bloqueDirectivos(d) {
+    if (!d) return "";
+    if (!d.compras && !d.ventas && d.netoPct == null) return "";
+    var hayCompras = d.compras > 0;
+    var color = hayCompras && d.montoCompras > d.montoVentas ? "#4CAF50" : "#8b93a7";
+    var h = '<div style="margin-top:8px;background:#1a1a2e;border-radius:6px;padding:10px">';
+    h += '<div style="color:#8b93a7;font-size:11px;margin-bottom:6px">Directivos, ultimos 6 meses</div>';
+    h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:2px 0">' +
+      '<span style="color:#aaa">Compras / ventas</span>' +
+      '<span style="color:' + color + ';font-weight:700">' + d.compras + " / " + d.ventas + "</span></div>";
+    if (d.montoCompras || d.montoVentas)
+      h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:2px 0">' +
+        '<span style="color:#aaa">Montos</span><span style="color:#fff">' +
+        fM(d.montoCompras) + " comprado · " + fM(d.montoVentas) + "</span></div>";
+    (d.ultimas || []).slice(0, 2).forEach(function (m) {
+      h += '<div style="color:#5c6478;font-size:11px;padding:2px 0">' + (m.fecha || "") + " · " +
+        (m.cargo || m.quien || "") + ": " + (m.que || "") + (m.valor ? " (" + fM(m.valor) + ")" : "") + "</div>";
+    });
+    if (!hayCompras)
+      h += '<div style="color:#5c6478;font-size:11px;margin-top:4px">Sin compras de insiders. ' +
+        "Las ventas solas no dicen mucho: se vende por impuestos o por plata personal.</div>";
+    return h + "</div>";
+  }
+
+  // Si el consenso le viene errando por abajo trimestre a trimestre, las
+  // proyecciones que ves arriba probablemente tambien esten cortas.
+  function bloqueSorpresas(sp) {
+    if (!sp || !sp.trimestres || !sp.trimestres.length) return "";
+    var color = sp.superados >= sp.total - 1 ? "#4CAF50" : sp.superados <= 1 ? "#FF9800" : "#8b93a7";
+    var h = '<div style="margin-top:8px;background:#1a1a2e;border-radius:6px;padding:10px">';
+    h += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">' +
+      '<span style="color:#8b93a7;font-size:11px">Balances vs lo esperado</span>' +
+      '<span style="color:' + color + ';font-size:12px;font-weight:700">' + sp.superados + " de " + sp.total + " superados</span></div>";
+    sp.trimestres.slice().reverse().forEach(function (q) {
+      var c = q.sorpresaPct == null ? "#8b93a7" : q.sorpresaPct >= 0 ? "#4CAF50" : "#F44336";
+      h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:2px 0">' +
+        '<span style="color:#aaa">' + (q.periodo || "") + "</span>" +
+        '<span style="color:' + c + '">' + (q.sorpresaPct != null ? fPct(q.sorpresaPct) : "") +
+        ' <span style="color:#5c6478">(' + q.real + " vs " + q.esperado + ")</span></span></div>";
+    });
+    return h + "</div>";
+  }
+
   function tarjeta(it, precios, an, enCartera) {
     var tk = it.ticker;
     var px = (precios && precios.prices && precios.prices[tk]) || null;
@@ -184,6 +236,8 @@
     h += bloqueEntrada(f, px, it.objetivo, (WLCFG && WLCFG.margen_seguridad) || 20);
     h += bloqueTecnico((an && an.tecnicos && an.tecnicos[tk]) || null);
     h += bloqueFundamentos(tk, f);
+    h += bloqueSorpresas((an && an.sorpresas && an.sorpresas[tk]) || null);
+    h += bloqueDirectivos((an && an.directivos && an.directivos[tk]) || null);
 
     if (bancos.length) {
       h += '<div style="margin-top:8px"><div style="color:#888;font-size:11px;margin-bottom:4px">Bancos</div>';

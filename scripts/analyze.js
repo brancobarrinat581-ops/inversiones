@@ -184,14 +184,14 @@ const ym = sec => { const d = new Date(sec * 1000); return d.getUTCFullYear() + 
 
 // ---------- 1. Fundamentals + bancos + fechas de balance ----------
 async function fetchYahooData(prev) {
-  const fundamentals = {}, banks = {}, cats = {};
+  const fundamentals = {}, banks = {}, cats = {}, directivos = {}, sorpresas = {};
   let ok = 0, fail = 0, yahooCaido = false;
   const today = new Date(); today.setUTCHours(0, 0, 0, 0);
 
   for (const tk of Object.keys(TICKERS)) {
     let res = null;
     if (!yahooCaido) {
-      try { res = await quoteSummary(ysym(tk), 'financialData,summaryDetail,defaultKeyStatistics,upgradeDowngradeHistory,calendarEvents'); }
+      try { res = await quoteSummary(ysym(tk), 'financialData,summaryDetail,defaultKeyStatistics,upgradeDowngradeHistory,calendarEvents,insiderTransactions,netSharePurchaseActivity,earningsHistory'); }
       catch (e) { console.log(`  ${tk}: Yahoo fallo (${e.message})`); if (/crumb/.test(e.message)) yahooCaido = true; }
     }
     if (res) {
@@ -209,6 +209,41 @@ async function fetchYahooData(prev) {
         liquidez: raw(fd.currentRatio)
       };
       if (row.target != null || row.pe != null || row.forwardPE != null) { fundamentals[tk] = row; ok++; }
+
+      // Operaciones de los directivos. Que un ejecutivo compre con plata propia es
+      // de las pocas señales donde alguien arriesga lo suyo. Las ventas dicen mucho
+      // menos: se venden acciones por mil motivos personales.
+      const ins = (res.insiderTransactions && res.insiderTransactions.transactions) || [];
+      const neto = res.netSharePurchaseActivity || {};
+      const desde6m = Date.now() / 1000 - 183 * 86400;
+      const movs = ins.filter(t => raw(t.startDate) > desde6m).slice(0, 40);
+      if (movs.length || raw(neto.netPercentInsiderShares) != null) {
+        const compras = movs.filter(t => /purchase|buy/i.test(t.transactionText || ''));
+        const ventas = movs.filter(t => /sale|sold/i.test(t.transactionText || ''));
+        const monto = (l) => l.reduce((a, t) => a + (raw(t.value) || 0), 0);
+        directivos[tk] = {
+          compras: compras.length, ventas: ventas.length,
+          montoCompras: Math.round(monto(compras)), montoVentas: Math.round(monto(ventas)),
+          netoPct: raw(neto.netPercentInsiderShares) != null ? Math.round(raw(neto.netPercentInsiderShares) * 1000) / 10 : null,
+          ultimas: movs.slice(0, 3).map(t => ({
+            quien: t.filerName || '', cargo: t.filerRelation || '',
+            que: t.transactionText || '', valor: Math.round(raw(t.value) || 0),
+            fecha: raw(t.startDate) ? new Date(raw(t.startDate) * 1000).toISOString().slice(0, 10) : null
+          }))
+        };
+      }
+
+      // Sorpresas en los balances: cuanto le erro el consenso en los ultimos trimestres.
+      const eh = (res.earningsHistory && res.earningsHistory.history) || [];
+      const trimestres = eh.filter(q => raw(q.epsActual) != null && raw(q.epsEstimate) != null).slice(-4).map(q => ({
+        periodo: q.quarter && q.quarter.fmt ? q.quarter.fmt : (q.period || ''),
+        real: raw(q.epsActual), esperado: raw(q.epsEstimate),
+        sorpresaPct: raw(q.surprisePercent) != null ? Math.round(raw(q.surprisePercent) * 1000) / 10 : null
+      }));
+      if (trimestres.length) {
+        const superados = trimestres.filter(q => q.real > q.esperado).length;
+        sorpresas[tk] = { trimestres, superados, total: trimestres.length };
+      }
 
       // Targets por banco: ultima nota de cada firma en los ultimos 6 meses, con precio objetivo
       const hist = (res.upgradeDowngradeHistory && res.upgradeDowngradeHistory.history) || [];
@@ -251,7 +286,7 @@ async function fetchYahooData(prev) {
   });
 
   console.log(`Yahoo: ${ok} ok / ${fail} fallidos`);
-  return { fundamentals, banks, catalysts, ok };
+  return { fundamentals, banks, catalysts, directivos, sorpresas, ok };
 }
 
 // ---------- 2. Noticias (Yahoo RSS) ----------
@@ -346,12 +381,18 @@ async function main() {
   console.log('\n[3/3] Traduccion');
   await translate([news, discoveryNews], [prev.news, prev.discovery_news]);
 
+  // Si Yahoo no devolvio estos modulos esta vez, conservamos lo ultimo que vino.
+  if (!Object.keys(y.directivos || {}).length && prev.directivos) y.directivos = prev.directivos;
+  if (!Object.keys(y.sorpresas || {}).length && prev.sorpresas) y.sorpresas = prev.sorpresas;
+
   const out = {
     ts: new Date().toISOString(),
     tickers: TICKERS,
     fundamentals: y.fundamentals,
     bank_targets: y.banks,
     catalysts: y.catalysts,
+    directivos: y.directivos,
+    sorpresas: y.sorpresas,
     news,
     discovery: { tickers: Object.keys(DISCOVERY), info: DISCOVERY },
     discovery_news: discoveryNews,
