@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-07T17:28:34.250Z",
+ "ts": "2026-10-07T17:51:37.478Z",
  "tickers": {
   "NVDA": {
    "name": "NVIDIA",
@@ -128,17 +128,17 @@
  },
  "fundamentals": {
   "NVDA": {
-   "price": 237.315,
+   "price": 236.84,
    "target": 328.71695,
    "targetHigh": 515,
    "targetLow": 180,
    "consensus": "strong_buy",
    "analysts": 59,
-   "pe": 30.001898,
-   "forwardPE": 14.911778,
+   "pe": 29.941845,
+   "forwardPE": 14.881931,
    "peg": 0.29,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:41.508Z",
+   "updated": "2026-10-07T17:50:57.415Z",
    "margenBruto": 0.74674004,
    "margenOperativo": 0.66236997,
    "margenNeto": 0.63663,
@@ -152,17 +152,17 @@
    "liquidez": 4.589
   },
   "META": {
-   "price": 725.071,
+   "price": 724.72,
    "target": 794.9607,
    "targetHigh": 1000,
    "targetLow": 580,
    "consensus": "strong_buy",
    "analysts": 58,
-   "pe": 27.319931,
-   "forwardPE": 20.772144,
+   "pe": 27.306705,
+   "forwardPE": 20.762087,
    "peg": 0.98,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:41.947Z",
+   "updated": "2026-10-07T17:50:57.917Z",
    "margenBruto": 0.81747,
    "margenOperativo": 0.34827,
    "margenNeto": 0.29834998,
@@ -176,17 +176,17 @@
    "liquidez": 2.226
   },
   "MSFT": {
-   "price": 528.91,
+   "price": 529.86,
    "target": 587.6338,
    "targetHigh": 870,
    "targetLow": 440,
    "consensus": "strong_buy",
    "analysts": 53,
-   "pe": 29.465734,
-   "forwardPE": 22.338253,
+   "pe": 29.518661,
+   "forwardPE": 22.378376,
    "peg": 1.72,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:42.400Z",
+   "updated": "2026-10-07T17:50:58.450Z",
    "margenBruto": 0.67944,
    "margenOperativo": 0.45111,
    "margenNeto": 0.40305,
@@ -200,17 +200,17 @@
    "liquidez": 1.23
   },
   "ADBE": {
-   "price": 232.01,
+   "price": 232.4275,
    "target": 275.06375,
    "targetHigh": 373,
    "targetLow": 195,
    "consensus": "hold",
    "analysts": 32,
-   "pe": 12.954215,
-   "forwardPE": 8.383899,
+   "pe": 12.977527,
+   "forwardPE": 8.398986,
    "peg": 0.58,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:42.883Z",
+   "updated": "2026-10-07T17:50:58.935Z",
    "margenBruto": 0.89252996,
    "margenOperativo": 0.34822,
    "margenNeto": 0.28048,
@@ -224,17 +224,17 @@
    "liquidez": 0.77
   },
   "MU": {
-   "price": 1086.22,
+   "price": 1084.3,
    "target": 1535.5652,
    "targetHigh": 2200,
    "targetLow": 361,
    "consensus": "strong_buy",
    "analysts": 46,
-   "pe": 14.61348,
-   "forwardPE": 5.264417,
+   "pe": 14.58765,
+   "forwardPE": 5.255112,
    "peg": 0.16,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:43.331Z",
+   "updated": "2026-10-07T17:50:59.427Z",
    "margenBruto": 0.80716,
    "margenOperativo": 0.80678004,
    "margenNeto": 0.63796,
@@ -248,17 +248,17 @@
    "liquidez": 3.314
   },
   "PANW": {
-   "price": 407.43,
+   "price": 408.43,
    "target": 396.92,
    "targetHigh": 475,
    "targetLow": 190,
    "consensus": "buy",
    "analysts": 50,
-   "pe": 1018.57495,
-   "forwardPE": 83.50567,
+   "pe": 1021.07495,
+   "forwardPE": 83.710625,
    "peg": 2.14,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:43.808Z",
+   "updated": "2026-10-07T17:50:59.885Z",
    "margenBruto": 0.70383,
    "margenOperativo": 0.05396,
    "margenNeto": 0.02674,
@@ -272,17 +272,17 @@
    "liquidez": 0.871
   },
   "MELI": {
-   "price": 1869.795,
+   "price": 1866.59,
    "target": 2275.778,
    "targetHigh": 2800,
    "targetLow": 1750,
    "consensus": "buy",
    "analysts": 26,
-   "pe": 46.362385,
-   "forwardPE": 33.042625,
+   "pe": 46.282913,
+   "forwardPE": 32.98599,
    "peg": 1.01,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:44.217Z",
+   "updated": "2026-10-07T17:51:00.321Z",
    "margenBruto": 0.47749,
    "margenOperativo": 0.06716,
    "margenNeto": 0.052950002,
@@ -302,11 +302,11 @@
    "targetLow": null,
    "consensus": null,
    "analysts": null,
-   "pe": 24.686995,
+   "pe": 24.680645,
    "forwardPE": null,
    "peg": null,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:44.618Z",
+   "updated": "2026-10-07T17:51:00.740Z",
    "margenBruto": null,
    "margenOperativo": null,
    "margenNeto": null,
@@ -320,17 +320,17 @@
    "liquidez": null
   },
   "ACN": {
-   "price": 197.205,
+   "price": 196.63,
    "target": 223.65459,
    "targetHigh": 275,
    "targetLow": 163,
    "consensus": "buy",
    "analysts": 24,
-   "pe": 14.543141,
-   "forwardPE": 12.362314,
+   "pe": 14.500737,
+   "forwardPE": 12.326269,
    "peg": 1.83,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:45.073Z",
+   "updated": "2026-10-07T17:51:01.200Z",
    "margenBruto": 0.3205,
    "margenOperativo": 0.1533,
    "margenNeto": 0.11279,
@@ -344,17 +344,17 @@
    "liquidez": 1.427
   },
   "MCD": {
-   "price": 231.92,
+   "price": 232.325,
    "target": 293.7586,
    "targetHigh": 390,
    "targetLow": 230,
    "consensus": "buy",
    "analysts": 29,
-   "pe": 18.839966,
-   "forwardPE": 16.821886,
+   "pe": 18.872868,
+   "forwardPE": 16.851263,
    "peg": 2.45,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:45.529Z",
+   "updated": "2026-10-07T17:51:01.646Z",
    "margenBruto": 0.57382,
    "margenOperativo": 0.46485,
    "margenNeto": 0.3172,
@@ -380,17 +380,17 @@
    "updated": "2026-09-28"
   },
   "NU": {
-   "price": 15.645,
+   "price": 15.63,
    "target": 18.77273,
    "targetHigh": 23,
    "targetLow": 12,
    "consensus": "buy",
    "analysts": 22,
-   "pe": 21.431507,
-   "forwardPE": 13.846971,
+   "pe": 21.41096,
+   "forwardPE": 13.833694,
    "peg": 0.72,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:46.343Z",
+   "updated": "2026-10-07T17:51:02.554Z",
    "margenBruto": 0,
    "margenOperativo": 0.50154,
    "margenNeto": 0.42728,
@@ -404,17 +404,17 @@
    "liquidez": null
   },
   "PAMP": {
-   "price": 81.275,
+   "price": 80.89,
    "target": 121.09091,
    "targetHigh": 160,
    "targetLow": 100,
    "consensus": null,
    "analysts": 11,
-   "pe": 7.3886366,
-   "forwardPE": 6.925049,
+   "pe": 7.3536363,
+   "forwardPE": 6.892245,
    "peg": null,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:46.809Z",
+   "updated": "2026-10-07T17:51:02.975Z",
    "margenBruto": 0.33456,
    "margenOperativo": 0.25603,
    "margenNeto": 0.23583001,
@@ -428,17 +428,17 @@
    "liquidez": 3.641
   },
   "VIST": {
-   "price": 65.54,
-   "target": 93.412926,
-   "targetHigh": 116.59442,
-   "targetLow": 77.55042,
+   "price": 65.53,
+   "target": 93.420944,
+   "targetHigh": 116.60443,
+   "targetLow": 77.557076,
    "consensus": "strong_buy",
    "analysts": 12,
-   "pe": 8.6693125,
-   "forwardPE": 6.6510715,
+   "pe": 8.66799,
+   "forwardPE": 6.6500564,
    "peg": null,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:47.221Z",
+   "updated": "2026-10-07T17:51:03.465Z",
    "margenBruto": 0.82515,
    "margenOperativo": 0.44244,
    "margenNeto": 0.23558001,
@@ -452,17 +452,17 @@
    "liquidez": 0.692
   },
   "GGAL": {
-   "price": 37.4381,
+   "price": 37.365,
    "target": 66.5742,
    "targetHigh": 103,
    "targetLow": 50,
    "consensus": "buy",
    "analysts": 10,
-   "pe": 42.06528,
-   "forwardPE": 5.4025884,
+   "pe": 41.98315,
+   "forwardPE": 5.39204,
    "peg": 0.18,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:47.628Z",
+   "updated": "2026-10-07T17:51:03.885Z",
    "margenBruto": 0,
    "margenOperativo": 0.17318001,
    "margenNeto": 0.01496,
@@ -476,17 +476,17 @@
    "liquidez": null
   },
   "YPF": {
-   "price": 50.17,
+   "price": 49.915,
    "target": 61.38333,
    "targetHigh": 78,
    "targetLow": 50,
    "consensus": "buy",
    "analysts": 12,
-   "pe": 26.405262,
-   "forwardPE": 9.146663,
+   "pe": 26.271053,
+   "forwardPE": 9.100174,
    "peg": 0.1,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:48.038Z",
+   "updated": "2026-10-07T17:51:04.479Z",
    "margenBruto": 0.35638002,
    "margenOperativo": 0.27511,
    "margenNeto": 0.04003,
@@ -500,17 +500,17 @@
    "liquidez": 0.934
   },
   "NFLX": {
-   "price": 69.315,
+   "price": 69.365,
    "target": 92.61556,
    "targetHigh": 135,
    "targetLow": 57,
    "consensus": "buy",
    "analysts": 45,
-   "pe": 21.79717,
-   "forwardPE": 18.206629,
+   "pe": 21.812891,
+   "forwardPE": 18.21976,
    "peg": 1.17,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:48.508Z",
+   "updated": "2026-10-07T17:51:04.925Z",
    "margenBruto": 0.49118,
    "margenOperativo": 0.33381,
    "margenNeto": 0.28219,
@@ -524,17 +524,17 @@
    "liquidez": 1.142
   },
   "UBER": {
-   "price": 68.505,
+   "price": 68.535,
    "target": 100.85522,
    "targetHigh": 150,
    "targetLow": 70,
    "consensus": "buy",
    "analysts": 46,
-   "pe": 15.0230255,
-   "forwardPE": 15.494627,
+   "pe": 15.029606,
+   "forwardPE": 15.501414,
    "peg": 5.89,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:48.935Z",
+   "updated": "2026-10-07T17:51:05.485Z",
    "margenBruto": 0.40752,
    "margenOperativo": 0.13317999,
    "margenNeto": 0.17345,
@@ -548,17 +548,17 @@
    "liquidez": 0.843
   },
   "VST": {
-   "price": 165.125,
+   "price": 165.57,
    "target": 210.25,
    "targetHigh": 305,
    "targetLow": 106,
    "consensus": "strong_buy",
    "analysts": 20,
-   "pe": 27.845701,
-   "forwardPE": 15.852497,
+   "pe": 27.920744,
+   "forwardPE": 15.89522,
    "peg": 0.44,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:49.492Z",
+   "updated": "2026-10-07T17:51:05.909Z",
    "margenBruto": 0.38309,
    "margenOperativo": 0.13766,
    "margenNeto": 0.1155,
@@ -572,17 +572,17 @@
    "liquidez": 0.973
   },
   "KO": {
-   "price": 86.225,
+   "price": 86.135,
    "target": 94.43478,
    "targetHigh": 104,
    "targetLow": 75,
    "consensus": "buy",
    "analysts": 23,
-   "pe": 25.893394,
-   "forwardPE": 24.46002,
+   "pe": 25.866367,
+   "forwardPE": 24.43449,
    "peg": 3.91,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:49.912Z",
+   "updated": "2026-10-07T17:51:06.461Z",
    "margenBruto": 0.61888003,
    "margenOperativo": 0.34873,
    "margenNeto": 0.28558,
@@ -596,17 +596,17 @@
    "liquidez": 1.305
   },
   "JNJ": {
-   "price": 259.935,
+   "price": 260.27,
    "target": 279.63635,
    "targetHigh": 320,
    "targetLow": 190,
    "consensus": "buy",
    "analysts": 22,
-   "pe": 30.11993,
-   "forwardPE": 21.479267,
+   "pe": 30.158747,
+   "forwardPE": 21.506948,
    "peg": 2.67,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:50.393Z",
+   "updated": "2026-10-07T17:51:06.884Z",
    "margenBruto": 0.6814,
    "margenOperativo": 0.2919,
    "margenNeto": 0.21482,
@@ -620,17 +620,17 @@
    "liquidez": 1.089
   },
   "PG": {
-   "price": 148.26,
+   "price": 148.465,
    "target": 160.78261,
    "targetHigh": 186,
    "targetLow": 143,
    "consensus": "buy",
    "analysts": 23,
-   "pe": 22.39577,
-   "forwardPE": 20.04456,
+   "pe": 22.426737,
+   "forwardPE": 20.072277,
    "peg": 3.8,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:50.883Z",
+   "updated": "2026-10-07T17:51:07.483Z",
    "margenBruto": 0.50873,
    "margenOperativo": 0.22084999,
    "margenNeto": 0.18437,
@@ -644,17 +644,17 @@
    "liquidez": 0.677
   },
   "WMT": {
-   "price": 108.13,
+   "price": 108.22,
    "target": 126.775,
    "targetHigh": 155,
    "targetLow": 81,
    "consensus": "buy",
    "analysts": 40,
-   "pe": 38.34397,
-   "forwardPE": 33.53149,
+   "pe": 38.37589,
+   "forwardPE": 33.5594,
    "peg": 3.64,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:51.305Z",
+   "updated": "2026-10-07T17:51:08.104Z",
    "margenBruto": 0.24836999,
    "margenOperativo": 0.0345,
    "margenNeto": 0.03,
@@ -668,17 +668,17 @@
    "liquidez": 0.767
   },
   "GOOGL": {
-   "price": 347.0762,
+   "price": 348.13,
    "target": 429.47406,
    "targetHigh": 515,
    "targetLow": 340,
    "consensus": "strong_buy",
    "analysts": 54,
-   "pe": 17.41476,
-   "forwardPE": 23.028584,
+   "pe": 17.467636,
+   "forwardPE": 23.098503,
    "peg": 1.24,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:51.783Z",
+   "updated": "2026-10-07T17:51:08.560Z",
    "margenBruto": 0.60897,
    "margenOperativo": 0.34033,
    "margenNeto": 0.54771,
@@ -692,17 +692,17 @@
    "liquidez": 2.724
   },
   "V": {
-   "price": 373.863,
+   "price": 373.935,
    "target": 419.36163,
    "targetHigh": 466,
    "targetLow": 330,
    "consensus": "strong_buy",
    "analysts": 37,
-   "pe": 31.818129,
-   "forwardPE": 24.917057,
+   "pe": 31.824255,
+   "forwardPE": 24.921856,
    "peg": 1.68,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:52.221Z",
+   "updated": "2026-10-07T17:51:09.046Z",
    "margenBruto": 0.97725,
    "margenOperativo": 0.66130996,
    "margenNeto": 0.50782,
@@ -716,17 +716,17 @@
    "liquidez": 0.985
   },
   "COST": {
-   "price": 944.52,
+   "price": 946.63,
    "target": 1057.9429,
    "targetHigh": 1315,
    "targetLow": 770,
    "consensus": "buy",
    "analysts": 35,
-   "pe": 45.49711,
-   "forwardPE": 37.779682,
+   "pe": 45.598747,
+   "forwardPE": 37.86408,
    "peg": 4.71,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:52.646Z",
+   "updated": "2026-10-07T17:51:09.541Z",
    "margenBruto": 0.12824,
    "margenOperativo": 0.03971,
    "margenNeto": 0.03043,
@@ -740,17 +740,17 @@
    "liquidez": 1.06
   },
   "JPM": {
-   "price": 329.4961,
+   "price": 329.515,
    "target": 372.8095,
    "targetHigh": 420,
    "targetLow": 305,
    "consensus": "buy",
    "analysts": 21,
-   "pe": 14.117228,
-   "forwardPE": 13.164294,
+   "pe": 14.118038,
+   "forwardPE": 13.1650505,
    "peg": 1.53,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:53.121Z",
+   "updated": "2026-10-07T17:51:09.993Z",
    "margenBruto": 0,
    "margenOperativo": 0.50394,
    "margenNeto": 0.34921002,
@@ -764,17 +764,17 @@
    "liquidez": null
   },
   "ORCL": {
-   "price": 144.245,
+   "price": 144.335,
    "target": 237.97415,
    "targetHigh": 400,
    "targetLow": 110,
    "consensus": "buy",
    "analysts": 41,
-   "pe": 22.608932,
-   "forwardPE": 13.116531,
+   "pe": 22.623041,
+   "forwardPE": 13.124717,
    "peg": 0.81,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:53.594Z",
+   "updated": "2026-10-07T17:51:10.474Z",
    "margenBruto": 0.63957,
    "margenOperativo": 0.35632,
    "margenNeto": 0.2636,
@@ -788,17 +788,17 @@
    "liquidez": 1.171
   },
   "PLTR": {
-   "price": 193.475,
+   "price": 193.46,
    "target": 199.844,
    "targetHigh": 255,
    "targetLow": 80,
    "consensus": "buy",
    "analysts": 25,
-   "pe": 166.7888,
-   "forwardPE": 82.5349,
+   "pe": 166.77588,
+   "forwardPE": 82.528496,
    "peg": 1.66,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:54.029Z",
+   "updated": "2026-10-07T17:51:10.897Z",
    "margenBruto": 0.84796,
    "margenOperativo": 0.47120997,
    "margenNeto": 0.49005002,
@@ -812,17 +812,17 @@
    "liquidez": 7.228
   },
   "AMD": {
-   "price": 646.22,
+   "price": 643.76,
    "target": 636.208,
    "targetHigh": 1250,
    "targetLow": 365,
    "consensus": "strong_buy",
    "analysts": 50,
-   "pe": 164.85204,
-   "forwardPE": 41.1032,
+   "pe": 164.22449,
+   "forwardPE": 40.94673,
    "peg": 0.66,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:54.461Z",
+   "updated": "2026-10-07T17:51:11.460Z",
    "margenBruto": 0.55724,
    "margenOperativo": 0.1725,
    "margenNeto": 0.15577,
@@ -836,17 +836,17 @@
    "liquidez": 2.609
   },
   "COIN": {
-   "price": 178.2964,
+   "price": 178.24,
    "target": 211.12424,
    "targetHigh": 330,
    "targetLow": 110,
    "consensus": "buy",
    "analysts": 33,
    "pe": null,
-   "forwardPE": 62.849693,
+   "forwardPE": 62.82981,
    "peg": 1.88,
    "source": "Yahoo Finance",
-   "updated": "2026-10-07T17:27:54.898Z",
+   "updated": "2026-10-07T17:51:11.916Z",
    "margenBruto": 0.8581,
    "margenOperativo": -0.13922,
    "margenNeto": -0.16344,
@@ -4463,39 +4463,39 @@
  "news": {
   "NVDA": [
    {
-    "title": "SpaceX Wants $40 Billion for Nvidia Chips. Here’s Where the 145% Long Term Upside Sits.",
-    "url": "https://www.tikr.com/blog/spacex-wants-40-billion-for-nvidia-chips-heres-where-the-145-long-term-upside-sits?ref=yahoofinance&amp;.tsrc=rss",
+    "title": "How SpaceX's big Nvidia buy could contribute to 'structural changes' to the economy",
+    "url": "https://finance.yahoo.com/video/spacexs-big-nvidia-buy-could-174534810.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 17:08:00 +0000",
-    "titleEs": "SpaceX quiere 40 mil millones de dólares para chips Nvidia. Aquí es donde se encuentra la ventaja a largo plazo del 145%."
+    "published": "Wed, 07 Oct 2026 17:45:34 +0000",
+    "titleEs": "Cómo la gran compra de Nvidia por parte de SpaceX podría contribuir a los 'cambios estructurales' de la economía"
    },
    {
-    "title": "Here's What $1,000 in Each of These 6 Cryptocurrencies Could Be Worth by 2030",
-    "url": "https://www.fool.com/investing/2026/10/07/heres-what-1000-in-each-of-these-6-cryptocurrencie/?.tsrc=rss",
+    "title": "Sector Update: Tech Stocks Decline Wednesday Afternoon",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/sector-tech-stocks-decline-wednesday-173706015.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 17:05:00 +0000",
-    "titleEs": "Esto es lo que podrían valer $1,000 en cada una de estas 6 criptomonedas para 2030"
+    "published": "Wed, 07 Oct 2026 17:37:06 +0000",
+    "titleEs": "Actualización del sector: las acciones tecnológicas caen el miércoles por la tarde"
    },
    {
-    "title": "SpaceX in Talks to Borrow $40 Billion to Buy Nvidia Chips",
-    "url": "https://finance.yahoo.com/video/spacex-talks-borrow-40-billion-164117664.html?.tsrc=rss",
+    "title": "Constellation Brands Beat Wall Street, but Beer Drinkers Aren’t Showing Up",
+    "url": "https://app.moby.co/home/news/news-constellation-brands-beat-wall-street-but-beer-drinkers-arent-showing-up?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 16:41:17 +0000",
-    "titleEs": "SpaceX en conversaciones para pedir prestado 40 mil millones de dólares para comprar chips Nvidia"
+    "published": "Wed, 07 Oct 2026 17:26:54 +0000",
+    "titleEs": "Constellation Brands venció a Wall Street, pero los bebedores de cerveza no aparecen"
    },
    {
-    "title": "2 AI Stocks to Buy and Hold for the Next Decade",
-    "url": "https://www.fool.com/investing/2026/10/07/2-ai-stocks-to-buy-and-hold-for-the-next-decade/?.tsrc=rss",
+    "title": "SpaceX Reportedly Wants $40 Billion to Buy Artificial Intelligence (AI) Chips. Here's Why That's Huge News for Nvidia Investors.",
+    "url": "https://www.fool.com/investing/2026/10/07/spacex-reportedly-wants-40-billion-to-buy-artifici/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 16:20:00 +0000",
-    "titleEs": "Dos acciones de IA para comprar y mantener durante la próxima década"
+    "published": "Wed, 07 Oct 2026 17:20:00 +0000",
+    "titleEs": "Se informa que SpaceX quiere 40 mil millones de dólares para comprar chips de inteligencia artificial (IA). He aquí por qué es una gran noticia para los inversores de Nvidia."
    },
    {
-    "title": "Enterprise AI Adoption and CoCo Agent Expansion Drive Snowflake’s (SNOW) Growth",
-    "url": "https://finance.yahoo.com/technology/ai/articles/enterprise-ai-adoption-coco-agent-160518125.html?.tsrc=rss",
+    "title": "Microsoft Gets an Nvidia-Powered AI Laptop. Is It Time to Buy?",
+    "url": "https://www.tikr.com/blog/microsoft-gets-an-nvidia-powered-ai-laptop-is-it-time-to-buy?ref=yahoofinance&amp;.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 16:05:18 +0000",
-    "titleEs": "La adopción de la IA empresarial y la expansión del agente CoCo impulsan el crecimiento de Snowflake (SNOW)"
+    "published": "Wed, 07 Oct 2026 17:19:59 +0000",
+    "titleEs": "Microsoft obtiene una computadora portátil con inteligencia artificial con tecnología Nvidia. ¿Es hora de comprar?"
    }
   ],
   "META": [
@@ -4537,6 +4537,13 @@
   ],
   "MSFT": [
    {
+    "title": "Microsoft Gets an Nvidia-Powered AI Laptop. Is It Time to Buy?",
+    "url": "https://www.tikr.com/blog/microsoft-gets-an-nvidia-powered-ai-laptop-is-it-time-to-buy?ref=yahoofinance&amp;.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Wed, 07 Oct 2026 17:19:59 +0000",
+    "titleEs": "Microsoft obtiene una computadora portátil con inteligencia artificial con tecnología Nvidia. ¿Es hora de comprar?"
+   },
+   {
     "title": "Bad News for Microsoft: “Basically Zero” AI Use for Most Employees on Copilot",
     "url": "https://www.tikr.com/blog/bad-news-for-microsoft-basically-zero-ai-use-for-most-employees-on-copilot?ref=yahoofinance&amp;.tsrc=rss",
     "source": "Yahoo Finance",
@@ -4563,13 +4570,6 @@
     "source": "Yahoo Finance",
     "published": "Wed, 07 Oct 2026 15:05:00 +0000",
     "titleEs": "Coherent Solutions amplía varias asociaciones de inteligencia artificial, nube y datos en 2026"
-   },
-   {
-    "title": "OptiSigns Expands Secure TV Dashboard Apps for Power BI, Salesforce, Tableau, Grafana, Databricks and More",
-    "url": "https://finance.yahoo.com/technology/articles/optisigns-expands-secure-tv-dashboard-150000128.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 15:00:00 +0000",
-    "titleEs": "OptiSigns amplía las aplicaciones Secure TV Dashboard para Power BI, Salesforce, Tableau, Grafana, Databricks y más"
    }
   ],
   "ADBE": [
@@ -4625,11 +4625,18 @@
     "titleEs": "Las ganancias de Micron aumentan a medida que se acelera el gasto en IA de Meta"
    },
    {
-    "title": "Why Sozzi just added McDonald's to the 'Wall of Underperformers'",
-    "url": "https://finance.yahoo.com/video/why-sozzi-just-added-mcdonalds-to-the-wall-of-underperformers-141102739.html?.tsrc=rss",
+    "title": "Sector Update: Tech Stocks Decline Wednesday Afternoon",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/sector-tech-stocks-decline-wednesday-173706015.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 14:11:02 +0000",
-    "titleEs": "Por qué Sozzi acaba de agregar a McDonald's al 'muro de los de bajo rendimiento'"
+    "published": "Wed, 07 Oct 2026 17:37:06 +0000",
+    "titleEs": "Actualización del sector: las acciones tecnológicas caen el miércoles por la tarde"
+   },
+   {
+    "title": "MU Stock Adds 3% As D.A. Davidson Forecasts Stock Value To Triple On Valuation Play",
+    "url": "https://stocktwits.com/news-articles/markets/equity/mu-stock-adds-3-as-d-a-davidson-forecasts-stock-value-to-triple-on-valuation-play/cZDvS2GRBZP?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Wed, 07 Oct 2026 17:36:26 +0000",
+    "titleEs": "Las acciones de MU aumentan un 3% a medida que D.A. Davidson pronostica que el valor de las acciones se triplicará gracias al juego de valoración"
    },
    {
     "title": "Apple Needs Chips, and “Micron Sets the Price.” Now Micron Is Making More Money than Apple",
@@ -4637,13 +4644,6 @@
     "source": "Yahoo Finance",
     "published": "Wed, 07 Oct 2026 16:44:37 +0000",
     "titleEs": "Apple necesita chips y \"Micron fija el precio\". Ahora Micron gana más dinero que Apple"
-   },
-   {
-    "title": "Micron (MU) Stock Still Looks Expensive Despite Its Huge Five Year Run",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/micron-mu-stock-still-looks-161114308.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 16:11:14 +0000",
-    "titleEs": "Las acciones de Micron (MU) todavía parecen caras a pesar de su enorme trayectoria de cinco años"
    }
   ],
   "PANW": [
@@ -5314,6 +5314,13 @@
   ],
   "GOOGL": [
    {
+    "title": "Is Constellation Energy Stock a Good Fit For Your Portfolio Risk?",
+    "url": "https://www.trefis.com/articles/617823/is-constellation-energy-stock-a-good-fit-for-your-portfolio-risk/2026-10-07?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Wed, 07 Oct 2026 17:33:11 +0000",
+    "titleEs": "¿Las acciones de Constellation Energy son una buena opción para el riesgo de su cartera?"
+   },
+   {
     "title": "Analysts Just Upgraded Marvell. Here’s What They See Coming Next",
     "url": "https://247wallst.com/investing/2026/10/07/analysts-just-upgraded-marvell-heres-what-they-see-coming-next/?.tsrc=rss",
     "source": "Yahoo Finance",
@@ -5340,13 +5347,6 @@
     "source": "Yahoo Finance",
     "published": "Wed, 07 Oct 2026 16:43:50 +0000",
     "titleEs": "El director ejecutivo de Unity quiere que la plataforma de juegos de inteligencia artificial de Google llegue a las consolas y dice que el objetivo no es un \"descuido de la inteligencia artificial\""
-   },
-   {
-    "title": "Prediction: This AI Stock Could Hit $1,000 Before 2030",
-    "url": "https://247wallst.com/investing/2026/10/07/prediction-this-ai-stock-could-hit-1000-before-2030/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 16:30:24 +0000",
-    "titleEs": "Predicción: esta acción de IA podría alcanzar los 1.000 dólares antes de 2030"
    }
   ],
   "V": [
@@ -5388,6 +5388,13 @@
   ],
   "COST": [
    {
+    "title": "Costco Stock Could Surprise Investors Over the Next Several Years",
+    "url": "https://247wallst.com/investing/2026/10/07/costco-stock-could-surprise-investors-over-the-next-several-years/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Wed, 07 Oct 2026 17:30:15 +0000",
+    "titleEs": "Las acciones de Costco podrían sorprender a los inversores en los próximos años"
+   },
+   {
     "title": "Costco brings back Disneyland ticket deal that could save hundreds",
     "url": "https://www.thestreet.com/travel/costco-disneyland-ticket-deal-2026?.tsrc=rss",
     "source": "Yahoo Finance",
@@ -5414,13 +5421,6 @@
     "source": "Yahoo Finance",
     "published": "Tue, 06 Oct 2026 09:50:00 +0000",
     "titleEs": "¿Debería invertir $1000 en acciones de Costco en octubre?"
-   },
-   {
-    "title": "Costco Is Down 10% in 6 Months While the S&P 500 Is Up 17%. Is Costco Too Cheap to Pass Up Under $900 a Share?",
-    "url": "https://www.fool.com/investing/2026/10/06/costco-is-down-10-in-6-months-while-the-sp-500-is/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Tue, 06 Oct 2026 09:35:00 +0000",
-    "titleEs": "Costco ha bajado un 10% en 6 meses, mientras que el S&P 500 ha subido un 17%. ¿Es Costco demasiado barato para dejar pasar menos de $900 por acción?"
    }
   ],
   "JPM": [
@@ -5675,6 +5675,13 @@
     "titleEs": "El principal toro de Tesla admite que las acciones son “ricas desde cualquier punto de vista” incluso después del ritmo de entrega"
    },
    {
+    "title": "Linda Yaccarino spent 2 years as Elon Musk’s X CEO. She says his ‘insatiable sense of urgency’ is the secret to his trillionaire success",
+    "url": "https://finance.yahoo.com/media-advertising/articles/linda-yaccarino-spent-2-years-145146079.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Wed, 07 Oct 2026 14:51:46 +0000",
+    "titleEs": "Linda Yaccarino pasó 2 años como directora ejecutiva de X de Elon Musk. Ella dice que su “insaciable sentido de urgencia” es el secreto de su éxito billonario"
+   },
+   {
     "title": "Tesla Pressured European Regulators to Ease FSD Review As Musk Claimed Delays 'Cost Lives': Reuters",
     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62220690/tesla-fsd-europe-regulator-pressure?utm_source=yahooFinance&amp;utm_campaign=partner_feed&amp;utm_medium=referral&amp;.tsrc=rss",
     "source": "Yahoo Finance",
@@ -5687,13 +5694,6 @@
     "source": "Yahoo Finance",
     "published": "Wed, 07 Oct 2026 13:35:46 +0000",
     "titleEs": "UBS señala una configuración alcista en las acciones de Tesla y eleva su precio objetivo"
-   },
-   {
-    "title": "Tesla’s Third-Quarter Deliveries Beat Expectations. Time to Buy the Stock?",
-    "url": "https://www.fool.com/investing/2026/10/07/tesla-s-third-quarter-deliveries-beat-expectations-time-to-buy-the-stock/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 13:20:01 +0000",
-    "titleEs": "Las entregas de Tesla en el tercer trimestre superaron las expectativas. ¿Es hora de comprar acciones?"
    }
   ],
   "AMZN": [
@@ -5758,6 +5758,13 @@
   ],
   "GOOGL": [
    {
+    "title": "Is Constellation Energy Stock a Good Fit For Your Portfolio Risk?",
+    "url": "https://www.trefis.com/articles/617823/is-constellation-energy-stock-a-good-fit-for-your-portfolio-risk/2026-10-07?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Wed, 07 Oct 2026 17:33:11 +0000",
+    "titleEs": "¿Las acciones de Constellation Energy son una buena opción para el riesgo de su cartera?"
+   },
+   {
     "title": "Analysts Just Upgraded Marvell. Here’s What They See Coming Next",
     "url": "https://247wallst.com/investing/2026/10/07/analysts-just-upgraded-marvell-heres-what-they-see-coming-next/?.tsrc=rss",
     "source": "Yahoo Finance",
@@ -5777,13 +5784,6 @@
     "source": "Yahoo Finance",
     "published": "Wed, 07 Oct 2026 16:45:21 +0000",
     "titleEs": "El alfabeto solo requiere un poquito de fe, así que sigo apretando el gatillo"
-   },
-   {
-    "title": "Unity CEO Wants Google AI Gaming Platform To Reach Consoles, Says Goal Isn't ‘AI Slop’",
-    "url": "https://stocktwits.com/news-articles/markets/equity/unity-ceo-wants-google-ai-gaming-platform-to-reach-consoles-says-goal-isn-t-ai-slop/cZDv08WRBZb?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 16:43:50 +0000",
-    "titleEs": "El director ejecutivo de Unity quiere que la plataforma de juegos de inteligencia artificial de Google llegue a las consolas y dice que el objetivo no es un \"descuido de la inteligencia artificial\""
    }
   ],
   "AMD": [
@@ -5818,6 +5818,13 @@
   ],
   "AVGO": [
    {
+    "title": "Broadcom vs. Qualcomm: Rapid Growth vs. Flat Revenue",
+    "url": "https://www.fool.com/coverage/charts/2026/10/07/broadcom-vs-qualcomm-rapid-growth-vs-flat-revenue/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Wed, 07 Oct 2026 17:20:02 +0000",
+    "titleEs": "Broadcom frente a Qualcomm: crecimiento rápido frente a ingresos fijos"
+   },
+   {
     "title": "ASML Holding N.V. vs. Broadcom: Which Technology Stock Is a Better Buy in 2026?",
     "url": "https://www.fool.com/coverage/better-buy/2026/10/07/asml-holding-nv-vs-broadcom-which-technology-stock-is-a-better-buy-in-2026/?.tsrc=rss",
     "source": "Yahoo Finance",
@@ -5837,13 +5844,6 @@
     "source": "Yahoo Finance",
     "published": "Wed, 07 Oct 2026 14:00:02 +0000",
     "titleEs": "Microdispositivos avanzados frente a Broadcom: ¿Qué acción de semiconductores es una mejor compra en 2026?"
-   },
-   {
-    "title": "Broadcom's AI Revenue Is Growing at 221%. Here's Why Custom Chips Could Be a Bigger Business Than GPUs.",
-    "url": "https://www.fool.com/investing/2026/10/07/broadcom-ai-revenue-grow-custom-chip-gpu/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Wed, 07 Oct 2026 11:53:00 +0000",
-    "titleEs": "Los ingresos por IA de Broadcom están creciendo un 221%. He aquí por qué los chips personalizados podrían ser un negocio más importante que las GPU."
    }
   ],
   "SNOW": [
@@ -5972,15 +5972,15 @@
  "source": "Yahoo Finance (en vivo)",
  "tecnicos": {
   "NVDA": {
-   "precio": 237.27,
+   "precio": 236.77,
    "max52": 239.24,
    "min52": 165.17,
-   "desdeMax": -0.8,
-   "desdeMin": 43.7,
+   "desdeMax": -1,
+   "desdeMin": 43.4,
    "posicion52": 97,
-   "sma50": 220.58,
+   "sma50": 220.57,
    "sma200": 201.68,
-   "rsi": 64,
+   "rsi": 63.2,
    "volatilidad": 37.7,
    "señales": [
     {
@@ -5993,10 +5993,10 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:28:34.466Z"
+   "actualizado": "2026-10-07T17:51:37.782Z"
   },
   "META": {
-   "precio": 724.58,
+   "precio": 724.63,
    "max52": 777.59,
    "min52": 525.72,
    "desdeMax": -6.8,
@@ -6013,18 +6013,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:28:35.108Z"
+   "actualizado": "2026-10-07T17:51:38.480Z"
   },
   "MSFT": {
-   "precio": 529.01,
+   "precio": 529.49,
    "max52": 542.07,
    "min52": 352.83,
-   "desdeMax": -2.4,
-   "desdeMin": 49.9,
+   "desdeMax": -2.3,
+   "desdeMin": 50.1,
    "posicion52": 93,
-   "sma50": 496.11,
+   "sma50": 496.12,
    "sma200": 433.57,
-   "rsi": 67.7,
+   "rsi": 68,
    "volatilidad": 32.7,
    "señales": [
     {
@@ -6037,18 +6037,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:28:35.674Z"
+   "actualizado": "2026-10-07T17:51:39.092Z"
   },
   "ADBE": {
-   "precio": 231.97,
+   "precio": 232.46,
    "max52": 359.91,
    "min52": 193.41,
-   "desdeMax": -35.5,
-   "desdeMin": 19.9,
+   "desdeMax": -35.4,
+   "desdeMin": 20.2,
    "posicion52": 23,
-   "sma50": 258.42,
-   "sma200": 258.12,
-   "rsi": 37.5,
+   "sma50": 258.43,
+   "sma200": 258.13,
+   "rsi": 37.8,
    "volatilidad": 40.8,
    "señales": [
     {
@@ -6065,18 +6065,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-07T17:28:36.235Z"
+   "actualizado": "2026-10-07T17:51:39.703Z"
   },
   "MU": {
-   "precio": 1086.44,
+   "precio": 1083.4,
    "max52": 1213.56,
    "min52": 181.6,
-   "desdeMax": -10.5,
-   "desdeMin": 498.3,
-   "posicion52": 88,
-   "sma50": 967.13,
-   "sma200": 694.06,
-   "rsi": 59.5,
+   "desdeMax": -10.7,
+   "desdeMin": 496.6,
+   "posicion52": 87,
+   "sma50": 967.07,
+   "sma200": 694.05,
+   "rsi": 59.2,
    "volatilidad": 81.1,
    "señales": [
     {
@@ -6093,18 +6093,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:28:36.850Z"
+   "actualizado": "2026-10-07T17:51:40.324Z"
   },
   "PANW": {
-   "precio": 407.36,
+   "precio": 408.46,
    "max52": 419.91,
    "min52": 141.67,
-   "desdeMax": -3,
-   "desdeMin": 187.5,
-   "posicion52": 95,
-   "sma50": 367.34,
+   "desdeMax": -2.7,
+   "desdeMin": 188.3,
+   "posicion52": 96,
+   "sma50": 367.36,
    "sma200": 253.73,
-   "rsi": 60.9,
+   "rsi": 61.5,
    "volatilidad": 47.8,
    "señales": [
     {
@@ -6117,18 +6117,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:28:37.402Z"
+   "actualizado": "2026-10-07T17:51:40.934Z"
   },
   "MELI": {
-   "precio": 1867.89,
+   "precio": 1866.59,
    "max52": 2360.76,
    "min52": 1546.81,
    "desdeMax": -20.9,
-   "desdeMin": 20.8,
+   "desdeMin": 20.7,
    "posicion52": 39,
-   "sma50": 1862.32,
+   "sma50": 1862.29,
    "sma200": 1836.47,
-   "rsi": 55.8,
+   "rsi": 55.7,
    "volatilidad": 41.3,
    "señales": [
     {
@@ -6137,10 +6137,10 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:28:37.986Z"
+   "actualizado": "2026-10-07T17:51:41.613Z"
   },
   "SPY": {
-   "precio": 777.35,
+   "precio": 777.3,
    "max52": 779.09,
    "min52": 631.97,
    "desdeMax": -0.2,
@@ -6148,7 +6148,7 @@
    "posicion52": 99,
    "sma50": 765.95,
    "sma200": 721.99,
-   "rsi": 60,
+   "rsi": 59.9,
    "volatilidad": 13,
    "señales": [
     {
@@ -6161,18 +6161,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:28:38.561Z"
+   "actualizado": "2026-10-07T17:51:42.232Z"
   },
   "ACN": {
-   "precio": 197.06,
+   "precio": 196.63,
    "max52": 288.54,
    "min52": 124.44,
-   "desdeMax": -31.7,
-   "desdeMin": 58.4,
+   "desdeMax": -31.9,
+   "desdeMin": 58,
    "posicion52": 44,
-   "sma50": 182.49,
+   "sma50": 182.48,
    "sma200": 194.76,
-   "rsi": 57.3,
+   "rsi": 57.1,
    "volatilidad": 48.2,
    "señales": [
     {
@@ -6181,18 +6181,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:28:41.642Z"
+   "actualizado": "2026-10-07T17:51:45.363Z"
   },
   "MCD": {
-   "precio": 231.88,
+   "precio": 232.33,
    "max52": 341.06,
    "min52": 230.94,
-   "desdeMax": -32,
-   "desdeMin": 0.4,
+   "desdeMax": -31.9,
+   "desdeMin": 0.6,
    "posicion52": 1,
    "sma50": 257.03,
    "sma200": 288.54,
-   "rsi": 25.6,
+   "rsi": 26,
    "volatilidad": 19.2,
    "señales": [
     {
@@ -6213,18 +6213,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-07T17:28:42.283Z"
+   "actualizado": "2026-10-07T17:51:46.027Z"
   },
   "IBIT": {
-   "precio": 47.07,
+   "precio": 47.04,
    "max52": 70.06,
    "min52": 33.29,
-   "desdeMax": -32.8,
-   "desdeMin": 41.4,
+   "desdeMax": -32.9,
+   "desdeMin": 41.3,
    "posicion52": 37,
    "sma50": 42.66,
    "sma200": 41.91,
-   "rsi": 56.7,
+   "rsi": 56.5,
    "volatilidad": 45.4,
    "señales": [
     {
@@ -6233,18 +6233,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:28:42.838Z"
+   "actualizado": "2026-10-07T17:51:46.627Z"
   },
   "NU": {
-   "precio": 15.64,
+   "precio": 15.62,
    "max52": 18.76,
    "min52": 11.6,
    "desdeMax": -16.7,
-   "desdeMin": 34.8,
+   "desdeMin": 34.7,
    "posicion52": 56,
    "sma50": 14.32,
    "sma200": 14.69,
-   "rsi": 64.2,
+   "rsi": 64,
    "volatilidad": 42,
    "señales": [
     {
@@ -6253,18 +6253,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:28:43.438Z"
+   "actualizado": "2026-10-07T17:51:47.226Z"
   },
   "VIST": {
-   "precio": 65.74,
+   "precio": 65.63,
    "max52": 79.25,
    "min52": 34.51,
-   "desdeMax": -17,
-   "desdeMin": 90.5,
+   "desdeMax": -17.2,
+   "desdeMin": 90.2,
    "posicion52": 70,
-   "sma50": 69.87,
+   "sma50": 69.86,
    "sma200": 65.12,
-   "rsi": 40.3,
+   "rsi": 40,
    "volatilidad": 48.8,
    "señales": [
     {
@@ -6273,18 +6273,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:28:52.309Z"
+   "actualizado": "2026-10-07T17:51:56.280Z"
   },
   "GGAL": {
-   "precio": 37.44,
+   "precio": 37.35,
    "max52": 60.79,
    "min52": 27.8,
-   "desdeMax": -38.4,
-   "desdeMin": 34.7,
+   "desdeMax": -38.6,
+   "desdeMin": 34.4,
    "posicion52": 29,
-   "sma50": 43.01,
+   "sma50": 43,
    "sma200": 47.16,
-   "rsi": 35.1,
+   "rsi": 34.8,
    "volatilidad": 66.8,
    "señales": [
     {
@@ -6301,18 +6301,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:28:52.880Z"
+   "actualizado": "2026-10-07T17:51:56.900Z"
   },
   "YPF": {
-   "precio": 50.17,
+   "precio": 49.83,
    "max52": 57.61,
    "min52": 23.99,
-   "desdeMax": -12.9,
-   "desdeMin": 109.1,
-   "posicion52": 78,
+   "desdeMax": -13.5,
+   "desdeMin": 107.7,
+   "posicion52": 77,
    "sma50": 51.78,
-   "sma200": 45.13,
-   "rsi": 42.1,
+   "sma200": 45.12,
+   "rsi": 41,
    "volatilidad": 46,
    "señales": [
     {
@@ -6321,18 +6321,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:28:53.467Z"
+   "actualizado": "2026-10-07T17:51:57.545Z"
   },
   "NFLX": {
-   "precio": 69.29,
+   "precio": 69.43,
    "max52": 124.14,
    "min52": 67.06,
-   "desdeMax": -44.2,
-   "desdeMin": 3.3,
+   "desdeMax": -44.1,
+   "desdeMin": 3.5,
    "posicion52": 4,
    "sma50": 75.42,
    "sma200": 83.68,
-   "rsi": 39.6,
+   "rsi": 40.1,
    "volatilidad": 36.4,
    "señales": [
     {
@@ -6349,18 +6349,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-07T17:28:56.519Z"
+   "actualizado": "2026-10-07T17:52:00.713Z"
   },
   "UBER": {
-   "precio": 68.47,
+   "precio": 68.57,
    "max52": 99.72,
    "min52": 65.94,
-   "desdeMax": -31.3,
-   "desdeMin": 3.8,
-   "posicion52": 7,
+   "desdeMax": -31.2,
+   "desdeMin": 4,
+   "posicion52": 8,
    "sma50": 73.08,
    "sma200": 74.57,
-   "rsi": 40,
+   "rsi": 40.3,
    "volatilidad": 35,
    "señales": [
     {
@@ -6377,18 +6377,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-07T17:28:57.072Z"
+   "actualizado": "2026-10-07T17:52:01.315Z"
   },
   "VST": {
-   "precio": 164.86,
+   "precio": 165.76,
    "max52": 210.85,
    "min52": 134.71,
-   "desdeMax": -21.8,
-   "desdeMin": 22.4,
-   "posicion52": 40,
-   "sma50": 143.34,
+   "desdeMax": -21.4,
+   "desdeMin": 23.1,
+   "posicion52": 41,
+   "sma50": 143.35,
    "sma200": 154.77,
-   "rsi": 74.5,
+   "rsi": 75,
    "volatilidad": 49.7,
    "señales": [
     {
@@ -6401,18 +6401,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:28:57.581Z"
+   "actualizado": "2026-10-07T17:52:01.977Z"
   },
   "KO": {
-   "precio": 86.21,
+   "precio": 86.14,
    "max52": 91.99,
    "min52": 66.12,
-   "desdeMax": -6.3,
-   "desdeMin": 30.4,
-   "posicion52": 78,
+   "desdeMax": -6.4,
+   "desdeMin": 30.3,
+   "posicion52": 77,
    "sma50": 88.02,
    "sma200": 80.25,
-   "rsi": 42.3,
+   "rsi": 41.8,
    "volatilidad": 18.8,
    "señales": [
     {
@@ -6421,18 +6421,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:28:58.207Z"
+   "actualizado": "2026-10-07T17:52:02.640Z"
   },
   "JNJ": {
-   "precio": 259.91,
+   "precio": 260.22,
    "max52": 278.43,
    "min52": 186,
-   "desdeMax": -6.7,
-   "desdeMin": 39.7,
+   "desdeMax": -6.5,
+   "desdeMin": 39.9,
    "posicion52": 80,
-   "sma50": 265.43,
+   "sma50": 265.44,
    "sma200": 242.41,
-   "rsi": 43,
+   "rsi": 43.5,
    "volatilidad": 19.2,
    "señales": [
     {
@@ -6441,18 +6441,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:28:58.803Z"
+   "actualizado": "2026-10-07T17:52:03.296Z"
   },
   "PG": {
-   "precio": 148.26,
+   "precio": 148.48,
    "max52": 167.2,
    "min52": 138.04,
-   "desdeMax": -11.3,
-   "desdeMin": 7.4,
-   "posicion52": 35,
+   "desdeMax": -11.2,
+   "desdeMin": 7.6,
+   "posicion52": 36,
    "sma50": 145.69,
    "sma200": 147.67,
-   "rsi": 55.7,
+   "rsi": 56.4,
    "volatilidad": 19.7,
    "señales": [
     {
@@ -6461,18 +6461,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:28:59.396Z"
+   "actualizado": "2026-10-07T17:52:04.330Z"
   },
   "WMT": {
-   "precio": 108.07,
+   "precio": 108.21,
    "max52": 134.2,
    "min52": 100.61,
-   "desdeMax": -19.5,
-   "desdeMin": 7.4,
-   "posicion52": 22,
-   "sma50": 108.57,
+   "desdeMax": -19.4,
+   "desdeMin": 7.5,
+   "posicion52": 23,
+   "sma50": 108.58,
    "sma200": 118.19,
-   "rsi": 52.7,
+   "rsi": 53,
    "volatilidad": 26.4,
    "señales": [
     {
@@ -6489,18 +6489,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-07T17:28:59.976Z"
+   "actualizado": "2026-10-07T17:52:05.094Z"
   },
   "GOOGL": {
-   "precio": 346.98,
+   "precio": 348.18,
    "max52": 402.62,
    "min52": 236.57,
-   "desdeMax": -13.8,
-   "desdeMin": 46.7,
-   "posicion52": 66,
-   "sma50": 345.59,
+   "desdeMax": -13.5,
+   "desdeMin": 47.2,
+   "posicion52": 67,
+   "sma50": 345.61,
    "sma200": 339.6,
-   "rsi": 52.7,
+   "rsi": 53.8,
    "volatilidad": 31.6,
    "señales": [
     {
@@ -6509,18 +6509,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:29:00.558Z"
+   "actualizado": "2026-10-07T17:52:05.753Z"
   },
   "V": {
-   "precio": 373.67,
+   "precio": 374.05,
    "max52": 384.14,
    "min52": 295.52,
-   "desdeMax": -2.7,
-   "desdeMin": 26.4,
-   "posicion52": 88,
-   "sma50": 369.25,
+   "desdeMax": -2.6,
+   "desdeMin": 26.6,
+   "posicion52": 89,
+   "sma50": 369.26,
    "sma200": 337.86,
-   "rsi": 57.3,
+   "rsi": 57.6,
    "volatilidad": 22.1,
    "señales": [
     {
@@ -6533,19 +6533,19 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:29:03.689Z"
+   "actualizado": "2026-10-07T17:52:08.904Z"
   },
   "COST": {
-   "precio": 944.29,
+   "precio": 946.61,
    "max52": 1094.32,
    "min52": 850,
-   "desdeMax": -13.7,
-   "desdeMin": 11.1,
-   "posicion52": 39,
-   "sma50": 932.13,
-   "sma200": 962.53,
-   "rsi": 61.7,
-   "volatilidad": 19.9,
+   "desdeMax": -13.5,
+   "desdeMin": 11.4,
+   "posicion52": 40,
+   "sma50": 932.18,
+   "sma200": 962.55,
+   "rsi": 62.5,
+   "volatilidad": 20,
    "señales": [
     {
      "texto": "Por debajo de su media de 200 dias",
@@ -6557,18 +6557,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:29:04.305Z"
+   "actualizado": "2026-10-07T17:52:09.583Z"
   },
   "JPM": {
-   "precio": 329.41,
+   "precio": 329.55,
    "max52": 365.18,
    "min52": 282.84,
    "desdeMax": -9.8,
    "desdeMin": 16.5,
    "posicion52": 57,
-   "sma50": 350.76,
-   "sma200": 322.01,
-   "rsi": 31.8,
+   "sma50": 350.77,
+   "sma200": 322.02,
+   "rsi": 31.9,
    "volatilidad": 22.4,
    "señales": [
     {
@@ -6577,18 +6577,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-07T17:29:04.922Z"
+   "actualizado": "2026-10-07T17:52:10.209Z"
   },
   "ORCL": {
-   "precio": 144.16,
+   "precio": 144.35,
    "max52": 313,
    "min52": 114.99,
    "desdeMax": -53.9,
-   "desdeMin": 25.4,
+   "desdeMin": 25.5,
    "posicion52": 15,
-   "sma50": 145.12,
+   "sma50": 145.13,
    "sma200": 162.31,
-   "rsi": 50.4,
+   "rsi": 50.6,
    "volatilidad": 56.4,
    "señales": [
     {
@@ -6609,18 +6609,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-07T17:29:05.507Z"
+   "actualizado": "2026-10-07T17:52:10.847Z"
   },
   "PLTR": {
-   "precio": 193.22,
+   "precio": 193.46,
    "max52": 207.18,
    "min52": 107.27,
-   "desdeMax": -6.7,
-   "desdeMin": 80.1,
+   "desdeMax": -6.6,
+   "desdeMin": 80.3,
    "posicion52": 86,
    "sma50": 173.71,
-   "sma200": 152.22,
-   "rsi": 65.4,
+   "sma200": 152.23,
+   "rsi": 65.6,
    "volatilidad": 60,
    "señales": [
     {
@@ -6637,24 +6637,20 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:29:06.061Z"
+   "actualizado": "2026-10-07T17:52:11.524Z"
   },
   "AMD": {
-   "precio": 646.35,
+   "precio": 643.77,
    "max52": 649.42,
    "min52": 190.95,
-   "desdeMax": -0.5,
-   "desdeMin": 238.5,
+   "desdeMax": -0.9,
+   "desdeMin": 237.1,
    "posicion52": 99,
-   "sma50": 522.65,
-   "sma200": 381.32,
-   "rsi": 70.9,
+   "sma50": 522.6,
+   "sma200": 381.31,
+   "rsi": 69.9,
    "volatilidad": 68.9,
    "señales": [
-    {
-     "texto": "RSI en 71: sobrecomprada",
-     "tono": "venta"
-    },
     {
      "texto": "Cerca del maximo de su año",
      "tono": "venta"
@@ -6669,18 +6665,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-07T17:29:06.615Z"
+   "actualizado": "2026-10-07T17:52:12.133Z"
   },
   "COIN": {
-   "precio": 178.12,
+   "precio": 178.23,
    "max52": 387.27,
    "min52": 141.09,
    "desdeMax": -54,
-   "desdeMin": 26.2,
+   "desdeMin": 26.3,
    "posicion52": 15,
-   "sma50": 174,
+   "sma50": 174.01,
    "sma200": 184.49,
-   "rsi": 46.3,
+   "rsi": 46.4,
    "volatilidad": 72.1,
    "señales": [
     {
@@ -6701,8 +6697,8 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-07T17:29:07.129Z"
+   "actualizado": "2026-10-07T17:52:12.746Z"
   }
  },
- "tecnicos_ts": "2026-10-07T17:29:07.629Z"
+ "tecnicos_ts": "2026-10-07T17:52:13.246Z"
 }
