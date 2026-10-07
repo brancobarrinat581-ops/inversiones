@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  var WL = [], AN = null;
+  var WL = [], AN = null, WLCFG = null;
 
   function getJSON(u, cb) {
     try {
@@ -26,6 +26,86 @@
     var d = Math.round((new Date(f + "T00:00:00Z") - new Date()) / 86400000);
     if (d < 0) return null;
     return d === 0 ? "hoy" : d === 1 ? "mañana" : "en " + d + " dias";
+  }
+
+  // ETFs y fondos: no tienen balance propio, no se les mide salud del negocio.
+  var SIN_BALANCE = ["SPY", "IBIT", "EWZ", "ILF", "ICLN", "IOLCAMA", "IOLDOLD"];
+
+  // Cada criterio devuelve bien / regular / flojo, con el umbral a la vista para
+  // que se pueda discutir el numero en vez de confiar en un puntaje opaco.
+  function criterios(f) {
+    var c = [];
+    var add = function (nombre, valor, fmt, bien, regular, mayorEsMejor, ayuda) {
+      if (valor == null || !isFinite(valor)) return;
+      var ok = mayorEsMejor ? valor >= bien : valor <= bien;
+      var med = mayorEsMejor ? valor >= regular : valor <= regular;
+      c.push({ nombre: nombre, texto: fmt(valor), estado: ok ? "bien" : med ? "regular" : "flojo", ayuda: ayuda });
+    };
+    var pct = function (v) { return (v * 100).toFixed(1) + "%"; };
+    var n1 = function (v) { return v.toFixed(1); };
+
+    add("Margen operativo", f.margenOperativo, pct, 0.20, 0.10, true, "Cuanto le queda de cada peso vendido despues de los costos del negocio");
+    add("Rentabilidad sobre patrimonio", f.roe, pct, 0.15, 0.08, true, "Cuanto gana por cada peso que pusieron los accionistas");
+    add("Crecimiento de ventas", f.crecimientoVentas, pct, 0.10, 0.03, true, "Cuanto crecieron los ingresos contra el mismo periodo del año anterior");
+    add("Deuda sobre patrimonio", f.deudaPatrimonio, n1, 60, 150, false, "Cuanto debe comparado con lo que vale. Mas bajo es mas solido");
+    add("PEG", f.peg, n1, 1.5, 3, false, "Precio en relacion al crecimiento. Arriba de 3 suele estar caro");
+    if (f.flujoLibre != null && isFinite(f.flujoLibre))
+      c.push({
+        nombre: "Flujo de caja libre", texto: "US$ " + Math.round(f.flujoLibre / 1e6).toLocaleString("es-AR") + " M",
+        estado: f.flujoLibre > 0 ? "bien" : "flojo",
+        ayuda: "Plata que le sobra despues de operar e invertir. Negativo significa que se financia con deuda o emision"
+      });
+    return c;
+  }
+
+  function bloqueFundamentos(tk, f) {
+    if (SIN_BALANCE.indexOf(tk) !== -1)
+      return '<div style="margin-top:8px;color:#666;font-size:11px">Es un ETF o fondo: no tiene balance propio que analizar.</div>';
+    var c = criterios(f || {});
+    if (!c.length)
+      return '<div style="margin-top:8px;color:#666;font-size:11px">Sin datos de balance todavia. Los trae el analisis de Yahoo.</div>';
+
+    var bien = c.filter(function (x) { return x.estado === "bien"; }).length;
+    var flojos = c.filter(function (x) { return x.estado === "flojo"; }).length;
+    var color = flojos >= 2 ? "#F44336" : bien >= c.length - 1 ? "#4CAF50" : "#FF9800";
+    var veredicto = flojos >= 2 ? "Fundamentos debiles" : bien >= c.length - 1 ? "Fundamentos solidos" : "Fundamentos mixtos";
+    var punto = { bien: "#4CAF50", regular: "#FF9800", flojo: "#F44336" };
+
+    var h = '<div style="margin-top:10px;background:#1a1a2e;border-radius:6px;padding:10px;border-left:3px solid ' + color + '">';
+    h += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">' +
+      '<span style="color:' + color + ';font-size:13px;font-weight:700">' + veredicto + "</span>" +
+      '<span style="color:#888;font-size:11px">' + bien + " de " + c.length + " criterios bien</span></div>";
+    c.forEach(function (x) {
+      h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0" title="' + x.ayuda + '">' +
+        '<span style="color:#aaa">' + x.nombre + "</span>" +
+        '<span style="color:' + punto[x.estado] + ';font-weight:700">' + x.texto + "</span></div>";
+    });
+    return h + "</div>";
+  }
+
+  // Precio de referencia: no predice nada, ordena lo que dicen los analistas y
+  // le aplica un margen de seguridad para no comprar justo en el techo.
+  function bloqueEntrada(f, px, objetivo, margen) {
+    if (!(f && f.target > 0) || !(px && px.usd > 0)) return "";
+    var piso = f.targetLow > 0 ? f.targetLow : f.target * 0.8;
+    var conMargen = f.target * (1 - margen / 100);
+    var referencia = Math.min(piso, conMargen);
+    var falta = (px.usd / referencia - 1) * 100;
+
+    var h = '<div style="margin-top:8px;background:#1a1a2e;border-radius:6px;padding:10px">';
+    h += '<div style="color:#888;font-size:11px;margin-bottom:6px">Precio de referencia para entrar</div>';
+    h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:2px 0">' +
+      '<span style="color:#aaa">Analistas: minimo / promedio / maximo</span>' +
+      '<span style="color:#fff">' + (f.targetLow > 0 ? fUSD(f.targetLow) : "-") + " / " + fUSD(f.target) +
+      " / " + (f.targetHigh > 0 ? fUSD(f.targetHigh) : "-") + "</span></div>";
+    h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:2px 0">' +
+      '<span style="color:#aaa">Con ' + margen + "% de margen de seguridad</span>" +
+      '<span style="color:#64B5F6;font-weight:700">' + fUSD(referencia) + "</span></div>";
+    h += '<div style="color:' + (falta <= 0 ? "#4CAF50" : "#888") + ';font-size:12px;margin-top:6px">' +
+      (falta <= 0 ? "Hoy cotiza por debajo de esa referencia." : "Hoy esta " + fPct(falta) + " por encima de esa referencia.") + "</div>";
+    if (objetivo != null)
+      h += '<div style="color:#666;font-size:11px;margin-top:4px">Tu precio propio: ' + fUSD(objetivo) + "</div>";
+    return h + "</div>";
   }
 
   function tarjeta(it, precios, an, enCartera) {
@@ -53,18 +133,6 @@
     }
     h += "</div>";
 
-    // Precio al que querria entrar
-    if (it.objetivo != null && px && px.usd > 0) {
-      var falta = (px.usd / it.objetivo - 1) * 100;
-      var llego = px.usd <= it.objetivo;
-      h += '<div style="margin-top:8px;padding:8px;border-radius:6px;background:' + (llego ? "#4CAF5022" : "#1a1a2e") +
-        ';border-left:3px solid ' + (llego ? "#4CAF50" : "#444") + '">' +
-        '<span style="color:' + (llego ? "#4CAF50" : "#888") + ';font-size:12px">' +
-        (llego ? "Llego a tu precio de entrada de " + fUSD(it.objetivo)
-               : "Tu precio de entrada es " + fUSD(it.objetivo) + ", esta " + fPct(falta) + " por encima") +
-        "</span></div>";
-    }
-
     // Consenso de analistas
     if (f.target > 0 && px && px.usd > 0) {
       var up = (f.target / px.usd - 1) * 100;
@@ -83,6 +151,9 @@
           '<div style="color:#fff;font-size:14px;font-weight:700">' + Number(f.forwardPE).toFixed(1) + "</div></div>";
       h += "</div>";
     }
+
+    h += bloqueEntrada(f, px, it.objetivo, (WLCFG && WLCFG.margen_seguridad) || 20);
+    h += bloqueFundamentos(tk, f);
 
     if (bancos.length) {
       h += '<div style="margin-top:8px"><div style="color:#888;font-size:11px;margin-bottom:4px">Bancos</div>';
@@ -135,6 +206,18 @@
       WL.forEach(function (it) { h += tarjeta(it, precios, AN, enCartera[it.ticker]); });
     }
 
+    // Las que ya tenes, con los mismos criterios: sirve tanto para decidir una
+    // compra nueva como para revisar si lo que tenes sigue teniendo sentido.
+    var propias = Object.keys(enCartera).filter(function (t) {
+      return (AN && AN.fundamentals && AN.fundamentals[t]) || SIN_BALANCE.indexOf(t) !== -1;
+    }).sort();
+    if (propias.length) {
+      h += '<h3 style="color:#fff;margin:18px 0 8px;font-size:15px">\uD83D\uDCBC Tus posiciones</h3>';
+      propias.forEach(function (t) {
+        h += tarjeta({ ticker: t, objetivo: null, nota: "" }, precios, AN, true);
+      });
+    }
+
     h += '<button id="wl-close2" style="width:100%;padding:10px;background:#333;color:#fff;border:none;' +
       'border-radius:8px;font-size:14px;cursor:pointer;margin-top:10px">Cerrar</button></div></div>';
 
@@ -161,7 +244,10 @@
     document.body.appendChild(b);
   }
 
-  getJSON("watchlist.json", function (d) { WL = (d && (Array.isArray(d) ? d : d.watchlist)) || []; });
+  getJSON("watchlist.json", function (d) {
+    WLCFG = d && !Array.isArray(d) ? d : null;
+    WL = (d && (Array.isArray(d) ? d : d.watchlist)) || [];
+  });
   getJSON("analysts.json", function (d) { AN = d; });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boton);

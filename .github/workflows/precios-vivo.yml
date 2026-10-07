@@ -19,6 +19,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 # Compartido con "Update Prices" para que nunca commiteen los dos a la vez.
 concurrency:
@@ -39,6 +40,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          export GH_TOKEN="${{ github.token }}"
 
           # Corta a las 21:00 UTC (18:00 AR, con la rueda ya cerrada) o a las
           # 5 horas y media, lo que pase primero. Nunca queda dando vueltas de noche.
@@ -51,7 +53,13 @@ jobs:
 
             if node scripts/fetch-prices.js && node scripts/validate-ops.js; then
               node scripts/snapshot.js || true
-              git add prices.json history.json
+              node scripts/alertas.js || true
+              node -e "for(const x of require('./alertas-nuevas.json')) console.log(JSON.stringify({t:x.titulo,b:x.texto}))" 2>/dev/null | while read -r linea; do
+                TIT=$(echo "$linea" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(JSON.parse(s).t))")
+                CUE=$(echo "$linea" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(JSON.parse(s).b))")
+                gh issue create --title "$TIT" --body "$CUE" --label alerta || echo "no pude crear el issue"
+              done
+              git add prices.json history.json alertas.json
               if git diff --staged --quiet; then
                 echo "Sin cambios"
               else

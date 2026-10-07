@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: precios
@@ -41,11 +42,25 @@ jobs:
       - name: Snapshot
         run: node scripts/snapshot.js
 
+      - name: Alertas
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node scripts/alertas.js
+          node -e "
+            const a=require('./alertas-nuevas.json');
+            for(const x of a) console.log(JSON.stringify({t:x.titulo,b:x.texto}));
+          " | while read -r linea; do
+            TIT=$(echo "$linea" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(JSON.parse(s).t))")
+            CUE=$(echo "$linea" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(JSON.parse(s).b))")
+            gh issue create --title "$TIT" --body "$CUE" --label alerta || echo "no pude crear el issue"
+          done
+
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add prices.json history.json
+          git add prices.json history.json alertas.json
           if git diff --staged --quiet; then
             echo "No changes"
           else

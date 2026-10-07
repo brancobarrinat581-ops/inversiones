@@ -188,7 +188,13 @@ async function fetchYahooData(prev) {
         price: raw(fd.currentPrice), target: raw(fd.targetMeanPrice), targetHigh: raw(fd.targetHighPrice), targetLow: raw(fd.targetLowPrice),
         consensus: fd.recommendationKey && fd.recommendationKey !== 'none' ? fd.recommendationKey : null,
         analysts: raw(fd.numberOfAnalystOpinions), pe: raw(sd.trailingPE), forwardPE: raw(sd.forwardPE) ?? raw(dks.forwardPE),
-        peg: raw(dks.pegRatio), source: 'Yahoo Finance', updated: new Date().toISOString()
+        peg: raw(dks.pegRatio), source: 'Yahoo Finance', updated: new Date().toISOString(),
+        // Salud del negocio. Viene en el mismo pedido, no cuesta una llamada extra.
+        margenBruto: raw(fd.grossMargins), margenOperativo: raw(fd.operatingMargins), margenNeto: raw(fd.profitMargins),
+        roe: raw(fd.returnOnEquity), deudaPatrimonio: raw(fd.debtToEquity),
+        crecimientoVentas: raw(fd.revenueGrowth), crecimientoGanancias: raw(fd.earningsGrowth),
+        flujoLibre: raw(fd.freeCashflow), caja: raw(fd.totalCash), deuda: raw(fd.totalDebt),
+        liquidez: raw(fd.currentRatio)
       };
       if (row.target != null || row.pe != null || row.forwardPE != null) { fundamentals[tk] = row; ok++; }
 

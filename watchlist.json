@@ -1,5 +1,5 @@
 {
-  "_ayuda": "Acciones que seguís sin tenerlas en cartera. 'objetivo' es el precio en dolares al que te interesaria entrar (poné null si todavia no lo definiste). 'nota' es tu tesis: por que la estas mirando. Para que aparezcan los datos, el ticker tambien tiene que estar en TICKERS dentro de scripts/analyze.js y en el MAP de scripts/fetch-prices.js.",
+  "_ayuda": "Acciones que seguís sin tenerlas en cartera. 'objetivo' es el precio en dolares al que te interesaria entrar (poné null si todavia no lo definiste). 'nota' es tu tesis: por que la estas mirando. Para que aparezcan los datos, el ticker tambien tiene que estar en TICKERS dentro de scripts/analyze.js y en el MAP de scripts/fetch-prices.js. 'margen_seguridad' es el descuento (en %) que se le aplica al precio objetivo promedio de los analistas para calcular el precio de referencia de entrada.",
   "watchlist": [
     {
       "ticker": "NFLX",
@@ -16,5 +16,6 @@
       "objetivo": null,
       "nota": "Generacion electrica en EEUU, demanda de los centros de datos de IA. Ojo: VST es Vistra, no confundir con VIST (Vista Energy), que ya tenes en cartera."
     }
-  ]
+  ],
+  "margen_seguridad": 20
 }
