@@ -6,7 +6,7 @@
   var PF = window.__PF;
   if (!PF) { console.warn("metrics-ui: falta scripts/lib/portfolio.js"); return; }
 
-  var HIST = null, DIV = [], GRUPOS = null;
+  var HIST = null, DIV = [], GRUPOS = null, WLIST = [];
 
   function getJSON(u, cb) {
     try {
@@ -82,6 +82,32 @@
     for (var j = serie.length - 1; j >= 0; j--) if (serie[j].spy > 0) { b = serie[j]; break; }
     if (!a || !b || a === b) return null;
     return { pct: (b.spy / a.spy - 1) * 100, desde: a.fecha, hasta: b.fecha };
+  }
+
+  // Rendimiento por ventana de tiempo. Usa el mismo calculo time-weighted,
+  // acotado a los ultimos N dias de la serie.
+  function periodos(serie, ops) {
+    if (!serie || serie.length < 2) return [];
+    var fin = serie[serie.length - 1].fecha;
+    var defs = [
+      { label: "Ultimo dia", dias: 1 },
+      { label: "Semana", dias: 7 },
+      { label: "Mes", dias: 30 },
+      { label: "Año", dias: 365 },
+      { label: "Maximo", dias: null }
+    ];
+    var out = [];
+    defs.forEach(function (d) {
+      var sub = serie;
+      if (d.dias != null) {
+        var desde = new Date(new Date(fin + "T00:00:00Z").getTime() - d.dias * 86400000).toISOString().slice(0, 10);
+        sub = serie.filter(function (x) { return x.fecha >= desde; });
+      }
+      if (sub.length < 2) return;
+      var t = twr(sub, ops);
+      if (t) out.push({ label: d.label, pct: t.pct, desde: sub[0].fecha });
+    });
+    return out;
   }
 
   // ---------- grafico ----------
@@ -166,6 +192,17 @@
       h += '<div style="display:flex;justify-content:space-between;color:#666;font-size:11px">' +
         "<span>" + serie[0].fecha + "</span><span>" + serie[serie.length - 1].fecha + "</span></div></div>";
 
+      var per = periodos(serie, ls("operaciones_raw", []));
+      if (per.length) {
+        h += '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">';
+        per.forEach(function (x) {
+          h += '<div style="flex:1;min-width:84px;background:#0d1117;border-radius:8px;padding:8px;text-align:center">' +
+            '<div style="color:#888;font-size:10px">' + x.label + "</div>" +
+            '<div style="color:' + col(x.pct) + ';font-size:15px;font-weight:700">' + fPct(x.pct) + "</div></div>";
+        });
+        h += "</div>";
+      }
+
       if (t) {
         h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">';
         h += bloque("Tu cartera", fPct(t.pct), "sin efecto de aportes", col(t.pct));
@@ -249,6 +286,20 @@
       }
     }
 
+    // ---------- simulador de compra ----------
+    h += '<h3 style="color:#fff;margin:16px 0 8px;font-size:15px">\uD83E\uDDEE Simulador de compra</h3>';
+    h += '<div style="background:#0d1117;border-radius:8px;padding:12px;margin-bottom:8px">';
+    h += '<div style="color:#888;font-size:12px;margin-bottom:8px">Antes de comprar, mira como te quedaria la cartera.</div>';
+    h += '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">';
+    h += '<select id="sim-tk" style="flex:1;min-width:120px;background:#1a1a2e;color:#fff;border:1px solid #333;' +
+      'border-radius:6px;padding:8px;font-size:13px"></select>';
+    h += '<input id="sim-monto" type="number" inputmode="numeric" placeholder="Monto en pesos" ' +
+      'style="flex:1;min-width:120px;background:#1a1a2e;color:#fff;border:1px solid #333;border-radius:6px;' +
+      'padding:8px;font-size:13px" />';
+    h += "</div>";
+    h += '<div id="sim-out" style="margin-top:10px;color:#666;font-size:12px">Elegi un ticker y un monto.</div>';
+    h += "</div>";
+
     // ---------- operaciones cerradas ----------
     var cer = PF.cerradas(ls("operaciones_raw", []));
     h += '<h3 style="color:#fff;margin:16px 0 8px;font-size:15px">\uD83D\uDCCB Operaciones cerradas</h3>';
@@ -289,6 +340,88 @@
     var a = document.getElementById("met-close"), b = document.getElementById("met-close2");
     if (a) a.onclick = cerrar;
     if (b) b.onclick = cerrar;
+
+    armarSimulador(r);
+  }
+
+  function armarSimulador(r) {
+    var sel = document.getElementById("sim-tk");
+    var inp = document.getElementById("sim-monto");
+    var out = document.getElementById("sim-out");
+    if (!sel || !inp || !out) return;
+
+    // Lo que ya tenes mas lo que estas siguiendo, sin repetir.
+    var opciones = r.posiciones.map(function (p) { return p.ticker; });
+    var wl = (WLIST || []).map(function (x) { return x.ticker; });
+    wl.forEach(function (t) { if (opciones.indexOf(t) === -1) opciones.push(t); });
+    sel.innerHTML = '<option value="">Que comprarias…</option>' +
+      opciones.map(function (t) { return '<option value="' + t + '">' + t + "</option>"; }).join("");
+
+    var deTicker = {};
+    if (GRUPOS && GRUPOS.grupos)
+      Object.keys(GRUPOS.grupos).forEach(function (g) {
+        (GRUPOS.grupos[g].tickers || []).forEach(function (t) { deTicker[t] = g; });
+      });
+
+    function calcular() {
+      var tk = sel.value;
+      var monto = Number(inp.value);
+      if (!tk || !isFinite(monto) || monto <= 0) {
+        out.innerHTML = '<span style="color:#666">Elegi un ticker y un monto.</span>';
+        return;
+      }
+      var valorNuevo = r.valor + monto;
+      var actual = 0;
+      r.posiciones.forEach(function (p) { if (p.ticker === tk) actual = p.valor; });
+      var pesoAntes = r.valor > 0 ? actual / r.valor * 100 : 0;
+      var pesoDespues = (actual + monto) / valorNuevo * 100;
+
+      var h = '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0">' +
+        '<span style="color:#aaa">Peso de ' + tk + "</span>" +
+        '<span style="color:#fff">' + pesoAntes.toFixed(1) + "% → <b>" + pesoDespues.toFixed(1) + "%</b></span></div>";
+
+      var g = deTicker[tk];
+      if (g && GRUPOS && GRUPOS.grupos[g]) {
+        var antesG = 0;
+        r.posiciones.forEach(function (p) { if (deTicker[p.ticker] === g) antesG += p.valor; });
+        var pgAntes = r.valor > 0 ? antesG / r.valor * 100 : 0;
+        var pgDespues = (antesG + monto) / valorNuevo * 100;
+        var obj = GRUPOS.grupos[g].objetivo;
+        h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0">' +
+          '<span style="color:#aaa">' + g + "</span>" +
+          '<span style="color:#fff">' + pgAntes.toFixed(1) + "% → <b>" + pgDespues.toFixed(1) + "%</b>" +
+          (obj != null ? ' <span style="color:' + (Math.abs(pgDespues - obj) > Math.abs(pgAntes - obj) ? "#FF9800" : "#4CAF50") +
+            '">(objetivo ' + obj + "%)</span>" : "") + "</span></div>";
+        if (obj != null && Math.abs(pgDespues - obj) > Math.abs(pgAntes - obj))
+          h += '<div style="color:#FF9800;font-size:11px;margin-top:4px">Esta compra te aleja del objetivo de ese grupo.</div>';
+      }
+
+      if (GRUPOS && GRUPOS.argentina) {
+        var arg = 0;
+        r.posiciones.forEach(function (p) { if (GRUPOS.argentina.indexOf(p.ticker) !== -1) arg += p.valor; });
+        var esArg = GRUPOS.argentina.indexOf(tk) !== -1;
+        var paAntes = r.valor > 0 ? arg / r.valor * 100 : 0;
+        var paDespues = (arg + (esArg ? monto : 0)) / valorNuevo * 100;
+        h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0">' +
+          '<span style="color:#aaa">Riesgo argentino</span>' +
+          '<span style="color:#fff">' + paAntes.toFixed(1) + "% → <b>" + paDespues.toFixed(1) + "%</b></span></div>";
+      }
+
+      h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0;' +
+        'border-top:1px solid #1f2430;margin-top:6px">' +
+        '<span style="color:#aaa">Cartera total</span>' +
+        '<span style="color:#fff">' + f0(r.valor) + " → <b>" + f0(valorNuevo) + "</b></span></div>";
+
+      var px = (ls("prices_data", {}).prices || {})[tk];
+      if (px && px.ars > 0)
+        h += '<div style="color:#666;font-size:11px;margin-top:4px">Son unos ' +
+          Math.floor(monto / px.ars).toLocaleString("es-AR") + " certificados a " + f0(px.ars) + " cada uno.</div>";
+
+      out.innerHTML = h;
+    }
+
+    sel.onchange = calcular;
+    inp.oninput = calcular;
   }
 
   function boton() {
@@ -306,6 +439,7 @@
 
   getJSON("history.json", function (d) { HIST = d; });
   getJSON("grupos.json", function (d) { GRUPOS = d; });
+  getJSON("watchlist.json", function (d) { WLIST = (d && (Array.isArray(d) ? d : d.watchlist)) || []; });
   getJSON("dividendos.json", function (d) { DIV = Array.isArray(d) ? d : (d && d.dividendos) || []; });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boton);
