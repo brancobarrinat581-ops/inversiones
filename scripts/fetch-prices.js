@@ -60,13 +60,26 @@ async function get(url, timeout = 10000) {
   } catch (e) { clearTimeout(id); throw e; }
 }
 
-async function yahooQuote(symbol) {
-  const r = await get(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1d`);
-  const m = (await r.json())?.chart?.result?.[0]?.meta;
-  const p = m?.regularMarketPrice;
-  if (!(p > 0)) throw new Error('sin precio');
-  const prev = m.chartPreviousClose || m.previousClose || 0;
-  return { price: p, changePct: prev > 0 ? ((p - prev) / prev) * 100 : 0, currency: m.currency || '' };
+// Yahoo corta por exceso de pedidos (HTTP 429) y devuelve el resto vacio. Con 33
+// tickers por dos simbolos cada uno son 66 llamadas, y sin reintentos los ultimos
+// de la lista quedaban SIEMPRE sin precio. Por eso: reintentos con espera creciente.
+async function yahooQuote(symbol, intentos = 3) {
+  let ultimo = null;
+  for (let i = 0; i < intentos; i++) {
+    try {
+      const r = await get(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1d`);
+      const m = (await r.json())?.chart?.result?.[0]?.meta;
+      const p = m?.regularMarketPrice;
+      if (!(p > 0)) throw new Error('sin precio');
+      const prev = m.chartPreviousClose || m.previousClose || 0;
+      return { price: p, changePct: prev > 0 ? ((p - prev) / prev) * 100 : 0, currency: m.currency || '' };
+    } catch (e) {
+      ultimo = e;
+      const limitado = /429|HTTP 4\d\d/.test(e.message);
+      if (i < intentos - 1) await new Promise(r => setTimeout(r, limitado ? 2500 * (i + 1) : 900));
+    }
+  }
+  throw ultimo || new Error('sin precio');
 }
 
 async function fetchCCL() {
@@ -114,7 +127,7 @@ async function main() {
   const byma = await fetchBYMA();
 
   const prices = {};
-  let real = 0, stale = 0;
+  let real = 0, stale = 0, vuelta = 0;
 
   for (const [tk, [symBA, symUS, ratio]] of Object.entries(MAP)) {
     let ars = null, usd = null, chg = 0, src = null;
@@ -129,6 +142,15 @@ async function main() {
     if (ars == null && usd != null && cclUsado) { ars = Math.round(usd / ratio * cclUsado); src = 'USD*CCL'; }
     if (usd == null && ars != null && cclUsado) usd = Math.round(ars * ratio / cclUsado * 100) / 100;
 
+    // Control del ratio: si tenemos el precio real en dolares y el del CEDEAR en
+    // pesos, el ratio queda despejado. Un ratio mal cargado es el error mas caro
+    // de este archivo, porque desvirtua el valor de toda la posicion.
+    if (ars > 0 && usd > 0 && cclUsado && src === 'Yahoo .BA') {
+      const implicito = usd * cclUsado / ars;
+      if (Math.abs(implicito - ratio) / ratio > 0.15)
+        console.log(`  ⚠️  ${tk}: ratio configurado ${ratio} pero los precios implican ${implicito.toFixed(1)}. Revisar.`);
+    }
+
     if (ars != null) {
       prices[tk] = { usd: usd || 0, ars: Math.round(ars * 100) / 100, changePct: Math.round(chg * 100) / 100,
                      src, stale: false, asOf: now };
@@ -141,7 +163,9 @@ async function main() {
     } else {
       console.log(`  ${tk}: SIN FUENTE y sin historico -> se omite`);
     }
-    await new Promise(r => setTimeout(r, 250));
+    vuelta++;
+    // Pausa mas larga cada 8 tickers: baja el ritmo justo antes de que Yahoo corte.
+    await new Promise(r => setTimeout(r, vuelta % 8 === 0 ? 3000 : 450));
   }
 
   // FCIs: valor cargado a mano en precios-manuales.json (si no existe, se arrastra el anterior)
@@ -168,7 +192,9 @@ async function main() {
     count: Object.keys(prices).length, real, stale, prices
   }, null, 2));
 
-  console.log(`\nOK -> prices.json | ${real} en vivo, ${stale} desactualizados`);
+  const faltan = Object.keys(MAP).filter(tk => !prices[tk]);
+  if (faltan.length) console.log(`\n⚠️  Sin precio (${faltan.length}): ${faltan.join(', ')}`);
+  console.log(`\nOK -> prices.json | ${real} en vivo, ${stale} desactualizados, ${Object.keys(prices).length} en total`);
 }
 
 main().catch(e => { console.error('ERROR', e); process.exit(1); });
