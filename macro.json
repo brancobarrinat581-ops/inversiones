@@ -1,15 +1,40 @@
 {
- "ts": null,
+ "ts": "2026-10-08T12:57:40.292Z",
  "fuente": "BCRA (api.bcra.gob.ar)",
  "_ayuda": "Lo completa scripts/macro.js en cada corrida del analisis. Si el BCRA no responde, se conserva lo ultimo que vino.",
  "ultimoIntento": {
-  "ts": "2026-10-08T12:54:28.940Z",
-  "ok": false,
-  "error": "catalogo con 1000 entradas, ninguna coincide con las buscadas",
-  "campos": [
-   "idVariable,descripcion,categoria,tipoSerie,periodicidad,unidadExpresion,moneda,primerFechaInformada,ultFechaInformada,ultValorInformado",
-   "idVariable,descripcion,categoria,tipoSerie,periodicidad,unidadExpresion,moneda,primerFechaInformada,ultFechaInformada,ultValorInformado",
-   "idVariable,descripcion,categoria,tipoSerie,periodicidad,unidadExpresion,moneda,primerFechaInformada,ultFechaInformada,ultValorInformado"
-  ]
- }
+  "ts": "2026-10-08T12:57:40.292Z",
+  "ok": true
+ },
+ "inflacionMensual": {
+  "valor": 1.7,
+  "fecha": "2026-08-31",
+  "descripcion": "Inflación mensual.",
+  "id": 27
+ },
+ "inflacionInteranual": {
+  "valor": 33.5,
+  "fecha": "2026-08-31",
+  "descripcion": "Inflación interanual.",
+  "id": 28
+ },
+ "inflacionEsperada": {
+  "valor": 0,
+  "fecha": "2026-10-02",
+  "descripcion": "Efecto monetario de los intereses, primas y remuneración de cuentas corrientes asociados a op. de pases, LELIQ, NOTALQ, redescuentos y adel. ",
+  "id": 55
+ },
+ "tasaPolitica": {
+  "valor": 2.5,
+  "fecha": "2023-09-13",
+  "descripcion": "Margen sobre tasa de politica monetaria de NOTALIQ en pesos de 190 días",
+  "id": 195
+ },
+ "plazoFijo": {
+  "valor": 22.8125,
+  "fecha": "2026-10-06",
+  "descripcion": "Tasa de interés BADLAR de bancos privados",
+  "id": 7
+ },
+ "inflacion12m": 33.5
 }
