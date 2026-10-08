@@ -1,11 +1,6 @@
 {
- "ts": "2026-10-08T13:36:53.568Z",
+ "ts": "2026-10-08T13:42:29.157Z",
  "fuente": "BCRA (api.bcra.gob.ar)",
- "_ayuda": "Lo completa scripts/macro.js en cada corrida del analisis. Si el BCRA no responde, se conserva lo ultimo que vino.",
- "ultimoIntento": {
-  "ts": "2026-10-08T13:36:53.568Z",
-  "ok": true
- },
  "inflacionMensual": {
   "valor": 1.7,
   "fecha": "2026-08-31",
@@ -24,17 +19,16 @@
   "descripcion": "Mediana de la variación interanual próximos 12 meses del índice de precios al consumidor del relevamiento de expectativas de mercado",
   "id": 29
  },
- "tasaPolitica": {
-  "valor": 2.5,
-  "fecha": "2023-09-13",
-  "descripcion": "Margen sobre tasa de politica monetaria de NOTALIQ en pesos de 190 días",
-  "id": 195
- },
  "plazoFijo": {
-  "valor": 84527238,
-  "fecha": "2026-10-05",
-  "descripcion": "Plazo fijo del total de sectores",
-  "id": 1377
+  "valor": 22.8125,
+  "fecha": "2026-10-06",
+  "descripcion": "Tasa de interés BADLAR de bancos privados",
+  "id": 7
  },
- "inflacion12m": 33.5
+ "inflacion12m": 33.5,
+ "ultimoIntento": {
+  "ts": "2026-10-08T13:42:29.157Z",
+  "ok": true
+ },
+ "_ayuda": "Lo completa scripts/macro.js en cada corrida del analisis. Si el BCRA no responde, se conserva lo ultimo que vino."
 }
