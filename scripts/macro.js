@@ -11,6 +11,17 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const SALIDA = path.join(ROOT, "macro.json");
 
+const { execFileSync } = require("child_process");
+
+// El BCRA a veces sirve una cadena de certificados incompleta, y Node la rechaza
+// con "fetch failed" aunque el sitio funcione en el navegador. Si pasa, reintentamos
+// con curl, que muestra el error real. Solo se usa para lectura de datos publicos.
+function viaCurl(url) {
+  const out = execFileSync("curl", ["-sS", "--max-time", "20", "-H", "Accept: application/json", url],
+    { encoding: "utf8" });
+  return JSON.parse(out);
+}
+
 async function get(url, timeout = 15000) {
   const c = new AbortController();
   const id = setTimeout(() => c.abort(), timeout);
@@ -22,7 +33,13 @@ async function get(url, timeout = 15000) {
     clearTimeout(id);
     if (!r.ok) throw new Error("HTTP " + r.status);
     return await r.json();
-  } catch (e) { clearTimeout(id); throw e; }
+  } catch (e) {
+    clearTimeout(id);
+    const causa = (e.cause && (e.cause.code || e.cause.message)) || e.message;
+    console.log(`  fetch fallo (${causa}), pruebo con curl`);
+    try { return viaCurl(url); }
+    catch (e2) { throw new Error(`${causa} | curl: ${String(e2.message).split("\n")[0]}`); }
+  }
 }
 
 // El catalogo de variables cambia de ID cada tanto, asi que las buscamos por su
@@ -62,7 +79,12 @@ const fechaDe = (v) => String(v.fecha || v.Fecha || "").slice(0, 10) || null;
 async function main() {
   const lista = await catalogo();
   if (!lista.length) {
-    console.log("⚠️  BCRA no respondio. Dejo macro.json como estaba.");
+    console.log("⚠️  BCRA no respondio. Dejo los datos anteriores.");
+    // Dejo el diagnostico en el archivo, asi se ve desde el repo sin leer el log.
+    let prev = {};
+    try { prev = JSON.parse(fs.readFileSync(SALIDA, "utf8")); } catch (e) {}
+    prev.ultimoIntento = { ts: new Date().toISOString(), ok: false, error: "BCRA no respondio desde GitHub Actions" };
+    fs.writeFileSync(SALIDA, JSON.stringify(prev, null, 1));
     process.exit(0);
   }
 
@@ -89,9 +111,10 @@ async function main() {
   else if (out.inflacionMensual) out.inflacion12m = (Math.pow(1 + out.inflacionMensual.valor / 100, 12) - 1) * 100;
 
   if (Object.keys(out).length <= 2) {
-    console.log("⚠️  No se pudo leer ninguna variable util. No escribo macro.json.");
+    console.log("⚠️  No se pudo leer ninguna variable util.");
     process.exit(0);
   }
+  out.ultimoIntento = { ts: out.ts, ok: true };
 
   // Conservamos lo anterior para lo que hoy no vino.
   let prev = {};
