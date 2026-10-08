@@ -162,6 +162,18 @@
 
   window.__UI = { registrar: registrar, modal: modal, colores: C, abrirMenu: abrirMenu };
 
+  // Los paneles que no se arman con este kit (el de Oportunidades, que trae su
+  // propio modal) igual tienen que cerrarse con Escape: si uno responde y el otro
+  // no, el que no responde parece colgado.
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    ["disc-modal", "eval-modal"].forEach(function (id) {
+      var n = document.getElementById(id);
+      if (n) n.remove();
+    });
+    cerrarMenu();
+  });
+
   function arrancar() { botonMenu(); adoptar(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", arrancar);
   else arrancar();
