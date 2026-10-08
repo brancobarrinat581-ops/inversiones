@@ -51,9 +51,16 @@ async function catalogo() {
   ];
   for (const url of bases) {
     try {
-      const d = await get(url);
-      const lista = Array.isArray(d) ? d : d.results || d.Results || [];
-      if (lista.length) { console.log(`Catalogo BCRA: ${lista.length} variables (${url.split("/").slice(-2)[0]})`); return lista; }
+      // El catalogo viene paginado: sin recorrer todas las paginas, las variables
+      // de inflacion pueden quedar afuera.
+      const todas = [];
+      for (let offset = 0; offset < 5000; offset += 1000) {
+        const d = await get(`${url}?limit=1000&offset=${offset}`);
+        const pagina = Array.isArray(d) ? d : d.results || d.Results || [];
+        todas.push(...pagina);
+        if (pagina.length < 1000) break;
+      }
+      if (todas.length) { console.log(`Catalogo BCRA: ${todas.length} variables`); return todas; }
     } catch (e) { console.log("BCRA " + url + " FALLO: " + e.message); }
   }
   return [];
@@ -70,11 +77,12 @@ function buscar(lista, frases) {
   return null;
 }
 
+// El catalogo trae el ultimo valor informado en ultValorInformado / ultFechaInformada.
 const valorDe = (v) => {
-  const n = Number(v.valor != null ? v.valor : v.Valor);
+  const n = Number(v.ultValorInformado != null ? v.ultValorInformado : v.valor);
   return isFinite(n) ? n : null;
 };
-const fechaDe = (v) => String(v.fecha || v.Fecha || "").slice(0, 10) || null;
+const fechaDe = (v) => String(v.ultFechaInformada || v.fecha || "").slice(0, 10) || null;
 
 async function main() {
   const lista = await catalogo();
