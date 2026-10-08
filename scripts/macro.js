@@ -69,9 +69,12 @@ async function catalogo() {
 const norm = (s) => String(s || "").toLowerCase()
   .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
+// Coincidencia al comienzo de la descripcion: "includes" agarraba variables que
+// solo mencionaban la frase en el medio (una "remuneracion" o un "margen sobre la
+// tasa"), y mostraba numeros de otra cosa con el nombre de la buena.
 function buscar(lista, frases) {
   for (const f of frases) {
-    const hit = lista.find(v => norm(v.descripcion || v.Descripcion).includes(norm(f)));
+    const hit = lista.find(v => norm(v.descripcion || v.Descripcion).startsWith(norm(f)));
     if (hit) return hit;
   }
   return null;
@@ -99,7 +102,7 @@ async function main() {
   const buscados = {
     inflacionMensual: ["inflacion mensual"],
     inflacionInteranual: ["inflacion interanual"],
-    inflacionEsperada: ["inflacion esperada", "rem", "proximos 12 meses"],
+    inflacionEsperada: ["mediana de la variacion interanual"],
     tasaPolitica: ["tasa de politica monetaria"],
     plazoFijo: ["badlar", "plazo fijo", "tasa de interes de depositos"]
   };
