@@ -151,7 +151,10 @@
     // Resultado total
     h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">';
     h += bloque("Invertido", f0(r.invertido), r.posiciones.length + " posiciones");
-    h += bloque("Valor actual", f0(r.valor), fUSD(r.valorUSD) + " al CCL " + Math.round(r.ccl));
+    var pxd = ls("prices_data", {});
+    var edad = pxd.ts ? Math.round((Date.now() - new Date(pxd.ts).getTime()) / 3600000) : null;
+    h += bloque("Valor actual", f0(r.valor), fUSD(r.valorUSD) + " al CCL " + Math.round(r.ccl) +
+      (edad != null ? " · precios de hace " + (edad < 48 ? edad + " h" : Math.round(edad / 24) + " dias") : ""));
     h += "</div>";
 
     h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">';
@@ -195,7 +198,9 @@
             (r.tir > pf ? "le ganas por " + (r.tir - pf).toFixed(1) : "te gana por " + (pf - r.tir).toFixed(1)) +
             " puntos</span></div>";
         }
-        h += '<div style="color:#5c6478;font-size:10px;margin-top:6px">Fuente: BCRA</div></div>';
+        var fm = MACRO.inflacionInteranual && MACRO.inflacionInteranual.fecha;
+        h += '<div style="color:#5c6478;font-size:10px;margin-top:6px">Fuente: BCRA' +
+          (fm ? " · dato de " + fm : "") + "</div></div>";
       }
       h += "</div>";
     }

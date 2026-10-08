@@ -81,7 +81,7 @@
         '<span style="color:#aaa">' + x.nombre + "</span>" +
         '<span style="color:' + punto[x.estado] + ';font-weight:700">' + x.texto + "</span></div>";
     });
-    return h + "</div>";
+    return h + sello(f.source || "Yahoo", f.updated) + "</div>";
   }
 
   // Precio de referencia: no predice nada, ordena lo que dicen los analistas y
@@ -134,7 +134,29 @@
     if (t.sma200)
       h += '<div style="color:#5c6478;font-size:11px;margin-top:4px">Media 200 dias: ' + fUSD(t.sma200) +
         (t.sma50 ? " · 50 dias: " + fUSD(t.sma50) : "") + "</div>";
-    return h + "</div>";
+    return h + sello("Yahoo", t.actualizado) + "</div>";
+  }
+
+  // Sello de procedencia. La idea es que ningun numero se vea igual venga de donde
+  // venga: un target traido hace diez minutos y uno de hace cuatro meses tienen que
+  // distinguirse de un vistazo.
+  function antiguedad(iso) {
+    if (!iso) return null;
+    var ms = Date.now() - new Date(iso).getTime();
+    if (!isFinite(ms) || ms < 0) return null;
+    var h = ms / 3600000;
+    if (h < 1) return "hace " + Math.max(1, Math.round(ms / 60000)) + " min";
+    if (h < 48) return "hace " + Math.round(h) + " h";
+    return "hace " + Math.round(h / 24) + " dias";
+  }
+
+  function sello(fuente, iso) {
+    var edad = antiguedad(iso);
+    if (!fuente && !edad) return "";
+    // Mas de una semana ya no es un dato de hoy: se avisa en naranja.
+    var viejo = iso && (Date.now() - new Date(iso).getTime()) > 7 * 86400000;
+    return '<div style="text-align:right;color:' + (viejo ? "#FF9800" : "#5c6478") + ';font-size:10px;margin-top:6px">' +
+      (fuente || "") + (edad ? " · " + edad : "") + (viejo ? " · dato viejo" : "") + "</div>";
   }
 
   var fM = function (n) {
@@ -167,7 +189,7 @@
     if (!hayCompras)
       h += '<div style="color:#5c6478;font-size:11px;margin-top:4px">Sin compras de insiders. ' +
         "Las ventas solas no dicen mucho: se vende por impuestos o por plata personal.</div>";
-    return h + "</div>";
+    return h + sello(d.fuente || "Yahoo", d.traido) + "</div>";
   }
 
   // Si el consenso le viene errando por abajo trimestre a trimestre, las
@@ -186,7 +208,7 @@
         '<span style="color:' + c + '">' + (q.sorpresaPct != null ? fPct(q.sorpresaPct) : "") +
         ' <span style="color:#5c6478">(' + q.real + " vs " + q.esperado + ")</span></span></div>";
     });
-    return h + "</div>";
+    return h + sello(sp.fuente || "Yahoo", sp.traido) + "</div>";
   }
 
   function tarjeta(it, precios, an, enCartera) {
@@ -213,6 +235,7 @@
       h += '<div style="color:#F44336;font-size:12px;text-align:right">Sin precio todavia</div>';
     }
     h += "</div>";
+    if (px) h += sello(px.src, px.asOf);
 
     // Consenso de analistas
     if (f.target > 0 && px && px.usd > 0) {
@@ -246,7 +269,7 @@
           '<span style="color:#ccc">' + b.bank + (b.rating ? ' <span style="color:#888">' + b.rating + "</span>" : "") + "</span>" +
           '<span style="color:#fff">' + (b.target ? fUSD(b.target) : "") + "</span></div>";
       });
-      h += "</div>";
+      h += sello(bancos[0].fuente || "Yahoo", bancos[0].traido) + "</div>";
     }
 
     var prox = cats.filter(function (c) { return dias(c.date); })[0];

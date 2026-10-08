@@ -44,81 +44,10 @@ const YSYM = { PAMP: 'PAM' };
 const ysym = tk => YSYM[tk] || tk;
 
 // Respaldo si Yahoo no responde. Se descartan solos cuando la fecha ya paso.
-const CATALYSTS_FALLBACK = {
-  MU:[{date:"2026-09-30",event:"Balance Q4 FY2026",type:"earnings",importance:"high"}],
-  ACN:[{date:"2026-10-01",event:"Balance Q4 FY2026",type:"earnings",importance:"high"}],
-  MSFT:[{date:"2026-10-27",event:"Balance Q1 FY2027 (estimado)",type:"earnings",importance:"high"}],
-  META:[{date:"2026-10-28",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"high"}],
-  MCD:[{date:"2026-10-28",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"medium"}],
-  MELI:[{date:"2026-11-05",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"high"}],
-  VIST:[{date:"2026-11-10",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"medium"}],
-  NU:[{date:"2026-11-12",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"high"}],
-  PAMP:[{date:"2026-11-12",event:"Balance Q3 2026 (estimado)",type:"earnings",importance:"medium"}],
-  PANW:[{date:"2026-11-19",event:"Balance Q1 FY2027 (estimado)",type:"earnings",importance:"high"}],
-  NVDA:[{date:"2026-11-25",event:"Balance Q3 FY2027 (estimado)",type:"earnings",importance:"high"}],
-  ADBE:[{date:"2026-12-10",event:"Balance Q4 FY2026 (estimado)",type:"earnings",importance:"high"}]
-};
 const HIGH = new Set(['NVDA','META','MSFT','ADBE','MU','PANW','MELI','ACN','NU']);
 
 // TARGETS POR BANCO — Datos verificados de TipRanks, CNBC, Yahoo Finance, MarketBeat.
 // Fecha de cada estimación incluida. Se actualizan cuando salen nuevos informes.
-const BANK_TARGETS_FALLBACK = {
-  NVDA: [
-    {bank:"Goldman Sachs",analyst:"Toshiya Hari",target:285,rating:"Buy",date:"2026-06"},
-    {bank:"Morgan Stanley",analyst:"Joseph Moore",target:288,rating:"Overweight",date:"2026-06"},
-    {bank:"JPMorgan",analyst:"Harlan Sur",target:265,rating:"Overweight",date:"2026-05"},
-    {bank:"Bank of America",analyst:"",target:350,rating:"Buy",date:"2026-06"},
-    {bank:"Jefferies",analyst:"Blayne Curtis",target:275,rating:"Buy",date:"2026-05"},
-    {bank:"Wells Fargo",analyst:"",target:315,rating:"Buy",date:"2026-05"}
-  ],
-  MSFT: [
-    {bank:"Goldman Sachs",analyst:"",target:655,rating:"Buy",date:"2026-08"},
-    {bank:"Morgan Stanley",analyst:"",target:600,rating:"Overweight",date:"2026-07"},
-    {bank:"Wedbush",analyst:"Dan Ives",target:625,rating:"Outperform",date:"2026-07"},
-    {bank:"Stifel",analyst:"",target:530,rating:"Hold",date:"2026-09"},
-    {bank:"Bernstein",analyst:"",target:641,rating:"Buy",date:"2026-07"}
-  ],
-  META: [
-    {bank:"Morgan Stanley",analyst:"",target:750,rating:"Overweight",date:"2026-06"},
-    {bank:"JPMorgan",analyst:"Doug Anmuth",target:800,rating:"Overweight",date:"2026-05"},
-    {bank:"Goldman Sachs",analyst:"Eric Sheridan",target:636,rating:"Buy",date:"2026-04"}
-  ],
-  ADBE: [
-    {bank:"RBC Capital",analyst:"Matthew Swanson",target:315,rating:"Buy",date:"2026-09"},
-    {bank:"Morgan Stanley",analyst:"Adam Wood",target:240,rating:"Underweight",date:"2026-07"},
-    {bank:"Citi",analyst:"",target:301,rating:"Neutral",date:"2026-09"},
-    {bank:"CLSA",analyst:"",target:300,rating:"Outperform",date:"2026-09"},
-    {bank:"Barclays",analyst:"",target:295,rating:"Buy",date:"2026-09"},
-    {bank:"Goldman Sachs",analyst:"Gabriela Borges",target:220,rating:"Sell",date:"2026-07"}
-  ],
-  MU: [
-    {bank:"JPMorgan",analyst:"",target:150,rating:"Overweight",date:"2026-06"},
-    {bank:"Morgan Stanley",analyst:"",target:140,rating:"Overweight",date:"2026-06"}
-  ],
-  PANW: [
-    {bank:"Goldman Sachs",analyst:"",target:330,rating:"Buy",date:"2026-05"},
-    {bank:"Morgan Stanley",analyst:"",target:320,rating:"Overweight",date:"2026-05"}
-  ],
-  MELI: [
-    {bank:"Morgan Stanley",analyst:"Andrew Ruben",target:2950,rating:"Overweight",date:"2026-06"},
-    {bank:"JPMorgan",analyst:"Marcelo Santos",target:2650,rating:"Neutral",date:"2026-06"},
-    {bank:"Barclays",analyst:"",target:2900,rating:"Buy",date:"2026-06"}
-  ],
-  ACN: [
-    {bank:"Wolfe Research",analyst:"",target:285,rating:"Outperform",date:"2026-09"},
-    {bank:"BMO Capital",analyst:"",target:325,rating:"Hold",date:"2026-06"},
-    {bank:"HSBC",analyst:"",target:240,rating:"Reduce",date:"2026-07"}
-  ],
-  MCD: [
-    {bank:"Consenso Wall St",analyst:"41 analistas",target:337,rating:"Buy",date:"2026-08"}
-  ],
-  NU: [
-    {bank:"Consenso Wall St",analyst:"14 analistas",target:16.5,rating:"Buy",date:"2026-08"}
-  ],
-  VIST: [
-    {bank:"Seeking Alpha",analyst:"",target:86,rating:"Buy",date:"2026-07"}
-  ]
-};
 
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
@@ -183,8 +112,9 @@ const raw = x => (x && typeof x === 'object' && 'raw' in x) ? x.raw : (typeof x 
 const ym = sec => { const d = new Date(sec * 1000); return d.getUTCFullYear() + '-' + String(d.getUTCMonth() + 1).padStart(2, '0'); };
 
 // ---------- 1. Fundamentals + bancos + fechas de balance ----------
-async function fetchYahooData(prev) {
+async function fetchYahooData(prev, prevBanks, prevCats) {
   const fundamentals = {}, banks = {}, cats = {}, directivos = {}, sorpresas = {};
+  const hoyISO = new Date().toISOString();
   let ok = 0, fail = 0, yahooCaido = false;
   const today = new Date(); today.setUTCHours(0, 0, 0, 0);
 
@@ -222,6 +152,7 @@ async function fetchYahooData(prev) {
         const ventas = movs.filter(t => /sale|sold/i.test(t.transactionText || ''));
         const monto = (l) => l.reduce((a, t) => a + (raw(t.value) || 0), 0);
         directivos[tk] = {
+          fuente: 'Yahoo', traido: hoyISO,
           compras: compras.length, ventas: ventas.length,
           montoCompras: Math.round(monto(compras)), montoVentas: Math.round(monto(ventas)),
           netoPct: raw(neto.netPercentInsiderShares) != null ? Math.round(raw(neto.netPercentInsiderShares) * 1000) / 10 : null,
@@ -242,7 +173,7 @@ async function fetchYahooData(prev) {
       }));
       if (trimestres.length) {
         const superados = trimestres.filter(q => q.real > q.esperado).length;
-        sorpresas[tk] = { trimestres, superados, total: trimestres.length };
+        sorpresas[tk] = { trimestres, superados, total: trimestres.length, fuente: 'Yahoo', traido: hoyISO };
       }
 
       // Targets por banco: ultima nota de cada firma en los ultimos 6 meses, con precio objetivo
@@ -252,14 +183,14 @@ async function fetchYahooData(prev) {
         const tgt = raw(h.currentPriceTarget);
         if (visto.has(h.firm) || !(tgt > 0) || !sane(tk, tgt)) return;
         visto.add(h.firm);
-        lista.push({ bank: h.firm, analyst: '', target: tgt, rating: h.toGrade || '', date: ym(h.epochGradeDate), action: h.priceTargetAction || h.action || '' });
+        lista.push({ bank: h.firm, analyst: '', target: tgt, rating: h.toGrade || '', date: ym(h.epochGradeDate), action: h.priceTargetAction || h.action || '', fuente: 'Yahoo', traido: hoyISO });
       });
       if (lista.length) banks[tk] = lista.slice(0, 8);
 
       // Proxima fecha de balance
       const ed = ((res.calendarEvents && res.calendarEvents.earnings && res.calendarEvents.earnings.earningsDate) || [])
         .map(raw).filter(Boolean).map(s => new Date(s * 1000)).filter(d => d >= today).sort((a, b) => a - b)[0];
-      if (ed) cats[tk] = [{ date: ed.toISOString().slice(0, 10), event: 'Presenta balance', type: 'earnings', importance: HIGH.has(tk) ? 'high' : 'medium' }];
+      if (ed) cats[tk] = [{ date: ed.toISOString().slice(0, 10), event: 'Presenta balance', type: 'earnings', importance: HIGH.has(tk) ? 'high' : 'medium', fuente: 'Yahoo', traido: hoyISO }];
 
       console.log(`  ${tk}: target=${row.target} cons=${row.consensus} bancos=${lista.length} balance=${ed ? ed.toISOString().slice(0, 10) : '-'}`);
     } else fail++;
@@ -270,8 +201,11 @@ async function fetchYahooData(prev) {
       if (sane(tk, p.price, 0.8, 1.25) && sane(tk, p.target)) fundamentals[tk] = p;
       else console.log(`  ${tk}: descarto fundamentals viejos (precio ${p.price} vs vivo ${LIVE[tk]})`);
     }
-    if (!banks[tk] && BANK_TARGETS_FALLBACK[tk]) {
-      const l = BANK_TARGETS_FALLBACK[tk].filter(b => sane(tk, b.target));
+    // Si Yahoo no trajo bancos, conservamos lo ultimo REAL que vino, con su fecha
+    // original a la vista. Antes habia una tabla escrita a mano que se mostraba
+    // igual que un dato fresco: eso se elimino.
+    if (!banks[tk] && prevBanks && prevBanks[tk]) {
+      const l = prevBanks[tk].filter(b => sane(tk, b.target));
       if (l.length) banks[tk] = l;
     }
     await sleep(350);
@@ -280,8 +214,8 @@ async function fetchYahooData(prev) {
   // Catalysts: Yahoo > respaldo; se eliminan eventos de hace mas de 2 dias
   const lim = new Date(today.getTime() - 2 * 86400000).toISOString().slice(0, 10);
   const catalysts = {};
-  new Set([...Object.keys(CATALYSTS_FALLBACK), ...Object.keys(cats)]).forEach(tk => {
-    const l = (cats[tk] || CATALYSTS_FALLBACK[tk] || []).filter(e => e.date >= lim);
+  new Set([...Object.keys(prevCats || {}), ...Object.keys(cats)]).forEach(tk => {
+    const l = (cats[tk] || (prevCats && prevCats[tk]) || []).filter(e => e.date >= lim);
     if (l.length) catalysts[tk] = l;
   });
 
@@ -372,7 +306,7 @@ async function main() {
   try { prev = JSON.parse(fs.readFileSync('analysts.json', 'utf8')); } catch (e) {}
 
   console.log('\n[1/3] Yahoo: fundamentals, bancos, balances');
-  const y = await fetchYahooData(prev.fundamentals);
+  const y = await fetchYahooData(prev.fundamentals, prev.bank_targets, prev.catalysts);
 
   console.log('\n[2/3] Noticias');
   const news = await fetchNewsFor(Object.keys(TICKERS), prev.news, 5);
