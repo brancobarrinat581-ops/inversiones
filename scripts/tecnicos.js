@@ -11,6 +11,11 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 
+// Algunos tickers argentinos cotizan en Nueva York con otro simbolo. Sin esto,
+// PAMP quedaba sin historico y por lo tanto fuera del calculo de correlaciones.
+const YSYM = { PAMP: "PAM", BMA: "BMA", VIST: "VIST", GGAL: "GGAL", YPF: "YPF" };
+const ysym = (tk) => YSYM[tk] || tk;
+
 async function get(url, timeout = 12000) {
   const c = new AbortController();
   const id = setTimeout(() => c.abort(), timeout);
@@ -167,7 +172,7 @@ async function main() {
   for (let i = 0; i < simbolos.length; i++) {
     const tk = simbolos[i];
     try {
-      const c = await historico(tk);
+      const c = await historico(ysym(tk));
       series[tk] = c;
       tecnicos[tk] = calcular(c);
       ok++;
