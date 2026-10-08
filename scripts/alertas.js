@@ -89,6 +89,24 @@ Object.keys(an.catalysts || {}).forEach((tk) => {
   });
 });
 
+// 3b) Los fondos IOL no tienen cotizacion publica: su precio lo carga una persona.
+// Si queda viejo, el valor total de la cartera queda mal y nada avisa.
+const pm = leer("precios-manuales.json", null);
+if (pm && pm.fecha) {
+  const dias = Math.round((new Date(hoy + "T00:00:00Z") - new Date(pm.fecha + "T00:00:00Z")) / 86400000);
+  if (dias >= 10) {
+    const cuanto = r.posiciones
+      .filter(p => Object.keys(pm).some(k => k === p.ticker))
+      .reduce((a, p) => a + p.valor, 0);
+    alertas.push({
+      tipo: "manual", clave: `manual-${pm.fecha}-${Math.floor(dias / 10)}`,
+      titulo: `Los fondos IOL llevan ${dias} dias sin actualizar`,
+      texto: `El precio de IOLCAMA e IOLDOLD se carga a mano en precios-manuales.json y la ultima vez fue el ${pm.fecha}. ` +
+        `Son $${Math.round(cuanto).toLocaleString("es-AR")} de tu cartera valuados con un precio viejo.`
+    });
+  }
+}
+
 // 4) Un grupo se corrio mucho del objetivo
 const gr = leer("grupos.json", null);
 if (gr && gr.grupos && r.valor > 0) {

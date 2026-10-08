@@ -110,18 +110,65 @@ function calcular(cierres) {
   };
 }
 
+function retornos(cierres) {
+  const r = [];
+  for (let i = 1; i < cierres.length; i++) r.push(cierres[i] / cierres[i - 1] - 1);
+  return r;
+}
+
+function correl(a, b) {
+  const n = Math.min(a.length, b.length);
+  const x = a.slice(-n), y = b.slice(-n);
+  const mx = media(x), my = media(y);
+  let num = 0, dx = 0, dy = 0;
+  for (let i = 0; i < n; i++) {
+    const ax = x[i] - mx, ay = y[i] - my;
+    num += ax * ay; dx += ax * ax; dy += ay * ay;
+  }
+  return dx > 0 && dy > 0 ? num / Math.sqrt(dx * dy) : 0;
+}
+
+function correlaciones(tickers, series) {
+  const r = {};
+  tickers.forEach(t => { r[t] = retornos(series[t]); });
+  const matriz = {}, pares = [];
+  tickers.forEach(a => {
+    matriz[a] = {};
+    tickers.forEach(b => {
+      if (a === b) { matriz[a][b] = 1; return; }
+      const c = Math.round(correl(r[a], r[b]) * 100) / 100;
+      matriz[a][b] = c;
+      if (a < b) pares.push({ a, b, rho: c });
+    });
+  });
+  // Posiciones independientes equivalentes: si todo se moviera igual seria 1;
+  // si nada se moviera junto, seria el numero de posiciones.
+  const n = tickers.length;
+  let suma = 0;
+  tickers.forEach(a => tickers.forEach(b => { suma += matriz[a][b]; }));
+  const efectivas = suma > 0 ? (n * n) / suma : n;
+  pares.sort((x, y) => y.rho - x.rho);
+  return {
+    matriz, efectivas: Math.round(efectivas * 10) / 10, posiciones: n,
+    masAltas: pares.slice(0, 5), masBajas: pares.slice(-3).reverse(),
+    actualizado: new Date().toISOString()
+  };
+}
+
 async function main() {
   const an = JSON.parse(fs.readFileSync(path.join(ROOT, "analysts.json"), "utf8"));
   const simbolos = Object.keys(an.tickers || {});
   if (!simbolos.length) { console.log("Sin tickers en analysts.json"); return; }
 
   const tecnicos = an.tecnicos || {};
+  const series = {};
   let ok = 0, fallos = [];
 
   for (let i = 0; i < simbolos.length; i++) {
     const tk = simbolos[i];
     try {
       const c = await historico(tk);
+      series[tk] = c;
       tecnicos[tk] = calcular(c);
       ok++;
       const t = tecnicos[tk];
@@ -132,6 +179,25 @@ async function main() {
     }
     await new Promise(r => setTimeout(r, (i + 1) % 8 === 0 ? 3000 : 500));
   }
+
+  // Correlaciones de lo que realmente tenes en cartera. La diversificacion por
+  // etiquetas de sector engaña: NVDA, MSFT, META y AMD caen juntas aunque figuren
+  // en casillas distintas.
+  try {
+    const oj = JSON.parse(fs.readFileSync(path.join(ROOT, "operaciones.json"), "utf8"));
+    const ops = Array.isArray(oj) ? oj : oj.operaciones;
+    const saldo = {};
+    ops.forEach(o => {
+      const t = String(o.ticker).toUpperCase();
+      const q = Math.abs(Number(o.cantidad)) || 0;
+      saldo[t] = (saldo[t] || 0) + (String(o.tipo).toUpperCase() === "COMPRA" ? q : -q);
+    });
+    const enCartera = Object.keys(saldo).filter(t => saldo[t] > 1e-9 && series[t] && series[t].length > 120);
+    if (enCartera.length >= 2) {
+      an.correlaciones = correlaciones(enCartera, series);
+      console.log(`\nCorrelaciones sobre ${enCartera.length} posiciones.`);
+    }
+  } catch (e) { console.log("Correlaciones: " + e.message); }
 
   an.tecnicos = tecnicos;
   an.tecnicos_ts = new Date().toISOString();

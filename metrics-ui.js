@@ -8,7 +8,7 @@
   if (!PF) { console.warn("metrics-ui: falta scripts/lib/portfolio.js"); return; }
   if (!UI) { console.warn("metrics-ui: falta ui-kit.js"); return; }
 
-  var HIST = null, DIV = [], GRUPOS = null, WLIST = [], PERF = null, MACRO = null;
+  var HIST = null, DIV = [], GRUPOS = null, WLIST = [], PERF = null, MACRO = null, ANAL = null;
 
   function getJSON(u, cb) {
     try {
@@ -318,6 +318,32 @@
       }
     }
 
+    // Diversificacion real: cuanto se mueven juntas las posiciones.
+    var corr = ANAL && ANAL.correlaciones;
+    if (corr && corr.efectivas) {
+      var ratio = corr.efectivas / corr.posiciones;
+      var cColor = ratio < 0.35 ? "#FF9800" : ratio < 0.6 ? "#64B5F6" : "#4CAF50";
+      h += '<div style="background:#0d1117;border-radius:8px;padding:12px;margin-bottom:8px">';
+      h += '<div style="display:flex;justify-content:space-between;align-items:baseline">' +
+        '<span style="color:#fff;font-size:13px">Diversificacion efectiva</span>' +
+        '<span style="color:' + cColor + ';font-size:18px;font-weight:700">' + corr.efectivas +
+        ' <span style="font-size:12px;color:#8b93a7">de ' + corr.posiciones + "</span></span></div>";
+      h += barra(ratio * 100, cColor);
+      h += '<div style="color:#8b93a7;font-size:11px;margin-top:6px">Tenes ' + corr.posiciones +
+        " posiciones, pero se mueven como si fueran " + corr.efectivas + " apuestas distintas. " +
+        "La diversificacion por sector enga\u00f1a: lo que importa es si caen juntas.</div>";
+      if (corr.masAltas && corr.masAltas.length) {
+        h += '<div style="color:#8b93a7;font-size:11px;margin-top:8px;margin-bottom:4px">Las que mas se mueven juntas</div>';
+        corr.masAltas.slice(0, 4).forEach(function (par) {
+          h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:2px 0">' +
+            '<span style="color:#ccc">' + par.a + " y " + par.b + "</span>" +
+            '<span style="color:' + (par.rho > 0.75 ? "#FF9800" : "#8b93a7") + '">' + par.rho + "</span></div>";
+        });
+      }
+      h += '<div style="text-align:right;color:#5c6478;font-size:10px;margin-top:6px">Calculado sobre 1 año de precios</div>';
+      h += "</div>";
+    }
+
     SEC["DIVERSIFICACION"] = h; h = "";
     // ---------- simulador de compra ----------
     h += '<h3 style="color:#fff;margin:16px 0 8px;font-size:15px">\uD83E\uDDEE Simulador de compra</h3>';
@@ -467,6 +493,7 @@
   getJSON("watchlist.json", function (d) { WLIST = (d && (Array.isArray(d) ? d : d.watchlist)) || []; });
   getJSON("perfiles.json", function (d) { PERF = d; });
   getJSON("macro.json", function (d) { MACRO = d; });
+  getJSON("analysts.json", function (d) { ANAL = d; });
   getJSON("dividendos.json", function (d) { DIV = Array.isArray(d) ? d : (d && d.dividendos) || []; });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boton);

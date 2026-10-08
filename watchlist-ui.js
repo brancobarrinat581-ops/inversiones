@@ -5,7 +5,7 @@
   "use strict";
 
   var UI = window.__UI;
-  var WL = [], AN = null, WLCFG = null, PERF = null;
+  var WL = [], AN = null, WLCFG = null, PERF = null, TESIS = null;
 
   function getJSON(u, cb) {
     try {
@@ -337,8 +337,13 @@
       return (AN && AN.fundamentals && AN.fundamentals[t]) || SIN_BALANCE.indexOf(t) !== -1;
     }).sort();
     if (propias.length) {
+      h += '<div style="color:#8b93a7;font-size:12px;margin-bottom:10px">Por que compraste cada una y a que ' +
+        "precio saldrias lo escribis en <b>tesis.json</b>. Dentro de seis meses, cuando algo este 20% abajo, " +
+        "esa nota vale mas que cualquier precio objetivo.</div>";
       propias.forEach(function (t) {
-        h += tarjeta({ ticker: t, objetivo: null, nota: "" }, precios, AN, true);
+        var ts = (TESIS && TESIS[t]) || {};
+        h += tarjeta({ ticker: t, objetivo: ts.salida != null ? ts.salida : null, nota: ts.nota || "" },
+          precios, AN, true);
       });
     }
 
@@ -362,6 +367,7 @@
   });
   getJSON("analysts.json", function (d) { AN = d; });
   getJSON("perfiles.json", function (d) { PERF = d; });
+  getJSON("tesis.json", function (d) { TESIS = (d && (d.tesis || d)) || null; });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boton);
   else boton();
