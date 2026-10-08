@@ -111,7 +111,14 @@ async function main() {
   else if (out.inflacionMensual) out.inflacion12m = (Math.pow(1 + out.inflacionMensual.valor / 100, 12) - 1) * 100;
 
   if (Object.keys(out).length <= 2) {
-    console.log("⚠️  No se pudo leer ninguna variable util.");
+    console.log("⚠️  No se pudo leer ninguna variable util. Catalogo: " + lista.length + " entradas.");
+    let prev = {};
+    try { prev = JSON.parse(fs.readFileSync(SALIDA, "utf8")); } catch (e) {}
+    const muestra = lista.slice(0, 3).map(v => Object.keys(v).join(","));
+    prev.ultimoIntento = { ts: new Date().toISOString(), ok: false,
+      error: "catalogo con " + lista.length + " entradas, ninguna coincide con las buscadas",
+      campos: muestra };
+    fs.writeFileSync(SALIDA, JSON.stringify(prev, null, 1));
     process.exit(0);
   }
   out.ultimoIntento = { ts: out.ts, ok: true };
