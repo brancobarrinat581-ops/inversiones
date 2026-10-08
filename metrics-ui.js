@@ -329,9 +329,12 @@
         '<span style="color:' + cColor + ';font-size:18px;font-weight:700">' + corr.efectivas +
         ' <span style="font-size:12px;color:#8b93a7">de ' + corr.posiciones + "</span></span></div>";
       h += barra(ratio * 100, cColor);
-      h += '<div style="color:#8b93a7;font-size:11px;margin-top:6px">Tenes ' + corr.posiciones +
-        " posiciones, pero se mueven como si fueran " + corr.efectivas + " apuestas distintas. " +
+      h += '<div style="color:#8b93a7;font-size:11px;margin-top:6px">Estas ' + corr.posiciones +
+        " posiciones se mueven como si fueran " + corr.efectivas + " apuestas distintas. " +
         "La diversificacion por sector enga\u00f1a: lo que importa es si caen juntas.</div>";
+      if (corr.sinSerie && corr.sinSerie.length)
+        h += '<div style="color:#5c6478;font-size:11px;margin-top:4px">Fuera del calculo: ' +
+          corr.sinSerie.join(", ") + ". No cotizan en ningun mercado, asi que no hay historico para comparar.</div>";
       if (corr.masAltas && corr.masAltas.length) {
         h += '<div style="color:#8b93a7;font-size:11px;margin-top:8px;margin-bottom:4px">Las que mas se mueven juntas</div>';
         corr.masAltas.slice(0, 4).forEach(function (par) {

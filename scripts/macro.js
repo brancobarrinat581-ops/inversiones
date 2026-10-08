@@ -69,16 +69,33 @@ async function catalogo() {
 const norm = (s) => String(s || "").toLowerCase()
   .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-// Coincidencia al comienzo de la descripcion: "includes" agarraba variables que
-// solo mencionaban la frase en el medio (una "remuneracion" o un "margen sobre la
-// tasa"), y mostraba numeros de otra cosa con el nombre de la buena.
-function buscar(lista, frases) {
+// Buscar por texto solo no alcanza: "plazo fijo" matcheaba un saldo en millones de
+// pesos (84.527.238) y lo mostraba como si fuera una tasa. Ahora cada variable
+// declara ademas en que unidad tiene que venir y en que rango puede estar.
+function buscar(lista, frases, filtro) {
+  const candidatos = [];
   for (const f of frases) {
-    const hit = lista.find(v => norm(v.descripcion || v.Descripcion).startsWith(norm(f)));
-    if (hit) return hit;
+    lista.forEach(v => {
+      const d = norm(v.descripcion || v.Descripcion);
+      const pos = d.indexOf(norm(f));
+      if (pos >= 0) candidatos.push({ v, puntaje: pos === 0 ? 0 : 1 });
+    });
+    if (candidatos.length) break;
+  }
+  candidatos.sort((a, b) => a.puntaje - b.puntaje);
+  for (const c of candidatos) {
+    if (!filtro || filtro(c.v)) return c.v;
   }
   return null;
 }
+
+// Una tasa o una inflacion viene expresada en porcentaje y no puede valer millones.
+const esPorcentaje = (v) => {
+  const u = norm(v.unidadExpresion || v.UnidadExpresion || "");
+  const n = Number(v.ultValorInformado);
+  return (u.includes("%") || u.includes("porcentaje") || u.includes("n.a") || u.includes("tna") || u === "") &&
+    isFinite(n) && Math.abs(n) <= 1000;
+};
 
 // El catalogo trae el ultimo valor informado en ultValorInformado / ultFechaInformada.
 const valorDe = (v) => {
@@ -100,16 +117,19 @@ async function main() {
   }
 
   const buscados = {
-    inflacionMensual: ["inflacion mensual"],
-    inflacionInteranual: ["inflacion interanual"],
-    inflacionEsperada: ["mediana de la variacion interanual"],
-    tasaPolitica: ["tasa de politica monetaria"],
-    plazoFijo: ["badlar", "plazo fijo", "tasa de interes de depositos"]
+    inflacionMensual: { frases: ["inflacion mensual"], filtro: esPorcentaje },
+    inflacionInteranual: { frases: ["inflacion interanual"], filtro: esPorcentaje },
+    inflacionEsperada: { frases: ["mediana de la variacion interanual"], filtro: esPorcentaje },
+    tasaPolitica: { frases: ["tasa de politica monetaria"], filtro: (v) => esPorcentaje(v) && !norm(v.descripcion).startsWith("margen") },
+    plazoFijo: { frases: ["tasa de interes badlar", "badlar", "deposito a plazo fijo"], filtro: esPorcentaje }
   };
 
+  // Arrancamos limpio: una variable que esta vez no se encuentra NO debe quedar
+  // con el valor viejo de otra corrida, porque se veria como un dato de hoy.
   const out = { ts: new Date().toISOString(), fuente: "BCRA (api.bcra.gob.ar)" };
-  for (const [clave, frases] of Object.entries(buscados)) {
-    const v = buscar(lista, frases);
+  for (const [clave, cfg] of Object.entries(buscados)) {
+    const { frases, filtro } = cfg;
+    const v = buscar(lista, frases, filtro);
     if (!v) { console.log(`  ${clave}: no encontrada en el catalogo`); continue; }
     const val = valorDe(v);
     if (val == null) { console.log(`  ${clave}: sin valor`); continue; }
@@ -134,10 +154,11 @@ async function main() {
   }
   out.ultimoIntento = { ts: out.ts, ok: true };
 
-  // Conservamos lo anterior para lo que hoy no vino.
+  // Solo conservamos la ayuda del archivo; los valores se reescriben enteros.
   let prev = {};
   try { prev = JSON.parse(fs.readFileSync(SALIDA, "utf8")); } catch (e) {}
-  fs.writeFileSync(SALIDA, JSON.stringify({ ...prev, ...out }, null, 1));
+  if (prev._ayuda) out._ayuda = prev._ayuda;
+  fs.writeFileSync(SALIDA, JSON.stringify(out, null, 1));
   console.log("\n✅ macro.json actualizado.");
 }
 

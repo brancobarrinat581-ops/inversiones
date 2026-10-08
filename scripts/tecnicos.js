@@ -192,10 +192,17 @@ async function main() {
       const q = Math.abs(Number(o.cantidad)) || 0;
       saldo[t] = (saldo[t] || 0) + (String(o.tipo).toUpperCase() === "COMPRA" ? q : -q);
     });
-    const enCartera = Object.keys(saldo).filter(t => saldo[t] > 1e-9 && series[t] && series[t].length > 120);
+    const todas = Object.keys(saldo).filter(t => saldo[t] > 1e-9);
+    const enCartera = todas.filter(t => series[t] && series[t].length > 120);
+    const sinSerie = todas.filter(t => enCartera.indexOf(t) === -1);
     if (enCartera.length >= 2) {
       an.correlaciones = correlaciones(enCartera, series);
-      console.log(`\nCorrelaciones sobre ${enCartera.length} posiciones.`);
+      // Los fondos IOL no cotizan en ningun mercado, asi que quedan afuera.
+      // Hay que decirlo: si no, 13 de 16 parece un error y es un limite real.
+      an.correlaciones.totalPosiciones = todas.length;
+      an.correlaciones.sinSerie = sinSerie;
+      console.log(`\nCorrelaciones sobre ${enCartera.length} de ${todas.length} posiciones` +
+        (sinSerie.length ? ` (sin historico: ${sinSerie.join(", ")})` : "") + ".");
     }
   } catch (e) { console.log("Correlaciones: " + e.message); }
 
