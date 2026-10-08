@@ -1,9 +1,9 @@
 {
- "ts": "2026-10-08T12:57:40.292Z",
+ "ts": "2026-10-08T13:36:53.568Z",
  "fuente": "BCRA (api.bcra.gob.ar)",
  "_ayuda": "Lo completa scripts/macro.js en cada corrida del analisis. Si el BCRA no responde, se conserva lo ultimo que vino.",
  "ultimoIntento": {
-  "ts": "2026-10-08T12:57:40.292Z",
+  "ts": "2026-10-08T13:36:53.568Z",
   "ok": true
  },
  "inflacionMensual": {
@@ -19,10 +19,10 @@
   "id": 28
  },
  "inflacionEsperada": {
-  "valor": 0,
-  "fecha": "2026-10-02",
-  "descripcion": "Efecto monetario de los intereses, primas y remuneración de cuentas corrientes asociados a op. de pases, LELIQ, NOTALQ, redescuentos y adel. ",
-  "id": 55
+  "valor": 21.1,
+  "fecha": "2026-09-30",
+  "descripcion": "Mediana de la variación interanual próximos 12 meses del índice de precios al consumidor del relevamiento de expectativas de mercado",
+  "id": 29
  },
  "tasaPolitica": {
   "valor": 2.5,
@@ -31,10 +31,10 @@
   "id": 195
  },
  "plazoFijo": {
-  "valor": 22.8125,
-  "fecha": "2026-10-06",
-  "descripcion": "Tasa de interés BADLAR de bancos privados",
-  "id": 7
+  "valor": 84527238,
+  "fecha": "2026-10-05",
+  "descripcion": "Plazo fijo del total de sectores",
+  "id": 1377
  },
  "inflacion12m": 33.5
 }
