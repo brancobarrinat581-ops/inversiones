@@ -1,5 +1,15 @@
 {
  "ts": null,
  "fuente": "BCRA (api.bcra.gob.ar)",
- "_ayuda": "Lo completa scripts/macro.js en cada corrida del analisis. Si el BCRA no responde, se conserva lo ultimo que vino."
+ "_ayuda": "Lo completa scripts/macro.js en cada corrida del analisis. Si el BCRA no responde, se conserva lo ultimo que vino.",
+ "ultimoIntento": {
+  "ts": "2026-10-08T12:54:28.940Z",
+  "ok": false,
+  "error": "catalogo con 1000 entradas, ninguna coincide con las buscadas",
+  "campos": [
+   "idVariable,descripcion,categoria,tipoSerie,periodicidad,unidadExpresion,moneda,primerFechaInformada,ultFechaInformada,ultValorInformado",
+   "idVariable,descripcion,categoria,tipoSerie,periodicidad,unidadExpresion,moneda,primerFechaInformada,ultFechaInformada,ultValorInformado",
+   "idVariable,descripcion,categoria,tipoSerie,periodicidad,unidadExpresion,moneda,primerFechaInformada,ultFechaInformada,ultValorInformado"
+  ]
+ }
 }
