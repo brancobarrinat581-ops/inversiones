@@ -1,6 +1,6 @@
 {
-  "_ayuda": "Fondos IOL sin cotizacion publica. Actualiza 'ars' (y 'usd' si queres) cuando cambie la cuota. IOLCAMA va por 1000 cuotas (cuota 12,28 -> 12280).",
+  "_ayuda": "Fondos IOL sin cotizacion publica. Actualiza solo 'ars' cuando cambie la cuota y movele la 'fecha'. IOLCAMA va por 1000 cuotas (cuota 12,28 -> 12280). El valor en dolares NO se carga aca: se calcula solo dividiendo por el CCL, para que toda la cartera use el mismo tipo de cambio.",
   "fecha": "2026-09-30",
-  "IOLCAMA": { "ars": 12280, "usd": 0 },
-  "IOLDOLD": { "ars": 1685.28, "usd": 1.09 }
+  "IOLCAMA": { "ars": 12280 },
+  "IOLDOLD": { "ars": 1685.28 }
 }

@@ -174,7 +174,14 @@ async function main() {
   MANUALES.forEach(tk => {
     const m = man[tk];
     if (m && m.ars > 0) {
-      const usd = m.usd > 0 ? m.usd : (cclUsado ? Math.round(m.ars / cclUsado * 100) / 100 : 0);
+      // El USD SIEMPRE se deriva del precio en pesos al CCL, aunque el archivo
+      // traiga uno cargado a mano. Si no, el total en dolares mezcla dos tipos de
+      // cambio: IOLDOLD tenia ars 1685,28 y usd 1,09, que implica un dolar de 1546
+      // mientras el resto de la cartera se valuaba al CCL de 1610. El total de la
+      // app daba US$5.629 y el del panel US$5.614 por esa sola linea.
+      const usd = cclUsado ? Math.round(m.ars / cclUsado * 10000) / 10000 : 0;
+      if (m.usd > 0 && cclUsado && Math.abs(m.usd - usd) / m.usd > 0.02)
+        console.log(`  ${tk}: ignoro el usd ${m.usd} del archivo, al CCL da ${usd}`);
       prices[tk] = { usd, ars: m.ars, changePct: 0, src: 'Manual', stale: false, asOf: man.fecha || now };
     } else if (prevP[tk]) {
       prices[tk] = { ...prevP[tk], src: 'Manual', stale: false };
