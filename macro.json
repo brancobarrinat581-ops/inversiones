@@ -1,15 +1,15 @@
 {
- "ts": "2026-10-13T18:25:13.970Z",
+ "ts": "2026-10-13T23:20:44.497Z",
  "fuente": "BCRA (api.bcra.gob.ar)",
  "inflacionMensual": {
-  "valor": 1.7,
-  "fecha": "2026-08-31",
+  "valor": 1.9,
+  "fecha": "2026-09-30",
   "descripcion": "Inflación mensual.",
   "id": 27
  },
  "inflacionInteranual": {
-  "valor": 33.5,
-  "fecha": "2026-08-31",
+  "valor": 33.4,
+  "fecha": "2026-09-30",
   "descripcion": "Inflación interanual.",
   "id": 28
  },
@@ -20,14 +20,14 @@
   "id": 29
  },
  "plazoFijo": {
-  "valor": 22.375,
-  "fecha": "2026-10-08",
+  "valor": 22.6875,
+  "fecha": "2026-10-09",
   "descripcion": "Tasa de interés BADLAR de bancos privados",
   "id": 7
  },
- "inflacion12m": 33.5,
+ "inflacion12m": 33.4,
  "ultimoIntento": {
-  "ts": "2026-10-13T18:25:13.970Z",
+  "ts": "2026-10-13T23:20:44.497Z",
   "ok": true
  },
  "_ayuda": "Lo completa scripts/macro.js en cada corrida del analisis. Si el BCRA no responde, se conserva lo ultimo que vino."
