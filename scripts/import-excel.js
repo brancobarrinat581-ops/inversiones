@@ -141,6 +141,16 @@ HOJAS.forEach((hoja) => {
   });
 });
 
+// Las operaciones cargadas en la app (y traidas desde Supabase) no estan en el
+// Excel: si no las conservamos aca, cada importacion las borraria. Cuando las
+// agregues al Excel, la clave coincide y dejan de duplicarse solas.
+const delApp = previas.filter(o => o.origen === "app" && !salida.some(n => clave(n) === clave(o)));
+if (delApp.length) {
+  console.log(`\nConservo ${delApp.length} operacion(es) cargadas en la app que no estan en el Excel:`);
+  delApp.forEach(o => console.log(`   · ${o.fecha} ${o.ticker} ${o.tipo} ${o.cantidad}`));
+  salida.push(...delApp);
+}
+
 salida.sort((a, b) => (a.fecha < b.fecha ? -1 : a.fecha > b.fecha ? 1 : 0));
 
 if (errores.length) {
@@ -154,7 +164,7 @@ if (!salida.length) { console.error("❌ El Excel no tiene operaciones legibles.
 const antes = new Set(previas.map(clave));
 const ahora = new Set(salida.map(clave));
 const nuevas = salida.filter((o) => !antes.has(clave(o)));
-const quitadas = previas.filter((o) => !ahora.has(clave(o)));
+const quitadas = previas.filter((o) => !ahora.has(clave(o)) && o.origen !== "app");
 
 if (avisos.length) {
   console.log(`\n⚠️  ${avisos.length} aviso(s):`);
