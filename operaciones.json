@@ -1,7 +1,7 @@
 {
- "ts": "2026-09-30T17:36:49.357Z",
+ "ts": "2026-10-14T13:43:09.445Z",
  "fuente": "Excel: Control_Portafolio_IOL.xlsx",
- "total": 70,
+ "total": 77,
  "operaciones": [
   {
    "id": "x001",
@@ -292,7 +292,7 @@
    "invertido_ars": 22655.19
   },
   {
-   "id": "x065",
+   "id": "x072",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-03-19",
    "ticker": "ILF",
@@ -364,7 +364,7 @@
    "invertido_ars": 148698.55
   },
   {
-   "id": "x066",
+   "id": "x073",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-04-08",
    "ticker": "IOLCAMA",
@@ -424,7 +424,7 @@
    "invertido_ars": 80350.38
   },
   {
-   "id": "x067",
+   "id": "x074",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-04-15",
    "ticker": "IOLCAMA",
@@ -448,7 +448,7 @@
    "invertido_ars": 105442.25
   },
   {
-   "id": "x068",
+   "id": "x075",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-04-16",
    "ticker": "IOLCAMA",
@@ -520,7 +520,7 @@
    "invertido_ars": 26843.87
   },
   {
-   "id": "x069",
+   "id": "x076",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-05-15",
    "ticker": "ILF",
@@ -700,7 +700,7 @@
    "invertido_ars": 55036.99
   },
   {
-   "id": "x070",
+   "id": "x077",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-07-28",
    "ticker": "IOLDOLD",
@@ -842,6 +842,90 @@
    "ppc": 15860,
    "comision": 328.16,
    "invertido_ars": 47908.16
+  },
+  {
+   "id": "x065",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-08",
+   "ticker": "MU",
+   "tipo": "COMPRA",
+   "cantidad": 1,
+   "precio": 337075,
+   "ppc": 337075,
+   "comision": 2324.81,
+   "invertido_ars": 339399.81
+  },
+  {
+   "id": "x066",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-08",
+   "ticker": "NVDA",
+   "tipo": "COMPRA",
+   "cantidad": 15,
+   "precio": 15620,
+   "ppc": 15620,
+   "comision": 1615.97,
+   "invertido_ars": 235915.97
+  },
+  {
+   "id": "x067",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-08",
+   "ticker": "NFLX",
+   "tipo": "COMPRA",
+   "cantidad": 123,
+   "precio": 2391,
+   "ppc": 2391,
+   "comision": 2028.37,
+   "invertido_ars": 296121.37
+  },
+  {
+   "id": "x068",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-08",
+   "ticker": "IBIT",
+   "tipo": "COMPRA",
+   "cantidad": 6,
+   "precio": 7360,
+   "ppc": 7360,
+   "comision": 304.57,
+   "invertido_ars": 44464.57
+  },
+  {
+   "id": "x069",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-08",
+   "ticker": "VIST",
+   "tipo": "COMPRA",
+   "cantidad": 4,
+   "precio": 36160,
+   "ppc": 36160,
+   "comision": 997.58,
+   "invertido_ars": 145637.58
+  },
+  {
+   "id": "x070",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-08",
+   "ticker": "PAMP",
+   "tipo": "COMPRA",
+   "cantidad": 13,
+   "precio": 5179.231,
+   "ppc": 5179.231,
+   "comision": 464.38,
+   "invertido_ars": 67794.38
+  },
+  {
+   "id": "x071",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-08",
+   "ticker": "SPY",
+   "tipo": "COMPRA",
+   "cantidad": 3,
+   "precio": 20730,
+   "ppc": 20730,
+   "comision": 428.92,
+   "invertido_ars": 62618.92
   }
  ]
 }
