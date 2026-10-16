@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-16T16:03:57.724Z",
+ "ts": "2026-10-16T16:14:33.894Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -10,6 +10,12 @@
  ],
  "alertas": [
   {
+   "tipo": "movimiento",
+   "clave": "mov-PANW-2026-10-16",
+   "titulo": "PANW se movio -7.3% hoy",
+   "texto": "Tu posicion vale $333.600, abajo de lo habitual."
+  },
+  {
    "tipo": "manual",
    "clave": "manual-2026-09-30-1",
    "titulo": "Los fondos IOL llevan 16 dias sin actualizar",
@@ -19,7 +25,7 @@
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-10",
    "titulo": "Tecnologia e IA esta en 48.7% y tu objetivo es 35%",
-   "texto": "Son 1.388.872 pesos de diferencia."
+   "texto": "Son 1.388.357 pesos de diferencia."
   }
  ]
 }
