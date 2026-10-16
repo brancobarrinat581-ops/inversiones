@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-16T17:28:22.530Z",
+ "ts": "2026-10-16T17:38:54.689Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -10,16 +10,10 @@
  ],
  "alertas": [
   {
-   "tipo": "precio-justo",
-   "clave": "justo-UBER-70",
-   "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$69.97 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.85522. Movilidad y delivery, ya genera caja libre positiva."
-  },
-  {
    "tipo": "movimiento",
    "clave": "mov-PANW-2026-10-16",
-   "titulo": "PANW se movio -7.3% hoy",
-   "texto": "Tu posicion vale $333.300, abajo de lo habitual."
+   "titulo": "PANW se movio -7.7% hoy",
+   "texto": "Tu posicion vale $332.100, abajo de lo habitual."
   },
   {
    "tipo": "manual",
@@ -30,8 +24,8 @@
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-10",
-   "titulo": "Tecnologia e IA esta en 48.7% y tu objetivo es 35%",
-   "texto": "Son 1.375.230 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 48.6% y tu objetivo es 35%",
+   "texto": "Son 1.367.202 pesos de diferencia."
   }
  ]
 }
