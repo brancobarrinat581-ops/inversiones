@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-16T19:34:53.877Z",
+ "ts": "2026-10-16T19:45:26.388Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -11,10 +11,10 @@
  ],
  "alertas": [
   {
-   "tipo": "movimiento",
-   "clave": "mov-PANW-2026-10-16",
-   "titulo": "PANW se movio -7.1% hoy",
-   "texto": "Tu posicion vale $334.200, abajo de lo habitual."
+   "tipo": "precio-justo",
+   "clave": "justo-GOOGL-340",
+   "titulo": "GOOGL esta en precio de compra",
+   "texto": "Cotiza US$339.92 y la referencia con 20% de margen de seguridad es US$340.00. El objetivo promedio de los analistas es US$430.5111. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
   },
   {
    "tipo": "manual",
@@ -25,8 +25,8 @@
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-10",
-   "titulo": "Tecnologia e IA esta en 48.5% y tu objetivo es 35%",
-   "texto": "Son 1.357.402 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 48.6% y tu objetivo es 35%",
+   "texto": "Son 1.359.486 pesos de diferencia."
   }
  ]
 }
