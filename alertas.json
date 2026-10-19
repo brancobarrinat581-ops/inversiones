@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-16T23:40:10.436Z",
+ "ts": "2026-10-19T17:26:58.839Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -7,26 +7,34 @@
   "mov-MU-2026-10-13",
   "mov-MU-2026-10-14",
   "mov-PANW-2026-10-16",
-  "justo-GOOGL-340"
+  "justo-GOOGL-340",
+  "bal-META-2026-10-21",
+  "bal-NFLX-2026-10-20"
  ],
  "alertas": [
   {
-   "tipo": "movimiento",
-   "clave": "mov-PANW-2026-10-16",
-   "titulo": "PANW se movio -7.3% hoy",
-   "texto": "Tu posicion vale $333.300, abajo de lo habitual."
+   "tipo": "balance",
+   "clave": "bal-META-2026-10-21",
+   "titulo": "META presenta balance en 2 dias",
+   "texto": "Presenta balance el 2026-10-21. Lo tenes en cartera."
+  },
+  {
+   "tipo": "balance",
+   "clave": "bal-NFLX-2026-10-20",
+   "titulo": "NFLX presenta balance mañana",
+   "texto": "Presenta balance el 2026-10-20. Lo tenes en cartera."
   },
   {
    "tipo": "manual",
    "clave": "manual-2026-09-30-1",
-   "titulo": "Los fondos IOL llevan 16 dias sin actualizar",
+   "titulo": "Los fondos IOL llevan 19 dias sin actualizar",
    "texto": "El precio de IOLCAMA e IOLDOLD se carga a mano en precios-manuales.json y la ultima vez fue el 2026-09-30. Son $1.152.410 de tu cartera valuados con un precio viejo."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-10",
-   "titulo": "Tecnologia e IA esta en 48.5% y tu objetivo es 35%",
-   "texto": "Son 1.358.635 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 49.0% y tu objetivo es 35%",
+   "texto": "Son 1.415.867 pesos de diferencia."
   }
  ]
 }
