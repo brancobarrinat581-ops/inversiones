@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-22T15:57:18.069Z",
+ "ts": "2026-10-22T22:26:54.182Z",
  "fuente": "BCRA (api.bcra.gob.ar)",
  "inflacionMensual": {
   "valor": 1.9,
@@ -27,7 +27,7 @@
  },
  "inflacion12m": 33.4,
  "ultimoIntento": {
-  "ts": "2026-10-22T15:57:18.069Z",
+  "ts": "2026-10-22T22:26:54.182Z",
   "ok": true
  },
  "_ayuda": "Lo completa scripts/macro.js en cada corrida del analisis. Si el BCRA no responde, se conserva lo ultimo que vino."
