@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-22T20:06:36.607Z",
+ "ts": "2026-10-22T20:17:11.762Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -11,14 +11,15 @@
   "bal-META-2026-10-21",
   "bal-NFLX-2026-10-20",
   "manual-2026-09-30-2",
-  "mov-META-2026-10-22"
+  "mov-META-2026-10-22",
+  "mov-ACN-2026-10-22"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-UBER-70",
    "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$69.045 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.85522. Movilidad y delivery, ya genera caja libre positiva."
+   "texto": "Cotiza US$69.07 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.85522. Movilidad y delivery, ya genera caja libre positiva."
   },
   {
    "tipo": "precio-justo",
@@ -29,8 +30,14 @@
   {
    "tipo": "movimiento",
    "clave": "mov-META-2026-10-22",
-   "titulo": "META se movio -7.6% hoy",
-   "texto": "Tu posicion vale $617.680, abajo de lo habitual."
+   "titulo": "META se movio -7.3% hoy",
+   "texto": "Tu posicion vale $619.920, abajo de lo habitual."
+  },
+  {
+   "tipo": "movimiento",
+   "clave": "mov-ACN-2026-10-22",
+   "titulo": "ACN se movio +7.1% hoy",
+   "texto": "Tu posicion vale $566.610, arriba de lo habitual."
   },
   {
    "tipo": "manual",
@@ -42,7 +49,7 @@
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-10",
    "titulo": "Tecnologia e IA esta en 48.8% y tu objetivo es 35%",
-   "texto": "Son 1.395.089 pesos de diferencia."
+   "texto": "Son 1.394.654 pesos de diferencia."
   }
  ]
 }
