@@ -1,277 +1,277 @@
 {
-  "ts": "2026-10-23T15:53:50.738Z",
-  "ccl": 1647.5,
+  "ts": "2026-10-23T16:04:25.568Z",
+  "ccl": 1648.1,
   "cclSrc": "dolarapi",
   "count": 35,
   "real": 33,
   "stale": 0,
   "prices": {
     "ADBE": {
-      "usd": 264.12,
-      "ars": 9900,
-      "changePct": -1.59,
+      "usd": 264.11,
+      "ars": 9880,
+      "changePct": -1.79,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "MELI": {
-      "usd": 1809.27,
-      "ars": 24860,
-      "changePct": 0.2,
+      "usd": 1809.03,
+      "ars": 24880,
+      "changePct": 0.28,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "MSFT": {
-      "usd": 524.869,
+      "usd": 524.885,
       "ars": 28880,
       "changePct": 1.69,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "MU": {
-      "usd": 886.83,
-      "ars": 292600,
-      "changePct": 4.72,
+      "usd": 890.88,
+      "ars": 291475,
+      "changePct": 4.31,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "NVDA": {
-      "usd": 212.53,
-      "ars": 14660,
-      "changePct": 1.03,
+      "usd": 212.9,
+      "ars": 14610,
+      "changePct": 0.69,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "PANW": {
-      "usd": 377.95,
+      "usd": 377.87,
       "ars": 12490,
       "changePct": 6.93,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "SPY": {
-      "usd": 762.62,
-      "ars": 21010,
-      "changePct": 0.67,
+      "usd": 762.93,
+      "ars": 20990,
+      "changePct": 0.57,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "ACN": {
-      "usd": 247.435,
-      "ars": 5410,
-      "changePct": -3.48,
+      "usd": 247.357,
+      "ars": 5455,
+      "changePct": -2.68,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "MCD": {
-      "usd": 247.955,
-      "ars": 17060,
-      "changePct": -0.99,
+      "usd": 247.79,
+      "ars": 17070,
+      "changePct": -0.93,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "META": {
-      "usd": 645.57,
-      "ars": 44460,
-      "changePct": 0.27,
+      "usd": 645.91,
+      "ars": 44380,
+      "changePct": 0.09,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "NU": {
-      "usd": 14.835,
-      "ars": 12290,
-      "changePct": 1.82,
+      "usd": 14.825,
+      "ars": 12260,
+      "changePct": 1.57,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "IBIT": {
-      "usd": 46.125,
-      "ars": 7625,
-      "changePct": 0.79,
+      "usd": 46.19,
+      "ars": 7615,
+      "changePct": 0.66,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "ICLN": {
-      "usd": 15.99,
+      "usd": 16.01,
       "ars": 5275,
       "changePct": -0.19,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "PAMP": {
-      "usd": 78.36,
-      "ars": 5150,
-      "changePct": 1.28,
+      "usd": 78.12,
+      "ars": 5180,
+      "changePct": 1.87,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "GGAL": {
-      "usd": 36.76,
-      "ars": 6050,
-      "changePct": 2.54,
+      "usd": 36.63,
+      "ars": 6055,
+      "changePct": 2.63,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "YPF": {
-      "usd": 50.105,
-      "ars": 8260,
-      "changePct": 2.74,
+      "usd": 50.015,
+      "ars": 8265,
+      "changePct": 2.8,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "BMA": {
-      "usd": 63.94,
+      "usd": 63.84,
       "ars": 10530,
       "changePct": 2.43,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "VIST": {
-      "usd": 74.295,
-      "ars": 40860,
-      "changePct": 5.85,
+      "usd": 74.24,
+      "ars": 40920,
+      "changePct": 6.01,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "NFLX": {
-      "usd": 66.756,
-      "ars": 2298,
-      "changePct": 0.31,
+      "usd": 66.805,
+      "ars": 2302,
+      "changePct": 0.48,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "UBER": {
-      "usd": 67.675,
-      "ars": 55900,
-      "changePct": -1.02,
+      "usd": 67.82,
+      "ars": 55950,
+      "changePct": -0.93,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "VST": {
-      "usd": 140.61,
-      "ars": 8910,
-      "changePct": 0.56,
+      "usd": 140.69,
+      "ars": 8875,
+      "changePct": 0.17,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "KO": {
-      "usd": 93.285,
-      "ars": 30760,
-      "changePct": -1.41,
+      "usd": 93.3,
+      "ars": 30840,
+      "changePct": -1.15,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "JNJ": {
-      "usd": 263.31,
-      "ars": 29000,
-      "changePct": -1.29,
+      "usd": 262.93,
+      "ars": 28960,
+      "changePct": -1.43,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "PG": {
-      "usd": 161.18,
-      "ars": 17720,
-      "changePct": -1.51,
+      "usd": 161.31,
+      "ars": 17710,
+      "changePct": -1.56,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "WMT": {
-      "usd": 120.15,
-      "ars": 10990,
-      "changePct": -0.09,
+      "usd": 120,
+      "ars": 10980,
+      "changePct": -0.18,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "GOOGL": {
-      "usd": 323.065,
-      "ars": 9220,
-      "changePct": 0.93,
+      "usd": 323.251,
+      "ars": 9215,
+      "changePct": 0.88,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "V": {
-      "usd": 408.67,
+      "usd": 408.74,
       "ars": 37460,
       "changePct": -0.43,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "COST": {
-      "usd": 1008.265,
+      "usd": 1007.36,
       "ars": 34620,
       "changePct": -0.4,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "JPM": {
-      "usd": 332.28,
-      "ars": 36720,
-      "changePct": -0.05,
+      "usd": 331.86,
+      "ars": 36580,
+      "changePct": -0.44,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "ORCL": {
-      "usd": 127.39,
-      "ars": 70000,
-      "changePct": 2.6,
+      "usd": 127.695,
+      "ars": 69925,
+      "changePct": 2.49,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "PLTR": {
-      "usd": 196.28,
-      "ars": 108200,
-      "changePct": 1.07,
+      "usd": 196.4,
+      "ars": 107725,
+      "changePct": 0.63,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "AMD": {
-      "usd": 520.52,
-      "ars": 85700,
-      "changePct": 2.88,
+      "usd": 521.255,
+      "ars": 85525,
+      "changePct": 2.67,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "COIN": {
-      "usd": 165.86,
-      "ars": 10210,
-      "changePct": -0.49,
+      "usd": 166.465,
+      "ars": 10150,
+      "changePct": -1.07,
       "src": "Yahoo .BA",
       "stale": false,
-      "asOf": "2026-10-23T15:53:50.738Z"
+      "asOf": "2026-10-23T16:04:25.568Z"
     },
     "IOLCAMA": {
-      "usd": 7.4537,
+      "usd": 7.451,
       "ars": 12280,
       "changePct": 0,
       "src": "Manual",
@@ -279,7 +279,7 @@
       "asOf": "2026-09-30"
     },
     "IOLDOLD": {
-      "usd": 1.0229,
+      "usd": 1.0226,
       "ars": 1685.28,
       "changePct": 0,
       "src": "Manual",
