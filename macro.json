@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-26T17:27:48.624Z",
+ "ts": "2026-10-26T23:11:48.171Z",
  "fuente": "BCRA (api.bcra.gob.ar)",
  "inflacionMensual": {
   "valor": 1.9,
@@ -20,14 +20,14 @@
   "id": 29
  },
  "plazoFijo": {
-  "valor": 22.9375,
-  "fecha": "2026-10-22",
+  "valor": 23.0625,
+  "fecha": "2026-10-23",
   "descripcion": "Tasa de interés BADLAR de bancos privados",
   "id": 7
  },
  "inflacion12m": 33.4,
  "ultimoIntento": {
-  "ts": "2026-10-26T17:27:48.624Z",
+  "ts": "2026-10-26T23:11:48.171Z",
   "ok": true
  },
  "_ayuda": "Lo completa scripts/macro.js en cada corrida del analisis. Si el BCRA no responde, se conserva lo ultimo que vino."

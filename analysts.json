@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-26T17:27:21.535Z",
+ "ts": "2026-10-26T23:11:21.797Z",
  "tickers": {
   "NVDA": {
    "name": "NVIDIA",
@@ -128,17 +128,17 @@
  },
  "fundamentals": {
   "NVDA": {
-   "price": 216.455,
+   "price": 216,
    "target": 328.95346,
    "targetHigh": 515,
    "targetLow": 180,
    "consensus": "strong_buy",
    "analysts": 58,
-   "pe": 27.364729,
-   "forwardPE": 13.601033,
+   "pe": 27.307207,
+   "forwardPE": 13.572443,
    "peg": 0.26,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:40.814Z",
+   "updated": "2026-10-26T23:10:02.778Z",
    "margenBruto": 0.74674004,
    "margenOperativo": 0.66236997,
    "margenNeto": 0.63663,
@@ -152,17 +152,17 @@
    "liquidez": 4.589
   },
   "META": {
-   "price": 640.68,
-   "target": 844.7731,
+   "price": 630.56,
+   "target": 845.49725,
    "targetHigh": 1050,
    "targetLow": 629.06,
    "consensus": "strong_buy",
    "analysts": 58,
-   "pe": 21.858751,
-   "forwardPE": 18.27903,
+   "pe": 21.513477,
+   "forwardPE": 17.968327,
    "peg": 0.85,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:41.241Z",
+   "updated": "2026-10-26T23:10:03.251Z",
    "margenBruto": 0.81034,
    "margenOperativo": 0.35414,
    "margenNeto": 0.31145,
@@ -176,17 +176,17 @@
    "liquidez": 1.903
   },
   "MSFT": {
-   "price": 530.3697,
-   "target": 601.7281,
+   "price": 532.6,
+   "target": 603.4262,
    "targetHigh": 870,
    "targetLow": 440,
    "consensus": "strong_buy",
    "analysts": 53,
-   "pe": 29.547056,
-   "forwardPE": 22.388178,
+   "pe": 29.671307,
+   "forwardPE": 22.482325,
    "peg": 1.7,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:41.711Z",
+   "updated": "2026-10-26T23:10:03.699Z",
    "margenBruto": 0.67944,
    "margenOperativo": 0.45111,
    "margenNeto": 0.40305,
@@ -200,17 +200,17 @@
    "liquidez": 1.23
   },
   "ADBE": {
-   "price": 254.77,
+   "price": 258.62,
    "target": 272.31375,
    "targetHigh": 373,
    "targetLow": 195,
    "consensus": "hold",
    "analysts": 32,
-   "pe": 14.225015,
-   "forwardPE": 9.261817,
+   "pe": 14.439978,
+   "forwardPE": 9.401778,
    "peg": 0.64,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:42.163Z",
+   "updated": "2026-10-26T23:10:04.149Z",
    "margenBruto": 0.89252996,
    "margenOperativo": 0.34822,
    "margenNeto": 0.28048,
@@ -224,17 +224,17 @@
    "liquidez": 0.77
   },
   "MU": {
-   "price": 914.034,
+   "price": 903.7,
    "target": 1561.9111,
    "targetHigh": 3000,
    "targetLow": 361,
    "consensus": "strong_buy",
    "analysts": 45,
-   "pe": 12.296972,
-   "forwardPE": 4.4178896,
+   "pe": 12.157944,
+   "forwardPE": 4.3679414,
    "peg": 0.16,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:42.610Z",
+   "updated": "2026-10-26T23:10:04.578Z",
    "margenBruto": 0.80716,
    "margenOperativo": 0.80678004,
    "margenNeto": 0.63796,
@@ -248,17 +248,17 @@
    "liquidez": 3.314
   },
   "PANW": {
-   "price": 390.68,
+   "price": 390.46,
    "target": 398.52,
    "targetHigh": 525,
    "targetLow": 190,
    "consensus": "buy",
    "analysts": 50,
-   "pe": 976.69995,
-   "forwardPE": 80.07264,
+   "pe": 976.14996,
+   "forwardPE": 80.02755,
    "peg": 1.94,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:43.077Z",
+   "updated": "2026-10-26T23:10:05.026Z",
    "margenBruto": 0.70383,
    "margenOperativo": 0.05396,
    "margenNeto": 0.02674,
@@ -272,17 +272,17 @@
    "liquidez": 0.871
   },
   "MELI": {
-   "price": 1652.62,
+   "price": 1668.72,
    "target": 2273.855,
    "targetHigh": 2800,
    "targetLow": 1750,
    "consensus": "buy",
    "analysts": 26,
-   "pe": 44.94479,
-   "forwardPE": 29.385643,
+   "pe": 45.38265,
+   "forwardPE": 29.67192,
    "peg": 0.99,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:43.507Z",
+   "updated": "2026-10-26T23:10:05.434Z",
    "margenBruto": 0.47749,
    "margenOperativo": 0.06716,
    "margenNeto": 0.052950002,
@@ -302,11 +302,11 @@
    "targetLow": null,
    "consensus": null,
    "analysts": null,
-   "pe": 24.32728,
+   "pe": 24.299658,
    "forwardPE": null,
    "peg": null,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:43.934Z",
+   "updated": "2026-10-26T23:10:05.846Z",
    "margenBruto": null,
    "margenOperativo": null,
    "margenNeto": null,
@@ -320,17 +320,17 @@
    "liquidez": null
   },
   "ACN": {
-   "price": 244.96,
-   "target": 227.98792,
+   "price": 247.23,
+   "target": 229.73792,
    "targetHigh": 300,
    "targetLow": 163,
    "consensus": "buy",
    "analysts": 24,
-   "pe": 18.064898,
-   "forwardPE": 15.418372,
+   "pe": 18.2323,
+   "forwardPE": 15.561653,
    "peg": 2.37,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:44.371Z",
+   "updated": "2026-10-26T23:10:06.309Z",
    "margenBruto": 0.3205,
    "margenOperativo": 0.17828,
    "margenNeto": 0.11279,
@@ -344,17 +344,17 @@
    "liquidez": 1.427
   },
   "MCD": {
-   "price": 249.665,
+   "price": 250.83,
    "target": 291.68967,
    "targetHigh": 390,
    "targetLow": 230,
    "consensus": "buy",
    "analysts": 29,
-   "pe": 20.281477,
-   "forwardPE": 18.169134,
+   "pe": 20.376116,
+   "forwardPE": 18.253918,
    "peg": 2.63,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:44.830Z",
+   "updated": "2026-10-26T23:10:06.741Z",
    "margenBruto": 0.57382,
    "margenOperativo": 0.46485,
    "margenNeto": 0.3172,
@@ -380,17 +380,17 @@
    "updated": "2026-09-28"
   },
   "NU": {
-   "price": 12.455,
-   "target": 18.92273,
+   "price": 12.59,
+   "target": 18.96957,
    "targetHigh": 23,
    "targetLow": 12,
    "consensus": "buy",
-   "analysts": 22,
-   "pe": 17.061644,
-   "forwardPE": 11.040101,
+   "analysts": 23,
+   "pe": 17.246574,
+   "forwardPE": 11.159764,
    "peg": 0.7,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:45.761Z",
+   "updated": "2026-10-26T23:10:07.558Z",
    "margenBruto": 0,
    "margenOperativo": 0.50154,
    "margenNeto": 0.42728,
@@ -404,17 +404,17 @@
    "liquidez": null
   },
   "PAMP": {
-   "price": 76.46,
+   "price": 76.62,
    "target": 120.63636,
    "targetHigh": 160,
    "targetLow": 100,
    "consensus": "buy",
    "analysts": 11,
-   "pe": 6.950909,
-   "forwardPE": 6.520197,
+   "pe": 6.9654546,
+   "forwardPE": 6.533841,
    "peg": null,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:46.168Z",
+   "updated": "2026-10-26T23:10:07.966Z",
    "margenBruto": 0.33456,
    "margenOperativo": 0.25603,
    "margenNeto": 0.23583001,
@@ -428,17 +428,17 @@
    "liquidez": 3.641
   },
   "VIST": {
-   "price": 72.71,
-   "target": 92.157104,
-   "targetHigh": 112.73229,
-   "targetLow": 74.981606,
+   "price": 72.98,
+   "target": 92.14926,
+   "targetHigh": 112.722694,
+   "targetLow": 74.97522,
    "consensus": "strong_buy",
    "analysts": 12,
-   "pe": 9.617724,
-   "forwardPE": 6.9999046,
+   "pe": 9.6534395,
+   "forwardPE": 7.0258985,
    "peg": null,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:46.611Z",
+   "updated": "2026-10-26T23:10:08.403Z",
    "margenBruto": 0.82515,
    "margenOperativo": 0.44244,
    "margenNeto": 0.23558001,
@@ -452,17 +452,17 @@
    "liquidez": 0.692
   },
   "GGAL": {
-   "price": 35.395,
+   "price": 35.35,
    "target": 62.2,
    "targetHigh": 85,
    "targetLow": 45,
    "consensus": "buy",
    "analysts": 10,
-   "pe": 39.769665,
-   "forwardPE": 5.0132504,
+   "pe": 39.7191,
+   "forwardPE": 5.0068765,
    "peg": 0.18,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:47.034Z",
+   "updated": "2026-10-26T23:10:08.816Z",
    "margenBruto": 0,
    "margenOperativo": 0.17318001,
    "margenNeto": 0.01496,
@@ -476,17 +476,17 @@
    "liquidez": null
   },
   "YPF": {
-   "price": 49.5525,
+   "price": 49.24,
    "target": 61.96667,
    "targetHigh": 78,
    "targetLow": 50,
    "consensus": "buy",
    "analysts": 12,
-   "pe": 26.080265,
-   "forwardPE": 9.030792,
+   "pe": 25.91579,
+   "forwardPE": 8.973841,
    "peg": 0.1,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:47.460Z",
+   "updated": "2026-10-26T23:10:09.236Z",
    "margenBruto": 0.35638002,
    "margenOperativo": 0.27511,
    "margenNeto": 0.04003,
@@ -500,17 +500,17 @@
    "liquidez": 0.934
   },
   "NFLX": {
-   "price": 63.205,
-   "target": 84.83302,
+   "price": 63.9,
+   "target": 84.78651,
    "targetHigh": 126,
    "targetLow": 57,
    "consensus": "buy",
    "analysts": 43,
-   "pe": 18.267342,
-   "forwardPE": 16.769878,
+   "pe": 18.468208,
+   "forwardPE": 16.950006,
    "peg": 1.04,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:47.912Z",
+   "updated": "2026-10-26T23:10:09.714Z",
    "margenBruto": 0.50685,
    "margenOperativo": 0.34632,
    "margenNeto": 0.29691,
@@ -524,17 +524,17 @@
    "liquidez": 1.075
   },
   "UBER": {
-   "price": 66.1493,
+   "price": 66.13,
    "target": 100.85522,
    "targetHigh": 150,
    "targetLow": 70,
    "consensus": "buy",
    "analysts": 46,
-   "pe": 14.506426,
-   "forwardPE": 14.992805,
+   "pe": 14.5021925,
+   "forwardPE": 14.988429,
    "peg": 5.8,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:48.330Z",
+   "updated": "2026-10-26T23:10:10.153Z",
    "margenBruto": 0.40752,
    "margenOperativo": 0.13317999,
    "margenNeto": 0.17345,
@@ -548,17 +548,17 @@
    "liquidez": 0.843
   },
   "VST": {
-   "price": 143,
+   "price": 141.73,
    "target": 208.86365,
    "targetHigh": 305,
    "targetLow": 106,
    "consensus": "strong_buy",
    "analysts": 22,
-   "pe": 24.114672,
-   "forwardPE": 13.794713,
+   "pe": 23.900505,
+   "forwardPE": 13.6722,
    "peg": 0.4,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:48.761Z",
+   "updated": "2026-10-26T23:10:10.606Z",
    "margenBruto": 0.38309,
    "margenOperativo": 0.13766,
    "margenNeto": 0.1155,
@@ -572,17 +572,17 @@
    "liquidez": 0.973
   },
   "KO": {
-   "price": 92.695,
+   "price": 92.7,
    "target": 95.625,
    "targetHigh": 104,
    "targetLow": 80,
    "consensus": "buy",
    "analysts": 24,
-   "pe": 27.836336,
-   "forwardPE": 26.301975,
+   "pe": 27.837837,
+   "forwardPE": 26.303392,
    "peg": 4.21,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:49.174Z",
+   "updated": "2026-10-26T23:10:11.033Z",
    "margenBruto": 0.61888003,
    "margenOperativo": 0.34873,
    "margenNeto": 0.28558,
@@ -596,17 +596,17 @@
    "liquidez": 1.305
   },
   "JNJ": {
-   "price": 265.44,
+   "price": 266.3,
    "target": 279.4091,
    "targetHigh": 320,
    "targetLow": 190,
    "consensus": "buy",
    "analysts": 22,
-   "pe": 40.27921,
-   "forwardPE": 22.84829,
+   "pe": 40.40971,
+   "forwardPE": 22.922314,
    "peg": 2.94,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:49.594Z",
+   "updated": "2026-10-26T23:10:11.457Z",
    "margenBruto": 0.67775,
    "margenOperativo": 0.25737,
    "margenNeto": 0.16203,
@@ -620,17 +620,17 @@
    "liquidez": 1.016
   },
   "PG": {
-   "price": 159.78,
-   "target": 172.34782,
+   "price": 159.92,
+   "target": 173.30435,
    "targetHigh": 190,
    "targetLow": 143,
    "consensus": "buy",
    "analysts": 23,
-   "pe": 24.063253,
-   "forwardPE": 21.634897,
+   "pe": 24.084337,
+   "forwardPE": 21.607832,
    "peg": 4.14,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:50.064Z",
+   "updated": "2026-10-26T23:10:11.887Z",
    "margenBruto": 0.50597,
    "margenOperativo": 0.27062,
    "margenNeto": 0.18229,
@@ -644,17 +644,17 @@
    "liquidez": 0.722
   },
   "WMT": {
-   "price": 120.085,
+   "price": 120.29,
    "target": 127.475,
    "targetHigh": 155,
    "targetLow": 81,
    "consensus": "buy",
    "analysts": 40,
-   "pe": 43.509056,
-   "forwardPE": 37.218464,
+   "pe": 43.583332,
+   "forwardPE": 37.282,
    "peg": 4.07,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:50.485Z",
+   "updated": "2026-10-26T23:10:12.350Z",
    "margenBruto": 0.24836999,
    "margenOperativo": 0.0345,
    "margenNeto": 0.03,
@@ -668,17 +668,17 @@
    "liquidez": 0.767
   },
   "GOOGL": {
-   "price": 319.02,
+   "price": 316.8,
    "target": 429.12222,
    "targetHigh": 500,
    "targetLow": 340,
    "consensus": "strong_buy",
    "analysts": 54,
-   "pe": 16.007023,
-   "forwardPE": 20.77137,
+   "pe": 15.895634,
+   "forwardPE": 20.626825,
    "peg": 1.12,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:50.969Z",
+   "updated": "2026-10-26T23:10:12.791Z",
    "margenBruto": 0.60897,
    "margenOperativo": 0.34033,
    "margenNeto": 0.54771,
@@ -692,17 +692,17 @@
    "liquidez": 2.724
   },
   "V": {
-   "price": 403.715,
-   "target": 425.38864,
+   "price": 404.16,
+   "target": 426.82108,
    "targetHigh": 480,
    "targetLow": 330,
    "consensus": "strong_buy",
    "analysts": 37,
-   "pe": 34.358723,
-   "forwardPE": 26.872448,
+   "pe": 34.396595,
+   "forwardPE": 26.903412,
    "peg": 1.85,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:51.409Z",
+   "updated": "2026-10-26T23:10:13.235Z",
    "margenBruto": 0.97725,
    "margenOperativo": 0.66130996,
    "margenNeto": 0.50782,
@@ -716,17 +716,17 @@
    "liquidez": 0.985
   },
   "COST": {
-   "price": 1002.94,
+   "price": 1005.16,
    "target": 1067.5946,
    "targetHigh": 1315,
    "targetLow": 770,
    "consensus": "buy",
    "analysts": 37,
-   "pe": 48.311176,
-   "forwardPE": 40.07541,
+   "pe": 48.41811,
+   "forwardPE": 40.164116,
    "peg": 5.03,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:51.837Z",
+   "updated": "2026-10-26T23:10:13.674Z",
    "margenBruto": 0.12765999,
    "margenOperativo": 0.037890002,
    "margenNeto": 0.03043,
@@ -740,17 +740,17 @@
    "liquidez": 1.06
   },
   "JPM": {
-   "price": 335.05,
+   "price": 334.04,
    "target": 372.26086,
    "targetHigh": 425,
    "targetLow": 312,
    "consensus": "buy",
    "analysts": 23,
-   "pe": 14.054111,
-   "forwardPE": 13.123137,
+   "pe": 14.011745,
+   "forwardPE": 13.083579,
    "peg": 1.41,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:52.275Z",
+   "updated": "2026-10-26T23:10:14.125Z",
    "margenBruto": 0,
    "margenOperativo": 0.42584,
    "margenNeto": 0.34592,
@@ -764,17 +764,17 @@
    "liquidez": null
   },
   "ORCL": {
-   "price": 126.36,
-   "target": 236.53513,
+   "price": 126.06,
+   "target": 235.8034,
    "targetHigh": 400,
    "targetLow": 110,
    "consensus": "buy",
    "analysts": 41,
-   "pe": 19.805643,
-   "forwardPE": 11.497861,
+   "pe": 19.75862,
+   "forwardPE": 11.468685,
    "peg": 0.71,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:52.751Z",
+   "updated": "2026-10-26T23:10:14.575Z",
    "margenBruto": 0.63957,
    "margenOperativo": 0.35632,
    "margenNeto": 0.2636,
@@ -788,17 +788,17 @@
    "liquidez": 1.171
   },
   "PLTR": {
-   "price": 199.34,
-   "target": 206.65768,
+   "price": 198.84,
+   "target": 207.61923,
    "targetHigh": 265,
    "targetLow": 80,
    "consensus": "buy",
    "analysts": 26,
-   "pe": 171.84483,
-   "forwardPE": 84.621,
+   "pe": 171.41379,
+   "forwardPE": 84.408745,
    "peg": 1.7,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:53.159Z",
+   "updated": "2026-10-26T23:10:14.987Z",
    "margenBruto": 0.84796,
    "margenOperativo": 0.47120997,
    "margenNeto": 0.49005002,
@@ -812,17 +812,17 @@
    "liquidez": 7.228
   },
   "AMD": {
-   "price": 531.86,
+   "price": 531.28,
    "target": 637.608,
    "targetHigh": 1250,
    "targetLow": 365,
    "consensus": "strong_buy",
    "analysts": 50,
-   "pe": 135.67856,
-   "forwardPE": 33.741276,
+   "pe": 135.53062,
+   "forwardPE": 33.719627,
    "peg": 0.51,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:53.604Z",
+   "updated": "2026-10-26T23:10:15.425Z",
    "margenBruto": 0.55724,
    "margenOperativo": 0.1725,
    "margenNeto": 0.15577,
@@ -836,17 +836,17 @@
    "liquidez": 2.609
   },
   "COIN": {
-   "price": 160.305,
+   "price": 159.6,
    "target": 213.54848,
    "targetHigh": 330,
    "targetLow": 110,
    "consensus": "buy",
    "analysts": 33,
    "pe": null,
-   "forwardPE": 52.128822,
+   "forwardPE": 51.89957,
    "peg": 2.4,
    "source": "Yahoo Finance",
-   "updated": "2026-10-26T17:25:54.039Z",
+   "updated": "2026-10-26T23:10:15.860Z",
    "margenBruto": 0.8581,
    "margenOperativo": -0.13922,
    "margenNeto": -0.16344,
@@ -870,7 +870,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Cantor Fitzgerald",
@@ -880,7 +880,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Rosenblatt",
@@ -890,7 +890,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Piper Sandler",
@@ -900,7 +900,7 @@
     "date": "2026-09",
     "action": "Announces",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -910,7 +910,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Mizuho",
@@ -920,7 +920,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -930,7 +930,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Bernstein",
@@ -940,7 +940,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "META": [
@@ -952,7 +952,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -962,7 +962,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "DA Davidson",
@@ -972,7 +972,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "BMO Capital",
@@ -982,7 +982,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Evercore ISI Group",
@@ -992,7 +992,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Mizuho",
@@ -1002,7 +1002,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Barclays",
@@ -1012,7 +1012,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "RBC Capital",
@@ -1022,10 +1022,20 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "MSFT": [
+   {
+    "bank": "Oppenheimer",
+    "analyst": "",
+    "target": 625,
+    "rating": "Outperform",
+    "date": "2026-10",
+    "action": "Raises",
+    "fuente": "Yahoo",
+    "traido": "2026-10-26T23:10:02.439Z"
+   },
    {
     "bank": "Truist Securities",
     "analyst": "",
@@ -1034,7 +1044,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Scotiabank",
@@ -1044,7 +1054,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Guggenheim",
@@ -1054,7 +1064,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "BMO Capital",
@@ -1064,7 +1074,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Bernstein",
@@ -1074,7 +1084,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "StoneX",
@@ -1084,7 +1094,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "UBS",
@@ -1094,17 +1104,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
-   },
-   {
-    "bank": "Citigroup",
-    "analyst": "",
-    "target": 636,
-    "rating": "Buy",
-    "date": "2026-10",
-    "action": "Raises",
-    "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "ADBE": [
@@ -1116,7 +1116,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wells Fargo",
@@ -1126,7 +1126,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "DA Davidson",
@@ -1136,7 +1136,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -1146,7 +1146,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -1156,7 +1156,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Jefferies",
@@ -1166,7 +1166,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "TD Cowen",
@@ -1176,7 +1176,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Evercore ISI Group",
@@ -1186,7 +1186,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "MU": [
@@ -1198,7 +1198,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Needham",
@@ -1208,7 +1208,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Mizuho",
@@ -1218,7 +1218,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Morgan Stanley",
@@ -1228,7 +1228,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "TD Cowen",
@@ -1238,7 +1238,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "RBC Capital",
@@ -1248,7 +1248,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "DA Davidson",
@@ -1258,7 +1258,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Cantor Fitzgerald",
@@ -1268,7 +1268,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "PANW": [
@@ -1280,7 +1280,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wells Fargo",
@@ -1290,7 +1290,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "TD Cowen",
@@ -1300,7 +1300,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "BTIG",
@@ -1310,7 +1310,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Morgan Stanley",
@@ -1320,7 +1320,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Bernstein",
@@ -1330,7 +1330,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Argus Research",
@@ -1340,7 +1340,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Roth Capital",
@@ -1350,7 +1350,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "MELI": [
@@ -1362,7 +1362,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Cantor Fitzgerald",
@@ -1372,7 +1372,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Susquehanna",
@@ -1382,7 +1382,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "BTIG",
@@ -1392,7 +1392,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -1402,7 +1402,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "UBS",
@@ -1412,7 +1412,7 @@
     "date": "2026-05",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Morgan Stanley",
@@ -1422,7 +1422,7 @@
     "date": "2026-05",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Barclays",
@@ -1432,7 +1432,7 @@
     "date": "2026-05",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "ACN": [
@@ -1444,7 +1444,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Baird",
@@ -1454,7 +1454,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "TD Cowen",
@@ -1464,7 +1464,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Susquehanna",
@@ -1474,7 +1474,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Mizuho",
@@ -1484,7 +1484,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Goldman Sachs",
@@ -1494,7 +1494,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Truist Securities",
@@ -1504,7 +1504,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "RBC Capital",
@@ -1514,7 +1514,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "MCD": [
@@ -1526,7 +1526,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -1536,7 +1536,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Bernstein",
@@ -1546,7 +1546,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Keybanc",
@@ -1556,7 +1556,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wells Fargo",
@@ -1566,7 +1566,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Guggenheim",
@@ -1576,7 +1576,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -1586,7 +1586,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Melius Research",
@@ -1596,7 +1596,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "NU": [
@@ -1608,7 +1608,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -1618,7 +1618,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Needham",
@@ -1628,7 +1628,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Itau BBA",
@@ -1638,7 +1638,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wolfe Research",
@@ -1648,7 +1648,7 @@
     "date": "2026-08",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Susquehanna",
@@ -1658,7 +1658,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -1668,7 +1668,7 @@
     "date": "2026-06",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "B of A Securities",
@@ -1678,7 +1678,7 @@
     "date": "2026-06",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "PAMP": [
@@ -1690,7 +1690,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "VIST": [
@@ -1702,7 +1702,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "UBS",
@@ -1712,7 +1712,7 @@
     "date": "2026-05",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "GGAL": [
@@ -1724,7 +1724,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -1734,7 +1734,7 @@
     "date": "2026-06",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "YPF": [
@@ -1746,7 +1746,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "UBS",
@@ -1756,7 +1756,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "NFLX": [
@@ -1768,7 +1768,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Pivotal Research",
@@ -1778,7 +1778,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "UBS",
@@ -1788,7 +1788,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -1798,7 +1798,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Oppenheimer",
@@ -1808,7 +1808,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Morgan Stanley",
@@ -1818,7 +1818,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -1828,7 +1828,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "TD Cowen",
@@ -1838,7 +1838,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "UBER": [
@@ -1850,7 +1850,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Cantor Fitzgerald",
@@ -1860,7 +1860,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citizens",
@@ -1870,7 +1870,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "BTIG",
@@ -1880,7 +1880,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wells Fargo",
@@ -1890,7 +1890,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Scotiabank",
@@ -1900,7 +1900,7 @@
     "date": "2026-09",
     "action": "Announces",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wedbush",
@@ -1910,7 +1910,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Rosenblatt",
@@ -1920,7 +1920,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "VST": [
@@ -1932,7 +1932,7 @@
     "date": "2026-10",
     "action": "Announces",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Morgan Stanley",
@@ -1942,7 +1942,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "CIBC",
@@ -1952,7 +1952,7 @@
     "date": "2026-10",
     "action": "Announces",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "BMO Capital",
@@ -1962,7 +1962,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Bernstein",
@@ -1972,7 +1972,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Mizuho",
@@ -1982,7 +1982,7 @@
     "date": "2026-08",
     "action": "Announces",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "TD Cowen",
@@ -1992,7 +1992,7 @@
     "date": "2026-08",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "UBS",
@@ -2002,7 +2002,7 @@
     "date": "2026-07",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "KO": [
@@ -2014,7 +2014,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Barclays",
@@ -2024,7 +2024,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -2034,7 +2034,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wells Fargo",
@@ -2044,7 +2044,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -2054,7 +2054,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Argus Research",
@@ -2064,7 +2064,7 @@
     "date": "2026-07",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "TD Cowen",
@@ -2074,7 +2074,7 @@
     "date": "2026-07",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "RBC Capital",
@@ -2084,7 +2084,7 @@
     "date": "2026-07",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "JNJ": [
@@ -2096,7 +2096,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Morgan Stanley",
@@ -2106,7 +2106,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Leerink Partners",
@@ -2116,7 +2116,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "RBC Capital",
@@ -2126,7 +2126,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Guggenheim",
@@ -2136,7 +2136,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -2146,7 +2146,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -2156,7 +2156,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "HSBC",
@@ -2166,7 +2166,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "PG": [
@@ -2178,7 +2178,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Piper Sandler",
@@ -2188,7 +2188,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Freedom Broker",
@@ -2198,7 +2198,7 @@
     "date": "2026-10",
     "action": "Announces",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "UBS",
@@ -2208,7 +2208,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -2218,7 +2218,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "BNP Paribas",
@@ -2228,7 +2228,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -2238,7 +2238,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Evercore ISI Group",
@@ -2248,7 +2248,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "WMT": [
@@ -2260,7 +2260,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Deutsche Bank",
@@ -2270,7 +2270,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Mizuho",
@@ -2280,7 +2280,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "DA Davidson",
@@ -2290,7 +2290,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "BTIG",
@@ -2300,7 +2300,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Tigress Financial",
@@ -2310,7 +2310,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Telsey Advisory Group",
@@ -2320,7 +2320,7 @@
     "date": "2026-08",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -2330,7 +2330,7 @@
     "date": "2026-08",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "GOOGL": [
@@ -2342,7 +2342,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "BMO Capital",
@@ -2352,7 +2352,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Keybanc",
@@ -2362,7 +2362,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "JP Morgan",
@@ -2372,7 +2372,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "UBS",
@@ -2382,7 +2382,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Cantor Fitzgerald",
@@ -2392,7 +2392,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Needham",
@@ -2402,7 +2402,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wells Fargo",
@@ -2412,7 +2412,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "V": [
@@ -2424,7 +2424,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Truist Securities",
@@ -2434,7 +2434,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Baird",
@@ -2444,7 +2444,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "RBC Capital",
@@ -2454,7 +2454,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wolfe Research",
@@ -2464,7 +2464,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Cantor Fitzgerald",
@@ -2474,7 +2474,7 @@
     "date": "2026-08",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wells Fargo",
@@ -2484,7 +2484,7 @@
     "date": "2026-07",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Piper Sandler",
@@ -2494,7 +2494,7 @@
     "date": "2026-07",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "COST": [
@@ -2506,7 +2506,7 @@
     "date": "2026-10",
     "action": "Announces",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Tigress Financial",
@@ -2516,7 +2516,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "RBC Capital",
@@ -2526,7 +2526,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Deutsche Bank",
@@ -2536,7 +2536,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Argus Research",
@@ -2546,7 +2546,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Freedom Broker",
@@ -2556,7 +2556,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Raymond James",
@@ -2566,7 +2566,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Roth Capital",
@@ -2576,7 +2576,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "JPM": [
@@ -2588,7 +2588,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Truist Securities",
@@ -2598,7 +2598,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Barclays",
@@ -2608,7 +2608,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "RBC Capital",
@@ -2618,7 +2618,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Morgan Stanley",
@@ -2628,7 +2628,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Baird",
@@ -2638,7 +2638,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "UBS",
@@ -2648,7 +2648,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "HSBC",
@@ -2658,7 +2658,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "ORCL": [
@@ -2670,7 +2670,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Goldman Sachs",
@@ -2680,7 +2680,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Cantor Fitzgerald",
@@ -2690,7 +2690,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citizens",
@@ -2700,7 +2700,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Freedom Broker",
@@ -2710,7 +2710,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Argus Research",
@@ -2720,7 +2720,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Stifel",
@@ -2730,7 +2730,7 @@
     "date": "2026-09",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "TD Cowen",
@@ -2740,7 +2740,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "PLTR": [
@@ -2752,7 +2752,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -2762,7 +2762,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Mizuho",
@@ -2772,7 +2772,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Barclays",
@@ -2782,7 +2782,7 @@
     "date": "2026-10",
     "action": "Announces",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Goldman Sachs",
@@ -2792,7 +2792,7 @@
     "date": "2026-10",
     "action": "Announces",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Rosenblatt",
@@ -2802,7 +2802,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "UBS",
@@ -2812,7 +2812,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "DA Davidson",
@@ -2822,7 +2822,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "AMD": [
@@ -2834,7 +2834,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Wedbush",
@@ -2844,7 +2844,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -2854,7 +2854,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Mizuho",
@@ -2864,7 +2864,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Stifel",
@@ -2874,7 +2874,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "StoneX",
@@ -2884,7 +2884,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Rosenblatt",
@@ -2894,7 +2894,7 @@
     "date": "2026-09",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "B of A Securities",
@@ -2904,7 +2904,7 @@
     "date": "2026-09",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "COIN": [
@@ -2916,7 +2916,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Needham",
@@ -2926,7 +2926,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citigroup",
@@ -2936,7 +2936,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Citizens",
@@ -2946,7 +2946,7 @@
     "date": "2026-10",
     "action": "Lowers",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Morgan Stanley",
@@ -2956,7 +2956,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Barclays",
@@ -2966,7 +2966,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "BTIG",
@@ -2976,7 +2976,7 @@
     "date": "2026-10",
     "action": "Maintains",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    },
    {
     "bank": "Piper Sandler",
@@ -2986,7 +2986,7 @@
     "date": "2026-10",
     "action": "Raises",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ]
  },
@@ -2998,7 +2998,7 @@
     "type": "earnings",
     "importance": "high",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "ACN": [
@@ -3008,7 +3008,7 @@
     "type": "earnings",
     "importance": "high",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "MSFT": [
@@ -3018,7 +3018,7 @@
     "type": "earnings",
     "importance": "high",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "MCD": [
@@ -3028,7 +3028,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "MELI": [
@@ -3038,7 +3038,7 @@
     "type": "earnings",
     "importance": "high",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "VIST": [
@@ -3048,7 +3048,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "NU": [
@@ -3058,7 +3058,7 @@
     "type": "earnings",
     "importance": "high",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "PAMP": [
@@ -3068,7 +3068,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "PANW": [
@@ -3078,7 +3078,7 @@
     "type": "earnings",
     "importance": "high",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "NVDA": [
@@ -3088,7 +3088,7 @@
     "type": "earnings",
     "importance": "high",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "ADBE": [
@@ -3098,7 +3098,7 @@
     "type": "earnings",
     "importance": "high",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "GGAL": [
@@ -3108,7 +3108,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "YPF": [
@@ -3118,7 +3118,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "NFLX": [
@@ -3128,7 +3128,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "UBER": [
@@ -3138,7 +3138,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "VST": [
@@ -3148,7 +3148,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "KO": [
@@ -3158,7 +3158,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "PG": [
@@ -3168,7 +3168,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "WMT": [
@@ -3178,7 +3178,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "GOOGL": [
@@ -3188,7 +3188,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "V": [
@@ -3198,7 +3198,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "COST": [
@@ -3208,7 +3208,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "JPM": [
@@ -3218,7 +3218,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "ORCL": [
@@ -3228,7 +3228,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "PLTR": [
@@ -3238,7 +3238,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "AMD": [
@@ -3248,7 +3248,7 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ],
   "COIN": [
@@ -3258,14 +3258,14 @@
     "type": "earnings",
     "importance": "medium",
     "fuente": "Yahoo",
-    "traido": "2026-10-26T17:25:40.542Z"
+    "traido": "2026-10-26T23:10:02.439Z"
    }
   ]
  },
  "directivos": {
   "NVDA": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 9,
    "montoCompras": 0,
@@ -3297,7 +3297,7 @@
   },
   "META": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 25,
    "montoCompras": 0,
@@ -3329,7 +3329,7 @@
   },
   "MSFT": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 9,
    "montoCompras": 0,
@@ -3361,7 +3361,7 @@
   },
   "ADBE": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 1,
    "ventas": 3,
    "montoCompras": 1945130,
@@ -3393,7 +3393,7 @@
   },
   "MU": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 16,
    "montoCompras": 0,
@@ -3425,7 +3425,7 @@
   },
   "PANW": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 19,
    "montoCompras": 0,
@@ -3457,7 +3457,7 @@
   },
   "MELI": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 2,
    "ventas": 0,
    "montoCompras": 1193556,
@@ -3489,7 +3489,7 @@
   },
   "ACN": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 3,
    "montoCompras": 0,
@@ -3521,7 +3521,7 @@
   },
   "MCD": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 3,
    "montoCompras": 0,
@@ -3553,7 +3553,7 @@
   },
   "NU": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 6,
    "montoCompras": 0,
@@ -3585,7 +3585,7 @@
   },
   "PAMP": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 3,
    "ventas": 1,
    "montoCompras": 41156300,
@@ -3617,7 +3617,7 @@
   },
   "YPF": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 3,
    "ventas": 1,
    "montoCompras": 337381,
@@ -3649,7 +3649,7 @@
   },
   "NFLX": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 14,
    "montoCompras": 0,
@@ -3681,7 +3681,7 @@
   },
   "UBER": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 2,
    "ventas": 1,
    "montoCompras": 15314016,
@@ -3713,7 +3713,7 @@
   },
   "VST": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 2,
    "ventas": 10,
    "montoCompras": 1173069,
@@ -3745,7 +3745,7 @@
   },
   "KO": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 12,
    "montoCompras": 0,
@@ -3777,7 +3777,7 @@
   },
   "JNJ": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 7,
    "montoCompras": 0,
@@ -3809,7 +3809,7 @@
   },
   "PG": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 13,
    "montoCompras": 0,
@@ -3841,7 +3841,7 @@
   },
   "WMT": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 18,
    "montoCompras": 0,
@@ -3873,7 +3873,7 @@
   },
   "GOOGL": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 0,
    "montoCompras": 0,
@@ -3905,7 +3905,7 @@
   },
   "V": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 11,
    "montoCompras": 0,
@@ -3937,7 +3937,7 @@
   },
   "COST": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 4,
    "montoCompras": 0,
@@ -3969,7 +3969,7 @@
   },
   "JPM": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 11,
    "montoCompras": 0,
@@ -4001,7 +4001,7 @@
   },
   "ORCL": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 1,
    "ventas": 4,
    "montoCompras": 3483800,
@@ -4033,7 +4033,7 @@
   },
   "PLTR": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 23,
    "montoCompras": 0,
@@ -4065,7 +4065,7 @@
   },
   "AMD": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 14,
    "montoCompras": 0,
@@ -4097,7 +4097,7 @@
   },
   "COIN": {
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z",
+   "traido": "2026-10-26T23:10:02.439Z",
    "compras": 0,
    "ventas": 13,
    "montoCompras": 0,
@@ -4159,7 +4159,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "META": {
    "trimestres": [
@@ -4191,7 +4191,7 @@
    "superados": 2,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "MSFT": {
    "trimestres": [
@@ -4223,7 +4223,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "ADBE": {
    "trimestres": [
@@ -4255,7 +4255,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "MU": {
    "trimestres": [
@@ -4287,7 +4287,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "PANW": {
    "trimestres": [
@@ -4319,7 +4319,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "MELI": {
    "trimestres": [
@@ -4351,7 +4351,7 @@
    "superados": 2,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "ACN": {
    "trimestres": [
@@ -4383,7 +4383,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "MCD": {
    "trimestres": [
@@ -4415,7 +4415,7 @@
    "superados": 3,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "NU": {
    "trimestres": [
@@ -4447,7 +4447,7 @@
    "superados": 2,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "PAMP": {
    "trimestres": [
@@ -4479,7 +4479,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "VIST": {
    "trimestres": [
@@ -4511,7 +4511,7 @@
    "superados": 1,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "GGAL": {
    "trimestres": [
@@ -4543,7 +4543,7 @@
    "superados": 1,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "YPF": {
    "trimestres": [
@@ -4575,7 +4575,7 @@
    "superados": 2,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "NFLX": {
    "trimestres": [
@@ -4607,7 +4607,7 @@
    "superados": 3,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "UBER": {
    "trimestres": [
@@ -4639,7 +4639,7 @@
    "superados": 2,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "VST": {
    "trimestres": [
@@ -4671,7 +4671,7 @@
    "superados": 1,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "KO": {
    "trimestres": [
@@ -4703,7 +4703,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "JNJ": {
    "trimestres": [
@@ -4735,7 +4735,7 @@
    "superados": 3,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "PG": {
    "trimestres": [
@@ -4767,7 +4767,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "WMT": {
    "trimestres": [
@@ -4799,7 +4799,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "GOOGL": {
    "trimestres": [
@@ -4831,7 +4831,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "V": {
    "trimestres": [
@@ -4863,7 +4863,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "COST": {
    "trimestres": [
@@ -4895,7 +4895,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "JPM": {
    "trimestres": [
@@ -4927,7 +4927,7 @@
    "superados": 2,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "ORCL": {
    "trimestres": [
@@ -4959,7 +4959,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "PLTR": {
    "trimestres": [
@@ -4991,7 +4991,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "AMD": {
    "trimestres": [
@@ -5023,7 +5023,7 @@
    "superados": 4,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   },
   "COIN": {
    "trimestres": [
@@ -5055,119 +5055,119 @@
    "superados": 1,
    "total": 4,
    "fuente": "Yahoo",
-   "traido": "2026-10-26T17:25:40.542Z"
+   "traido": "2026-10-26T23:10:02.439Z"
   }
  },
  "news": {
   "NVDA": [
    {
-    "title": "Anthropic makes more per employee than every Magnificent Seven company but Nvidia",
-    "url": "https://finance.yahoo.com/markets/article/anthropic-makes-more-per-employee-than-every-magnificent-seven-company-but-nvidia-171110780.html?.tsrc=rss",
+    "title": "Why Range Resources Stock Surged Today",
+    "url": "https://www.fool.com/investing/2026/10/26/why-range-resources-stock-surged-today/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 17:11:10 +0000",
-    "titleEs": "Anthropic gana más por empleado que todas las empresas de los Siete Magníficos excepto Nvidia"
+    "published": "Mon, 26 Oct 2026 22:47:50 +0000",
+    "titleEs": "Por qué las existencias de Range Resources aumentaron hoy"
    },
    {
-    "title": "Medifast, Inc. Q3 2026 Earnings Call Summary",
-    "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-medifast-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss",
+    "title": "Intel vs. Nvidia: Flat Trends vs. Rapid Expansion in Revenue",
+    "url": "https://www.fool.com/coverage/charts/2026/10/26/intel-vs-nvidia-flat-trends-vs-rapid-expansion-in-revenue/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:47:14 +0000",
-    "titleEs": "Resumen de la llamada de resultados del tercer trimestre de 2026 de Medifast, Inc."
+    "published": "Mon, 26 Oct 2026 22:20:01 +0000",
+    "titleEs": "Intel frente a Nvidia: tendencias planas frente a una rápida expansión de los ingresos"
    },
    {
-    "title": "Alliance Resource Partners, L.P. Q3 2026 Earnings Call Summary",
-    "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-alliance-resource-partners-lp-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss",
+    "title": "Business First Bancshares, Inc. Q3 2026 Earnings Call Summary",
+    "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-business-first-bancshares-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:45:09 +0000",
-    "titleEs": "Resumen de la convocatoria de resultados del tercer trimestre de 2026 de Alliance Resource Partners, L.P."
+    "published": "Mon, 26 Oct 2026 21:00:54 +0000",
+    "titleEs": "Resumen de la convocatoria de resultados del tercer trimestre de 2026 de Business First Bancshares, Inc."
    },
    {
-    "title": "MakeMyTrip Limited Q2 2027 Earnings Call Summary",
-    "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-makemytrip-limited-q2-2027-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss",
+    "title": "Verizon Communications Inc. Q3 2026 Earnings Call Summary",
+    "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-verizon-communications-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:45:05 +0000",
-    "titleEs": "Resumen de la llamada de resultados del segundo trimestre de 2027 de MakeMyTrip Limited"
+    "published": "Mon, 26 Oct 2026 21:00:50 +0000",
+    "titleEs": "Resumen de la llamada de resultados del tercer trimestre de 2026 de Verizon Communications Inc."
    },
    {
-    "title": "Acumen Pharmaceuticals, Inc. Q3 2026 Earnings Call Summary",
-    "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-acumen-pharmaceuticals-inc-q3-2026-earnings-call-summary?utm_source=yahoo_finance&amp;utm_medium=rss&amp;.tsrc=rss",
+    "title": "Anthropic Just Filed to Go Public. Should You Buy the Stock?",
+    "url": "https://www.fool.com/investing/2026/10/26/anthropic-just-filed-to-go-public-should-you-buy-the-stock/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:42:03 +0000",
-    "titleEs": "Resumen de la convocatoria de resultados del tercer trimestre de 2026 de Acumen Pharmaceuticals, Inc."
+    "published": "Mon, 26 Oct 2026 22:55:01 +0000",
+    "titleEs": "Anthropic acaba de presentarse para hacerse público. ¿Debería comprar acciones?"
    }
   ],
   "META": [
    {
-    "title": "Zuckerberg shakes California's wealth tax before the vote",
-    "url": "https://www.thestreet.com/taxes/zuckerberg-california-wealth-tax-meta-class-c-stock-prop-40?.tsrc=rss",
+    "title": "Stock Market Today, Oct. 26: AI Optimism Lifts Nasdaq as Tech Stocks Rebound",
+    "url": "https://www.fool.com/coverage/stock-market-today/2026/10/26/stock-market-today-oct-26-ai-optimism-lifts-nasdaq-as-tech-stocks-rebound/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:47:00 +0000",
-    "titleEs": "Zuckerberg sacude el impuesto sobre el patrimonio de California antes de la votación"
+    "published": "Mon, 26 Oct 2026 21:50:00 +0000",
+    "titleEs": "Mercado de valores hoy, 26 de octubre: El optimismo de la IA impulsa al Nasdaq a medida que las acciones tecnológicas se recuperan"
    },
    {
-    "title": "Top Midday Stories: Anthropic Files With SEC for IPO; Meta Looking to Raise $95 Billion From Stock Offerings for AI Expansion",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/top-midday-stories-anthropic-files-161521568.html?.tsrc=rss",
+    "title": "CleanSpark Stock Fell 39% in October. Its Landlord Bet Now Rides on Meta’s Credit",
+    "url": "https://www.tikr.com/blog/cleanspark-stock-fell-39-in-october-its-landlord-bet-now-rides-on-metas-credit?ref=yahoofinance&amp;.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:15:21 +0000",
-    "titleEs": "Principales historias del mediodía: Archivos antrópicos ante la SEC para la OPI; Meta busca recaudar 95 mil millones de dólares mediante ofertas de acciones para la expansión de la IA"
+    "published": "Mon, 26 Oct 2026 21:02:57 +0000",
+    "titleEs": "Las acciones de CleanSpark cayeron un 39% en octubre. Su apuesta por el propietario ahora depende del crédito de Meta"
    },
    {
-    "title": "Bill Gates: Meta’s Muse Is “the First Truly Great Consumer AI Product”",
-    "url": "https://www.tikr.com/blog/bill-gates-metas-muse-is-the-first-truly-great-consumer-ai-product?ref=yahoofinance&amp;.tsrc=rss",
+    "title": "Anthropic’s IPO Will “Suck a Massive Amount of Money” From AI Stocks, Cramer Warns",
+    "url": "https://www.tikr.com/blog/anthropics-ipo-will-suck-a-massive-amount-of-money-from-ai-stocks-cramer-warns?ref=yahoofinance&amp;.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:52:42 +0000",
-    "titleEs": "Bill Gates: Meta's Muse es \"el primer gran producto de IA de consumo\""
+    "published": "Mon, 26 Oct 2026 20:13:14 +0000",
+    "titleEs": "La oferta pública inicial de Anthropic \"succionará una enorme cantidad de dinero\" de las acciones de IA, advierte Cramer"
    },
    {
-    "title": "Reddit Sinks 5% as Slower Growth Guidance Looms Over Earnings; Snap Drops 3%, Meta Holds Steady",
-    "url": "https://247wallst.com/investing/2026/10/26/reddit-sinks-5-as-slower-growth-guidance-looms-over-earnings-snap-drops-3-meta-holds-steady/?.tsrc=rss",
+    "title": "Why Google might avoid an earnings 'reckoning' this week",
+    "url": "https://finance.yahoo.com/markets/stocks/article/why-google-might-avoid-an-earnings-reckoning-this-week-210350868.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:51:05 +0000",
-    "titleEs": "Reddit se hunde un 5% a medida que una guía de crecimiento más lento se cierne sobre las ganancias; Snap cae un 3%, Meta se mantiene estable"
+    "published": "Mon, 26 Oct 2026 21:03:50 +0000",
+    "titleEs": "Por qué Google podría evitar un \"ajuste de cuentas\" de ganancias esta semana"
    },
    {
-    "title": "Meta Seeks About $95 Billion for AI Buildout as Nvidia, AMD and Broadcom Consider Investing in Their Own Customer",
-    "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62594709/meta-95-billion-ai-expansion-chipmaker-investments?utm_source=yahooFinance&amp;utm_campaign=partner_feed&amp;utm_medium=referral&amp;.tsrc=rss",
+    "title": "1 small-cap stock to target this week and 2 we find risky",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/1-small-cap-stock-target-205447287.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:41:52 +0000",
-    "titleEs": "Meta busca alrededor de $95 mil millones para el desarrollo de IA mientras Nvidia, AMD y Broadcom consideran invertir en su propio cliente"
+    "published": "Mon, 26 Oct 2026 20:54:47 +0000",
+    "titleEs": "1 acción de pequeña capitalización a la que apuntar esta semana y 2 que consideramos riesgosas"
    }
   ],
   "MSFT": [
    {
-    "title": "Microsoft offers voluntary buyout to 60,000 employees",
-    "url": "https://finance.yahoo.com/technology/article/microsoft-offers-voluntary-buyout-to-60000-employees-160011034.html?.tsrc=rss",
+    "title": "Dow Jones Futures: Elon Musk-Led Tesla Leads Market Higher; Amazon, Alphabet, Microsoft Earnings On Deck",
+    "url": "https://finance.yahoo.com/m/4f45ec30-6388-381f-b8f7-2aed6d460b6f/dow-jones-futures%3A-elon.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:00:11 +0000",
-    "titleEs": "Microsoft ofrece compra voluntaria a 60.000 empleados"
+    "published": "Mon, 26 Oct 2026 22:03:09 +0000",
+    "titleEs": "Futuros del Dow Jones: Tesla, liderada por Elon Musk, lidera el mercado al alza; Ganancias de Amazon, Alphabet y Microsoft en cubierta"
    },
    {
-    "title": "Microsoft offers voluntary buyouts to about 60,000 employees",
-    "url": "https://www.proactiveinvestors.com/companies/news/1100703/microsoft-offers-voluntary-buyouts-to-about-60-000-employees-1100703.html?.tsrc=rss",
+    "title": "Tech Earnings Are the Market’s Biggest Story This Week: Here’s Why Microsoft, Amazon, Intel, SanDisk, and Alphabet Will Drive the Stock Market’s Next Move",
+    "url": "https://247wallst.com/videos/tech-earnings-are-the-markets-biggest-story-this-week-heres-why-microsoft-amazon-intel-sandisk-and-alphabet-will-drive-the-stock-markets-next-move/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 17:09:00 +0000",
-    "titleEs": "Microsoft ofrece adquisiciones voluntarias a unos 60.000 empleados"
+    "published": "Mon, 26 Oct 2026 21:15:14 +0000",
+    "titleEs": "Las ganancias tecnológicas son la historia más importante del mercado esta semana: he aquí por qué Microsoft, Amazon, Intel, SanDisk y Alphabet impulsarán el próximo movimiento del mercado de valores"
    },
    {
-    "title": "MSFT Stock Gains After Unveiling Massive Buyout Offer For 60,000 Employees To Trim Costs Amid AI Push",
-    "url": "https://stocktwits.com/news-articles/markets/equity/msft-stock-gains-after-unveiling-massive-buyout-offer-for-60-000-employees-to-trim-costs-amid-ai-push/cZU3e5HRByC?.tsrc=rss",
+    "title": "Microsoft offers around 60,000 employees voluntary buyouts",
+    "url": "https://www.euronews.com/2026/10/26/microsoft-offers-around-60000-employees-voluntary-buyouts?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 17:08:50 +0000",
-    "titleEs": "Las acciones de MSFT aumentan después de presentar una oferta de compra masiva para 60.000 empleados para reducir costos en medio del impulso de la IA"
+    "published": "Mon, 26 Oct 2026 20:25:21 +0000",
+    "titleEs": "Microsoft ofrece a unos 60.000 empleados salidas voluntarias"
    },
    {
-    "title": "Microsoft Offers Buyouts to 60,000 Employees. What Could It Mean for Margins?",
-    "url": "https://www.tikr.com/blog/microsoft-offers-buyouts-to-60000-employees-what-could-it-mean-for-margins?ref=yahoofinance&amp;.tsrc=rss",
+    "title": "Why Did Microsoft Stock Beat UiPath Over Five Years?",
+    "url": "https://www.trefis.com/stock/path/articles/620537/why-did-microsoft-stock-beat-uipath-over-five-years/2026-10-26?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 17:06:41 +0000",
-    "titleEs": "Microsoft ofrece adquisiciones a 60.000 empleados. ¿Qué podría significar para los márgenes?"
+    "published": "Mon, 26 Oct 2026 20:08:15 +0000",
+    "titleEs": "¿Por qué las acciones de Microsoft vencieron a UiPath durante cinco años?"
    },
    {
-    "title": "Aldi’s Thanksgiving Deal, Microsoft’s Buyout Offer and More of Today’s Top Money News",
-    "url": "https://finance.yahoo.com/markets/articles/aldi-thanksgiving-deal-microsoft-buyout-164516661.html?.tsrc=rss",
+    "title": "The All-In Podcast Flags Red Flags in Anthropic’s IPO. What Everyday Investors Should Know",
+    "url": "https://247wallst.com/investing/2026/10/26/the-all-in-podcast-flags-red-flags-in-anthropics-ipo-what-everyday-investors-should-know/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:45:16 +0000",
-    "titleEs": "El acuerdo de Acción de Gracias de Aldi, la oferta de compra de Microsoft y más de las principales noticias monetarias de hoy"
+    "published": "Mon, 26 Oct 2026 21:00:02 +0000",
+    "titleEs": "El podcast All-In señala señales de alerta en la oferta pública inicial de Anthropic. Lo que los inversores cotidianos deben saber"
    }
   ],
   "ADBE": [
@@ -5200,14 +5200,28 @@
     "titleEs": "Adobe frente a Docusign: ¿Qué acción tecnológica es una mejor compra en 2026?"
    },
    {
-    "title": "Adobe Stock Looks Different After Record Quarter And Raised Guidance",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/adobe-stock-looks-different-record-071254332.html?.tsrc=rss",
+    "title": "Why Adobe Stock Is the Best ‘Anti-AI’ Play This Earnings Season",
+    "url": "https://www.barchart.com/story/news/8451521/why-adobe-stock-is-the-best-anti-ai-play-this-earnings-season?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Sun, 25 Oct 2026 07:12:54 +0000",
-    "titleEs": "Adobe Stock se ve diferente después de un trimestre récord y una orientación mejorada"
+    "published": "Mon, 26 Oct 2026 11:30:02 +0000",
+    "titleEs": "Por qué Adobe Stock es la mejor apuesta 'anti-IA' en esta temporada de resultados"
    }
   ],
   "MU": [
+   {
+    "title": "Stocks higher by year-end: George Seay on where to deploy cash now",
+    "url": "https://www.thestreet.com/video/stocks-higher-by-year-end-george-seay-on-where-to-deploy-your-cash-now?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 20:07:05 +0000",
+    "titleEs": "Las acciones suben a fin de año: George Seay sobre dónde invertir el efectivo ahora"
+   },
+   {
+    "title": "Micron Climbs 4% as Bank of America Grows More Positive on Memory; Western Digital Rises 5%, SanDisk Gains 3%",
+    "url": "https://247wallst.com/investing/2026/10/26/micron-climbs-4-as-bank-of-america-grows-more-positive-on-memory-western-digital-rises-5-sandisk-gains-3/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 17:52:34 +0000",
+    "titleEs": "Micron sube un 4 % a medida que Bank of America se vuelve más positivo en materia de memoria; Western Digital sube un 5%, SanDisk gana un 3%"
+   },
    {
     "title": "If You Invest $1,000 in Micron Today, Here’s What It Could Be Worth by 2030",
     "url": "https://247wallst.com/investing/2026/10/26/if-you-invest-1000-in-micron-today-heres-what-it-could-be-worth-by-2030/?.tsrc=rss",
@@ -5228,23 +5242,30 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 14:45:12 +0000",
     "titleEs": "Micron sube a medida que Bank of America se vuelve \"cada vez más positivo en cuanto a la memoria\" después de las reuniones ejecutivas"
-   },
-   {
-    "title": "Bank of America Maintains Buy Rating on Micron Following Memory Supply and Technology Updates",
-    "url": "https://investorshub.advfn.com/market-news/article/38579/bank-of-america-maintains-buy-rating-on-micron-following-memory-supply-and-technology-updates?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 13:53:20 +0000",
-    "titleEs": "Bank of America mantiene la calificación de compra de Micron luego de las actualizaciones tecnológicas y de suministro de memoria"
-   },
-   {
-    "title": "Micron Just Delivered a Monster Quarter, but the Stock Is Plummeting. The Reason Is Obvious.",
-    "url": "https://www.fool.com/investing/2026/10/26/micron-just-delivered-a-monster-quarter-but-the-st/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 13:20:00 +0000",
-    "titleEs": "Micron acaba de entregar un cuarto monstruoso, pero las acciones están cayendo en picado. La razón es obvia."
    }
   ],
   "PANW": [
+   {
+    "title": "Palo Alto Networks (PANW) Laps the Stock Market: Here's Why",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-panw-laps-204503062.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 20:45:03 +0000",
+    "titleEs": "Palo Alto Networks (PANW) gana el mercado de valores: este es el motivo"
+   },
+   {
+    "title": "Palo Alto Networks (PANW) Jumped, What Is Behind The Fresh Attention?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-panw-jumped-190921010.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 19:09:21 +0000",
+    "titleEs": "Palo Alto Networks (PANW) saltó, ¿qué hay detrás de la nueva atención?"
+   },
+   {
+    "title": "Nvidia Is Sold Out: Jensen “Can’t Give You Chips for 2028,” Says Palo Alto CEO",
+    "url": "https://www.tikr.com/blog/nvidia-is-sold-out-jensen-cant-give-you-chips-for-2028-says-palo-alto-ceo?ref=yahoofinance&amp;.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 18:16:59 +0000",
+    "titleEs": "Nvidia está agotada: Jensen “no puede ofrecerle chips para 2028”, dice el director ejecutivo de Palo Alto"
+   },
    {
     "title": "Top AI-Powered Cybersecurity Stocks to Buy as Digital Threats Rise",
     "url": "https://finance.yahoo.com/technology/ai/articles/top-ai-powered-cybersecurity-stocks-114700300.html?.tsrc=rss",
@@ -5258,27 +5279,6 @@
     "source": "Yahoo Finance",
     "published": "Sat, 24 Oct 2026 06:00:39 +0000",
     "titleEs": "Las acciones de Palo Alto Networks, Datadog, Zscaler y SentinelOne se disparan, lo que necesita saber"
-   },
-   {
-    "title": "Palo Alto and Crowdstrike Jumped 6%, and Okta Up 5% as Evercore Survey Flags Stronger Cyber Demand",
-    "url": "https://www.tikr.com/blog/palo-alto-and-crowdstrike-jumped-6-and-okta-up-5-as-evercore-survey-flags-stronger-cyber-demand?ref=yahoofinance&amp;.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Fri, 23 Oct 2026 18:16:29 +0000",
-    "titleEs": "Palo Alto y Crowdstrike aumentaron un 6%, y Okta aumentó un 5% a medida que la encuesta Evercore señala una mayor demanda cibernética"
-   },
-   {
-    "title": "SailPoint Soars 11%, Palo Alto Up 6%, CrowdStrike Up 6% as Cybersecurity Stocks Rally",
-    "url": "https://www.tikr.com/blog/sailpoint-soars-11-palo-alto-up-6-crowdstrike-up-6-as-cybersecurity-stocks-rally?ref=yahoofinance&amp;.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Fri, 23 Oct 2026 17:07:41 +0000",
-    "titleEs": "SailPoint se dispara un 11%, Palo Alto un 6%, CrowdStrike un 6% mientras las acciones de ciberseguridad se recuperan"
-   },
-   {
-    "title": "Stock Market Midday, Oct. 23: Energy Surges on Oil Price Spike, Cybersecurity Stocks Gain",
-    "url": "https://www.fool.com/coverage/stock-market-today/2026/10/23/stock-market-midday-oct-23-energy-surges-on-oil-price-spike-cybersecurity-stocks-gain/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Fri, 23 Oct 2026 16:39:38 +0000",
-    "titleEs": "Mediodía del mercado de valores, 23 de octubre: La energía aumenta con el aumento del precio del petróleo y las acciones de ciberseguridad suben"
    }
   ],
   "MELI": [
@@ -5290,35 +5290,42 @@
     "titleEs": "Las acciones tecnológicas suben después de la presentación de una oferta pública inicial de Anthropic: AlphaCheck"
    },
    {
+    "title": "Is MercadoLibre (MELI) Undervalued On Brazil Election Risk Or Still Too Pricey?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/mercadolibre-meli-undervalued-brazil-election-221106855.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 22:11:06 +0000",
+    "titleEs": "¿Está MercadoLibre (MELI) infravalorado por el riesgo electoral en Brasil o sigue siendo demasiado caro?"
+   },
+   {
+    "title": "MercadoLibre vs. Uber Technologies: Comparing Recent Quarterly Revenue Trends",
+    "url": "https://www.fool.com/coverage/charts/2026/10/26/mercadolibre-vs-uber-technologies-comparing-recent-quarterly-revenue-trends/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 21:35:02 +0000",
+    "titleEs": "MercadoLibre versus Uber Technologies: Comparación de las tendencias recientes de ingresos trimestrales"
+   },
+   {
+    "title": "Mercado Pago processes most payments outside Mercado Libre",
+    "url": "https://www.thestreet.com/crypto/markets/mercado-pago-processes-most-payments-outside-mercado-libre?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 21:07:25 +0000",
+    "titleEs": "Mercado Pago procesa la mayoría de los pagos fuera de Mercado Libre"
+   },
+   {
     "title": "Petrobras Sinks 15%, MercadoLibre Down 12% as Lula’s Surprise Re-Election Rocks Brazilian Stocks",
     "url": "https://www.tikr.com/blog/petrobras-sinks-15-mercadolibre-down-12-as-lulas-surprise-re-election-rocks-brazilian-stocks?ref=yahoofinance&amp;.tsrc=rss",
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 13:55:59 +0000",
     "titleEs": "Petrobras se hunde un 15%, MercadoLibre cae un 12% mientras la sorprendente reelección de Lula sacude las acciones brasileñas"
-   },
-   {
-    "title": "Can MercadoLibre Keep Expanding Marketplace Leadership?",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/mercadolibre-keep-expanding-marketplace-leadership-134100101.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 13:41:00 +0000",
-    "titleEs": "¿Puede MercadoLibre seguir ampliando su liderazgo en el mercado?"
-   },
-   {
-    "title": "MercadoLibre (MELI) Registers a Bigger Fall Than the Market: Important Facts to Note",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/mercadolibre-meli-registers-bigger-fall-205002768.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Thu, 22 Oct 2026 20:50:02 +0000",
-    "titleEs": "MercadoLibre (MELI) registra caída mayor que la del mercado: Datos importantes a destacar"
-   },
-   {
-    "title": "Is It Worth Investing in MercadoLibre (MELI) Based on Wall Street's Bullish Views?",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-mercadolibre-meli-based-123003793.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Wed, 21 Oct 2026 12:30:03 +0000",
-    "titleEs": "¿Vale la pena invertir en MercadoLibre (MELI) según las opiniones alcistas de Wall Street?"
    }
   ],
   "SPY": [
+   {
+    "title": "S&P 500, Nasdaq, Dow Begin Week Higher As Anthropic IPO Filing Rekindles AI Enthusiasm — MSFT, AAPL, CART, VZ In Focus",
+    "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-begin-week-higher-as-anthropic-ipo-filing-rekindles-ai-enthusiasm-msft-aapl-cart-vz-in-focus/cZU3LuaRBz7?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 22:35:16 +0000",
+    "titleEs": "S&P 500, Nasdaq y Dow comienzan la semana al alza a medida que la presentación antrópica de IPO reaviva el entusiasmo por la IA: MSFT, AAPL, CART, VZ en foco"
+   },
    {
     "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday Ahead of Big Tech Earnings, Fed Decision",
     "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131810084.html?.tsrc=rss",
@@ -5327,32 +5334,25 @@
     "titleEs": "Los fondos negociados en bolsa y los futuros de acciones suben antes de la campana del lunes antes de las ganancias de las grandes empresas tecnológicas y la decisión de la Reserva Federal"
    },
    {
-    "title": "Netflix Drops 4% as Engagement Worries Outweigh Earnings Beat; Disney and Spotify Slip",
-    "url": "https://247wallst.com/investing/2026/10/26/netflix-drops-4-as-engagement-worries-outweigh-earnings-beat-disney-and-spotify-slip/?.tsrc=rss",
+    "title": "What If You Had Put $1,000 Into Bitcoin, Ethereum, XRP and Solana 5 Years Ago?",
+    "url": "https://247wallst.com/investing/cryptocurrency/2026/10/26/what-if-you-had-put-1000-into-bitcoin-ethereum-xrp-and-solana-5-years-ago/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:49:02 +0000",
-    "titleEs": "Netflix cae un 4% a medida que las preocupaciones sobre el compromiso superan las ganancias; Resbalón de Disney y Spotify"
+    "published": "Mon, 26 Oct 2026 21:30:22 +0000",
+    "titleEs": "¿Qué pasaría si hubieras invertido 1.000 dólares en Bitcoin, Ethereum, XRP y Solana hace 5 años?"
    },
    {
-    "title": "Lumentum Jumps 8% as StoneX Starts Coverage With $1,200 Target; Applied Optoelectronics and Coherent Climb 6%",
-    "url": "https://247wallst.com/investing/2026/10/26/lumentum-jumps-8-as-stonex-starts-coverage-with-1200-target-applied-optoelectronics-and-coherent-climb-6/?.tsrc=rss",
+    "title": "BUFR Holders Left $62,250 on the Table on a $300,000 Position While Chasing Calm",
+    "url": "https://247wallst.com/investing/etf/2026/10/26/bufr-holders-left-62250-on-the-table-on-a-300000-position-while-chasing-calm/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:46:18 +0000",
-    "titleEs": "Lumentum aumenta un 8% cuando StoneX comienza a cubrir con un objetivo de $1200; Optoelectrónica Aplicada y Ascenso Coherente 6%"
+    "published": "Mon, 26 Oct 2026 20:33:18 +0000",
+    "titleEs": "Los titulares de BUFR dejaron $62,250 en la mesa en una posición de $300,000 mientras buscaban la calma"
    },
    {
-    "title": "PayPal Slips 3% Ahead of Earnings Despite Truist Target Raise; Klarna and Affirm Retreat",
-    "url": "https://247wallst.com/investing/2026/10/26/paypal-slips-3-ahead-of-earnings-despite-truist-target-raise-klarna-and-affirm-retreat/?.tsrc=rss",
+    "title": "Intuitive Machines Just Dropped 30% in a Month. Is It Time to Sell?",
+    "url": "https://247wallst.com/investing/2026/10/26/intuitive-machines-just-dropped-30-in-a-month-is-it-time-to-sell/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:43:22 +0000",
-    "titleEs": "PayPal cae un 3% antes de las ganancias a pesar del aumento del objetivo de Truist; Klarna y Affirm Retiro"
-   },
-   {
-    "title": "TeraWulf Jumps 7% as CEO Pushes Back on Stranded Data Center Fears; Cipher Digital Rises 3%, Applied Digital Edges Higher",
-    "url": "https://247wallst.com/investing/2026/10/26/terawulf-jumps-7-as-ceo-pushes-back-on-stranded-data-center-fears-cipher-digital-rises-3-applied-digital-edges-higher/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:56:04 +0000",
-    "titleEs": "TeraWulf salta un 7% mientras el CEO rechaza los temores de los centros de datos varados; Cipher Digital aumenta un 3%, las ventajas digitales aplicadas suben"
+    "published": "Mon, 26 Oct 2026 18:51:57 +0000",
+    "titleEs": "Las máquinas intuitivas acaban de caer un 30% en un mes. ¿Es hora de vender?"
    }
   ],
   "ACN": [
@@ -5394,18 +5394,18 @@
   ],
   "MCD": [
    {
+    "title": "Burger King's new menu item embraces the protein trend",
+    "url": "https://www.thestreet.com/restaurants/bizarre-burger-king-japan-burger-leans-into-growing-trend?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 19:46:58 +0000",
+    "titleEs": "El nuevo elemento del menú de Burger King adopta la tendencia de las proteínas"
+   },
+   {
     "title": "McDonald’s is ending its FIFA World Cup sponsorship",
     "url": "https://www.nrn.com/quick-service/mcdonald-s-is-ending-its-fifa-world-cup-sponsorship?.tsrc=rss",
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 16:36:34 +0000",
     "titleEs": "McDonald's pone fin a su patrocinio de la Copa Mundial de la FIFA"
-   },
-   {
-    "title": "Burger King Japan sells a burger that’s missing almost everything",
-    "url": "https://www.thestreet.com/restaurants/bizarre-burger-king-japan-burger-leans-into-growing-trend?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 14:17:00 +0000",
-    "titleEs": "Burger King Japón vende una hamburguesa a la que le falta casi todo"
    },
    {
     "title": "Why McDonald's Burgers Taste the Same Everywhere",
@@ -5475,32 +5475,32 @@
     "titleEs": "Las acciones tecnológicas suben después de la presentación de una oferta pública inicial de Anthropic: AlphaCheck"
    },
    {
+    "title": "Why Nu Holdings Stock Got Crushed on Monday",
+    "url": "https://www.fool.com/investing/2026/10/26/why-nu-holdings-stock-got-crushed-on-monday/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 22:34:13 +0000",
+    "titleEs": "Por qué las acciones de Nu Holdings fueron aplastadas el lunes"
+   },
+   {
+    "title": "Warren Buffett's former fintech investment plunges 20%",
+    "url": "https://www.thestreet.com/investing/stocks/warren-buffetts-former-fintech-investment-plunges-20-nubank-nu?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 18:42:31 +0000",
+    "titleEs": "La antigua inversión en fintech de Warren Buffett se desploma un 20%"
+   },
+   {
+    "title": "Brazilian Stocks Tumble After Lula’s Shock Win. It Could Create a Buying Opportunity.",
+    "url": "https://finance.yahoo.com/m/dfd0b482-18fe-3682-bc92-a8600f8517e0/brazilian-stocks-tumble-after.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 16:47:00 +0000",
+    "titleEs": "Las acciones brasileñas se desploman tras la sorprendente victoria de Lula. Podría crear una oportunidad de compra."
+   },
+   {
     "title": "NU Stock Suffers Worst Day On Record In Brazil Market Rout – Monness Crespi Initiates Coverage With ‘Buy’ Rating",
     "url": "https://stocktwits.com/news-articles/markets/equity/nu-stock-worst-day-on-record-in-brazil-market-rout-with-buy-rating/cZU34E4RByy?.tsrc=rss",
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 16:33:07 +0000",
     "titleEs": "Las acciones de NU sufren el peor día registrado en la caída del mercado brasileño: Monness Crespi inicia cobertura con calificación de 'comprar'"
-   },
-   {
-    "title": "Brazilian Stocks Tumble as Lula Wins Surprise Fourth Term: Nu Holdings Sinks 25%, Petrobras Tumbles 21%, MercadoLibre Drops 15%",
-    "url": "https://247wallst.com/investing/2026/10/26/brazilian-stocks-tumble-as-lula-wins-surprise-fourth-term-nu-holdings-sinks-25-petrobras-tumbles-21-mercadolibre-drops-15/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 13:22:06 +0000",
-    "titleEs": "Las acciones brasileñas caen mientras Lula gana un cuarto mandato sorpresa: Nu Holdings se hunde un 25%, Petrobras cae un 21%, MercadoLibre cae un 15%"
-   },
-   {
-    "title": "Lula Staged an Unexpected Comeback in Brazil's Presidential Elections. Its Markets Are Plunging.",
-    "url": "https://www.ibtimes.com/lula-staged-unexpected-comeback-brazils-presidential-elections-its-markets-are-plunging-3808973?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 12:09:58 +0000",
-    "titleEs": "Lula protagonizó un regreso inesperado en las elecciones presidenciales de Brasil. Sus mercados se están hundiendo."
-   },
-   {
-    "title": "Brazilian Stocks Tumble After Lula’s Shock Win. The Country’s Path Is Unworkable.",
-    "url": "https://finance.yahoo.com/m/dfd0b482-18fe-3682-bc92-a8600f8517e0/brazilian-stocks-tumble-after.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 11:06:00 +0000",
-    "titleEs": "Las acciones brasileñas se desploman tras la sorprendente victoria de Lula. El camino del país es inviable."
    }
   ],
   "PAMP": [
@@ -5653,6 +5653,13 @@
   ],
   "NFLX": [
    {
+    "title": "Netflix Price Prediction: Where the Stock Goes After a Year of Doubts",
+    "url": "https://247wallst.com/investing/2026/10/26/netflix-price-prediction-where-the-stock-goes-after-a-year-of-doubts/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 17:30:37 +0000",
+    "titleEs": "Predicción del precio de Netflix: hacia dónde se dirigen las acciones después de un año de dudas"
+   },
+   {
     "title": "Netflix Stock: Should You Buy the Post-Earnings Dip?",
     "url": "https://www.fool.com/investing/2026/10/26/netflix-stock-should-you-buy-the-post-earnings-dip/?.tsrc=rss",
     "source": "Yahoo Finance",
@@ -5679,50 +5686,43 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 14:07:30 +0000",
     "titleEs": "Chamath: Netflix es “una suscripción inactiva” y 14.000 millones de dólares de deuda construyeron su biblioteca"
-   },
-   {
-    "title": "Netflix Co-CEO Greg Peters Just Said \"We Know That We Can Do Better\" When It Comes to U.S. Engagement. Should Investors Be Worried?",
-    "url": "https://www.fool.com/investing/2026/10/26/netflix-co-ceo-greg-peters-just-said-we-know-that/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 14:05:00 +0000",
-    "titleEs": "El codirector ejecutivo de Netflix, Greg Peters, acaba de decir: \"Sabemos que podemos hacerlo mejor\" en lo que respecta al compromiso de Estados Unidos. ¿Deberían preocuparse los inversores?"
    }
   ],
   "UBER": [
    {
-    "title": "Uber Technologies (UBER) Is Defending A Negligent Hiring Lawsuit",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/uber-technologies-uber-defending-negligent-140723492.html?.tsrc=rss",
+    "title": "MercadoLibre vs. Uber Technologies: Comparing Recent Quarterly Revenue Trends",
+    "url": "https://www.fool.com/coverage/charts/2026/10/26/mercadolibre-vs-uber-technologies-comparing-recent-quarterly-revenue-trends/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 14:07:23 +0000",
-    "titleEs": "Uber Technologies (UBER) defiende una demanda por contratación negligente"
+    "published": "Mon, 26 Oct 2026 21:35:02 +0000",
+    "titleEs": "MercadoLibre versus Uber Technologies: Comparación de las tendencias recientes de ingresos trimestrales"
    },
    {
-    "title": "Instacart Explores Potential Sale As Talks Begin With Uber And DoorDash",
-    "url": "https://www.tikr.com/blog/instacart-explores-sale-talks-uber-doordash?ref=yahoofinance&amp;.tsrc=rss",
+    "title": "CART Stock Jumps As DoorDash Acquisition Talks Reportedly Heat Up Toward Possible $17B Deal",
+    "url": "https://stocktwits.com/news-articles/markets/equity/cart-stock-jumps-as-door-dash-acquisition-talks-reportedly-heat-up-toward-possible-17-b-deal/cZU3WbVRBzI?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 07:21:17 +0000",
-    "titleEs": "Instacart explora una posible venta a medida que comienzan las conversaciones con Uber y DoorDash"
+    "published": "Mon, 26 Oct 2026 21:27:48 +0000",
+    "titleEs": "Las acciones de CART aumentan a medida que, según se informa, las conversaciones sobre la adquisición de DoorDash se intensifican hacia un posible acuerdo de 17.000 millones de dólares"
    },
    {
-    "title": "Instacart reportedly discussed selling itself with DoorDash and Uber",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/instacart-reportedly-discussed-selling-itself-163000211.html?.tsrc=rss",
+    "title": "DoorDash in advanced talks to acquire Instacart, WSJ reports",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/doordash-advanced-talks-acquire-instacart-200418058.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Sat, 24 Oct 2026 16:30:00 +0000",
-    "titleEs": "Según se informa, Instacart discutió venderse con DoorDash y Uber"
+    "published": "Mon, 26 Oct 2026 20:04:18 +0000",
+    "titleEs": "DoorDash en conversaciones avanzadas para adquirir Instacart, informa WSJ"
    },
    {
-    "title": "Uber Stock Fell as Instacart’s Sale Talks With Uber and DoorDash Surfaced. Here’s Where the Stock Could Go by 2030",
-    "url": "https://www.tikr.com/blog/uber-stock-fell-as-instacarts-sale-talks-with-uber-and-doordash-surfaced-heres-where-the-stock-could-go-by-2030?ref=yahoofinance&amp;.tsrc=rss",
+    "title": "DoorDash in advanced talks to acquire Instacart: WSJ",
+    "url": "https://finance.yahoo.com/video/doordash-in-advanced-talks-to-acquire-instacart-wsj-211415549.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Sat, 24 Oct 2026 15:12:17 +0000",
-    "titleEs": "Las acciones de Uber cayeron cuando surgieron las conversaciones de venta de Instacart con Uber y DoorDash. Aquí es donde podrían ir las acciones en 2030"
+    "published": "Mon, 26 Oct 2026 21:14:15 +0000",
+    "titleEs": "DoorDash en conversaciones avanzadas para adquirir Instacart: WSJ"
    },
    {
-    "title": "Instacart Is Exploring a Sale, and Uber and DoorDash Are Circling",
-    "url": "https://247wallst.com/investing/2026/10/24/instacart-is-exploring-a-sale-and-uber-and-doordash-are-circling/?.tsrc=rss",
+    "title": "Walmart’s Food Delivery Could Be Cheaper for Fast Food Chains and Consumers",
+    "url": "https://finance.yahoo.com/m/f47f92e7-9e25-3762-a6f4-cee1cfa6f1bc/walmart%E2%80%99s-food-delivery-could.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Sat, 24 Oct 2026 14:22:38 +0000",
-    "titleEs": "Instacart está explorando una venta, y Uber y DoorDash están dando vueltas"
+    "published": "Mon, 26 Oct 2026 20:56:00 +0000",
+    "titleEs": "La entrega de alimentos a domicilio de Walmart podría ser más barata para las cadenas de comida rápida y los consumidores"
    }
   ],
   "VST": [
@@ -5764,11 +5764,25 @@
   ],
   "KO": [
    {
+    "title": "Coca-Cola Earnings Are Coming. Its Stock Rally Raises the Stakes.",
+    "url": "https://finance.yahoo.com/m/c339a014-4a5f-3994-a2aa-db73b341a7e9/coca-cola-earnings-are.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 20:52:00 +0000",
+    "titleEs": "Las ganancias de Coca-Cola están por llegar. Su repunte bursátil aumenta las apuestas."
+   },
+   {
     "title": "Danone joins Nestlé, Coca-Cola in revising recycling labels after EU greenwashing probe",
     "url": "https://www.esgdive.com/news/danone-joins-nestle-coca-cola-revises-recycling-labels-after-eu-greenwashing-complaint/872771/?.tsrc=rss",
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 16:26:36 +0000",
     "titleEs": "Danone se une a Nestlé y Coca-Cola en la revisión de las etiquetas de reciclaje tras la investigación de lavado verde de la UE"
+   },
+   {
+    "title": "Ahead of Coca-Cola Earnings, Here's What Barchart Data Says Comes Next for KO Stock",
+    "url": "https://www.barchart.com/story/news/8456588/ahead-of-coca-cola-earnings-here-s-what-barchart-data-says-comes-next-for-ko-stock?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 15:45:28 +0000",
+    "titleEs": "Antes de las ganancias de Coca-Cola, esto es lo que dicen los datos de Barchart que sigue para las acciones de KO"
    },
    {
     "title": "Coca-Cola Just Made a New All-Time High. Should You Wait for a Pullback Before Buying or Double Down in October?",
@@ -5783,23 +5797,23 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 14:30:09 +0000",
     "titleEs": "Coca-Cola paga menos que PepsiCo pero parece más fuerte. Lo que deben demostrar mañana."
-   },
-   {
-    "title": "Coca-Cola's Sports Beverage Portfolio: Can it Capture Fitness Demand?",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/coca-colas-sports-beverage-portfolio-140700232.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 14:07:00 +0000",
-    "titleEs": "La cartera de bebidas deportivas de Coca-Cola: ¿puede captar la demanda de fitness?"
-   },
-   {
-    "title": "Boeing, Coca-Cola Earnings Previews: A Turnaround Story and a Defensive Staple Face the Same Test",
-    "url": "https://247wallst.com/investing/2026/10/26/boeing-coca-cola-earnings-previews-a-turnaround-story-and-a-defensive-staple-face-the-same-test/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 12:05:22 +0000",
-    "titleEs": "Avances de las ganancias de Boeing y Coca-Cola: una historia de cambio y un elemento básico defensivo enfrentan la misma prueba"
    }
   ],
   "JNJ": [
+   {
+    "title": "Your Pension Still Pays the Same $3,100 It Did the Day You Retired. These 3 ETFs Give You the Raise It Never Will",
+    "url": "https://247wallst.com/investing/etf/2026/10/26/your-pension-still-pays-the-same-3100-it-did-the-day-you-retired-these-3-etfs-give-you-the-raise-it-never-will/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 22:03:06 +0000",
+    "titleEs": "Su pensión aún paga los mismos $3,100 que pagaba el día en que se jubiló. Estos 3 ETF le brindan el aumento que nunca tendrá"
+   },
+   {
+    "title": "What Do Johnson & Johnson (JNJ) Cancer Trial Wins Mean For Its Stock?",
+    "url": "https://finance.yahoo.com/healthcare/articles/johnson-johnson-jnj-cancer-trial-191205816.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 19:12:05 +0000",
+    "titleEs": "¿Qué significan para sus acciones las victorias en los ensayos contra el cáncer de Johnson & Johnson (JNJ)?"
+   },
    {
     "title": "ORIC Pharmaceuticals Sinks 22% as J&J Presents Rival Prostate Cancer Data",
     "url": "https://www.tikr.com/blog/oric-pharmaceuticals-sinks-22-as-jj-presents-rival-prostate-cancer-data?ref=yahoofinance&amp;.tsrc=rss",
@@ -5820,23 +5834,16 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 07:13:34 +0000",
     "titleEs": "El medicamento contra el cáncer de próstata de Johnson & Johnson reduce los tumores en un ensayo en etapa inicial"
-   },
-   {
-    "title": "Johnson & Johnson Won UK Approval for Its Psoriasis Pill. Here’s Where the Stock Could Go by 2030",
-    "url": "https://www.tikr.com/blog/johnson-johnson-won-uk-approval-for-its-psoriasis-pill-heres-where-the-stock-could-go-by-2030?ref=yahoofinance&amp;.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 01:24:23 +0000",
-    "titleEs": "Johnson & Johnson obtuvo la aprobación del Reino Unido para su píldora para la psoriasis. Aquí es donde podrían ir las acciones en 2030"
-   },
-   {
-    "title": "RYBREVANT FASPRO™ (amivantamab and hyaluronidase-lpuj) combination demonstrates 77% overall response rate in first-line treatment of patients with advanced head and neck cancer",
-    "url": "https://finance.yahoo.com/healthcare/articles/rybrevant-faspro-amivantamab-hyaluronidase-lpuj-134500539.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Sun, 25 Oct 2026 13:45:00 +0000",
-    "titleEs": "La combinación RYBREVANT FASPRO™ (amivantamab y hialuronidasa-lpuj) demuestra una tasa de respuesta general del 77 % en el tratamiento de primera línea de pacientes con cáncer avanzado de cabeza y cuello"
    }
   ],
   "PG": [
+   {
+    "title": "How Bad Would Higher Oil Prices Be For Procter & Gamble Stock?",
+    "url": "https://www.trefis.com/stock/pg/articles/620505/how-bad-would-higher-oil-prices-be-for-procter-gamble-stock/2026-10-26?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 19:40:29 +0000",
+    "titleEs": "¿Qué tan malo sería el aumento de los precios del petróleo para las acciones de Procter & Gamble?"
+   },
    {
     "title": "TIPS or Dividend Stocks? How Retirees Can Keep Up With Inflation",
     "url": "https://247wallst.com/investing/2026/10/26/tips-or-dividend-stocks-how-retirees-can-keep-up-with-inflation/?.tsrc=rss",
@@ -5864,16 +5871,23 @@
     "source": "Yahoo Finance",
     "published": "Fri, 23 Oct 2026 18:30:00 +0000",
     "titleEs": "Procter & Gamble ha aumentado su dividendo durante 70 años consecutivos. He aquí por qué eso es importante en una liquidación"
-   },
-   {
-    "title": "Procter & Gamble's Topline Fundamentals Encouraging, RBC Capital Markets Says",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/procter-gamble-apos-topline-fundamentals-160020920.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Fri, 23 Oct 2026 16:00:20 +0000",
-    "titleEs": "Los principales fundamentos de Procter & Gamble son alentadores, según RBC Capital Markets"
    }
   ],
   "WMT": [
+   {
+    "title": "Walmart’s Food Delivery Could Be Cheaper for Fast Food Chains and Consumers",
+    "url": "https://finance.yahoo.com/m/f47f92e7-9e25-3762-a6f4-cee1cfa6f1bc/walmart%E2%80%99s-food-delivery-could.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 20:56:00 +0000",
+    "titleEs": "La entrega de alimentos a domicilio de Walmart podría ser más barata para las cadenas de comida rápida y los consumidores"
+   },
+   {
+    "title": "Walmart (WMT) Joins Meta’s AI Commerce Push as Retailers Explore Agentic Shopping",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/walmart-wmt-joins-meta-ai-174422462.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 17:44:22 +0000",
+    "titleEs": "Walmart (WMT) se une al impulso del comercio de IA de Meta a medida que los minoristas exploran las compras agentes"
+   },
    {
     "title": "Walmart gets aggressive when it comes to holiday sales",
     "url": "https://www.thestreet.com/retail/walmart-adds-three-major-holiday-sales-as-consumers-struggle?.tsrc=rss",
@@ -5894,60 +5908,60 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 15:03:59 +0000",
     "titleEs": "Walmart acaba de anunciar su triple evento navideño. Los inversores apuestan a que las vacaciones allanarán el camino hacia el billón de dólares para las acciones"
-   },
-   {
-    "title": "Can Walmart's AI Strategy Unlock the Next Phase of Digital Growth?",
-    "url": "https://finance.yahoo.com/technology/ai/articles/walmarts-ai-strategy-unlock-next-123400459.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 12:34:00 +0000",
-    "titleEs": "¿Puede la estrategia de IA de Walmart desbloquear la siguiente fase de crecimiento digital?"
-   },
-   {
-    "title": "Walmart Expands Better Care Services, Powered by General Medicine’s Healthcare Store",
-    "url": "https://finance.yahoo.com/healthcare/articles/walmart-expands-better-care-services-120000585.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 12:00:00 +0000",
-    "titleEs": "Walmart amplía mejores servicios de atención, impulsados ​​por la tienda de atención médica de medicina general"
    }
   ],
   "GOOGL": [
    {
-    "title": "Tesla stock leaves rest of the Magnificent 7 in the dust, surging to October’s top spot",
-    "url": "https://finance.yahoo.com/markets/article/tesla-stock-leaves-rest-of-the-magnificent-7-in-the-dust-surging-to-octobers-top-spot-172356059.html?.tsrc=rss",
+    "title": "AI Headlines Pile Up as Wall Street Navigates a Volatile Week",
+    "url": "https://finance.yahoo.com/technology/ai/articles/ai-headlines-pile-wall-street-190200236.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 17:23:56 +0000",
-    "titleEs": "Las acciones de Tesla dejan atrás al resto de los 7 Magníficos y alcanzan el primer puesto en octubre"
+    "published": "Mon, 26 Oct 2026 19:02:00 +0000",
+    "titleEs": "Los titulares sobre IA se acumulan mientras Wall Street atraviesa una semana volátil"
    },
    {
-    "title": "MSFT Stock Gains After Unveiling Massive Buyout Offer For 60,000 Employees To Trim Costs Amid AI Push",
-    "url": "https://stocktwits.com/news-articles/markets/equity/msft-stock-gains-after-unveiling-massive-buyout-offer-for-60-000-employees-to-trim-costs-amid-ai-push/cZU3e5HRByC?.tsrc=rss",
+    "title": "Will Alphabet Stock Surge After Oct. 28?",
+    "url": "https://www.fool.com/investing/2026/10/26/will-alphabet-stock-surge-after-oct-28/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 17:08:50 +0000",
-    "titleEs": "Las acciones de MSFT aumentan después de presentar una oferta de compra masiva para 60.000 empleados para reducir costos en medio del impulso de la IA"
+    "published": "Mon, 26 Oct 2026 22:25:00 +0000",
+    "titleEs": "¿Las acciones de Alphabet aumentarán después del 28 de octubre?"
    },
    {
-    "title": "Brazil markets battered, tech in focus elsewhere",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-sink-traders-brace-tech-022128987.html?.tsrc=rss",
+    "title": "Mark Cuban puts Bitcoin and Apple in the same bucket",
+    "url": "https://www.thestreet.com/crypto/markets/mark-cuban-puts-bitcoin-and-apple-in-the-same-bucket?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:56:52 +0000",
-    "titleEs": "Mercados brasileños golpeados, tecnología en foco en otros lugares"
+    "published": "Mon, 26 Oct 2026 22:05:25 +0000",
+    "titleEs": "Mark Cuban pone a Bitcoin y Apple en el mismo cubo"
    },
    {
-    "title": "Can Pinterest Stock Jump 50%?",
-    "url": "https://www.trefis.com/stock/pins/articles/620469/can-pinterest-stock-jump-50/2026-10-26?.tsrc=rss",
+    "title": "Dow Jones Futures: Elon Musk-Led Tesla Leads Market Higher; Amazon, Alphabet, Microsoft Earnings On Deck",
+    "url": "https://finance.yahoo.com/m/4f45ec30-6388-381f-b8f7-2aed6d460b6f/dow-jones-futures%3A-elon.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:50:54 +0000",
-    "titleEs": "¿Pueden las acciones de Pinterest saltar un 50%?"
+    "published": "Mon, 26 Oct 2026 22:03:09 +0000",
+    "titleEs": "Futuros del Dow Jones: Tesla, liderada por Elon Musk, lidera el mercado al alza; Ganancias de Amazon, Alphabet y Microsoft en cubierta"
    },
    {
-    "title": "Prediction: This Magnificent Seven Stock Could Be a $1 Trillion Opportunity",
-    "url": "https://247wallst.com/investing/2026/10/26/prediction-this-magnificent-seven-stock-could-be-a-1-trillion-opportunity/?.tsrc=rss",
+    "title": "Don't Miss This Week's 5 Most Important Earnings Charts",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/dont-miss-weeks-5-most-214800268.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:30:38 +0000",
-    "titleEs": "Predicción: estas acciones de los siete magníficos podrían ser una oportunidad de 1 billón de dólares"
+    "published": "Mon, 26 Oct 2026 21:48:00 +0000",
+    "titleEs": "No se pierda las 5 tablas de ganancias más importantes de esta semana"
    }
   ],
   "V": [
+   {
+    "title": "Visa Hit a Record High Despite a Swipe-Fee Threat. Here’s What October 27 Has to Prove",
+    "url": "https://www.tikr.com/blog/visa-hit-a-record-high-despite-a-swipe-fee-threat-heres-what-october-27-has-to-prove?ref=yahoofinance&amp;.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 20:05:39 +0000",
+    "titleEs": "Visa alcanzó un récord a pesar de la amenaza de pago por transferencia bancaria. Esto es lo que el 27 de octubre tiene que demostrar"
+   },
+   {
+    "title": "Visa, Mastercard, or American Express: Which Payment Stock Is the Better Buy?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/visa-mastercard-american-express-payment-194200658.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 19:42:00 +0000",
+    "titleEs": "Visa, Mastercard o American Express: ¿Qué acción de pago es la mejor compra?"
+   },
    {
     "title": "Visa, Mastercard May Top Views as Major Fintech Firms Release Results This Week, RBC Says",
     "url": "https://finance.yahoo.com/markets/stocks/articles/visa-mastercard-may-top-views-171324472.html?.tsrc=rss",
@@ -5968,23 +5982,16 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 15:42:47 +0000",
     "titleEs": "Ganancias de Visa (V) en el tercer trimestre: que esperar"
-   },
-   {
-    "title": "Visa Likely to Beat Q4 Earnings, but is That Enough to Buy the Stock?",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/visa-likely-beat-q4-earnings-132400971.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 13:24:00 +0000",
-    "titleEs": "Es probable que Visa supere las ganancias del cuarto trimestre, pero ¿es eso suficiente para comprar acciones?"
-   },
-   {
-    "title": "Visa and Mastercard Just Gained More Than 12% in a Month: Take Profits, or Buy More?",
-    "url": "https://www.tikr.com/blog/visa-and-mastercard-just-gained-more-than-12-in-a-month-take-profits-or-buy-more?ref=yahoofinance&amp;.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 11:26:23 +0000",
-    "titleEs": "Visa y Mastercard acaban de ganar más del 12% en un mes: ¿obtener ganancias o comprar más?"
    }
   ],
   "COST": [
+   {
+    "title": "Costco expands a key health offering",
+    "url": "https://www.thestreet.com/retail/costco-expands-pharmacy-options-glp1-fertility-mobile-pay-ahead?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 18:17:13 +0000",
+    "titleEs": "Costco amplía una oferta clave de salud"
+   },
    {
     "title": "Costco's AI Search Traffic Soars: Can It Fuel Online Sales?",
     "url": "https://finance.yahoo.com/technology/ai/articles/costcos-ai-search-traffic-soars-135200769.html?.tsrc=rss",
@@ -6012,16 +6019,16 @@
     "source": "Yahoo Finance",
     "published": "Sat, 24 Oct 2026 02:08:33 +0000",
     "titleEs": "Costco Wholesale (COST) agrega un cardán para teléfonos inteligentes con inteligencia artificial a los estantes exclusivos para miembros"
-   },
-   {
-    "title": "Prediction: $5,000 in Costco Stock Will Trail the Market Through 2030",
-    "url": "https://www.fool.com/investing/2026/10/23/prediction-usd5-000-in-costco-stock-will-trail-the-market-through-2030/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Fri, 23 Oct 2026 23:07:01 +0000",
-    "titleEs": "Predicción: $5,000 en acciones de Costco seguirán al mercado hasta 2030"
    }
   ],
   "JPM": [
+   {
+    "title": "Rockefeller Adds J.P. Morgan Team in Houston",
+    "url": "https://www.wealthmanagement.com/ria-news/rockefeller-adds-14b-jp-morgan-team-in-houston?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 18:30:06 +0000",
+    "titleEs": "Rockefeller agrega equipo de J.P. Morgan en Houston"
+   },
    {
     "title": "KBRA Assigns Preliminary Ratings to J.P. Morgan Mortgage Trust 2026-9 (JPMMT 2026-9)",
     "url": "https://finance.yahoo.com/real-estate/articles/kbra-assigns-preliminary-ratings-j-161100388.html?.tsrc=rss",
@@ -6049,16 +6056,23 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 14:06:49 +0000",
     "titleEs": "Se quedó con 745,575 Chase Points durante años, esperando el viaje perfecto. Cuando nació su segundo hijo, decidió hacer algo totalmente diferente."
-   },
-   {
-    "title": "Can French stocks rebound despite persistent political risks? JPM weighs in",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/french-stocks-rebound-despite-persistent-112134881.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 11:21:34 +0000",
-    "titleEs": "¿Podrán las acciones francesas recuperarse a pesar de los persistentes riesgos políticos? JPM interviene"
    }
   ],
   "ORCL": [
+   {
+    "title": "Barclays Still Sees 100% Upside for Oracle. Here’s How It Gets to $252",
+    "url": "https://www.tikr.com/blog/barclays-still-sees-100-upside-for-oracle-heres-how-it-gets-to-252?ref=yahoofinance&amp;.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 18:51:06 +0000",
+    "titleEs": "Barclays todavía ve un 100% de ventajas para Oracle. Así es como llega a $252"
+   },
+   {
+    "title": "Nvidia May Be Bankrolling More Than Chips in Oracle’s AI Expansion",
+    "url": "https://www.barchart.com/story/news/8456060/nvidia-may-be-bankrolling-more-than-chips-in-oracles-ai-expansion?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 15:14:09 +0000",
+    "titleEs": "Nvidia puede estar financiando más que chips en la expansión de la IA de Oracle"
+   },
    {
     "title": "Oracle Could Have a Massive AI Opportunity. Here’s Where the Stock Could Go",
     "url": "https://247wallst.com/investing/2026/10/26/oracle-could-have-a-massive-ai-opportunity-heres-where-the-stock-could-go/?.tsrc=rss",
@@ -6079,23 +6093,23 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 12:08:00 +0000",
     "titleEs": "Oracle presenta la instalación y configuración de aplicaciones Fusion listas para agentes de IA para acelerar las implementaciones"
-   },
-   {
-    "title": "Oracle Introduces Claw-Powered Fusion Agentic Applications for Supply Chain",
-    "url": "https://finance.yahoo.com/technology/ai/articles/oracle-introduces-claw-powered-fusion-120700287.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 12:07:00 +0000",
-    "titleEs": "Oracle presenta aplicaciones Fusion Agentic impulsadas por Claw para la cadena de suministro"
-   },
-   {
-    "title": "Oracle Introduces Claw-Powered Fusion Agentic Applications for Customer Experience",
-    "url": "https://finance.yahoo.com/technology/ai/articles/oracle-introduces-claw-powered-fusion-120600383.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 12:06:00 +0000",
-    "titleEs": "Oracle presenta aplicaciones Fusion Agentic impulsadas por Claw para la experiencia del cliente"
    }
   ],
   "PLTR": [
+   {
+    "title": "Will Palantir Technologies Stock Hit $300 Before the End of 2026?",
+    "url": "https://www.fool.com/investing/2026/10/26/will-palantir-technologies-stock-hit-300-before-the-end-of-2026/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 21:36:02 +0000",
+    "titleEs": "¿Las acciones de Palantir Technologies alcanzarán los 300 dólares antes de finales de 2026?"
+   },
+   {
+    "title": "Burke Wealth Initiates a New Position in Palantir (PLTR) as AI Software Growth Accelerates",
+    "url": "https://finance.yahoo.com/technology/ai/articles/burke-wealth-initiates-position-palantir-173050006.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 17:30:50 +0000",
+    "titleEs": "Burke Wealth inicia una nueva posición en Palantir (PLTR) a medida que se acelera el crecimiento del software de inteligencia artificial"
+   },
    {
     "title": "Palantir Technologies (PLTR) is an Incredible Growth Stock: 3 Reasons Why",
     "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-technologies-pltr-incredible-growth-154502732.html?.tsrc=rss",
@@ -6116,20 +6130,6 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 13:49:24 +0000",
     "titleEs": "Michael Burry está vendiendo PLTR en corto: por qué las ganancias de Palantir el próximo lunes son un momento decisivo"
-   },
-   {
-    "title": "Brokers Suggest Investing in Palantir Technologies (PLTR): Read This Before Placing a Bet",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/brokers-suggest-investing-palantir-technologies-123002071.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 12:30:02 +0000",
-    "titleEs": "Los corredores sugieren invertir en Palantir Technologies (PLTR): lea esto antes de realizar una apuesta"
-   },
-   {
-    "title": "Up Just 9% in the Last 12 Months, Can Palantir Stock Give Better Returns in 2026?",
-    "url": "https://www.tikr.com/blog/palantir-stock-valuation-pltr-2026?ref=yahoofinance&amp;.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 12:25:41 +0000",
-    "titleEs": "Con un aumento de solo el 9% en los últimos 12 meses, ¿pueden las acciones de Palantir ofrecer mejores rendimientos en 2026?"
    }
   ],
   "AMD": [
@@ -6139,6 +6139,20 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 14:01:41 +0000",
     "titleEs": "Meta anuncia planes para recaudar hasta 95 mil millones de dólares para el desarrollo de la IA"
+   },
+   {
+    "title": "Advanced Micro Devices (AMD) Rises Higher Than Market: Key Facts",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/advanced-micro-devices-amd-rises-204503858.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 20:45:03 +0000",
+    "titleEs": "Los microdispositivos avanzados (AMD) crecen más que el mercado: datos clave"
+   },
+   {
+    "title": "Intel Rises 5% as New Street Upgrade Cites Server CPU Shortage; AMD and NVIDIA Gain 3%",
+    "url": "https://247wallst.com/investing/2026/10/26/intel-rises-5-as-new-street-upgrade-cites-server-cpu-shortage-amd-and-nvidia-gain-3/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 17:50:31 +0000",
+    "titleEs": "Intel aumenta un 5% a medida que la nueva actualización Street cita la escasez de CPU del servidor; AMD y NVIDIA ganan un 3%"
    },
    {
     "title": "Meta Seeks About $95 Billion for AI Buildout as Nvidia, AMD and Broadcom Consider Investing in Their Own Customer",
@@ -6153,20 +6167,6 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 15:35:00 +0000",
     "titleEs": "No AMD. No Marvell. Esta es la empresa por la que Nvidia debe preocuparse."
-   },
-   {
-    "title": "Global Flip Chip Technology Market Report 2026: Size, Share, Trends, and Forecast to 2030 | Capitalize on AI, 5G, and 3D Packaging with TSMC, Intel, Samsung, AMD, and Amkor",
-    "url": "https://finance.yahoo.com/technology/articles/global-flip-chip-technology-market-142300958.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 14:23:00 +0000",
-    "titleEs": "Informe del mercado global de tecnología Flip Chip 2026: tamaño, participación, tendencias y pronóstico hasta 2030 | Aproveche la IA, 5G y el embalaje 3D con TSMC, Intel, Samsung, AMD y Amkor"
-   },
-   {
-    "title": "Price Prediction: The Gap With Nvidia Could Shape AMD’s Next Big Move",
-    "url": "https://247wallst.com/investing/2026/10/26/price-prediction-the-gap-with-nvidia-could-shape-amds-next-big-move/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 14:00:43 +0000",
-    "titleEs": "Predicción de precios: la brecha con Nvidia podría dar forma al próximo gran movimiento de AMD"
    }
   ],
   "COIN": [
@@ -6266,122 +6266,122 @@
  "discovery_news": {
   "TSLA": [
    {
-    "title": "Tesla stock leaves rest of the Magnificent 7 in the dust, surging to October’s top spot",
-    "url": "https://finance.yahoo.com/markets/article/tesla-stock-leaves-rest-of-the-magnificent-7-in-the-dust-surging-to-octobers-top-spot-172356059.html?.tsrc=rss",
+    "title": "Dow Jones Futures: Elon Musk-Led Tesla Leads Market Higher; Amazon, Alphabet, Microsoft Earnings On Deck",
+    "url": "https://finance.yahoo.com/m/4f45ec30-6388-381f-b8f7-2aed6d460b6f/dow-jones-futures%3A-elon.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 17:23:56 +0000",
-    "titleEs": "Las acciones de Tesla dejan atrás al resto de los 7 Magníficos y alcanzan el primer puesto en octubre"
+    "published": "Mon, 26 Oct 2026 22:03:09 +0000",
+    "titleEs": "Futuros del Dow Jones: Tesla, liderada por Elon Musk, lidera el mercado al alza; Ganancias de Amazon, Alphabet y Microsoft en cubierta"
    },
    {
-    "title": "Tesla stock jumps as Barclays bets a SpaceX takeout bump is coming",
-    "url": "https://finance.yahoo.com/markets/stocks/article/tesla-stock-jumps-as-barclays-bets-a-spacex-takeout-bump-is-coming-152118597.html?.tsrc=rss",
+    "title": "Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut.",
+    "url": "https://www.fool.com/investing/2026/10/26/tesla-isnt-a-hyperscaler-why-the-ai-bears-are-misreading-its-5-billion-capex-cut/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:21:18 +0000",
-    "titleEs": "Las acciones de Tesla suben mientras Barclays apuesta a que se avecina un aumento en la comida para llevar de SpaceX"
+    "published": "Mon, 26 Oct 2026 20:53:02 +0000",
+    "titleEs": "Tesla no es un hiperescalador. Por qué los bajistas de la IA están malinterpretando su recorte de capital de 5.000 millones de dólares."
    },
    {
-    "title": "I Wouldn't Buy Tesla Stock Betting on a SpaceX Deal. Here's Why.",
-    "url": "https://www.fool.com/investing/2026/10/26/i-wouldn-t-buy-tesla-stock-betting-on-a-spacex-deal-here-s-why/?.tsrc=rss",
+    "title": "Tesla Stock, Upgraded On SpaceX Prospects, Moves Into A Buy Zone",
+    "url": "https://finance.yahoo.com/m/01cd1ea9-015f-3e37-8ef6-7e8f380f0327/tesla-stock%2C-upgraded-on.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:43:01 +0000",
-    "titleEs": "No compraría acciones de Tesla apostando por un acuerdo con SpaceX. He aquí por qué."
+    "published": "Mon, 26 Oct 2026 20:51:45 +0000",
+    "titleEs": "Las acciones de Tesla, mejoradas según las perspectivas de SpaceX, entran en una zona de compra"
    },
    {
-    "title": "Tesla Soars 6% on Barclays Upgrade Calling SpaceX Merger “Key Part of the Tesla Bull Case”",
-    "url": "https://www.tikr.com/blog/tesla-soars-6-on-barclays-upgrade-calling-spacex-merger-key-part-of-the-tesla-bull-case?ref=yahoofinance&amp;.tsrc=rss",
+    "title": "Fort Bend County sweetens pot to land $10B Tesla solar plant",
+    "url": "https://finance.yahoo.com/economy/policy/articles/fort-bend-county-sweetens-pot-204327337.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:29:30 +0000",
-    "titleEs": "Tesla se dispara un 6% con la actualización de Barclays y califica la fusión de SpaceX como \"parte clave del caso Tesla Bull\""
+    "published": "Mon, 26 Oct 2026 20:43:27 +0000",
+    "titleEs": "El condado de Fort Bend se endulza para conseguir una planta solar Tesla de 10.000 millones de dólares"
    }
   ],
   "AMZN": [
    {
-    "title": "If Amazon Grows At 10% a Year, Here’s What $1,000 Becomes By 2030",
-    "url": "https://247wallst.com/investing/2026/10/26/if-amazon-grows-at-10-a-year-heres-what-1000-becomes-by-2030/?.tsrc=rss",
+    "title": "Dow Jones Futures: Elon Musk-Led Tesla Leads Market Higher; Amazon, Alphabet, Microsoft Earnings On Deck",
+    "url": "https://finance.yahoo.com/m/4f45ec30-6388-381f-b8f7-2aed6d460b6f/dow-jones-futures%3A-elon.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:00:41 +0000",
-    "titleEs": "Si Amazon crece un 10% al año, esto es en lo que se convertirán 1.000 dólares en 2030"
+    "published": "Mon, 26 Oct 2026 22:03:09 +0000",
+    "titleEs": "Futuros del Dow Jones: Tesla, liderada por Elon Musk, lidera el mercado al alza; Ganancias de Amazon, Alphabet y Microsoft en cubierta"
    },
    {
-    "title": "H2O.ai's TimeH2O Beats Mistral, Google, and Amazon in Time-Series Forecasting",
-    "url": "https://finance.yahoo.com/technology/ai/articles/h2o-ais-timeh2o-beats-mistral-152900943.html?.tsrc=rss",
+    "title": "Tech Earnings Are the Market’s Biggest Story This Week: Here’s Why Microsoft, Amazon, Intel, SanDisk, and Alphabet Will Drive the Stock Market’s Next Move",
+    "url": "https://247wallst.com/videos/tech-earnings-are-the-markets-biggest-story-this-week-heres-why-microsoft-amazon-intel-sandisk-and-alphabet-will-drive-the-stock-markets-next-move/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:29:00 +0000",
-    "titleEs": "TimeH2O de H2O.ai supera a Mistral, Google y Amazon en pronósticos de series temporales"
+    "published": "Mon, 26 Oct 2026 21:15:14 +0000",
+    "titleEs": "Las ganancias tecnológicas son la historia más importante del mercado esta semana: he aquí por qué Microsoft, Amazon, Intel, SanDisk y Alphabet impulsarán el próximo movimiento del mercado de valores"
    },
    {
-    "title": "Forget Alphabet and Microsoft: Is Amazon the smartest AI play ahead of earnings?",
-    "url": "https://finance.yahoo.com/technology/ai/articles/forget-alphabet-microsoft-amazon-smartest-133558125.html?.tsrc=rss",
+    "title": "Should You Buy Amazon Stock Now or Wait for a Dip?",
+    "url": "https://www.fool.com/investing/2026/10/26/should-you-buy-amazon-stock-now-or-wait-for-a-dip/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:16:57 +0000",
-    "titleEs": "Olvídese de Alphabet y Microsoft: ¿Es Amazon el juego de IA más inteligente antes de las ganancias?"
+    "published": "Mon, 26 Oct 2026 19:58:02 +0000",
+    "titleEs": "¿Debería comprar acciones de Amazon ahora o esperar una caída?"
    },
    {
-    "title": "Anthropic makes more per employee than every Magnificent Seven company but Nvidia",
-    "url": "https://finance.yahoo.com/markets/article/anthropic-makes-more-per-employee-than-every-magnificent-seven-company-but-nvidia-171110780.html?.tsrc=rss",
+    "title": "DoorDash in advanced talks to acquire Instacart: WSJ",
+    "url": "https://finance.yahoo.com/video/doordash-in-advanced-talks-to-acquire-instacart-wsj-211415549.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 17:11:10 +0000",
-    "titleEs": "Anthropic gana más por empleado que todas las empresas de los Siete Magníficos excepto Nvidia"
+    "published": "Mon, 26 Oct 2026 21:14:15 +0000",
+    "titleEs": "DoorDash en conversaciones avanzadas para adquirir Instacart: WSJ"
    }
   ],
   "AAPL": [
    {
-    "title": "The 10 biggest stocks are faltering, and it's dragging the S&P 500 down",
-    "url": "https://finance.yahoo.com/markets/article/the-10-biggest-stocks-are-faltering-and-its-dragging-the-sp-500-down-122521456.html?.tsrc=rss",
+    "title": "Mark Cuban puts Bitcoin and Apple in the same bucket",
+    "url": "https://www.thestreet.com/crypto/markets/mark-cuban-puts-bitcoin-and-apple-in-the-same-bucket?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 12:25:21 +0000",
-    "titleEs": "Las 10 acciones más importantes están tambaleándose y eso está arrastrando al S&P 500 hacia abajo"
+    "published": "Mon, 26 Oct 2026 22:05:25 +0000",
+    "titleEs": "Mark Cuban pone a Bitcoin y Apple en el mismo cubo"
    },
    {
-    "title": "Prediction: The Next Chapter for Apple Could Be Its Most Important Yet",
-    "url": "https://247wallst.com/investing/2026/10/26/prediction-the-next-chapter-for-apple-could-be-its-most-important-yet/?.tsrc=rss",
+    "title": "Apple (AAPL) Stock Falls Amid Market Uptick: What Investors Need to Know",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/apple-aapl-stock-falls-amid-204503686.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:00:03 +0000",
-    "titleEs": "Predicción: El próximo capítulo de Apple podría ser el más importante hasta el momento"
+    "published": "Mon, 26 Oct 2026 20:45:03 +0000",
+    "titleEs": "Las acciones de Apple (AAPL) caen en medio del repunte del mercado: lo que los inversores deben saber"
    },
    {
-    "title": "Retiree Alleges Morgan Stanley Covered Call Strategy Cost Him His Apple and NVIDIA Shares; Reif Law Group Files Financial Elder Abuse Claims",
-    "url": "https://finance.yahoo.com/markets/options/articles/retiree-alleges-morgan-stanley-covered-150000527.html?.tsrc=rss",
+    "title": "Billionaire predicts 'unhinged' future for iPhone Duo",
+    "url": "https://www.thestreet.com/crypto/innovation/billionaire-predicts-unhinged-future-for-iphone-duo?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:00:00 +0000",
-    "titleEs": "Jubilado alega que la estrategia de llamada cubierta de Morgan Stanley le costó sus acciones de Apple y NVIDIA; Reif Law Group presenta reclamaciones por abuso financiero de personas mayores"
+    "published": "Mon, 26 Oct 2026 20:07:19 +0000",
+    "titleEs": "Multimillonario predice un futuro 'desquiciado' para el iPhone Duo"
    },
    {
-    "title": "Apple’s $5 Trillion Dilemma: 3 Reasons Earnings Could Spark a Breakout on Nov. 2 — or a Meltdown",
-    "url": "https://247wallst.com/investing/2026/10/26/apples-5-trillion-dilemma-3-reasons-earnings-could-spark-a-breakout-on-nov-2-or-a-meltdown/?.tsrc=rss",
+    "title": "Apple’s iPhone Duo delivery times stretch to January",
+    "url": "https://www.proactiveinvestors.com/companies/news/1100704/apple-s-iphone-duo-delivery-times-stretch-to-january-1100704.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 13:42:24 +0000",
-    "titleEs": "El dilema de los 5 billones de dólares de Apple: 3 razones por las que las ganancias podrían provocar una ruptura el 2 de noviembre... o una crisis"
+    "published": "Mon, 26 Oct 2026 17:30:00 +0000",
+    "titleEs": "Los plazos de entrega del iPhone Duo de Apple se extienden hasta enero"
    }
   ],
   "GOOGL": [
    {
-    "title": "Tesla stock leaves rest of the Magnificent 7 in the dust, surging to October’s top spot",
-    "url": "https://finance.yahoo.com/markets/article/tesla-stock-leaves-rest-of-the-magnificent-7-in-the-dust-surging-to-octobers-top-spot-172356059.html?.tsrc=rss",
+    "title": "AI Headlines Pile Up as Wall Street Navigates a Volatile Week",
+    "url": "https://finance.yahoo.com/technology/ai/articles/ai-headlines-pile-wall-street-190200236.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 17:23:56 +0000",
-    "titleEs": "Las acciones de Tesla dejan atrás al resto de los 7 Magníficos y alcanzan el primer puesto en octubre"
+    "published": "Mon, 26 Oct 2026 19:02:00 +0000",
+    "titleEs": "Los titulares sobre IA se acumulan mientras Wall Street atraviesa una semana volátil"
    },
    {
-    "title": "MSFT Stock Gains After Unveiling Massive Buyout Offer For 60,000 Employees To Trim Costs Amid AI Push",
-    "url": "https://stocktwits.com/news-articles/markets/equity/msft-stock-gains-after-unveiling-massive-buyout-offer-for-60-000-employees-to-trim-costs-amid-ai-push/cZU3e5HRByC?.tsrc=rss",
+    "title": "Will Alphabet Stock Surge After Oct. 28?",
+    "url": "https://www.fool.com/investing/2026/10/26/will-alphabet-stock-surge-after-oct-28/?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 17:08:50 +0000",
-    "titleEs": "Las acciones de MSFT aumentan después de presentar una oferta de compra masiva para 60.000 empleados para reducir costos en medio del impulso de la IA"
+    "published": "Mon, 26 Oct 2026 22:25:00 +0000",
+    "titleEs": "¿Las acciones de Alphabet aumentarán después del 28 de octubre?"
    },
    {
-    "title": "Brazil markets battered, tech in focus elsewhere",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-sink-traders-brace-tech-022128987.html?.tsrc=rss",
+    "title": "Mark Cuban puts Bitcoin and Apple in the same bucket",
+    "url": "https://www.thestreet.com/crypto/markets/mark-cuban-puts-bitcoin-and-apple-in-the-same-bucket?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:56:52 +0000",
-    "titleEs": "Mercados brasileños golpeados, tecnología en foco en otros lugares"
+    "published": "Mon, 26 Oct 2026 22:05:25 +0000",
+    "titleEs": "Mark Cuban pone a Bitcoin y Apple en el mismo cubo"
    },
    {
-    "title": "Can Pinterest Stock Jump 50%?",
-    "url": "https://www.trefis.com/stock/pins/articles/620469/can-pinterest-stock-jump-50/2026-10-26?.tsrc=rss",
+    "title": "Dow Jones Futures: Elon Musk-Led Tesla Leads Market Higher; Amazon, Alphabet, Microsoft Earnings On Deck",
+    "url": "https://finance.yahoo.com/m/4f45ec30-6388-381f-b8f7-2aed6d460b6f/dow-jones-futures%3A-elon.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 16:50:54 +0000",
-    "titleEs": "¿Pueden las acciones de Pinterest saltar un 50%?"
+    "published": "Mon, 26 Oct 2026 22:03:09 +0000",
+    "titleEs": "Futuros del Dow Jones: Tesla, liderada por Elon Musk, lidera el mercado al alza; Ganancias de Amazon, Alphabet y Microsoft en cubierta"
    }
   ],
   "AMD": [
@@ -6393,58 +6393,72 @@
     "titleEs": "Meta anuncia planes para recaudar hasta 95 mil millones de dólares para el desarrollo de la IA"
    },
    {
+    "title": "Advanced Micro Devices (AMD) Rises Higher Than Market: Key Facts",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/advanced-micro-devices-amd-rises-204503858.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 20:45:03 +0000",
+    "titleEs": "Los microdispositivos avanzados (AMD) crecen más que el mercado: datos clave"
+   },
+   {
+    "title": "Intel Rises 5% as New Street Upgrade Cites Server CPU Shortage; AMD and NVIDIA Gain 3%",
+    "url": "https://247wallst.com/investing/2026/10/26/intel-rises-5-as-new-street-upgrade-cites-server-cpu-shortage-amd-and-nvidia-gain-3/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 17:50:31 +0000",
+    "titleEs": "Intel aumenta un 5% a medida que la nueva actualización Street cita la escasez de CPU del servidor; AMD y NVIDIA ganan un 3%"
+   },
+   {
     "title": "Meta Seeks About $95 Billion for AI Buildout as Nvidia, AMD and Broadcom Consider Investing in Their Own Customer",
     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62594709/meta-95-billion-ai-expansion-chipmaker-investments?utm_source=yahooFinance&amp;utm_campaign=partner_feed&amp;utm_medium=referral&amp;.tsrc=rss",
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 15:41:52 +0000",
     "titleEs": "Meta busca alrededor de $95 mil millones para el desarrollo de IA mientras Nvidia, AMD y Broadcom consideran invertir en su propio cliente"
-   },
-   {
-    "title": "Not AMD. Not Marvell. Here's Which Company Nvidia Needs to Be Worried About.",
-    "url": "https://www.fool.com/investing/2026/10/26/heres-which-company-nvidia-needs-to-be-worried/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:35:00 +0000",
-    "titleEs": "No AMD. No Marvell. Esta es la empresa por la que Nvidia debe preocuparse."
-   },
-   {
-    "title": "Global Flip Chip Technology Market Report 2026: Size, Share, Trends, and Forecast to 2030 | Capitalize on AI, 5G, and 3D Packaging with TSMC, Intel, Samsung, AMD, and Amkor",
-    "url": "https://finance.yahoo.com/technology/articles/global-flip-chip-technology-market-142300958.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 14:23:00 +0000",
-    "titleEs": "Informe del mercado global de tecnología Flip Chip 2026: tamaño, participación, tendencias y pronóstico hasta 2030 | Aproveche la IA, 5G y el embalaje 3D con TSMC, Intel, Samsung, AMD y Amkor"
    }
   ],
   "AVGO": [
    {
-    "title": "Meta announces plans to raise up to $95 billion for AI build-out",
-    "url": "https://finance.yahoo.com/markets/article/meta-announces-plans-to-raise-up-to-95-billion-for-ai-buildout-140141962.html?.tsrc=rss",
+    "title": "Broadcom Partners With Wall Street Bigwigs To Forge $63B Deal To Power Anthropic’s AI Hardware",
+    "url": "https://stocktwits.com/news-articles/markets/equity/broadcom-partners-with-wall-street-bigwigs-to-forge-63-b-deal-to-power-anthropic-s-ai-hardware/cZU3ie1RBzJ?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 14:01:41 +0000",
-    "titleEs": "Meta anuncia planes para recaudar hasta 95 mil millones de dólares para el desarrollo de la IA"
+    "published": "Mon, 26 Oct 2026 22:50:16 +0000",
+    "titleEs": "Broadcom se asocia con los peces gordos de Wall Street para forjar un acuerdo de 63.000 millones de dólares para impulsar el hardware de inteligencia artificial de Anthropic"
    },
    {
-    "title": "Tech stocks rise after Anthropic IPO filing: AlphaCheck",
-    "url": "https://finance.yahoo.com/markets/article/tech-rise-after-anthropic-ipo-filing-alphacheck-140040601.html?.tsrc=rss",
+    "title": "Broadcom secures $63 billion from banks to finance AI compute sales to Anthropic",
+    "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-secures-63-billion-banks-205926176.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 14:00:40 +0000",
-    "titleEs": "Las acciones tecnológicas suben después de la presentación de una oferta pública inicial de Anthropic: AlphaCheck"
+    "published": "Mon, 26 Oct 2026 20:59:26 +0000",
+    "titleEs": "Broadcom obtiene 63 mil millones de dólares de los bancos para financiar las ventas de computación de IA a Anthropic"
    },
    {
-    "title": "Meta Seeks About $95 Billion for AI Buildout as Nvidia, AMD and Broadcom Consider Investing in Their Own Customer",
-    "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62594709/meta-95-billion-ai-expansion-chipmaker-investments?utm_source=yahooFinance&amp;utm_campaign=partner_feed&amp;utm_medium=referral&amp;.tsrc=rss",
+    "title": "Broadcom Arranges $63 Billion Deal to Finance Anthropic’s Chips",
+    "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-arranges-63-billion-deal-203614048.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:41:52 +0000",
-    "titleEs": "Meta busca alrededor de $95 mil millones para el desarrollo de IA mientras Nvidia, AMD y Broadcom consideran invertir en su propio cliente"
+    "published": "Mon, 26 Oct 2026 20:36:14 +0000",
+    "titleEs": "Broadcom organiza un acuerdo de 63.000 millones de dólares para financiar los chips de Anthropic"
    },
    {
-    "title": "Why Is Broadcom (AVGO) Deepening Its Role In AI Storage Infrastructure?",
-    "url": "https://finance.yahoo.com/technology/ai/articles/why-broadcom-avgo-deepening-role-150906087.html?.tsrc=rss",
+    "title": "Bank of America, Blackstone, Citi and Morgan Stanley Announce Landmark $63 Billion Financing Structure to Enable AI Compute Capacity in Partnership with Broadcom",
+    "url": "https://finance.yahoo.com/technology/ai/articles/bank-america-blackstone-citi-morgan-201500298.html?.tsrc=rss",
     "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 15:09:06 +0000",
-    "titleEs": "¿Por qué Broadcom (AVGO) está profundizando su papel en la infraestructura de almacenamiento de IA?"
+    "published": "Mon, 26 Oct 2026 20:15:00 +0000",
+    "titleEs": "Bank of America, Blackstone, Citi y Morgan Stanley anuncian una estructura de financiación histórica de 63.000 millones de dólares para habilitar la capacidad informática de IA en asociación con Broadcom"
    }
   ],
   "SNOW": [
+   {
+    "title": "Why Snowflake Inc. (SNOW) Outpaced the Stock Market Today",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/why-snowflake-inc-snow-outpaced-204503755.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 20:45:03 +0000",
+    "titleEs": "Por qué Snowflake Inc. (SNOW) superó al mercado de valores hoy"
+   },
+   {
+    "title": "Snowflake Inc. (SNOW) Gains as Burke Wealth Sees Enterprise Software Emerging as an AI Winner",
+    "url": "https://finance.yahoo.com/technology/articles/snowflake-inc-snow-gains-burke-172327014.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 17:23:27 +0000",
+    "titleEs": "Snowflake Inc. (SNOW) gana a medida que Burke Wealth ve el software empresarial emergente como un ganador de IA"
+   },
    {
     "title": "Is It Worth Investing in Snowflake (SNOW) Based on Wall Street's Bullish Views?",
     "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-snowflake-snow-based-123003024.html?.tsrc=rss",
@@ -6458,23 +6472,23 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 05:31:43 +0000",
     "titleEs": "¿Qué tan bajo pueden llegar las acciones de Snowflake?"
-   },
-   {
-    "title": "Snowflake CMO NYSE Setting is 'Huge Inspiration' for Startup Campaign Finalists",
-    "url": "https://finance.yahoo.com/video/snowflake-cmo-nyse-setting-huge-163903708.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Fri, 23 Oct 2026 16:39:03 +0000",
-    "titleEs": "La configuración de Snowflake CMO NYSE es una 'gran inspiración' para los finalistas de la campaña de inicio"
-   },
-   {
-    "title": "Salesforce vs. Snowflake: Which Technology Stock Is a Better Buy in 2026?",
-    "url": "https://www.fool.com/coverage/better-buy/2026/10/23/salesforce-vs-snowflake-which-technology-stock-is-a-better-buy-in-2026/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Fri, 23 Oct 2026 13:46:00 +0000",
-    "titleEs": "Salesforce frente a Snowflake: ¿Qué acción tecnológica es una mejor compra en 2026?"
    }
   ],
   "PLTR": [
+   {
+    "title": "Will Palantir Technologies Stock Hit $300 Before the End of 2026?",
+    "url": "https://www.fool.com/investing/2026/10/26/will-palantir-technologies-stock-hit-300-before-the-end-of-2026/?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 21:36:02 +0000",
+    "titleEs": "¿Las acciones de Palantir Technologies alcanzarán los 300 dólares antes de finales de 2026?"
+   },
+   {
+    "title": "Burke Wealth Initiates a New Position in Palantir (PLTR) as AI Software Growth Accelerates",
+    "url": "https://finance.yahoo.com/technology/ai/articles/burke-wealth-initiates-position-palantir-173050006.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 17:30:50 +0000",
+    "titleEs": "Burke Wealth inicia una nueva posición en Palantir (PLTR) a medida que se acelera el crecimiento del software de inteligencia artificial"
+   },
    {
     "title": "Palantir Technologies (PLTR) is an Incredible Growth Stock: 3 Reasons Why",
     "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-technologies-pltr-incredible-growth-154502732.html?.tsrc=rss",
@@ -6488,20 +6502,6 @@
     "source": "Yahoo Finance",
     "published": "Mon, 26 Oct 2026 15:17:00 +0000",
     "titleEs": "Palantir está llevando su IA a un nuevo negocio inesperado"
-   },
-   {
-    "title": "Michael Burry Is Shorting PLTR: Why Palantir’s Earnings Next Monday Are a Make-or-Break Moment",
-    "url": "https://247wallst.com/investing/2026/10/26/michael-burry-is-shorting-pltr-why-palantirs-earnings-next-monday-are-a-make-or-break-moment/?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 13:49:24 +0000",
-    "titleEs": "Michael Burry está vendiendo PLTR en corto: por qué las ganancias de Palantir el próximo lunes son un momento decisivo"
-   },
-   {
-    "title": "Brokers Suggest Investing in Palantir Technologies (PLTR): Read This Before Placing a Bet",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/brokers-suggest-investing-palantir-technologies-123002071.html?.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Mon, 26 Oct 2026 12:30:02 +0000",
-    "titleEs": "Los corredores sugieren invertir en Palantir Technologies (PLTR): lea esto antes de realizar una apuesta"
    }
   ],
   "COIN": [
@@ -6536,6 +6536,13 @@
   ],
   "ARM": [
    {
+    "title": "Arm Holdings (ARM) Faces Jury Breach Ruling As It Unveils Server Security Tie Up",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/arm-holdings-arm-faces-jury-221537202.html?.tsrc=rss",
+    "source": "Yahoo Finance",
+    "published": "Mon, 26 Oct 2026 22:15:37 +0000",
+    "titleEs": "Arm Holdings (ARM) se enfrenta a un fallo del jurado por incumplimiento al revelar un vínculo de seguridad del servidor"
+   },
+   {
     "title": "Bulls Insist Arm’s Trio of Multipliers Justify Its Sky High Valuation",
     "url": "https://247wallst.com/investing/2026/10/26/bulls-insist-arms-trio-of-multipliers-justify-its-sky-high-valuation/?.tsrc=rss",
     "source": "Yahoo Finance",
@@ -6555,13 +6562,6 @@
     "source": "Yahoo Finance",
     "published": "Sun, 25 Oct 2026 16:01:03 +0000",
     "titleEs": "Wells Fargo, Cisco e Intuit entre otras 6 empresas que se oponen a las acciones tokenizadas"
-   },
-   {
-    "title": "Arm Stock Is Down 8% Last Week. What Does Lam Research Have to Do With It?",
-    "url": "https://www.tikr.com/blog/arm-stock-is-down-8-last-week-what-does-lam-research-have-to-do-with-it?ref=yahoofinance&amp;.tsrc=rss",
-    "source": "Yahoo Finance",
-    "published": "Sun, 25 Oct 2026 15:41:01 +0000",
-    "titleEs": "El stock de brazos bajó un 8% la semana pasada. ¿Qué tiene que ver la investigación de Lam con esto?"
    }
   ]
  },
@@ -6572,13 +6572,13 @@
   "matriz": {
    "ADBE": {
     "ADBE": 1,
-    "MELI": 0.23,
-    "NVDA": -0.13,
+    "MELI": 0.22,
+    "NVDA": -0.12,
     "PAMP": -0.12,
     "PANW": 0.31,
     "META": 0.08,
     "MSFT": 0.37,
-    "NU": 0.04,
+    "NU": 0.02,
     "VIST": -0.06,
     "IBIT": 0.07,
     "MU": -0.29,
@@ -6588,31 +6588,31 @@
     "NFLX": 0.31
    },
    "MELI": {
-    "ADBE": 0.23,
+    "ADBE": 0.22,
     "MELI": 1,
     "NVDA": 0.15,
     "PAMP": 0.18,
     "PANW": 0.06,
-    "META": 0.25,
+    "META": 0.26,
     "MSFT": 0.28,
-    "NU": 0.55,
-    "VIST": -0.07,
-    "IBIT": 0.19,
+    "NU": 0.54,
+    "VIST": -0.08,
+    "IBIT": 0.2,
     "MU": 0,
     "SPY": 0.32,
     "ACN": 0.21,
     "MCD": 0.15,
-    "NFLX": 0.21
+    "NFLX": 0.2
    },
    "NVDA": {
-    "ADBE": -0.13,
+    "ADBE": -0.12,
     "MELI": 0.15,
     "NVDA": 1,
     "PAMP": 0.2,
     "PANW": 0.21,
-    "META": 0.3,
+    "META": 0.29,
     "MSFT": 0.26,
-    "NU": 0.23,
+    "NU": 0.24,
     "VIST": 0.01,
     "IBIT": 0.36,
     "MU": 0.44,
@@ -6627,15 +6627,15 @@
     "NVDA": 0.2,
     "PAMP": 1,
     "PANW": 0.05,
-    "META": 0.01,
-    "MSFT": 0.1,
-    "NU": 0.33,
+    "META": 0.02,
+    "MSFT": 0.09,
+    "NU": 0.32,
     "VIST": 0.53,
     "IBIT": 0.15,
     "MU": 0.12,
     "SPY": 0.17,
     "ACN": -0.1,
-    "MCD": -0.07,
+    "MCD": -0.08,
     "NFLX": 0.06
    },
    "PANW": {
@@ -6657,13 +6657,13 @@
    },
    "META": {
     "ADBE": 0.08,
-    "MELI": 0.25,
-    "NVDA": 0.3,
-    "PAMP": 0.01,
+    "MELI": 0.26,
+    "NVDA": 0.29,
+    "PAMP": 0.02,
     "PANW": 0.09,
     "META": 1,
     "MSFT": 0.18,
-    "NU": 0.24,
+    "NU": 0.25,
     "VIST": -0.15,
     "IBIT": 0.23,
     "MU": 0.09,
@@ -6676,13 +6676,13 @@
     "ADBE": 0.37,
     "MELI": 0.28,
     "NVDA": 0.26,
-    "PAMP": 0.1,
+    "PAMP": 0.09,
     "PANW": 0.39,
     "META": 0.18,
     "MSFT": 1,
-    "NU": 0.21,
+    "NU": 0.2,
     "VIST": -0.03,
-    "IBIT": 0.3,
+    "IBIT": 0.29,
     "MU": 0.06,
     "SPY": 0.39,
     "ACN": 0.22,
@@ -6690,25 +6690,25 @@
     "NFLX": 0.22
    },
    "NU": {
-    "ADBE": 0.04,
-    "MELI": 0.55,
-    "NVDA": 0.23,
-    "PAMP": 0.33,
+    "ADBE": 0.02,
+    "MELI": 0.54,
+    "NVDA": 0.24,
+    "PAMP": 0.32,
     "PANW": 0.01,
-    "META": 0.24,
-    "MSFT": 0.21,
+    "META": 0.25,
+    "MSFT": 0.2,
     "NU": 1,
     "VIST": 0,
-    "IBIT": 0.29,
+    "IBIT": 0.3,
     "MU": 0.19,
     "SPY": 0.41,
-    "ACN": 0.07,
-    "MCD": 0.07,
-    "NFLX": 0.15
+    "ACN": 0.06,
+    "MCD": 0.06,
+    "NFLX": 0.13
    },
    "VIST": {
     "ADBE": -0.06,
-    "MELI": -0.07,
+    "MELI": -0.08,
     "NVDA": 0.01,
     "PAMP": 0.53,
     "PANW": 0.01,
@@ -6719,19 +6719,19 @@
     "IBIT": 0.01,
     "MU": -0.04,
     "SPY": -0.12,
-    "ACN": -0.01,
+    "ACN": -0.02,
     "MCD": -0.11,
-    "NFLX": 0
+    "NFLX": -0.01
    },
    "IBIT": {
     "ADBE": 0.07,
-    "MELI": 0.19,
+    "MELI": 0.2,
     "NVDA": 0.36,
     "PAMP": 0.15,
     "PANW": 0.22,
     "META": 0.23,
-    "MSFT": 0.3,
-    "NU": 0.29,
+    "MSFT": 0.29,
+    "NU": 0.3,
     "VIST": 0.01,
     "IBIT": 1,
     "MU": 0.27,
@@ -6752,10 +6752,10 @@
     "VIST": -0.04,
     "IBIT": 0.27,
     "MU": 1,
-    "SPY": 0.53,
+    "SPY": 0.52,
     "ACN": -0.3,
     "MCD": -0.29,
-    "NFLX": -0.16
+    "NFLX": -0.15
    },
    "SPY": {
     "ADBE": 0.08,
@@ -6768,9 +6768,9 @@
     "NU": 0.41,
     "VIST": -0.12,
     "IBIT": 0.49,
-    "MU": 0.53,
+    "MU": 0.52,
     "SPY": 1,
-    "ACN": 0.02,
+    "ACN": 0.03,
     "MCD": 0,
     "NFLX": 0.08
    },
@@ -6782,11 +6782,11 @@
     "PANW": 0.17,
     "META": 0,
     "MSFT": 0.22,
-    "NU": 0.07,
-    "VIST": -0.01,
+    "NU": 0.06,
+    "VIST": -0.02,
     "IBIT": 0.08,
     "MU": -0.3,
-    "SPY": 0.02,
+    "SPY": 0.03,
     "ACN": 1,
     "MCD": 0.29,
     "NFLX": 0.21
@@ -6795,11 +6795,11 @@
     "ADBE": 0.24,
     "MELI": 0.15,
     "NVDA": -0.27,
-    "PAMP": -0.07,
+    "PAMP": -0.08,
     "PANW": -0.15,
     "META": -0.02,
     "MSFT": 0.02,
-    "NU": 0.07,
+    "NU": 0.06,
     "VIST": -0.11,
     "IBIT": -0.05,
     "MU": -0.29,
@@ -6810,16 +6810,16 @@
    },
    "NFLX": {
     "ADBE": 0.31,
-    "MELI": 0.21,
+    "MELI": 0.2,
     "NVDA": -0.1,
     "PAMP": 0.06,
     "PANW": 0.04,
     "META": 0.11,
     "MSFT": 0.22,
-    "NU": 0.15,
-    "VIST": 0,
+    "NU": 0.13,
+    "VIST": -0.01,
     "IBIT": 0.12,
-    "MU": -0.16,
+    "MU": -0.15,
     "SPY": 0.08,
     "ACN": 0.21,
     "MCD": 0.2,
@@ -6842,7 +6842,7 @@
    {
     "a": "MELI",
     "b": "NU",
-    "rho": 0.55
+    "rho": 0.54
    },
    {
     "a": "PAMP",
@@ -6852,7 +6852,7 @@
    {
     "a": "MU",
     "b": "SPY",
-    "rho": 0.53
+    "rho": 0.52
    }
   ],
   "masBajas": [
@@ -6872,7 +6872,7 @@
     "rho": -0.29
    }
   ],
-  "actualizado": "2026-10-26T17:27:47.657Z",
+  "actualizado": "2026-10-26T23:11:47.296Z",
   "totalPosiciones": 17,
   "sinSerie": [
    "IOLCAMA",
@@ -6881,15 +6881,15 @@
  },
  "tecnicos": {
   "NVDA": {
-   "precio": 216.24,
+   "precio": 216,
    "max52": 239.24,
    "min52": 165.17,
-   "desdeMax": -9.6,
-   "desdeMin": 30.9,
+   "desdeMax": -9.7,
+   "desdeMin": 30.8,
    "posicion52": 69,
    "sma50": 222.3,
    "sma200": 203.82,
-   "rsi": 44.4,
+   "rsi": 44.1,
    "volatilidad": 37.6,
    "señales": [
     {
@@ -6898,38 +6898,42 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:21.765Z"
+   "actualizado": "2026-10-26T23:11:22.031Z"
   },
   "META": {
-   "precio": 640.39,
+   "precio": 630.56,
    "max52": 777.59,
    "min52": 525.72,
-   "desdeMax": -17.6,
-   "desdeMin": 21.8,
-   "posicion52": 46,
-   "sma50": 664.83,
-   "sma200": 632.5,
-   "rsi": 35.3,
-   "volatilidad": 42.6,
+   "desdeMax": -18.9,
+   "desdeMin": 19.9,
+   "posicion52": 42,
+   "sma50": 664.63,
+   "sma200": 632.45,
+   "rsi": 33.6,
+   "volatilidad": 42.7,
    "señales": [
+    {
+     "texto": "Por debajo de su media de 200 dias",
+     "tono": "compra"
+    },
     {
      "texto": "Tendencia de fondo al alza",
      "tono": "neutro"
     }
    ],
-   "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:22.320Z"
+   "zona": "compra",
+   "actualizado": "2026-10-26T23:11:22.594Z"
   },
   "MSFT": {
-   "precio": 530.22,
+   "precio": 532.6,
    "max52": 543.45,
    "min52": 352.83,
-   "desdeMax": -2.4,
-   "desdeMin": 50.3,
-   "posicion52": 93,
-   "sma50": 509.12,
-   "sma200": 436.78,
-   "rsi": 56,
+   "desdeMax": -2,
+   "desdeMin": 51,
+   "posicion52": 94,
+   "sma50": 509.17,
+   "sma200": 436.79,
+   "rsi": 57.2,
    "volatilidad": 33,
    "señales": [
     {
@@ -6942,19 +6946,19 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-26T17:27:23.025Z"
+   "actualizado": "2026-10-26T23:11:23.201Z"
   },
   "ADBE": {
-   "precio": 254.56,
+   "precio": 258.62,
    "max52": 359.91,
    "min52": 193.41,
-   "desdeMax": -29.3,
-   "desdeMin": 31.6,
-   "posicion52": 37,
-   "sma50": 255.6,
-   "sma200": 251.81,
-   "rsi": 53.1,
-   "volatilidad": 41.8,
+   "desdeMax": -28.1,
+   "desdeMin": 33.7,
+   "posicion52": 39,
+   "sma50": 255.68,
+   "sma200": 251.83,
+   "rsi": 55.8,
+   "volatilidad": 41.7,
    "señales": [
     {
      "texto": "Tendencia de fondo al alza",
@@ -6962,18 +6966,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:23.612Z"
+   "actualizado": "2026-10-26T23:11:23.770Z"
   },
   "MU": {
-   "precio": 912.73,
+   "precio": 903.7,
    "max52": 1213.56,
    "min52": 201.37,
-   "desdeMax": -24.8,
-   "desdeMin": 353.3,
-   "posicion52": 70,
-   "sma50": 981.55,
-   "sma200": 735.03,
-   "rsi": 43.6,
+   "desdeMax": -25.5,
+   "desdeMin": 348.8,
+   "posicion52": 69,
+   "sma50": 981.37,
+   "sma200": 734.99,
+   "rsi": 42.3,
    "volatilidad": 81.3,
    "señales": [
     {
@@ -6986,15 +6990,15 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:24.469Z"
+   "actualizado": "2026-10-26T23:11:24.358Z"
   },
   "PANW": {
-   "precio": 390.7,
+   "precio": 390.46,
    "max52": 419.91,
    "min52": 141.67,
    "desdeMax": -7,
-   "desdeMin": 175.8,
-   "posicion52": 90,
+   "desdeMin": 175.6,
+   "posicion52": 89,
    "sma50": 370.48,
    "sma200": 265.9,
    "rsi": 55.3,
@@ -7010,19 +7014,19 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-26T17:27:25.034Z"
+   "actualizado": "2026-10-26T23:11:24.918Z"
   },
   "MELI": {
-   "precio": 1651.07,
+   "precio": 1668.72,
    "max52": 2360.76,
    "min52": 1546.81,
-   "desdeMax": -30.1,
-   "desdeMin": 6.7,
-   "posicion52": 13,
-   "sma50": 1855.46,
-   "sma200": 1822.56,
-   "rsi": 31.4,
-   "volatilidad": 40.7,
+   "desdeMax": -29.3,
+   "desdeMin": 7.9,
+   "posicion52": 15,
+   "sma50": 1855.81,
+   "sma200": 1822.65,
+   "rsi": 32.5,
+   "volatilidad": 40.5,
    "señales": [
     {
      "texto": "Cerca del piso de su año",
@@ -7038,18 +7042,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:25.641Z"
+   "actualizado": "2026-10-26T23:11:25.483Z"
   },
   "SPY": {
-   "precio": 765.92,
+   "precio": 765.37,
    "max52": 779.09,
    "min52": 631.97,
-   "desdeMax": -1.7,
-   "desdeMin": 21.2,
+   "desdeMax": -1.8,
+   "desdeMin": 21.1,
    "posicion52": 91,
-   "sma50": 767.6,
+   "sma50": 767.59,
    "sma200": 727.39,
-   "rsi": 47.8,
+   "rsi": 47.3,
    "volatilidad": 12.7,
    "señales": [
     {
@@ -7062,38 +7066,42 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-26T17:27:26.158Z"
+   "actualizado": "2026-10-26T23:11:26.059Z"
   },
   "ACN": {
-   "precio": 244.73,
+   "precio": 247.23,
    "max52": 288.54,
    "min52": 124.44,
-   "desdeMax": -15.2,
-   "desdeMin": 96.7,
-   "posicion52": 73,
-   "sma50": 197.18,
-   "sma200": 192.08,
-   "rsi": 68.5,
+   "desdeMax": -14.3,
+   "desdeMin": 98.7,
+   "posicion52": 75,
+   "sma50": 197.23,
+   "sma200": 192.1,
+   "rsi": 70.6,
    "volatilidad": 49.4,
    "señales": [
+    {
+     "texto": "RSI en 71: sobrecomprada",
+     "tono": "venta"
+    },
     {
      "texto": "Tendencia de fondo al alza",
      "tono": "neutro"
     }
    ],
-   "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:29.240Z"
+   "zona": "venta",
+   "actualizado": "2026-10-26T23:11:29.132Z"
   },
   "MCD": {
-   "precio": 249.62,
+   "precio": 250.83,
    "max52": 341.06,
    "min52": 230.88,
-   "desdeMax": -26.8,
-   "desdeMin": 8.1,
-   "posicion52": 17,
-   "sma50": 249.32,
+   "desdeMax": -26.5,
+   "desdeMin": 8.6,
+   "posicion52": 18,
+   "sma50": 249.35,
    "sma200": 284.26,
-   "rsi": 59.2,
+   "rsi": 60.7,
    "volatilidad": 19.6,
    "señales": [
     {
@@ -7110,18 +7118,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:29.864Z"
+   "actualizado": "2026-10-26T23:11:29.756Z"
   },
   "IBIT": {
-   "precio": 45.41,
+   "precio": 45.22,
    "max52": 65.28,
    "min52": 33.29,
-   "desdeMax": -30.4,
-   "desdeMin": 36.4,
-   "posicion52": 38,
-   "sma50": 45.34,
+   "desdeMax": -30.7,
+   "desdeMin": 35.8,
+   "posicion52": 37,
+   "sma50": 45.33,
    "sma200": 41.64,
-   "rsi": 45.3,
+   "rsi": 44.3,
    "volatilidad": 44.9,
    "señales": [
     {
@@ -7130,19 +7138,19 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:30.477Z"
+   "actualizado": "2026-10-26T23:11:30.313Z"
   },
   "NU": {
-   "precio": 12.45,
+   "precio": 12.59,
    "max52": 18.76,
    "min52": 11.6,
-   "desdeMax": -33.6,
-   "desdeMin": 7.4,
-   "posicion52": 12,
-   "sma50": 14.51,
+   "desdeMax": -32.9,
+   "desdeMin": 8.5,
+   "posicion52": 14,
+   "sma50": 14.52,
    "sma200": 14.56,
-   "rsi": 34.7,
-   "volatilidad": 45.9,
+   "rsi": 35.3,
+   "volatilidad": 45.6,
    "señales": [
     {
      "texto": "Cerca del piso de su año",
@@ -7158,18 +7166,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:31.018Z"
+   "actualizado": "2026-10-26T23:11:30.901Z"
   },
   "PAMP": {
-   "precio": 76.5,
+   "precio": 76.62,
    "max52": 92.27,
    "min52": 75.26,
-   "desdeMax": -17.1,
-   "desdeMin": 1.7,
-   "posicion52": 7,
+   "desdeMax": -17,
+   "desdeMin": 1.8,
+   "posicion52": 8,
    "sma50": 81.03,
    "sma200": 82.64,
-   "rsi": 38.2,
+   "rsi": 38.5,
    "volatilidad": 32.2,
    "señales": [
     {
@@ -7186,18 +7194,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:31.614Z"
+   "actualizado": "2026-10-26T23:11:31.463Z"
   },
   "VIST": {
-   "precio": 72.71,
+   "precio": 72.98,
    "max52": 79.25,
    "min52": 43.88,
-   "desdeMax": -8.2,
-   "desdeMin": 65.7,
+   "desdeMax": -7.9,
+   "desdeMin": 66.3,
    "posicion52": 82,
-   "sma50": 70.74,
+   "sma50": 70.75,
    "sma200": 66.64,
-   "rsi": 57,
+   "rsi": 57.8,
    "volatilidad": 43.4,
    "señales": [
     {
@@ -7206,18 +7214,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:32.166Z"
+   "actualizado": "2026-10-26T23:11:32.022Z"
   },
   "GGAL": {
-   "precio": 35.36,
+   "precio": 35.35,
    "max52": 60.79,
    "min52": 35.09,
    "desdeMax": -41.8,
-   "desdeMin": 0.8,
+   "desdeMin": 0.7,
    "posicion52": 1,
    "sma50": 40.14,
    "sma200": 45.98,
-   "rsi": 39.6,
+   "rsi": 39.5,
    "volatilidad": 50.1,
    "señales": [
     {
@@ -7234,19 +7242,19 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:32.736Z"
+   "actualizado": "2026-10-26T23:11:32.593Z"
   },
   "YPF": {
-   "precio": 49.59,
+   "precio": 49.24,
    "max52": 57.61,
    "min52": 32.78,
-   "desdeMax": -13.9,
-   "desdeMin": 51.3,
-   "posicion52": 68,
-   "sma50": 51.95,
+   "desdeMax": -14.5,
+   "desdeMin": 50.2,
+   "posicion52": 66,
+   "sma50": 51.94,
    "sma200": 46.12,
-   "rsi": 43.4,
-   "volatilidad": 37.3,
+   "rsi": 42.2,
+   "volatilidad": 37.4,
    "señales": [
     {
      "texto": "Tendencia de fondo al alza",
@@ -7254,19 +7262,19 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:33.349Z"
+   "actualizado": "2026-10-26T23:11:33.175Z"
   },
   "NFLX": {
-   "precio": 63.18,
+   "precio": 63.9,
    "max52": 115.75,
-   "min52": 63.18,
-   "desdeMax": -45.4,
+   "min52": 63.9,
+   "desdeMax": -44.8,
    "desdeMin": 0,
    "posicion52": 0,
-   "sma50": 73.97,
+   "sma50": 73.98,
    "sma200": 82.14,
-   "rsi": 32.3,
-   "volatilidad": 36,
+   "rsi": 33.5,
+   "volatilidad": 35.9,
    "señales": [
     {
      "texto": "Cerca del piso de su año",
@@ -7282,7 +7290,7 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:36.410Z"
+   "actualizado": "2026-10-26T23:11:36.235Z"
   },
   "UBER": {
    "precio": 66.13,
@@ -7310,18 +7318,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:36.975Z"
+   "actualizado": "2026-10-26T23:11:36.790Z"
   },
   "VST": {
-   "precio": 143.15,
+   "precio": 141.73,
    "max52": 199.37,
    "min52": 134.71,
-   "desdeMax": -28.2,
-   "desdeMin": 6.3,
-   "posicion52": 13,
-   "sma50": 145.09,
+   "desdeMax": -28.9,
+   "desdeMin": 5.2,
+   "posicion52": 11,
+   "sma50": 145.07,
    "sma200": 154.16,
-   "rsi": 45.4,
+   "rsi": 44.1,
    "volatilidad": 50.2,
    "señales": [
     {
@@ -7338,18 +7346,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:37.537Z"
+   "actualizado": "2026-10-26T23:11:37.359Z"
   },
   "KO": {
-   "precio": 92.68,
+   "precio": 92.7,
    "max52": 95.34,
    "min52": 67.54,
    "desdeMax": -2.8,
-   "desdeMin": 37.2,
-   "posicion52": 90,
+   "desdeMin": 37.3,
+   "posicion52": 91,
    "sma50": 89.2,
    "sma200": 81.71,
-   "rsi": 59.6,
+   "rsi": 59.7,
    "volatilidad": 19.1,
    "señales": [
     {
@@ -7362,19 +7370,19 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-26T17:27:38.133Z"
+   "actualizado": "2026-10-26T23:11:37.953Z"
   },
   "JNJ": {
-   "precio": 265.25,
+   "precio": 266.3,
    "max52": 278.43,
    "min52": 186,
-   "desdeMax": -4.7,
-   "desdeMin": 42.6,
-   "posicion52": 86,
-   "sma50": 265.3,
-   "sma200": 245.77,
-   "rsi": 54.4,
-   "volatilidad": 20.7,
+   "desdeMax": -4.4,
+   "desdeMin": 43.2,
+   "posicion52": 87,
+   "sma50": 265.32,
+   "sma200": 245.78,
+   "rsi": 55.3,
+   "volatilidad": 20.8,
    "señales": [
     {
      "texto": "Cerca del maximo de su año",
@@ -7386,19 +7394,19 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-26T17:27:38.729Z"
+   "actualizado": "2026-10-26T23:11:38.583Z"
   },
   "PG": {
-   "precio": 159.71,
+   "precio": 159.92,
    "max52": 167.2,
    "min52": 138.04,
-   "desdeMax": -4.5,
-   "desdeMin": 15.7,
-   "posicion52": 74,
+   "desdeMax": -4.4,
+   "desdeMin": 15.9,
+   "posicion52": 75,
    "sma50": 148.67,
-   "sma200": 148.6,
-   "rsi": 60.9,
-   "volatilidad": 20.9,
+   "sma200": 148.61,
+   "rsi": 61.3,
+   "volatilidad": 20.8,
    "señales": [
     {
      "texto": "Tendencia de fondo al alza",
@@ -7406,40 +7414,48 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:39.331Z"
+   "actualizado": "2026-10-26T23:11:39.094Z"
   },
   "WMT": {
-   "precio": 120.05,
+   "precio": 120.29,
    "max52": 134.2,
    "min52": 100.61,
-   "desdeMax": -10.5,
-   "desdeMin": 19.3,
-   "posicion52": 58,
+   "desdeMax": -10.4,
+   "desdeMin": 19.6,
+   "posicion52": 59,
    "sma50": 109.53,
    "sma200": 118.46,
-   "rsi": 69.8,
+   "rsi": 70.2,
    "volatilidad": 26.2,
    "señales": [
+    {
+     "texto": "RSI en 70: sobrecomprada",
+     "tono": "venta"
+    },
     {
      "texto": "Tendencia de fondo a la baja",
      "tono": "venta"
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-26T17:27:39.942Z"
+   "actualizado": "2026-10-26T23:11:39.686Z"
   },
   "GOOGL": {
-   "precio": 318.94,
+   "precio": 316.8,
    "max52": 402.62,
    "min52": 267.47,
-   "desdeMax": -20.8,
-   "desdeMin": 19.2,
-   "posicion52": 38,
-   "sma50": 342.4,
-   "sma200": 341.28,
-   "rsi": 30.6,
+   "desdeMax": -21.3,
+   "desdeMin": 18.4,
+   "posicion52": 37,
+   "sma50": 342.36,
+   "sma200": 341.27,
+   "rsi": 29.5,
    "volatilidad": 31.4,
    "señales": [
+    {
+     "texto": "RSI en 30: sobrevendida",
+     "tono": "compra"
+    },
     {
      "texto": "Por debajo de su media de 200 dias",
      "tono": "compra"
@@ -7450,18 +7466,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:40.497Z"
+   "actualizado": "2026-10-26T23:11:40.249Z"
   },
   "V": {
-   "precio": 403.53,
+   "precio": 404.16,
    "max52": 414.34,
    "min52": 295.52,
-   "desdeMax": -2.6,
-   "desdeMin": 36.5,
+   "desdeMax": -2.5,
+   "desdeMin": 36.8,
    "posicion52": 91,
-   "sma50": 377.85,
+   "sma50": 377.87,
    "sma200": 340.82,
-   "rsi": 64.5,
+   "rsi": 65.3,
    "volatilidad": 22.2,
    "señales": [
     {
@@ -7474,18 +7490,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-26T17:27:43.635Z"
+   "actualizado": "2026-10-26T23:11:43.364Z"
   },
   "COST": {
-   "precio": 1002.9,
+   "precio": 1005.16,
    "max52": 1094.32,
    "min52": 850,
-   "desdeMax": -8.4,
-   "desdeMin": 18,
-   "posicion52": 63,
-   "sma50": 939.7,
-   "sma200": 969.79,
-   "rsi": 68.9,
+   "desdeMax": -8.1,
+   "desdeMin": 18.3,
+   "posicion52": 64,
+   "sma50": 939.75,
+   "sma200": 969.8,
+   "rsi": 69.7,
    "volatilidad": 19.8,
    "señales": [
     {
@@ -7494,18 +7510,18 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-26T17:27:44.224Z"
+   "actualizado": "2026-10-26T23:11:43.938Z"
   },
   "JPM": {
-   "precio": 335.18,
+   "precio": 334.04,
    "max52": 365.18,
    "min52": 282.84,
-   "desdeMax": -8.2,
-   "desdeMin": 18.5,
-   "posicion52": 64,
-   "sma50": 344.86,
-   "sma200": 322.54,
-   "rsi": 46.8,
+   "desdeMax": -8.5,
+   "desdeMin": 18.1,
+   "posicion52": 62,
+   "sma50": 344.83,
+   "sma200": 322.53,
+   "rsi": 45.1,
    "volatilidad": 22,
    "señales": [
     {
@@ -7514,18 +7530,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:44.835Z"
+   "actualizado": "2026-10-26T23:11:44.551Z"
   },
   "ORCL": {
-   "precio": 126.25,
+   "precio": 126.06,
    "max52": 281.4,
    "min52": 114.99,
-   "desdeMax": -55.1,
-   "desdeMin": 9.8,
+   "desdeMax": -55.2,
+   "desdeMin": 9.6,
    "posicion52": 7,
    "sma50": 142.4,
    "sma200": 158.23,
-   "rsi": 39.2,
+   "rsi": 39.1,
    "volatilidad": 57,
    "señales": [
     {
@@ -7546,18 +7562,18 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:45.397Z"
+   "actualizado": "2026-10-26T23:11:45.116Z"
   },
   "PLTR": {
-   "precio": 199.15,
+   "precio": 198.84,
    "max52": 209.05,
    "min52": 107.27,
-   "desdeMax": -4.7,
-   "desdeMin": 85.6,
+   "desdeMax": -4.9,
+   "desdeMin": 85.4,
    "posicion52": 90,
    "sma50": 185.25,
    "sma200": 153.26,
-   "rsi": 56.3,
+   "rsi": 56.1,
    "volatilidad": 60.8,
    "señales": [
     {
@@ -7574,14 +7590,14 @@
     }
    ],
    "zona": "venta",
-   "actualizado": "2026-10-26T17:27:45.960Z"
+   "actualizado": "2026-10-26T23:11:45.671Z"
   },
   "AMD": {
-   "precio": 531.32,
+   "precio": 531.28,
    "max52": 649.42,
    "min52": 190.95,
    "desdeMax": -18.2,
-   "desdeMin": 178.3,
+   "desdeMin": 178.2,
    "posicion52": 74,
    "sma50": 542.62,
    "sma200": 403.72,
@@ -7598,18 +7614,18 @@
     }
    ],
    "zona": "neutral",
-   "actualizado": "2026-10-26T17:27:46.532Z"
+   "actualizado": "2026-10-26T23:11:46.232Z"
   },
   "COIN": {
-   "precio": 160.23,
+   "precio": 159.6,
    "max52": 361.43,
    "min52": 141.09,
-   "desdeMax": -55.7,
-   "desdeMin": 13.6,
-   "posicion52": 9,
-   "sma50": 179.79,
+   "desdeMax": -55.8,
+   "desdeMin": 13.1,
+   "posicion52": 8,
+   "sma50": 179.78,
    "sma200": 180.07,
-   "rsi": 39.4,
+   "rsi": 39.1,
    "volatilidad": 71.9,
    "señales": [
     {
@@ -7630,8 +7646,8 @@
     }
    ],
    "zona": "compra",
-   "actualizado": "2026-10-26T17:27:47.149Z"
+   "actualizado": "2026-10-26T23:11:46.789Z"
   }
  },
- "tecnicos_ts": "2026-10-26T17:27:47.657Z"
+ "tecnicos_ts": "2026-10-26T23:11:47.296Z"
 }
