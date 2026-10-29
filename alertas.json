@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-29T17:35:05.491Z",
+ "ts": "2026-10-29T17:45:43.179Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -17,20 +17,21 @@
   "mov-MELI-2026-10-26",
   "mov-NU-2026-10-26",
   "bal-MSFT-2026-10-28",
-  "bal-VIST-2026-10-28"
+  "bal-VIST-2026-10-28",
+  "justo-GOOGL-325"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-UBER-70",
    "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$65.374 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.85522. Movilidad y delivery, ya genera caja libre positiva."
+   "texto": "Cotiza US$65.33 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.85522. Movilidad y delivery, ya genera caja libre positiva."
   },
   {
    "tipo": "precio-justo",
-   "clave": "justo-GOOGL-340",
+   "clave": "justo-GOOGL-325",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$283.7 y la referencia con 20% de margen de seguridad es US$340.00. El objetivo promedio de los analistas es US$429.67776. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$282.96 y la referencia con 20% de margen de seguridad es US$325.00. El objetivo promedio de los analistas es US$419.91537. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
   },
   {
    "tipo": "manual",
@@ -42,7 +43,7 @@
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-10",
    "titulo": "Tecnologia e IA esta en 49.8% y tu objetivo es 35%",
-   "texto": "Son 1.491.564 pesos de diferencia."
+   "texto": "Son 1.494.282 pesos de diferencia."
   }
  ]
 }
