@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-30T18:45:57.807Z",
+ "ts": "2026-10-30T18:56:33.984Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -20,20 +20,27 @@
   "bal-VIST-2026-10-28",
   "justo-GOOGL-325",
   "bal-PAMP-2026-11-02",
-  "manual-2026-09-30-3"
+  "manual-2026-09-30-3",
+  "mov-MU-2026-10-30"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-UBER-70",
    "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$64.995 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.85522. Movilidad y delivery, ya genera caja libre positiva."
+   "texto": "Cotiza US$65.03 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.85522. Movilidad y delivery, ya genera caja libre positiva."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-GOOGL-325",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$277.568 y la referencia con 20% de margen de seguridad es US$325.00. El objetivo promedio de los analistas es US$408.08655. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$277.5 y la referencia con 20% de margen de seguridad es US$325.00. El objetivo promedio de los analistas es US$408.08655. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+  },
+  {
+   "tipo": "movimiento",
+   "clave": "mov-MU-2026-10-30",
+   "titulo": "MU se movio -7.2% hoy",
+   "texto": "Tu posicion vale $859.275, abajo de lo habitual."
   },
   {
    "tipo": "balance",
@@ -50,8 +57,8 @@
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-10",
-   "titulo": "Tecnologia e IA esta en 49.6% y tu objetivo es 35%",
-   "texto": "Son 1.443.877 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 49.5% y tu objetivo es 35%",
+   "texto": "Son 1.432.886 pesos de diferencia."
   }
  ]
 }
