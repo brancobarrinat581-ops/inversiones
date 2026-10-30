@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-30T01:07:48.544Z",
+ "ts": "2026-10-30T17:00:04.536Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -18,32 +18,40 @@
   "mov-NU-2026-10-26",
   "bal-MSFT-2026-10-28",
   "bal-VIST-2026-10-28",
-  "justo-GOOGL-325"
+  "justo-GOOGL-325",
+  "bal-PAMP-2026-11-02",
+  "manual-2026-09-30-3"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-UBER-70",
    "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$65.74 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.85522. Movilidad y delivery, ya genera caja libre positiva."
+   "texto": "Cotiza US$64.93 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.85522. Movilidad y delivery, ya genera caja libre positiva."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-GOOGL-325",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$283.82 y la referencia con 20% de margen de seguridad es US$325.00. El objetivo promedio de los analistas es US$419.91537. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$279.72 y la referencia con 20% de margen de seguridad es US$325.00. El objetivo promedio de los analistas es US$419.91537. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+  },
+  {
+   "tipo": "balance",
+   "clave": "bal-PAMP-2026-11-02",
+   "titulo": "PAMP presenta balance en 3 dias",
+   "texto": "Presenta balance el 2026-11-02. Lo tenes en cartera."
   },
   {
    "tipo": "manual",
-   "clave": "manual-2026-09-30-2",
-   "titulo": "Los fondos IOL llevan 29 dias sin actualizar",
+   "clave": "manual-2026-09-30-3",
+   "titulo": "Los fondos IOL llevan 30 dias sin actualizar",
    "texto": "El precio de IOLCAMA e IOLDOLD se carga a mano en precios-manuales.json y la ultima vez fue el 2026-09-30. Son $1.152.410 de tu cartera valuados con un precio viejo."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-10",
    "titulo": "Tecnologia e IA esta en 49.7% y tu objetivo es 35%",
-   "texto": "Son 1.486.949 pesos de diferencia."
+   "texto": "Son 1.466.038 pesos de diferencia."
   }
  ]
 }
