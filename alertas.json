@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-03T02:57:17.177Z",
+ "ts": "2026-11-03T18:23:06.402Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -25,56 +25,58 @@
   "bal-MCD-2026-11-04",
   "bal-MELI-2026-11-04",
   "bal-UBER-2026-11-04",
-  "reb-Tecnologia e IA-2026-11"
+  "reb-Tecnologia e IA-2026-11",
+  "justo-GOOGL-300",
+  "bal-VST-2026-11-06"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-UBER-70",
    "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$66.71 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.85522. Movilidad y delivery, ya genera caja libre positiva."
+   "texto": "Cotiza US$66.514 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.76826. Movilidad y delivery, ya genera caja libre positiva."
   },
   {
    "tipo": "precio-justo",
-   "clave": "justo-GOOGL-325",
+   "clave": "justo-GOOGL-300",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$278.99 y la referencia con 20% de margen de seguridad es US$325.00. El objetivo promedio de los analistas es US$406.54807. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$280.56 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$402.7264. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
   },
   {
    "tipo": "balance",
    "clave": "bal-MCD-2026-11-04",
-   "titulo": "MCD presenta balance en 2 dias",
+   "titulo": "MCD presenta balance mañana",
    "texto": "Presenta balance el 2026-11-04. Lo tenes en cartera."
   },
   {
    "tipo": "balance",
    "clave": "bal-MELI-2026-11-04",
-   "titulo": "MELI presenta balance en 2 dias",
+   "titulo": "MELI presenta balance mañana",
    "texto": "Presenta balance el 2026-11-04. Lo tenes en cartera."
   },
   {
    "tipo": "balance",
-   "clave": "bal-PAMP-2026-11-02",
-   "titulo": "PAMP presenta balance hoy",
-   "texto": "Presenta balance el 2026-11-02. Lo tenes en cartera."
+   "clave": "bal-UBER-2026-11-04",
+   "titulo": "UBER presenta balance mañana",
+   "texto": "Presenta balance el 2026-11-04. Lo tenes en seguimiento."
   },
   {
    "tipo": "balance",
-   "clave": "bal-UBER-2026-11-04",
-   "titulo": "UBER presenta balance en 2 dias",
-   "texto": "Presenta balance el 2026-11-04. Lo tenes en seguimiento."
+   "clave": "bal-VST-2026-11-06",
+   "titulo": "VST presenta balance en 3 dias",
+   "texto": "Presenta balance el 2026-11-06. Lo tenes en seguimiento."
   },
   {
    "tipo": "manual",
    "clave": "manual-2026-09-30-3",
-   "titulo": "Los fondos IOL llevan 33 dias sin actualizar",
+   "titulo": "Los fondos IOL llevan 34 dias sin actualizar",
    "texto": "El precio de IOLCAMA e IOLDOLD se carga a mano en precios-manuales.json y la ultima vez fue el 2026-09-30. Son $1.152.410 de tu cartera valuados con un precio viejo."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-11",
-   "titulo": "Tecnologia e IA esta en 49.1% y tu objetivo es 35%",
-   "texto": "Son 1.387.885 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 49.5% y tu objetivo es 35%",
+   "texto": "Son 1.441.247 pesos de diferencia."
   }
  ]
 }
