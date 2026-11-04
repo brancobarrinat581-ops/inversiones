@@ -213,10 +213,18 @@ console.log(`\n${previas.length} operaciones antes → ${salida.length} despues`
 nuevas.forEach((o) => console.log(`   + ${o.fecha} ${o.ticker} ${o.tipo} ${o.cantidad}`));
 quitadas.forEach((o) => console.log(`   - ${o.fecha} ${o.ticker} ${o.tipo} ${o.cantidad}`));
 
-fs.writeFileSync(SALIDA, JSON.stringify({
-  ts: new Date().toISOString(),
-  fuente: "Excel: " + path.basename(archivo),
-  total: salida.length,
-  operaciones: salida
-}, null, 1));
-console.log(`\n✅ operaciones.json actualizado (${salida.length} operaciones).`);
+// Si las operaciones son identicas, no reescribimos el archivo solo para cambiar
+// la fecha: cada corrida generaba un commit vacio y esos commits chocaban con los
+// de precios, que escriben cada 10 minutos.
+const igual = JSON.stringify(previas) === JSON.stringify(salida);
+if (igual) {
+  console.log(`\nSin cambios reales en las operaciones (${salida.length}). No reescribo el archivo.`);
+} else {
+  fs.writeFileSync(SALIDA, JSON.stringify({
+    ts: new Date().toISOString(),
+    fuente: "Excel: " + path.basename(archivo),
+    total: salida.length,
+    operaciones: salida
+  }, null, 1));
+  console.log(`\n✅ operaciones.json actualizado (${salida.length} operaciones).`);
+}
