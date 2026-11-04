@@ -1,7 +1,7 @@
 {
- "ts": "2026-10-14T13:46:27.735Z",
+ "ts": "2026-11-04T16:58:26.828Z",
  "fuente": "Excel: Control_Portafolio_IOL.xlsx",
- "total": 77,
+ "total": 83,
  "operaciones": [
   {
    "id": "x001",
@@ -292,7 +292,7 @@
    "invertido_ars": 22655.19
   },
   {
-   "id": "x072",
+   "id": "x076",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-03-19",
    "ticker": "ILF",
@@ -364,14 +364,14 @@
    "invertido_ars": 148698.55
   },
   {
-   "id": "x073",
+   "id": "x077",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-04-08",
    "ticker": "IOLCAMA",
    "tipo": "COMPRA",
-   "cantidad": 50.004,
-   "precio": 10999.005,
-   "ppc": 10999.005,
+   "cantidad": 50004,
+   "precio": 10.999004999999999,
+   "ppc": 10.999004999999999,
    "comision": 5.75,
    "invertido_ars": 550000
   },
@@ -424,14 +424,14 @@
    "invertido_ars": 80350.38
   },
   {
-   "id": "x074",
+   "id": "x078",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-04-15",
    "ticker": "IOLCAMA",
    "tipo": "VENTA",
-   "cantidad": 4,
-   "precio": 11049.45,
-   "ppc": 11049.45,
+   "cantidad": 4000,
+   "precio": 11.04945,
+   "ppc": 11.04945,
    "comision": 5.75,
    "invertido_ars": 44203.55
   },
@@ -448,14 +448,14 @@
    "invertido_ars": 105442.25
   },
   {
-   "id": "x075",
+   "id": "x079",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-04-16",
    "ticker": "IOLCAMA",
    "tipo": "VENTA",
-   "cantidad": 9,
-   "precio": 11049.45,
-   "ppc": 11049.45,
+   "cantidad": 9000,
+   "precio": 11.04945,
+   "ppc": 11.04945,
    "comision": 5.75,
    "invertido_ars": 99450.8
   },
@@ -520,7 +520,7 @@
    "invertido_ars": 26843.87
   },
   {
-   "id": "x076",
+   "id": "x080",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-05-15",
    "ticker": "ILF",
@@ -700,16 +700,16 @@
    "invertido_ars": 55036.99
   },
   {
-   "id": "x077",
+   "id": "x081",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-07-28",
    "ticker": "IOLDOLD",
    "tipo": "COMPRA",
    "cantidad": 414.175,
-   "precio": 1665.371,
-   "ppc": 1665.371,
-   "comision": 0,
-   "invertido_ars": 689755.03
+   "precio": 1542.3500000000001,
+   "ppc": 1542.3500000000001,
+   "comision": 8136.25,
+   "invertido_ars": 646939.06
   },
   {
    "id": "x054",
@@ -926,6 +926,78 @@
    "ppc": 20730,
    "comision": 428.92,
    "invertido_ars": 62618.92
+  },
+  {
+   "id": "x082",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-23",
+   "ticker": "IOLCAMA",
+   "tipo": "VENTA",
+   "cantidad": 37004.5231,
+   "precio": 12.49,
+   "ppc": 12.49,
+   "comision": 0,
+   "invertido_ars": 462186.49
+  },
+  {
+   "id": "x083",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-23",
+   "ticker": "IOLDOLD",
+   "tipo": "VENTA",
+   "cantidad": 414.175,
+   "precio": 1722.2,
+   "ppc": 1722.2,
+   "comision": 5087.6,
+   "invertido_ars": 718379.79
+  },
+  {
+   "id": "x072",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-29",
+   "ticker": "GOOGL",
+   "tipo": "COMPRA",
+   "cantidad": 24,
+   "precio": 7990,
+   "ppc": 7990,
+   "comision": 1322.57,
+   "invertido_ars": 193082.57
+  },
+  {
+   "id": "x073",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-30",
+   "ticker": "NVDA",
+   "tipo": "COMPRA",
+   "cantidad": 17,
+   "precio": 14250,
+   "ppc": 14250,
+   "comision": 1670.8,
+   "invertido_ars": 243920.8
+  },
+  {
+   "id": "x074",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-30",
+   "ticker": "NU",
+   "tipo": "COMPRA",
+   "cantidad": 16,
+   "precio": 9715,
+   "ppc": 9715,
+   "comision": 1072.07,
+   "invertido_ars": 156512.07
+  },
+  {
+   "id": "x075",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-30",
+   "ticker": "PAMP",
+   "tipo": "COMPRA",
+   "cantidad": 20,
+   "precio": 4802.5,
+   "ppc": 4802.5,
+   "comision": 662.42,
+   "invertido_ars": 96712.42
   }
  ]
 }

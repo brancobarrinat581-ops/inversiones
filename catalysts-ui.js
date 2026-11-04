@@ -89,7 +89,30 @@
   function banner(){badge();var msgs=[];try{var pr=JSON.parse(localStorage.getItem("prices_data"));if(pr){var v=Object.keys(pr.prices||{}).filter(function(k){return pr.prices[k].stale&&pr.prices[k].src!=="Manual";});var hr=pr.ts?(Date.now()-new Date(pr.ts).getTime())/3600000:999;if(v.length)msgs.push({t:"warn",x:"\u26a0 Precio desactualizado en "+v.length+" activo"+(v.length>1?"s":"")});else if(hr>24)msgs.push({t:"warn",x:"\u26a0 Precios sin actualizar hace "+Math.round(hr)+" horas"});}}catch(e){}
     if(D&&D.catalysts){var hoy=new Date();hoy.setHours(0,0,0,0);Object.keys(D.catalysts).forEach(function(tk){(D.catalysts[tk]||[]).forEach(function(ev){var dias=Math.round((new Date(ev.date+"T00:00:00")-hoy)/86400000);if(dias>=0&&dias<=3)msgs.push({t:"info",x:"\ud83d\udcc5 "+tk+" reporta "+(dias===0?"HOY":dias===1?"ma\u00f1ana":"en "+dias+" d\u00edas")+" ("+ev.event+")"});});});}
     var old=document.getElementById("inv-banner");if(old)old.remove();if(!msgs.length)return;
-    var d=document.createElement("div");d.id="inv-banner";d.style.cssText="position:sticky;top:0;z-index:9998;display:flex;flex-direction:column;gap:4px;padding:8px 12px;font-size:13px";d.innerHTML=msgs.map(function(m){var c=m.t==="warn"?"#FF9800":"#64B5F6";return'<div style="background:'+c+'22;border-left:3px solid '+c+';color:'+c+';padding:6px 10px;border-radius:4px">'+m.x+"</div>";}).join("");document.body.insertBefore(d,document.body.firstChild);}
+
+    // Antes esto quedaba pegado arriba de todo, sin forma de sacarlo: tapaba la
+    // cartera todos los dias de balances. Ahora se puede cerrar y se recuerda lo
+    // cerrado por mensaje, asi un aviso nuevo vuelve a aparecer.
+    var cerrados={};try{cerrados=JSON.parse(localStorage.getItem("avisos_cerrados")||"{}");}catch(e){}
+    var hoyStr=new Date().toISOString().slice(0,10);
+    Object.keys(cerrados).forEach(function(k){if(cerrados[k]!==hoyStr)delete cerrados[k];});
+    var visibles=msgs.filter(function(m){return !cerrados[m.x];});
+    window.__AVISOS=msgs;
+    if(!visibles.length)return;
+
+    var d=document.createElement("div");d.id="inv-banner";
+    d.style.cssText="position:sticky;top:0;z-index:9998;display:flex;flex-direction:column;gap:4px;padding:8px 12px;font-size:13px";
+    d.innerHTML=visibles.map(function(m,i){var c=m.t==="warn"?"#FF9800":"#64B5F6";
+      return'<div data-aviso="'+i+'" style="background:'+c+'22;border-left:3px solid '+c+';color:'+c+';padding:6px 10px;border-radius:4px;display:flex;justify-content:space-between;align-items:center;gap:8px"><span>'+m.x+'</span><button data-cerrar="'+i+'" title="Ocultar hasta mañana" style="background:transparent;border:none;color:'+c+';font-size:15px;cursor:pointer;padding:0 2px;line-height:1">\u2715</button></div>';}).join("");
+    document.body.insertBefore(d,document.body.firstChild);
+    Array.prototype.forEach.call(d.querySelectorAll("button[data-cerrar]"),function(b){
+      b.onclick=function(){
+        var m=visibles[Number(b.getAttribute("data-cerrar"))];
+        cerrados[m.x]=hoyStr;
+        try{localStorage.setItem("avisos_cerrados",JSON.stringify(cerrados));}catch(e){}
+        banner();
+      };});
+  }
 
   function isCompact(el){var p=el.parentElement;if(!p)return false;var s=p.style||{};return s.display==="flex"&&s.justifyContent==="space-between";}
 

@@ -84,7 +84,12 @@ if (ops) {
     saldo[o.ticker] = saldo[o.ticker] || 0;
     if (o.tipo === "COMPRA") saldo[o.ticker] += o.cantidad;
     else if (o.tipo === "VENTA") {
-      if (o.cantidad - saldo[o.ticker] > 1e-6)
+      // Los fondos acumulan fracciones de cuota todos los dias, asi que al
+      // rescatar todo se vende un poquito mas de lo que suman las compras.
+      // Toleramos hasta un 0,1%: alcanza para la acumulacion y sigue cazando
+      // un error de verdad, como vender 9999 cuando habia 59.
+      const margen = Math.max(1e-6, saldo[o.ticker] * 0.001);
+      if (o.cantidad - saldo[o.ticker] > margen)
         err(`${o.fecha} ${o.ticker}: venta de ${o.cantidad} pero en cartera habia ${saldo[o.ticker].toFixed(4)}`);
       saldo[o.ticker] -= o.cantidad;
       if (saldo[o.ticker] < 0) saldo[o.ticker] = 0;

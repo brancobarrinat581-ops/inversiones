@@ -66,8 +66,7 @@ const clave = (o) => [String(o.fecha).slice(0, 10), String(o.ticker).toUpperCase
 const porClave = {};
 previas.forEach((o) => { porClave[clave(o)] = o; });
 
-// Tickers cuyo precio en el Excel esta en dolares: no se pueden convertir solos
-// porque el tipo de cambio de la planilla no es el que usa la app.
+// Solo IOLDOLD viene en dolares en el Excel. IOLCAMA es un fondo en pesos.
 const EN_USD = ["IOLDOLD"];
 let overrides = {};
 try { overrides = JSON.parse(fs.readFileSync(path.join(ROOT, "importar-overrides.json"), "utf8")); } catch (e) {}
@@ -101,17 +100,30 @@ HOJAS.forEach((hoja) => {
       tipo = "COMPRA";
     }
 
-    // Precio en dolares: necesita el valor en pesos, no lo adivinamos
-    if (EN_USD.indexOf(ticker) !== -1 || (precio < 100 && ticker.indexOf("IOL") === 0)) {
+    // IOLCAMA cambio de unidad a mitad de camino: las filas viejas estan por cada
+    // 1000 cuotas (50,004 a $10.999) y las nuevas por cuota (37.004 a $12,49).
+    // Llevamos todo a la unidad nueva para que el saldo cierre.
+    if (ticker === "IOLCAMA" && precio > 1000) {
+      cant = cant * 1000;
+      precio = precio / 1000;
+      comision = comision; // la comision ya esta en pesos, no se escala
+    }
+
+    // Precio en dolares: lo pasamos a pesos con el tipo de cambio de la misma fila.
+    if (EN_USD.indexOf(ticker) !== -1) {
       const ov = overrides[ticker] && overrides[ticker][f];
+      const mep = num(row["Dolar mep"]);
       const prev = porClave[[f, ticker, tipo, cant.toFixed(4)].join("|")];
       if (isFinite(num(ov))) precio = num(ov);
-      else if (prev && isFinite(num(prev.ppc))) precio = num(prev.ppc);
+      else if (isFinite(mep) && mep > 100) {
+        avisos.push(`${et}: precio en dolares (${precio}), lo paso a pesos con el MEP ${mep} de la misma fila`);
+        precio = precio * mep;
+        comision = comision * mep;
+      } else if (prev && isFinite(num(prev.ppc))) precio = num(prev.ppc);
       else {
-        errores.push(`${et}: el precio (${precio}) esta en dolares. Cargá el valor en pesos en importar-overrides.json como {"${ticker}":{"${f}": <precio ARS>}}`);
+        errores.push(`${et}: el precio (${precio}) esta en dolares y la fila no trae "Dolar mep". Cargá el valor en pesos en importar-overrides.json como {"${ticker}":{"${f}": <precio ARS>}}`);
         return;
       }
-      comision = 0; // la comision del Excel tambien viene en dolares
     } else if (isFinite(invertido)) {
       // La columna "Invertido $" del Excel es inconsistente: en las operaciones
       // viejas incluye la comision y en las nuevas no. Las dos formas son
@@ -150,6 +162,33 @@ if (delApp.length) {
   delApp.forEach(o => console.log(`   · ${o.fecha} ${o.ticker} ${o.tipo} ${o.cantidad}`));
   salida.push(...delApp);
 }
+
+// Liquidez: la fila "$" de la hoja Portafolio es la plata disponible para invertir.
+// Es parte del patrimonio aunque no sea una posicion, y sin esto no se ve.
+try {
+  const hp = wb.Sheets["Portafolio"];
+  if (hp) {
+    const filas = XLSX.utils.sheet_to_json(hp, { header: 1, defval: null });
+    let monto = null;
+    filas.forEach((f) => {
+      const et = String(f[1] || "").trim();
+      if (et === "$" || /^efectivo$|^liquidez$|^disponible$/i.test(et)) {
+        for (let i = 2; i < f.length; i++) {
+          const n = num(f[i]);
+          if (isFinite(n) && n > 0) { monto = n; break; }
+        }
+      }
+    });
+    if (monto != null) {
+      fs.writeFileSync(path.join(ROOT, "liquidez.json"), JSON.stringify({
+        ts: new Date().toISOString(),
+        fuente: "Excel: " + path.basename(archivo),
+        monto_ars: Math.round(monto * 100) / 100
+      }, null, 1));
+      console.log(`\n💵 Liquidez: $${Math.round(monto).toLocaleString("es-AR")}`);
+    }
+  }
+} catch (e) { avisos.push("no pude leer la liquidez de la hoja Portafolio: " + e.message); }
 
 salida.sort((a, b) => (a.fecha < b.fecha ? -1 : a.fecha > b.fecha ? 1 : 0));
 

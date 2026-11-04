@@ -8,7 +8,7 @@
   if (!PF) { console.warn("metrics-ui: falta scripts/lib/portfolio.js"); return; }
   if (!UI) { console.warn("metrics-ui: falta ui-kit.js"); return; }
 
-  var HIST = null, DIV = [], GRUPOS = null, WLIST = [], PERF = null, MACRO = null, ANAL = null;
+  var HIST = null, DIV = [], GRUPOS = null, WLIST = [], PERF = null, MACRO = null, ANAL = null, LIQ = null;
 
   function getJSON(u, cb) {
     try {
@@ -156,6 +156,19 @@
     h += bloque("Valor actual", f0(r.valor), fUSD(r.valorUSD) + " al CCL " + Math.round(r.ccl) +
       (edad != null ? " · precios de hace " + (edad < 48 ? edad + " h" : Math.round(edad / 24) + " dias") : ""));
     h += "</div>";
+
+    // Liquidez: plata disponible para invertir. No es una posicion, pero es parte
+    // del patrimonio, y sin verla no se puede decidir cuanto margen tenes.
+    var efectivo = LIQ && Number(LIQ.monto_ars) > 0 ? Number(LIQ.monto_ars) : 0;
+    if (efectivo > 0) {
+      var patrimonio = r.valor + efectivo;
+      h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">';
+      h += bloque("Liquidez", f0(efectivo),
+        (efectivo / patrimonio * 100).toFixed(1) + "% del patrimonio", "#64B5F6");
+      h += bloque("Patrimonio total", f0(patrimonio),
+        "invertido mas disponible · " + fUSD(patrimonio / r.ccl));
+      h += "</div>";
+    }
 
     h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">';
     h += bloque("No realizada", f0(r.ganancia), fPct(r.gananciaPct), col(r.ganancia));
@@ -475,6 +488,16 @@
         '<span style="color:#aaa">Cartera total</span>' +
         '<span style="color:#fff">' + f0(r.valor) + " → <b>" + f0(valorNuevo) + "</b></span></div>";
 
+      var disp = LIQ && Number(LIQ.monto_ars) > 0 ? Number(LIQ.monto_ars) : 0;
+      if (disp > 0) {
+        var queda = disp - monto;
+        h += '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0">' +
+          '<span style="color:#aaa">Liquidez despues de comprar</span>' +
+          '<span style="color:' + (queda < 0 ? "#F44336" : "#fff") + '">' + f0(disp) + " → <b>" + f0(queda) + "</b></span></div>";
+        if (queda < 0)
+          h += '<div style="color:#F44336;font-size:11px;margin-top:4px">Te faltan ' + f0(-queda) + " para esta compra.</div>";
+      }
+
       var px = (ls("prices_data", {}).prices || {})[tk];
       if (px && px.ars > 0)
         h += '<div style="color:#666;font-size:11px;margin-top:4px">Son unos ' +
@@ -497,6 +520,7 @@
   getJSON("perfiles.json", function (d) { PERF = d; });
   getJSON("macro.json", function (d) { MACRO = d; });
   getJSON("analysts.json", function (d) { ANAL = d; });
+  getJSON("liquidez.json", function (d) { LIQ = d; });
   getJSON("dividendos.json", function (d) { DIV = Array.isArray(d) ? d : (d && d.dividendos) || []; });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boton);
