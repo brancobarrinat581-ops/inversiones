@@ -1,0 +1,6 @@
+{
+  "_ayuda": "Filas del Excel que el importador debe saltear. Formato de cada clave: FECHA|TICKER|TIPO|CANTIDAD. Esto es un parche: lo correcto es corregir la fila en el Excel y sacarla de aca.",
+  "ignorar": {
+    "2026-10-23|IOLDOLD|VENTA|414.1750": "Branco confirmo que IOLDOLD no se vendio; la fila esta de mas en el Excel y contradice la hoja Portafolio"
+  }
+}

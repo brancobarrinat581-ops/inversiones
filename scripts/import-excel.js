@@ -71,6 +71,10 @@ const EN_USD = ["IOLDOLD"];
 let overrides = {};
 try { overrides = JSON.parse(fs.readFileSync(path.join(ROOT, "importar-overrides.json"), "utf8")); } catch (e) {}
 
+// Filas del Excel que hay que saltear porque estan mal cargadas en origen.
+let ignorar = {};
+try { ignorar = (JSON.parse(fs.readFileSync(path.join(ROOT, "importar-ignorar.json"), "utf8")) || {}).ignorar || {}; } catch (e) {}
+
 const salida = [];
 const idsUsados = new Set();
 let n = 0;
@@ -135,6 +139,7 @@ HOJAS.forEach((hoja) => {
     }
 
     const k = [f, ticker, tipo, cant.toFixed(4)].join("|");
+    if (ignorar[k]) { avisos.push(`${et}: salteada — ${ignorar[k]}`); return; }
     const prev = porClave[k];
     const id = prev && prev.id && !idsUsados.has(prev.id) ? prev.id : nuevoId();
     idsUsados.add(id);
