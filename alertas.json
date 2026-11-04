@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-04T18:03:11.647Z",
+ "ts": "2026-11-04T18:36:03.687Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -28,14 +28,21 @@
   "reb-Tecnologia e IA-2026-11",
   "justo-GOOGL-300",
   "bal-VST-2026-11-06",
-  "reb-Fondos IOL-2026-11"
+  "reb-Fondos IOL-2026-11",
+  "mov-VIST-2026-11-04"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-GOOGL-300",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$292.2 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.36792. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$291.03 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.36792. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+  },
+  {
+   "tipo": "movimiento",
+   "clave": "mov-VIST-2026-11-04",
+   "titulo": "VIST se movio -7.1% hoy",
+   "texto": "Tu posicion vale $421.440, abajo de lo habitual."
   },
   {
    "tipo": "balance",
@@ -64,8 +71,8 @@
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-11",
-   "titulo": "Tecnologia e IA esta en 52.5% y tu objetivo es 35%",
-   "texto": "Son 1.814.859 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 52.6% y tu objetivo es 35%",
+   "texto": "Son 1.827.470 pesos de diferencia."
   }
  ]
 }
