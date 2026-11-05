@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-05T12:31:54.976Z",
+ "ts": "2026-11-05T18:41:45.729Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -33,26 +33,55 @@
   "mov-MSFT-2026-11-04",
   "mov-MCD-2026-11-04",
   "mov-VIST-2026-11-05",
-  "reb-Nucleo-2026-11"
+  "reb-Nucleo-2026-11",
+  "justo-AMD-430",
+  "mov-NVDA-2026-11-05",
+  "mov-MU-2026-11-05",
+  "mov-MELI-2026-11-05",
+  "mov-PANW-2026-11-05"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-UBER-70",
    "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$69.87 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.76826. Movilidad y delivery, ya genera caja libre positiva."
+   "texto": "Cotiza US$68.39 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$100.76826. Movilidad y delivery, ya genera caja libre positiva."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-GOOGL-300",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$288.93 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.37357. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$283.525 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.37357. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+  },
+  {
+   "tipo": "precio-justo",
+   "clave": "justo-AMD-430",
+   "titulo": "AMD esta en precio de compra",
+   "texto": "Cotiza US$412.625 y la referencia con 20% de margen de seguridad es US$430.00. El objetivo promedio de los analistas es US$648.2375. Perfil Agresivo. AMD. El competidor de Nvidia en chips de IA. Si gana participacion, el salto es grande; si no, queda segunda."
   },
   {
    "tipo": "movimiento",
-   "clave": "mov-VIST-2026-11-05",
-   "titulo": "VIST se movio -7.7% hoy",
-   "texto": "Tu posicion vale $418.800, abajo de lo habitual."
+   "clave": "mov-NVDA-2026-11-05",
+   "titulo": "NVDA se movio -9.0% hoy",
+   "texto": "Tu posicion vale $1.087.150, abajo de lo habitual."
+  },
+  {
+   "tipo": "movimiento",
+   "clave": "mov-MU-2026-11-05",
+   "titulo": "MU se movio -15.4% hoy",
+   "texto": "Tu posicion vale $680.625, abajo de lo habitual."
+  },
+  {
+   "tipo": "movimiento",
+   "clave": "mov-MELI-2026-11-05",
+   "titulo": "MELI se movio -13.5% hoy",
+   "texto": "Tu posicion vale $400.520, abajo de lo habitual."
+  },
+  {
+   "tipo": "movimiento",
+   "clave": "mov-PANW-2026-11-05",
+   "titulo": "PANW se movio -8.3% hoy",
+   "texto": "Tu posicion vale $320.700, abajo de lo habitual."
   },
   {
    "tipo": "balance",
@@ -64,13 +93,13 @@
    "tipo": "rebalanceo",
    "clave": "reb-Nucleo-2026-11",
    "titulo": "Nucleo esta en 9.7% y tu objetivo es 20%",
-   "texto": "Son 1.170.134 pesos de diferencia."
+   "texto": "Son 1.108.517 pesos de diferencia."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-11",
-   "titulo": "Tecnologia e IA esta en 47.7% y tu objetivo es 35%",
-   "texto": "Son 1.444.017 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 47.0% y tu objetivo es 35%",
+   "texto": "Son 1.296.977 pesos de diferencia."
   }
  ]
 }
