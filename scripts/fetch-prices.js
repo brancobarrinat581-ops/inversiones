@@ -5,6 +5,7 @@
 // REGLA: nunca se inventa un precio. Si una fuente falla se conserva el ULTIMO PRECIO REAL
 //        conocido (de prices.json) marcado con stale:true y la fecha en que se obtuvo.
 const fs = require('fs');
+const path = require('path');
 
 // ticker -> [simbolo BYMA en Yahoo (.BA), simbolo USD subyacente, ratio CEDEAR]
 const MAP = {
@@ -45,7 +46,16 @@ const MAP = {
   COIN:  ['COIN.BA','COIN', 27]
 };
 // FCIs de IOL: no cotizan, no hay fuente publica. Se conserva el ultimo valor cargado a mano.
-const MANUALES = ['IOLCAMA','IOLDOLD'];
+// Fondos sin cotizacion publica: su precio sale de precios-manuales.json. La
+// lista se arma desde ese archivo para que agregar o sacar un fondo no requiera
+// tocar este codigo: cuando se rescato IOLCAMA y entro PRMCAPB, quedar hardcodeado
+// aca hizo que PRMCAPB no tuviera precio y que fallaran tres workflows.
+const MANUALES = (() => {
+  try {
+    const m = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'precios-manuales.json'), 'utf8'));
+    return Object.keys(m).filter(k => !k.startsWith('_') && k !== 'fecha' && m[k] && m[k].ars > 0);
+  } catch (e) { return ['IOLDOLD']; }
+})();
 
 async function get(url, timeout = 10000) {
   const c = new AbortController(); const id = setTimeout(() => c.abort(), timeout);
