@@ -195,6 +195,27 @@ try {
   }
 } catch (e) { avisos.push("no pude leer la liquidez de la hoja Portafolio: " + e.message); }
 
+// Los fondos devengan fracciones de cuota todos los dias, asi que al rescatar
+// todo se vende un poco mas de lo que suman las compras. Ese sobrante dejaba una
+// posicion residual negativa y la app la seguia contando como activa. Recortamos
+// la venta a lo que habia, siempre que la diferencia sea minima.
+(function recortarRescates() {
+  const saldo = {};
+  salida.sort((a, b) => (a.fecha < b.fecha ? -1 : a.fecha > b.fecha ? 1 : 0)).forEach((o) => {
+    saldo[o.ticker] = saldo[o.ticker] || 0;
+    if (o.tipo === "COMPRA") { saldo[o.ticker] += o.cantidad; return; }
+    const exceso = o.cantidad - saldo[o.ticker];
+    if (exceso > 0 && exceso <= Math.max(1e-6, saldo[o.ticker] * 0.001)) {
+      avisos.push(`${o.fecha} ${o.ticker}: rescate de ${o.cantidad}, habia ${saldo[o.ticker].toFixed(4)}. ` +
+        `Ajusto la venta al saldo (${exceso.toFixed(4)} cuotas devengadas).`);
+      o.cantidad = saldo[o.ticker];
+      o.invertido_ars = Math.round((o.cantidad * o.ppc - o.comision) * 100) / 100;
+    }
+    saldo[o.ticker] -= o.cantidad;
+    if (Math.abs(saldo[o.ticker]) < 1e-9) saldo[o.ticker] = 0;
+  });
+})();
+
 salida.sort((a, b) => (a.fecha < b.fecha ? -1 : a.fecha > b.fecha ? 1 : 0));
 
 if (errores.length) {
