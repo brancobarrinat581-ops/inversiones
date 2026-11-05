@@ -82,12 +82,44 @@ function nuevoId() { do { n++; } while (idsUsados.has("x" + String(n).padStart(3
 
 HOJAS.forEach((hoja) => {
   if (!wb.Sheets[hoja]) { avisos.push(`la hoja "${hoja}" no existe en el Excel`); return; }
-  XLSX.utils.sheet_to_json(wb.Sheets[hoja], { defval: null }).forEach((row, i) => {
+
+  // No damos por hecho que la primera fila sea el encabezado ni que diga "Fecha":
+  // alcanzo con que alguien escribiera otra cosa en A1 para que se perdiera la
+  // hoja entera en silencio. Buscamos la fila que tenga "Ticker" y armamos el
+  // mapa de columnas desde ahi; la primera columna es la fecha diga lo que diga.
+  const crudo = XLSX.utils.sheet_to_json(wb.Sheets[hoja], { header: 1, defval: null });
+  const iCab = crudo.findIndex(f => (f || []).some(c => /^ticker\s*$/i.test(String(c || "").trim())));
+  if (iCab < 0) { errores.push(`la hoja "${hoja}" no tiene una fila de encabezado con "Ticker"`); return; }
+
+  const cab = (crudo[iCab] || []).map(c => String(c == null ? "" : c).trim());
+  const col = {};
+  cab.forEach((c, j) => { if (c) col[c.toLowerCase()] = j; });
+  const idx = (...nombres) => {
+    for (const nn of nombres) { const j = col[nn.toLowerCase()]; if (j != null) return j; }
+    return -1;
+  };
+  const cTicker = idx("Ticker"), cTipo = idx("Tipo"), cCant = idx("Cantidad");
+  const cPrecio = idx("Precio Compra", "Precio"), cInv = idx("Invertido $", "Invertido");
+  const cCom = idx("Comisión $", "Comision $", "Comisión", "Comision"), cMep = idx("Dolar mep", "Dólar mep");
+  if (cTicker < 0 || cCant < 0 || cPrecio < 0) {
+    errores.push(`la hoja "${hoja}": no encuentro las columnas Ticker, Cantidad o Precio Compra`);
+    return;
+  }
+
+  const filas = crudo.slice(iCab + 1).map((f) => ({
+    "Fecha": f[0], "Ticker": f[cTicker],
+    "Tipo": cTipo >= 0 ? f[cTipo] : null, "Cantidad": f[cCant],
+    "Precio Compra": f[cPrecio], "Invertido $": cInv >= 0 ? f[cInv] : null,
+    "Comisión $": cCom >= 0 ? f[cCom] : null, "Dolar mep": cMep >= 0 ? f[cMep] : null
+  }));
+  const antesDeLaHoja = salida.length;
+
+  filas.forEach((row, i) => {
     const f = fecha(row["Fecha"]);
     const ticker = String(row["Ticker"] || "").toUpperCase().trim();
     if (!f || !ticker) return; // fila vacia o de relleno
 
-    const et = `${hoja} fila ${i + 2} (${ticker} ${f})`;
+    const et = `${hoja} fila ${iCab + i + 2} (${ticker} ${f})`;
     let cant = num(row["Cantidad"]);
     let tipo = String(row["Tipo"] || "").toUpperCase().trim();
     let precio = num(row["Precio Compra"]);
@@ -156,6 +188,11 @@ HOJAS.forEach((hoja) => {
       invertido_ars: Math.round((cant * precio + comision) * 100) / 100
     });
   });
+
+  // Una hoja que existe y no aporta ni una fila casi siempre es un encabezado
+  // cambiado, no una hoja vacia de verdad. Frenamos en vez de perder datos.
+  if (salida.length === antesDeLaHoja && filas.some((r) => r["Ticker"]))
+    errores.push(`la hoja "${hoja}" tiene filas pero no pude leer ninguna. Revisá los encabezados.`);
 });
 
 // Las operaciones cargadas en la app (y traidas desde Supabase) no estan en el

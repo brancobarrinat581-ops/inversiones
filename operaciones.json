@@ -1,7 +1,7 @@
 {
- "ts": "2026-11-05T00:14:07.799Z",
+ "ts": "2026-11-05T12:27:06.896Z",
  "fuente": "Excel: Control_Portafolio_IOL.xlsx",
- "total": 82,
+ "total": 83,
  "operaciones": [
   {
    "id": "x001",
@@ -986,6 +986,18 @@
    "ppc": 4802.5,
    "comision": 662.42,
    "invertido_ars": 96712.42
+  },
+  {
+   "id": "x083",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-10-30",
+   "ticker": "PRMCAPB",
+   "tipo": "COMPRA",
+   "cantidad": 5320.5783,
+   "precio": 189.785248,
+   "ppc": 189.785248,
+   "comision": 0,
+   "invertido_ars": 1009767.27
   }
  ]
 }
