@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-05T01:30:10.594Z",
+ "ts": "2026-11-05T12:31:54.976Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -31,7 +31,9 @@
   "reb-Fondos IOL-2026-11",
   "mov-VIST-2026-11-04",
   "mov-MSFT-2026-11-04",
-  "mov-MCD-2026-11-04"
+  "mov-MCD-2026-11-04",
+  "mov-VIST-2026-11-05",
+  "reb-Nucleo-2026-11"
  ],
  "alertas": [
   {
@@ -48,39 +50,27 @@
   },
   {
    "tipo": "movimiento",
-   "clave": "mov-VIST-2026-11-04",
+   "clave": "mov-VIST-2026-11-05",
    "titulo": "VIST se movio -7.7% hoy",
    "texto": "Tu posicion vale $418.800, abajo de lo habitual."
   },
   {
    "tipo": "balance",
-   "clave": "bal-MCD-2026-11-04",
-   "titulo": "MCD presenta balance hoy",
-   "texto": "Presenta balance el 2026-11-04. Lo tenes en cartera."
-  },
-  {
-   "tipo": "balance",
-   "clave": "bal-MELI-2026-11-04",
-   "titulo": "MELI presenta balance hoy",
-   "texto": "Presenta balance el 2026-11-04. Lo tenes en cartera."
-  },
-  {
-   "tipo": "balance",
-   "clave": "bal-UBER-2026-11-04",
-   "titulo": "UBER presenta balance hoy",
-   "texto": "Presenta balance el 2026-11-04. Lo tenes en seguimiento."
-  },
-  {
-   "tipo": "balance",
    "clave": "bal-VST-2026-11-06",
-   "titulo": "VST presenta balance en 2 dias",
+   "titulo": "VST presenta balance mañana",
    "texto": "Presenta balance el 2026-11-06. Lo tenes en seguimiento."
   },
   {
    "tipo": "rebalanceo",
+   "clave": "reb-Nucleo-2026-11",
+   "titulo": "Nucleo esta en 9.7% y tu objetivo es 20%",
+   "texto": "Son 1.170.134 pesos de diferencia."
+  },
+  {
+   "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-11",
-   "titulo": "Tecnologia e IA esta en 52.4% y tu objetivo es 35%",
-   "texto": "Son 1.797.436 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 47.7% y tu objetivo es 35%",
+   "texto": "Son 1.444.017 pesos de diferencia."
   }
  ]
 }
