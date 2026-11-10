@@ -185,7 +185,10 @@ HOJAS.forEach((hoja) => {
       precio: precio,
       ppc: precio,
       comision: Math.round(comision * 100) / 100,
-      invertido_ars: Math.round((cant * precio + comision) * 100) / 100
+      invertido_ars: Math.round((cant * precio + comision) * 100) / 100,
+      // Tipo de cambio del dia de la operacion, para medir el rendimiento en
+      // dolares con la plata convertida cuando realmente entro o salio.
+      mep: isFinite(num(row["Dolar mep"])) && num(row["Dolar mep"]) > 100 ? num(row["Dolar mep"]) : null
     });
   });
 

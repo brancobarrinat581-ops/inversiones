@@ -130,6 +130,14 @@ async function main() {
   catch (e) { console.log('sin prices.json previo'); }
   const prevP = prev.prices || {};
 
+  // El MEP se guarda para poder medir el rendimiento en dolares con el mismo
+  // tipo de cambio que figura en el Excel de operaciones.
+  let mep = null;
+  try {
+    const d = await (await get('https://dolarapi.com/v1/dolares/bolsa', 6000)).json();
+    if (d.venta > 0) { mep = d.venta; console.log('MEP: $' + mep + ' (dolarapi)'); }
+  } catch (e) { console.log('MEP dolarapi FALLO: ' + e.message); }
+
   const { ccl, cclSrc } = await fetchCCL();
   const cclUsado = ccl || prev.ccl || null;
   if (!ccl && cclUsado) console.log('CCL: uso el anterior $' + cclUsado);
@@ -205,7 +213,8 @@ async function main() {
   }
 
   fs.writeFileSync('prices.json', JSON.stringify({
-    ts: now, ccl: cclUsado, cclSrc: cclSrc || (prev.cclSrc ? prev.cclSrc + ' (anterior)' : null),
+    ts: now, ccl: cclUsado, mep: mep || prev.mep || null,
+    cclSrc: cclSrc || (prev.cclSrc ? prev.cclSrc + ' (anterior)' : null),
     count: Object.keys(prices).length, real, stale, prices
   }, null, 2));
 

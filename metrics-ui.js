@@ -331,6 +331,70 @@
       }
     }
 
+    // ---------- en dolares ----------
+    var U = null;
+    try {
+      var pr = ls("prices_data", {});
+      var tcHoy = Number(pr.mep) > 0 ? Number(pr.mep) : r.ccl;
+      U = PF.computeUSD(ls("operaciones_raw", []), pr.prices || {}, tcHoy);
+    } catch (e) { U = null; }
+
+    if (U && U.invertido > 0) {
+      var hoyU = new Date(Date.now() - 3 * 3600000).toISOString().slice(0, 10);
+      var tirU = PF.xirr(U.flujos, U.valor, hoyU);
+
+      h = '<div style="color:#8b93a7;font-size:12px;margin-bottom:12px">Cada compra y cada venta se convierte ' +
+        "al dolar del dia en que la hiciste, y lo que tenes hoy al de hoy. Esto mide el negocio sin la " +
+        "devaluacion: es lo que de verdad ganaste o perdiste en poder de compra.</div>";
+
+      h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">';
+      h += bloque("Invertido", fUSD(U.invertido), U.posiciones.length + " posiciones");
+      h += bloque("Valor actual", fUSD(U.valor), "al dolar de hoy, " + f0(U.tcHoy));
+      h += "</div>";
+
+      h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">';
+      h += bloque("Ganancia", fUSD(U.ganancia), fPct(U.gananciaPct), col(U.ganancia));
+      if (Math.abs(U.realizado) >= 1)
+        h += bloque("Realizada", fUSD(U.realizado), "operaciones cerradas", col(U.realizado));
+      if (tirU != null) h += bloque("TIR anualizada", fPct(tirU), "en dolares", col(tirU));
+      h += "</div>";
+
+      // La comparacion que explica todo: el mismo dinero medido de dos formas.
+      h += '<div style="background:#0d1117;border-radius:8px;padding:12px;margin-bottom:8px">';
+      h += '<div style="color:#8b93a7;font-size:12px;margin-bottom:8px">La misma cartera, medida de dos formas</div>';
+      [["En pesos", r.gananciaPct], ["En dolares", U.gananciaPct]].forEach(function (x) {
+        h += '<div style="display:flex;justify-content:space-between;font-size:13px;padding:4px 0">' +
+          '<span style="color:#aaa">' + x[0] + "</span>" +
+          '<span style="color:' + col(x[1]) + ';font-weight:700">' + fPct(x[1]) + "</span></div>";
+      });
+      var dev = r.gananciaPct - U.gananciaPct;
+      h += '<div style="color:#8b93a7;font-size:11px;margin-top:6px;border-top:1px solid #1f2430;padding-top:6px">' +
+        "La diferencia de " + dev.toFixed(1) + " puntos no es ganancia: es el dolar subiendo. " +
+        "En pesos parece mas porque el peso vale menos.</div></div>";
+
+      if (MACRO && MACRO.inflacion12m && tirU != null) {
+        h += '<div style="background:#0d1117;border-radius:8px;padding:12px;margin-bottom:8px">';
+        h += '<div style="color:#8b93a7;font-size:12px;margin-bottom:6px">Contra la inflacion</div>';
+        var realARS = r.tir != null ? ((1 + r.tir / 100) / (1 + MACRO.inflacion12m / 100) - 1) * 100 : null;
+        if (realARS != null)
+          h += '<div style="display:flex;justify-content:space-between;font-size:13px;padding:3px 0">' +
+            '<span style="color:#aaa">Real en pesos (TIR menos inflacion)</span>' +
+            '<span style="color:' + col(realARS) + ';font-weight:700">' + fPct(realARS) + "</span></div>";
+        h += '<div style="display:flex;justify-content:space-between;font-size:13px;padding:3px 0">' +
+          '<span style="color:#aaa">En dolares</span>' +
+          '<span style="color:' + col(tirU) + ';font-weight:700">' + fPct(tirU) + "</span></div>";
+        h += '<div style="color:#8b93a7;font-size:11px;margin-top:6px">Los dos miden poder de compra, uno contra la ' +
+          "canasta local y el otro contra el dolar. Cuando se separan mucho, el tipo de cambio se adelanto o se atraso " +
+          "respecto de los precios.</div></div>";
+      }
+
+      h += '<div style="color:#5c6478;font-size:11px">Tipo de cambio de cada operacion: el que anotaste en el Excel.' +
+        (U.sinTC ? " " + U.sinTC + " sin dato, estimadas con la operacion mas cercana." : "") + "</div>";
+
+      SEC["DOLARES"] = h;
+      h = "";
+    }
+
     // Diversificacion real: cuanto se mueven juntas las posiciones.
     var corr = ANAL && ANAL.correlaciones;
     if (corr && corr.efectivas) {
@@ -410,6 +474,7 @@
     UI.modal("met-modal", "\uD83D\uDCCA Rendimiento", [
       { nombre: "Resumen", html: SEC.RESUMEN },
       { nombre: "Evolucion", html: SEC.EVOLUCION },
+      { nombre: "En dolares", html: SEC.DOLARES },
       { nombre: "Diversificacion", html: SEC.DIVERSIFICACION },
       { nombre: "Simulador", html: SEC.SIMULADOR, alArmar: function () { armarSimulador(r); } },
       { nombre: "Cerradas", html: SEC.CERRADAS }

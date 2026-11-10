@@ -117,6 +117,83 @@ function xirr(flujos, valorFinal, fechaFinal) {
   return isFinite(r) ? r * 100 : null;
 }
 
+// Lo mismo pero medido en dolares: cada flujo se convierte al tipo de cambio del
+// dia en que ocurrio (el que figura en el Excel), y la tenencia de hoy al de hoy.
+// En Argentina es la unica forma de saber si ganaste poder de compra: el
+// rendimiento en pesos mezcla el negocio con la devaluacion.
+function computeUSD(ops, prices, tcHoy) {
+  var lista = normalize(ops);
+  var crudas = (ops || []);
+  // El tipo de cambio viaja en la operacion original, que normalize no copia.
+  var tcPorClave = {};
+  crudas.forEach(function (o) {
+    if (!o || !o.mep) return;
+    var k = [String(o.fecha).slice(0, 10), String(o.ticker).toUpperCase(),
+      String(o.tipo).toUpperCase(), Math.abs(Number(o.cantidad)).toFixed(4)].join("|");
+    tcPorClave[k] = Number(o.mep);
+  });
+
+  // Para una operacion sin tipo de cambio usamos el de la operacion mas cercana
+  // en el tiempo, que es mejor que descartarla o que usar el de hoy.
+  var conTC = lista.map(function (o) {
+    var k = [o.fecha, o.ticker, o.tipo, o.cantidad.toFixed(4)].join("|");
+    return { o: o, tc: tcPorClave[k] || null };
+  });
+  conTC.forEach(function (x, i) {
+    if (x.tc) return;
+    var mejor = null, dist = Infinity;
+    conTC.forEach(function (y) {
+      if (!y.tc) return;
+      var d = Math.abs(new Date(y.o.fecha) - new Date(x.o.fecha));
+      if (d < dist) { dist = d; mejor = y.tc; }
+    });
+    x.tc = mejor || tcHoy;
+  });
+
+  var pos = {}, realizado = 0, flujos = [], sinTC = 0;
+  conTC.forEach(function (x) {
+    var o = x.o, tc = x.tc;
+    if (!(tc > 0)) { sinTC++; return; }
+    if (!pos[o.ticker]) pos[o.ticker] = { cantidad: 0, costo: 0 };
+    var p = pos[o.ticker];
+    if (o.tipo === "COMPRA") {
+      var egreso = (o.cantidad * o.ppc + o.comision) / tc;
+      p.cantidad += o.cantidad;
+      p.costo += egreso;
+      flujos.push({ fecha: o.fecha, monto: -egreso });
+    } else if (o.tipo === "VENTA") {
+      var unitario = p.cantidad > 0 ? p.costo / p.cantidad : 0;
+      var vendido = Math.min(o.cantidad, p.cantidad);
+      var ingreso = (o.cantidad * o.ppc - o.comision) / tc;
+      realizado += ingreso - vendido * unitario;
+      p.cantidad -= vendido;
+      p.costo -= vendido * unitario;
+      if (p.cantidad < 1e-9) { p.cantidad = 0; p.costo = 0; }
+      flujos.push({ fecha: o.fecha, monto: ingreso });
+    }
+  });
+
+  prices = prices || {};
+  var invertido = 0, valor = 0, posiciones = [];
+  Object.keys(pos).forEach(function (t) {
+    var p = pos[t];
+    if (p.cantidad <= 1e-9) return;
+    var ars = Number((prices[t] || {}).ars) || 0;
+    var val = tcHoy > 0 ? p.cantidad * ars / tcHoy : 0;
+    invertido += p.costo;
+    valor += val;
+    posiciones.push({ ticker: t, cantidad: p.cantidad, invertido: p.costo, valor: val, ganancia: val - p.costo });
+  });
+  posiciones.sort(function (a, b) { return b.valor - a.valor; });
+
+  return {
+    posiciones: posiciones, invertido: invertido, valor: valor,
+    ganancia: valor - invertido,
+    gananciaPct: invertido > 0 ? (valor - invertido) / invertido * 100 : 0,
+    realizado: realizado, flujos: flujos, tcHoy: tcHoy, sinTC: sinTC
+  };
+}
+
 // Detalle de cada venta: cuanto costo lo vendido y cuanto resultado dejo.
 // Sirve para ver que operaciones salieron bien y cuales no.
 function cerradas(ops) {
@@ -147,8 +224,8 @@ function cerradas(ops) {
 }
 
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = { computePortfolio: computePortfolio, xirr: xirr, normalize: normalize, build: build, cerradas: cerradas };
+  module.exports = { computePortfolio: computePortfolio, xirr: xirr, normalize: normalize, build: build, cerradas: cerradas, computeUSD: computeUSD };
 }
 if (typeof window !== "undefined") {
-  window.__PF = { computePortfolio: computePortfolio, xirr: xirr, normalize: normalize, build: build, cerradas: cerradas };
+  window.__PF = { computePortfolio: computePortfolio, xirr: xirr, normalize: normalize, build: build, cerradas: cerradas, computeUSD: computeUSD };
 }
