@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-11T01:17:35.467Z",
+ "ts": "2026-11-11T18:38:00.667Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -43,44 +43,52 @@
   "bal-NU-2026-11-12",
   "manual-2026-10-30-1",
   "justo-AMD-527",
-  "justo-AMD-525"
+  "justo-AMD-525",
+  "mov-MU-2026-11-11",
+  "mov-PANW-2026-11-11"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-GOOGL-300",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$287.38 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.37357. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$295.19 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.37357. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
   },
   {
-   "tipo": "precio-justo",
-   "clave": "justo-AMD-525",
-   "titulo": "AMD esta en precio de compra",
-   "texto": "Cotiza US$515.21 y la referencia con 20% de margen de seguridad es US$525.00. El objetivo promedio de los analistas es US$657.4875. Perfil Agresivo. AMD. El competidor de Nvidia en chips de IA. Si gana participacion, el salto es grande; si no, queda segunda."
+   "tipo": "movimiento",
+   "clave": "mov-MU-2026-11-11",
+   "titulo": "MU se movio +19.6% hoy",
+   "texto": "Tu posicion vale $825.000, arriba de lo habitual."
+  },
+  {
+   "tipo": "movimiento",
+   "clave": "mov-PANW-2026-11-11",
+   "titulo": "PANW se movio +8.9% hoy",
+   "texto": "Tu posicion vale $341.100, arriba de lo habitual."
   },
   {
    "tipo": "balance",
    "clave": "bal-NU-2026-11-12",
-   "titulo": "NU presenta balance en 2 dias",
+   "titulo": "NU presenta balance mañana",
    "texto": "Presenta balance el 2026-11-12. Lo tenes en cartera."
   },
   {
    "tipo": "manual",
    "clave": "manual-2026-10-30-1",
-   "titulo": "Los fondos IOL llevan 11 dias sin actualizar",
+   "titulo": "Los fondos IOL llevan 12 dias sin actualizar",
    "texto": "El precio de IOLCAMA e IOLDOLD se carga a mano en precios-manuales.json y la ultima vez fue el 2026-10-30. Son $1.728.638 de tu cartera valuados con un precio viejo."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Nucleo-2026-11",
-   "titulo": "Nucleo esta en 9.7% y tu objetivo es 20%",
-   "texto": "Son 1.108.838 pesos de diferencia."
+   "titulo": "Nucleo esta en 9.9% y tu objetivo es 20%",
+   "texto": "Son 1.096.889 pesos de diferencia."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-11",
-   "titulo": "Tecnologia e IA esta en 47.0% y tu objetivo es 35%",
-   "texto": "Son 1.292.414 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 47.4% y tu objetivo es 35%",
+   "texto": "Son 1.344.430 pesos de diferencia."
   }
  ]
 }
