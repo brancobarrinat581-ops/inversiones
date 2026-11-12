@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-12T02:18:13.480Z",
+ "ts": "2026-11-12T15:27:15.952Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -45,44 +45,51 @@
   "justo-AMD-527",
   "justo-AMD-525",
   "mov-MU-2026-11-11",
-  "mov-PANW-2026-11-11"
+  "mov-PANW-2026-11-11",
+  "mov-NVDA-2026-11-12"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
+   "clave": "justo-UBER-70",
+   "titulo": "UBER esta en precio de compra",
+   "texto": "Cotiza US$69.353 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$98.87913. Movilidad y delivery, ya genera caja libre positiva."
+  },
+  {
+   "tipo": "precio-justo",
    "clave": "justo-GOOGL-300",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$293.45 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.37357. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$296.09 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.37357. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
   },
   {
    "tipo": "movimiento",
-   "clave": "mov-MU-2026-11-11",
-   "titulo": "MU se movio +17.7% hoy",
-   "texto": "Tu posicion vale $811.875, arriba de lo habitual."
+   "clave": "mov-NVDA-2026-11-12",
+   "titulo": "NVDA se movio -8.2% hoy",
+   "texto": "Tu posicion vale $1.149.480, abajo de lo habitual."
   },
   {
    "tipo": "balance",
    "clave": "bal-NU-2026-11-12",
-   "titulo": "NU presenta balance mañana",
+   "titulo": "NU presenta balance hoy",
    "texto": "Presenta balance el 2026-11-12. Lo tenes en cartera."
   },
   {
    "tipo": "manual",
    "clave": "manual-2026-10-30-1",
-   "titulo": "Los fondos IOL llevan 12 dias sin actualizar",
+   "titulo": "Los fondos IOL llevan 13 dias sin actualizar",
    "texto": "El precio de IOLCAMA e IOLDOLD se carga a mano en precios-manuales.json y la ultima vez fue el 2026-10-30. Son $1.728.638 de tu cartera valuados con un precio viejo."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Nucleo-2026-11",
-   "titulo": "Nucleo esta en 9.9% y tu objetivo es 20%",
-   "texto": "Son 1.092.921 pesos de diferencia."
+   "titulo": "Nucleo esta en 9.4% y tu objetivo es 20%",
+   "texto": "Son 1.211.038 pesos de diferencia."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-11",
-   "titulo": "Tecnologia e IA esta en 47.1% y tu objetivo es 35%",
-   "texto": "Son 1.315.192 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 48.4% y tu objetivo es 35%",
+   "texto": "Son 1.527.553 pesos de diferencia."
   }
  ]
 }
