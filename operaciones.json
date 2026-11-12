@@ -1,7 +1,7 @@
 {
- "ts": "2026-11-10T17:39:53.450Z",
+ "ts": "2026-11-12T15:26:07.959Z",
  "fuente": "Excel: Control_Portafolio_IOL.xlsx",
- "total": 85,
+ "total": 92,
  "operaciones": [
   {
    "id": "x001",
@@ -316,7 +316,7 @@
    "mep": 1420
   },
   {
-   "id": "x076",
+   "id": "x083",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-03-19",
    "ticker": "ILF",
@@ -394,7 +394,7 @@
    "mep": 1418.99
   },
   {
-   "id": "x077",
+   "id": "x084",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-04-08",
    "ticker": "IOLCAMA",
@@ -459,7 +459,7 @@
    "mep": 1410
   },
   {
-   "id": "x078",
+   "id": "x085",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-04-15",
    "ticker": "IOLCAMA",
@@ -485,7 +485,7 @@
    "mep": 1410
   },
   {
-   "id": "x079",
+   "id": "x086",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-04-16",
    "ticker": "IOLCAMA",
@@ -563,7 +563,7 @@
    "mep": 1420
   },
   {
-   "id": "x080",
+   "id": "x087",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-05-15",
    "ticker": "ILF",
@@ -758,7 +758,7 @@
    "mep": 1520
   },
   {
-   "id": "x081",
+   "id": "x088",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-07-28",
    "ticker": "IOLDOLD",
@@ -771,7 +771,7 @@
    "mep": 1415
   },
   {
-   "id": "x082",
+   "id": "x089",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-07-28",
    "ticker": "IOLDOLD",
@@ -1018,7 +1018,7 @@
    "mep": 1560
   },
   {
-   "id": "x083",
+   "id": "x090",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-10-23",
    "ticker": "IOLCAMA",
@@ -1083,7 +1083,7 @@
    "mep": 1580
   },
   {
-   "id": "x084",
+   "id": "x091",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-10-30",
    "ticker": "PRMCAPB",
@@ -1096,7 +1096,7 @@
    "mep": 1580
   },
   {
-   "id": "x085",
+   "id": "x092",
    "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
    "fecha": "2026-10-30",
    "ticker": "IOLDOLD",
@@ -1106,6 +1106,97 @@
    "ppc": 1734.43552,
    "comision": 9085,
    "invertido_ars": 727444.83,
+   "mep": 1580
+  },
+  {
+   "id": "x076",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-11-05",
+   "ticker": "IBIT",
+   "tipo": "COMPRA",
+   "cantidad": 6,
+   "precio": 7275,
+   "ppc": 7275,
+   "comision": 301.06,
+   "invertido_ars": 43951.06,
+   "mep": 1580
+  },
+  {
+   "id": "x077",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-11-05",
+   "ticker": "NVDA",
+   "tipo": "COMPRA",
+   "cantidad": 18,
+   "precio": 13080,
+   "ppc": 13080,
+   "comision": 1623.83,
+   "invertido_ars": 237063.83,
+   "mep": 1580
+  },
+  {
+   "id": "x078",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-11-05",
+   "ticker": "MELI",
+   "tipo": "COMPRA",
+   "cantidad": 4,
+   "precio": 21020,
+   "ppc": 21020,
+   "comision": 579.9,
+   "invertido_ars": 84659.9,
+   "mep": 1580
+  },
+  {
+   "id": "x079",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-11-05",
+   "ticker": "NU",
+   "tipo": "COMPRA",
+   "cantidad": 10,
+   "precio": 9630,
+   "ppc": 9630,
+   "comision": 664.19,
+   "invertido_ars": 96964.19,
+   "mep": 1580
+  },
+  {
+   "id": "x080",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-11-05",
+   "ticker": "MU",
+   "tipo": "COMPRA",
+   "cantidad": 1,
+   "precio": 238000,
+   "ppc": 238000,
+   "comision": 1641.49,
+   "invertido_ars": 239641.49,
+   "mep": 1580
+  },
+  {
+   "id": "x081",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-11-05",
+   "ticker": "META",
+   "tipo": "COMPRA",
+   "cantidad": 1,
+   "precio": 42380,
+   "ppc": 42380,
+   "comision": 292.3,
+   "invertido_ars": 42672.3,
+   "mep": 1580
+  },
+  {
+   "id": "x082",
+   "user_id": "dd9be8e9-14f1-4c27-bb96-4e6b6cb24f06",
+   "fecha": "2026-11-05",
+   "ticker": "GOOGL",
+   "tipo": "COMPRA",
+   "cantidad": 6,
+   "precio": 8270,
+   "ppc": 8270,
+   "comision": 342.22,
+   "invertido_ars": 49962.22,
    "mep": 1580
   }
  ]
