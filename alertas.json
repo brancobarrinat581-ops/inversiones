@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-19T02:39:05.581Z",
+ "ts": "2026-11-19T19:28:23.520Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -52,50 +52,52 @@
   "bal-PANW-2026-11-18",
   "bal-NVDA-2026-11-17",
   "mov-MU-2026-11-17",
-  "mov-PANW-2026-11-18"
+  "mov-PANW-2026-11-18",
+  "mov-PANW-2026-11-19",
+  "manual-2026-10-30-2"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-UBER-70",
    "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$68.76 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$98.232. Movilidad y delivery, ya genera caja libre positiva."
+   "texto": "Cotiza US$65.615 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$98.232. Movilidad y delivery, ya genera caja libre positiva."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-GOOGL-300",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$282.44 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.37357. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$279.37 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.37357. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+  },
+  {
+   "tipo": "precio-justo",
+   "clave": "justo-AMD-525",
+   "titulo": "AMD esta en precio de compra",
+   "texto": "Cotiza US$487.455 y la referencia con 20% de margen de seguridad es US$525.00. El objetivo promedio de los analistas es US$657.74286. Perfil Agresivo. AMD. El competidor de Nvidia en chips de IA. Si gana participacion, el salto es grande; si no, queda segunda."
   },
   {
    "tipo": "movimiento",
-   "clave": "mov-PANW-2026-11-18",
-   "titulo": "PANW se movio +11.2% hoy",
-   "texto": "Tu posicion vale $349.200, arriba de lo habitual."
-  },
-  {
-   "tipo": "balance",
-   "clave": "bal-PANW-2026-11-18",
-   "titulo": "PANW presenta balance hoy",
-   "texto": "Presenta balance el 2026-11-18. Lo tenes en cartera."
+   "clave": "mov-PANW-2026-11-19",
+   "titulo": "PANW se movio +7.3% hoy",
+   "texto": "Tu posicion vale $374.700, arriba de lo habitual."
   },
   {
    "tipo": "manual",
-   "clave": "manual-2026-10-30-1",
-   "titulo": "Los fondos IOL llevan 19 dias sin actualizar",
+   "clave": "manual-2026-10-30-2",
+   "titulo": "Los fondos IOL llevan 20 dias sin actualizar",
    "texto": "El precio de IOLCAMA e IOLDOLD se carga a mano en precios-manuales.json y la ultima vez fue el 2026-10-30. Son $1.728.638 de tu cartera valuados con un precio viejo."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Nucleo-2026-11",
    "titulo": "Nucleo esta en 9.5% y tu objetivo es 20%",
-   "texto": "Son 1.188.754 pesos de diferencia."
+   "texto": "Son 1.188.007 pesos de diferencia."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-11",
    "titulo": "Tecnologia e IA esta en 48.0% y tu objetivo es 35%",
-   "texto": "Son 1.467.452 pesos de diferencia."
+   "texto": "Son 1.469.170 pesos de diferencia."
   }
  ]
 }
