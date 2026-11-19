@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-19T19:50:14.378Z",
+ "ts": "2026-11-19T20:01:09.376Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -54,32 +54,39 @@
   "mov-MU-2026-11-17",
   "mov-PANW-2026-11-18",
   "mov-PANW-2026-11-19",
-  "manual-2026-10-30-2"
+  "manual-2026-10-30-2",
+  "justo-COIN-110"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-UBER-70",
    "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$65.565 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$98.232. Movilidad y delivery, ya genera caja libre positiva."
+   "texto": "Cotiza US$65.43 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$98.232. Movilidad y delivery, ya genera caja libre positiva."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-GOOGL-300",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$277.83 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.14716. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$275.66 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$400.14716. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-AMD-525",
    "titulo": "AMD esta en precio de compra",
-   "texto": "Cotiza US$488.58 y la referencia con 20% de margen de seguridad es US$525.00. El objetivo promedio de los analistas es US$657.74286. Perfil Agresivo. AMD. El competidor de Nvidia en chips de IA. Si gana participacion, el salto es grande; si no, queda segunda."
+   "texto": "Cotiza US$481.31 y la referencia con 20% de margen de seguridad es US$525.00. El objetivo promedio de los analistas es US$657.74286. Perfil Agresivo. AMD. El competidor de Nvidia en chips de IA. Si gana participacion, el salto es grande; si no, queda segunda."
+  },
+  {
+   "tipo": "precio-justo",
+   "clave": "justo-COIN-110",
+   "titulo": "COIN esta en precio de compra",
+   "texto": "Cotiza US$109.88 y la referencia con 20% de margen de seguridad es US$110.00. El objetivo promedio de los analistas es US$195.00294. Perfil Agresivo. Coinbase. Sus ingresos siguen al precio de las criptomonedas. Muy ciclica. Ojo: ya tenes IBIT, asi que se superpone."
   },
   {
    "tipo": "movimiento",
    "clave": "mov-PANW-2026-11-19",
-   "titulo": "PANW se movio +8.3% hoy",
-   "texto": "Tu posicion vale $378.000, arriba de lo habitual."
+   "titulo": "PANW se movio +7.7% hoy",
+   "texto": "Tu posicion vale $376.200, arriba de lo habitual."
   },
   {
    "tipo": "manual",
@@ -91,13 +98,13 @@
    "tipo": "rebalanceo",
    "clave": "reb-Nucleo-2026-11",
    "titulo": "Nucleo esta en 9.5% y tu objetivo es 20%",
-   "texto": "Son 1.193.292 pesos de diferencia."
+   "texto": "Son 1.189.967 pesos de diferencia."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-11",
-   "titulo": "Tecnologia e IA esta en 48.2% y tu objetivo es 35%",
-   "texto": "Son 1.490.496 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 48.1% y tu objetivo es 35%",
+   "texto": "Son 1.481.422 pesos de diferencia."
   }
  ]
 }
