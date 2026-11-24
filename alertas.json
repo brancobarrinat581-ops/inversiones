@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-24T02:53:10.015Z",
+ "ts": "2026-11-24T03:15:01.429Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -62,7 +62,9 @@
   "mov-NVDA-2026-11-20",
   "justo-NFLX-57",
   "mov-NVDA-2026-11-23",
-  "mov-MU-2026-11-23"
+  "mov-MU-2026-11-23",
+  "mov-NVDA-2026-11-24",
+  "mov-MU-2026-11-24"
  ],
  "alertas": [
   {
@@ -91,20 +93,20 @@
   },
   {
    "tipo": "movimiento",
-   "clave": "mov-NVDA-2026-11-23",
+   "clave": "mov-NVDA-2026-11-24",
    "titulo": "NVDA se movio -10.2% hoy",
    "texto": "Tu posicion vale $984.680, abajo de lo habitual."
   },
   {
    "tipo": "movimiento",
-   "clave": "mov-MU-2026-11-23",
+   "clave": "mov-MU-2026-11-24",
    "titulo": "MU se movio -11.1% hoy",
    "texto": "Tu posicion vale $856.000, abajo de lo habitual."
   },
   {
    "tipo": "manual",
    "clave": "manual-2026-10-30-2",
-   "titulo": "Los fondos IOL llevan 24 dias sin actualizar",
+   "titulo": "Los fondos IOL llevan 25 dias sin actualizar",
    "texto": "El precio de IOLCAMA e IOLDOLD se carga a mano en precios-manuales.json y la ultima vez fue el 2026-10-30. Son $1.728.638 de tu cartera valuados con un precio viejo."
   },
   {
