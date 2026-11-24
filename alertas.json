@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-24T21:06:53.080Z",
+ "ts": "2026-11-24T22:19:57.986Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -64,26 +64,27 @@
   "mov-NVDA-2026-11-23",
   "mov-MU-2026-11-23",
   "mov-NVDA-2026-11-24",
-  "mov-MU-2026-11-24"
+  "mov-MU-2026-11-24",
+  "mov-MELI-2026-11-24"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-UBER-70",
    "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$64.72 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$98.16174. Movilidad y delivery, ya genera caja libre positiva."
+   "texto": "Cotiza US$64.7 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$98.16174. Movilidad y delivery, ya genera caja libre positiva."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-GOOGL-300",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$279.05 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$395.7702. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$279.05 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$395.47815. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-ORCL-110",
    "titulo": "ORCL esta en precio de compra",
-   "texto": "Cotiza US$109.51 y la referencia con 20% de margen de seguridad es US$110.00. El objetivo promedio de los analistas es US$236.184. Perfil Agresivo. Oracle. El caso tipico de apuesta: se endeudo fuerte para construir centros de datos de IA. Si los contratos se cumplen, la suba es grande; si no, queda con mucha deuda y poco crecimiento. Los fundamentos hoy no la respaldan, la tesis es la remontada."
+   "texto": "Cotiza US$109.5 y la referencia con 20% de margen de seguridad es US$110.00. El objetivo promedio de los analistas es US$236.184. Perfil Agresivo. Oracle. El caso tipico de apuesta: se endeudo fuerte para construir centros de datos de IA. Si los contratos se cumplen, la suba es grande; si no, queda con mucha deuda y poco crecimiento. Los fundamentos hoy no la respaldan, la tesis es la remontada."
   },
   {
    "tipo": "precio-justo",
@@ -95,13 +96,19 @@
    "tipo": "precio-justo",
    "clave": "justo-COIN-110",
    "titulo": "COIN esta en precio de compra",
-   "texto": "Cotiza US$102.345 y la referencia con 20% de margen de seguridad es US$110.00. El objetivo promedio de los analistas es US$192.63705. Perfil Agresivo. Coinbase. Sus ingresos siguen al precio de las criptomonedas. Muy ciclica. Ojo: ya tenes IBIT, asi que se superpone."
+   "texto": "Cotiza US$102.345 y la referencia con 20% de margen de seguridad es US$110.00. El objetivo promedio de los analistas es US$191.78412. Perfil Agresivo. Coinbase. Sus ingresos siguen al precio de las criptomonedas. Muy ciclica. Ojo: ya tenes IBIT, asi que se superpone."
   },
   {
    "tipo": "movimiento",
    "clave": "mov-NVDA-2026-11-24",
-   "titulo": "NVDA se movio +20.5% hoy",
-   "texto": "Tu posicion vale $1.182.440, arriba de lo habitual."
+   "titulo": "NVDA se movio +21.8% hoy",
+   "texto": "Tu posicion vale $1.195.830, arriba de lo habitual."
+  },
+  {
+   "tipo": "movimiento",
+   "clave": "mov-MELI-2026-11-24",
+   "titulo": "MELI se movio +7.2% hoy",
+   "texto": "Tu posicion vale $499.100, arriba de lo habitual."
   },
   {
    "tipo": "manual",
@@ -113,13 +120,13 @@
    "tipo": "rebalanceo",
    "clave": "reb-Nucleo-2026-11",
    "titulo": "Nucleo esta en 9.5% y tu objetivo es 20%",
-   "texto": "Son 1.213.372 pesos de diferencia."
+   "texto": "Son 1.214.918 pesos de diferencia."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-11",
    "titulo": "Tecnologia e IA esta en 48.1% y tu objetivo es 35%",
-   "texto": "Son 1.510.466 pesos de diferencia."
+   "texto": "Son 1.518.863 pesos de diferencia."
   }
  ]
 }
