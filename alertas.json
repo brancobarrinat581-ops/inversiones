@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-25T17:17:49.477Z",
+ "ts": "2026-11-25T21:36:18.062Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -68,50 +68,39 @@
   "mov-MELI-2026-11-24",
   "mov-NVDA-2026-11-25",
   "mov-MELI-2026-11-25",
-  "mov-MU-2026-11-25"
+  "mov-MU-2026-11-25",
+  "justo-AMD-520"
  ],
  "alertas": [
   {
    "tipo": "precio-justo",
    "clave": "justo-UBER-70",
    "titulo": "UBER esta en precio de compra",
-   "texto": "Cotiza US$65.945 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$98.16174. Movilidad y delivery, ya genera caja libre positiva."
+   "texto": "Cotiza US$66.35 y la referencia con 20% de margen de seguridad es US$70.00. El objetivo promedio de los analistas es US$98.16174. Movilidad y delivery, ya genera caja libre positiva."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-GOOGL-300",
    "titulo": "GOOGL esta en precio de compra",
-   "texto": "Cotiza US$269.745 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$395.47815. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
+   "texto": "Cotiza US$273.1 y la referencia con 20% de margen de seguridad es US$300.00. El objetivo promedio de los analistas es US$395.1078. Perfil Moderado. Alphabet. Publicidad que genera mucha caja, mas la nube y la apuesta a IA. La causa antimonopolio es el riesgo a seguir."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-ORCL-110",
    "titulo": "ORCL esta en precio de compra",
-   "texto": "Cotiza US$103.3 y la referencia con 20% de margen de seguridad es US$110.00. El objetivo promedio de los analistas es US$236.184. Perfil Agresivo. Oracle. El caso tipico de apuesta: se endeudo fuerte para construir centros de datos de IA. Si los contratos se cumplen, la suba es grande; si no, queda con mucha deuda y poco crecimiento. Los fundamentos hoy no la respaldan, la tesis es la remontada."
+   "texto": "Cotiza US$103.88 y la referencia con 20% de margen de seguridad es US$110.00. El objetivo promedio de los analistas es US$236.184. Perfil Agresivo. Oracle. El caso tipico de apuesta: se endeudo fuerte para construir centros de datos de IA. Si los contratos se cumplen, la suba es grande; si no, queda con mucha deuda y poco crecimiento. Los fundamentos hoy no la respaldan, la tesis es la remontada."
   },
   {
    "tipo": "precio-justo",
-   "clave": "justo-AMD-525",
+   "clave": "justo-AMD-520",
    "titulo": "AMD esta en precio de compra",
-   "texto": "Cotiza US$389.735 y la referencia con 20% de margen de seguridad es US$524.97. El objetivo promedio de los analistas es US$656.2122. Perfil Agresivo. AMD. El competidor de Nvidia en chips de IA. Si gana participacion, el salto es grande; si no, queda segunda."
+   "texto": "Cotiza US$406.03 y la referencia con 20% de margen de seguridad es US$519.91. El objetivo promedio de los analistas es US$649.8857. Perfil Agresivo. AMD. El competidor de Nvidia en chips de IA. Si gana participacion, el salto es grande; si no, queda segunda."
   },
   {
    "tipo": "precio-justo",
    "clave": "justo-COIN-110",
    "titulo": "COIN esta en precio de compra",
-   "texto": "Cotiza US$99.93 y la referencia con 20% de margen de seguridad es US$110.00. El objetivo promedio de los analistas es US$191.78412. Perfil Agresivo. Coinbase. Sus ingresos siguen al precio de las criptomonedas. Muy ciclica. Ojo: ya tenes IBIT, asi que se superpone."
-  },
-  {
-   "tipo": "movimiento",
-   "clave": "mov-NVDA-2026-11-25",
-   "titulo": "NVDA se movio -10.0% hoy",
-   "texto": "Tu posicion vale $1.076.350, abajo de lo habitual."
-  },
-  {
-   "tipo": "movimiento",
-   "clave": "mov-MU-2026-11-25",
-   "titulo": "MU se movio -14.1% hoy",
-   "texto": "Tu posicion vale $780.000, abajo de lo habitual."
+   "texto": "Cotiza US$103.72 y la referencia con 20% de margen de seguridad es US$110.00. El objetivo promedio de los analistas es US$189.93314. Perfil Agresivo. Coinbase. Sus ingresos siguen al precio de las criptomonedas. Muy ciclica. Ojo: ya tenes IBIT, asi que se superpone."
   },
   {
    "tipo": "manual",
@@ -123,13 +112,13 @@
    "tipo": "rebalanceo",
    "clave": "reb-Nucleo-2026-11",
    "titulo": "Nucleo esta en 9.5% y tu objetivo es 20%",
-   "texto": "Son 1.167.951 pesos de diferencia."
+   "texto": "Son 1.209.063 pesos de diferencia."
   },
   {
    "tipo": "rebalanceo",
    "clave": "reb-Tecnologia e IA-2026-11",
-   "titulo": "Tecnologia e IA esta en 46.9% y tu objetivo es 35%",
-   "texto": "Son 1.326.306 pesos de diferencia."
+   "titulo": "Tecnologia e IA esta en 47.6% y tu objetivo es 35%",
+   "texto": "Son 1.445.242 pesos de diferencia."
   }
  ]
 }
