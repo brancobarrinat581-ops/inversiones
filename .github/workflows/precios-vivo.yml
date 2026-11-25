@@ -1,27 +1,25 @@
 name: Precios en vivo
 
 # Por que esto existe:
-# GitHub ejecuta los cron de repos gratuitos "cuando puede": de ~25 horarios
-# programados por dia terminaba corriendo 2 o 3, y en horarios que no coincidian
-# con el cron. Resultado: precios de cierre, nunca precios del dia.
-#
-# La vuelta: en lugar de pedir muchas corridas cortas, pedimos pocas corridas
-# LARGAS. Una sola que arranque cubre varias horas actualizando cada 15 minutos.
-# Si GitHub descarta un arranque, el siguiente levanta igual, y si llegan a
-# arrancar dos, la cola los encadena en vez de pisarse.
+# GitHub ejecuta los cron de repos gratuitos "cuando puede". La vuelta: en lugar
+# de pedir muchas corridas cortas, pedimos pocas corridas LARGAS. Una sola que
+# arranque cubre varias horas actualizando cada 10 minutos.
 on:
   schedule:
-    # GitHub dispara estos cron con 1 a 2 horas de atraso. Con arranques cada hora
-    # desde temprano, aunque se atrasen, alguno cae dentro de la rueda argentina
-    # (14:00 a 20:00 UTC). El grupo de concurrencia evita que se pisen: mientras
-    # uno corre, el siguiente espera y arranca apenas termina.
-    - cron: '5 11 * * 1-5'
+    # Medido sobre las corridas reales: GitHub esta disparando estos cron con 8 a
+    # 11 horas de atraso, no con 1 o 2. Los arranques de 11-18 UTC del 24 se
+    # ejecutaron entre las 22:19 y las 02:15, con la rueda cerrada, y el corte por
+    # horario los mataba en una vuelta. Por eso ahora los arranques empiezan de
+    # madrugada: con ese atraso caen dentro de la rueda, y si algun dia GitHub
+    # dispara en hora, el que arranca temprano espera la apertura en vez de morirse.
+    - cron: '5 2 * * 1-5'
+    - cron: '5 4 * * 1-5'
+    - cron: '5 6 * * 1-5'
+    - cron: '5 8 * * 1-5'
+    - cron: '5 10 * * 1-5'
     - cron: '5 12 * * 1-5'
-    - cron: '5 13 * * 1-5'
     - cron: '5 14 * * 1-5'
-    - cron: '5 15 * * 1-5'
     - cron: '5 16 * * 1-5'
-    - cron: '5 17 * * 1-5'
     - cron: '5 18 * * 1-5'
   workflow_dispatch:
 
@@ -50,9 +48,9 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           export GH_TOKEN="${{ github.token }}"
 
-          # Corta a las 21:00 UTC (18:00 AR, con la rueda ya cerrada) o a las
-          # 5 horas y media, lo que pase primero. Nunca queda dando vueltas de noche.
-          FIN=$(( $(date -u +%s) + 18000 ))
+          # Corta a las 21:00 UTC (18:00 AR, rueda cerrada) o a las 5h50, lo que
+          # pase primero. El limite de un job de Actions es 6 horas.
+          FIN=$(( $(date -u +%s) + 21000 ))
           VUELTA=0
 
           while true; do
@@ -85,11 +83,30 @@ jobs:
 
             AHORA=$(date -u +%s)
             HORA=$(date -u +%H)
-            # Fuera de la rueda no tiene sentido seguir despierto: se actualiza una
-            # vez y se corta, asi el proximo arranque encuentra el lugar libre.
-            if [ "$AHORA" -ge "$FIN" ] || [ "$HORA" -ge 21 ] || [ "$HORA" -lt 11 ]; then
+
+            # Despues del cierre no hay nada que mirar: se guarda el ultimo precio
+            # y se corta, asi el proximo arranque encuentra el lugar libre.
+            if [ "$AHORA" -ge "$FIN" ] || [ "$HORA" -ge 21 ]; then
               echo "Listo: $VUELTA actualizaciones."
               break
             fi
+
+            # Antes de la apertura: esperar SOLO si la apertura entra en la ventana
+            # que le queda al job. Hasta hoy una corrida que caia a las 02:00 hacia
+            # una vuelta y se iba, y despues no quedaba nadie despierto durante la
+            # rueda. Pero esperar sin llegar tampoco sirve: quema minutos de Actions
+            # para nada, asi que en ese caso guarda el cierre y corta.
+            if [ "$HORA" -lt 14 ]; then
+              FALTA=$(( (14 - HORA) * 3600 ))
+              RESTA=$(( FIN - AHORA ))
+              if [ "$FALTA" -le "$RESTA" ]; then
+                echo "Mercado cerrado. Espero $((FALTA/60)) min hasta la apertura."
+                sleep "$FALTA"
+                continue
+              fi
+              echo "Listo: $VUELTA actualizaciones (la apertura no entra en esta ventana)."
+              break
+            fi
+
             sleep 600
           done
