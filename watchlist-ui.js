@@ -5,7 +5,7 @@
   "use strict";
 
   var UI = window.__UI;
-  var WL = [], AN = null, WLCFG = null, PERF = null, TESIS = null;
+  var WL = [], AN = null, WLCFG = null, PERF = null, TESIS = null, CHEQ = null;
 
   function getJSON(u, cb) {
     try {
@@ -211,6 +211,37 @@
     return h + sello(sp.fuente || "Yahoo", sp.traido) + "</div>";
   }
 
+  // Estado de la tesis: si el negocio sigue cumpliendo lo que te hizo comprar.
+  // Va arriba de todo en tus posiciones porque es lo unico que deberia mover una
+  // decision de venta; el precio, por si solo, no.
+  function bloqueTesis(tk) {
+    var e = CHEQ && CHEQ[tk];
+    if (!e || e.sinChequeo) return "";
+    if (e.sinDatos)
+      return '<div style="margin-top:8px;color:#5c6478;font-size:11px">Sin datos de balance para chequear la tesis.</div>';
+
+    var est = {
+      intacta: { c: "#4CAF50", t: "Tesis intacta" },
+      atencion: { c: "#FF9800", t: "Una señal para mirar" },
+      rota: { c: "#F44336", t: "Tesis rota" }
+    }[e.estado] || { c: "#8b93a7", t: "Sin evaluar" };
+
+    var h = '<div style="margin-top:8px;background:#1a1a2e;border-radius:6px;padding:10px;border-left:3px solid ' + est.c + '">';
+    h += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">' +
+      '<span style="color:' + est.c + ';font-size:13px;font-weight:700">' + est.t + "</span>" +
+      '<span style="color:#5c6478;font-size:11px">perfil ' + (e.perfil || "") + "</span></div>";
+
+    (e["señales"] || []).forEach(function (x) {
+      h += '<div style="color:' + est.c + ';font-size:12px;padding:2px 0">• ' + x.texto + "</div>";
+    });
+    (e.ok || []).forEach(function (x) {
+      h += '<div style="color:#8b93a7;font-size:12px;padding:2px 0">• ' + x + "</div>";
+    });
+    if (e.estado === "intacta")
+      h += '<div style="color:#5c6478;font-size:11px;margin-top:6px">Caiga lo que caiga el precio, por el negocio no hay motivo para salir.</div>';
+    return h + "</div>";
+  }
+
   function tarjeta(it, precios, an, enCartera) {
     var tk = it.ticker;
     var px = (precios && precios.prices && precios.prices[tk]) || null;
@@ -257,6 +288,7 @@
     }
 
     h += bloqueEntrada(f, px, it.objetivo, (WLCFG && WLCFG.margen_seguridad) || 20);
+    if (enCartera) h += bloqueTesis(tk);
     h += bloqueTecnico((an && an.tecnicos && an.tecnicos[tk]) || null);
     h += bloqueFundamentos(tk, f);
     h += bloqueSorpresas((an && an.sorpresas && an.sorpresas[tk]) || null);
@@ -368,6 +400,7 @@
   getJSON("analysts.json", function (d) { AN = d; });
   getJSON("perfiles.json", function (d) { PERF = d; });
   getJSON("tesis.json", function (d) { TESIS = (d && (d.tesis || d)) || null; });
+  getJSON("chequeo-tesis.json", function (d) { CHEQ = (d && d.posiciones) || null; });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boton);
   else boton();

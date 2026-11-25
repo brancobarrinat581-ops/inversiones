@@ -1,21 +1,131 @@
 {
-  "_ayuda": "Por que compraste cada cosa y a que precio pensarias salir. Dentro de seis meses, cuando algo este 20% abajo, esto vale mas que cualquier precio objetivo. 'salida' es el precio en dolares al que venderias (null si todavia no lo definiste).",
+  "_ayuda": "Por que compraste cada cosa y cuando dejaria de tener sentido tenerla. El chequeo automatico (scripts/chequeo-tesis.js) compara estos umbrales contra los datos de Yahoo y avisa cuando una empresa deja de cumplir, sin mirar el precio. 'perfil' define que se le exige: madura (se espera caja positiva y margenes estables), expansion (se tolera caja negativa mientras crezca fuerte), indice (ETF o fondo, no se le mide balance). 'salida' es un precio en dolares al que venderias igual, null si no lo definiste. Cualquier umbral que pongas en la posicion pisa al del perfil.",
+  "perfiles": {
+    "madura": {
+      "descripcion": "Negocio consolidado. Se le exige generar caja y sostener margenes; no se le exige crecer mucho.",
+      "crecimiento_minimo": 5,
+      "caida_margen_maxima": 5,
+      "flujo_libre_negativo_alerta": true,
+      "deuda_patrimonio_maxima": 150,
+      "balances_fallados_seguidos": 2
+    },
+    "expansion": {
+      "descripcion": "Esta invirtiendo para crecer. La caja negativa es esperable mientras el crecimiento acompañe: recien molesta cuando deja de crecer.",
+      "crecimiento_minimo": 20,
+      "caida_margen_maxima": 8,
+      "flujo_libre_negativo_alerta": false,
+      "deuda_patrimonio_maxima": 250,
+      "balances_fallados_seguidos": 2
+    },
+    "indice": {
+      "descripcion": "ETF, indice o fondo. No tiene balance propio: no se le aplica ningun chequeo de tesis.",
+      "sin_chequeo": true
+    }
+  },
   "tesis": {
-    "MSFT": { "salida": null, "nota": "" },
-    "SPY": { "salida": null, "nota": "" },
-    "NVDA": { "salida": null, "nota": "" },
-    "META": { "salida": null, "nota": "" },
-    "IBIT": { "salida": null, "nota": "" },
-    "MELI": { "salida": null, "nota": "" },
-    "ADBE": { "salida": null, "nota": "" },
-    "ACN": { "salida": null, "nota": "" },
-    "MCD": { "salida": null, "nota": "" },
-    "MU": { "salida": null, "nota": "" },
-    "NU": { "salida": null, "nota": "" },
-    "PANW": { "salida": null, "nota": "" },
-    "PAMP": { "salida": null, "nota": "" },
-    "VIST": { "salida": null, "nota": "" },
-    "IOLCAMA": { "salida": null, "nota": "" },
-    "IOLDOLD": { "salida": null, "nota": "" }
+    "NVDA": {
+      "perfil": "expansion",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 66.1
+    },
+    "MU": {
+      "perfil": "expansion",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 74.6
+    },
+    "META": {
+      "perfil": "madura",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 37.8
+    },
+    "MSFT": {
+      "perfil": "madura",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 47.1
+    },
+    "GOOGL": {
+      "perfil": "expansion",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 33.3
+    },
+    "ADBE": {
+      "perfil": "madura",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 36.3
+    },
+    "PANW": {
+      "perfil": "expansion",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 4.9
+    },
+    "ACN": {
+      "perfil": "madura",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 16.4
+    },
+    "MCD": {
+      "perfil": "madura",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 46.1
+    },
+    "NFLX": {
+      "perfil": "madura",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 31.3
+    },
+    "MELI": {
+      "perfil": "expansion",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 7.4
+    },
+    "NU": {
+      "perfil": "expansion",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 50.9
+    },
+    "VIST": {
+      "perfil": "expansion",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 37.6
+    },
+    "PAMP": {
+      "perfil": "expansion",
+      "salida": null,
+      "nota": "",
+      "margen_referencia": 18
+    },
+    "SPY": {
+      "perfil": "indice",
+      "salida": null,
+      "nota": ""
+    },
+    "IBIT": {
+      "perfil": "indice",
+      "salida": null,
+      "nota": ""
+    },
+    "IOLDOLD": {
+      "perfil": "indice",
+      "salida": null,
+      "nota": ""
+    },
+    "PRMCAPB": {
+      "perfil": "indice",
+      "salida": null,
+      "nota": ""
+    }
   }
 }

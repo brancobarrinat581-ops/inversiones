@@ -39,11 +39,15 @@ jobs:
       - name: Macro BCRA
         run: node scripts/macro.js || true
 
+      # Mira si cada empresa sigue cumpliendo lo que te hizo comprarla.
+      - name: Chequeo de tesis
+        run: node scripts/chequeo-tesis.js || true
+
       - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add analysts.json macro.json
+          git add analysts.json macro.json chequeo-tesis.json tesis.json
           if git diff --staged --quiet; then
             echo "No changes"
           else

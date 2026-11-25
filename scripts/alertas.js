@@ -107,6 +107,32 @@ if (pm && pm.fecha) {
   }
 }
 
+// 3c) La tesis de una posicion dejo de cumplirse. Es la alerta que importa: avisa
+// por el negocio, no por el precio. Una posicion que cae 40% con los numeros
+// intactos no dispara nada; una que sube mientras se deteriora, si.
+const ct = leer("chequeo-tesis.json", null);
+if (ct && ct.posiciones) {
+  Object.keys(ct.posiciones).forEach((tk) => {
+    const e = ct.posiciones[tk];
+    if (!e || !e.señales || !e.señales.length) return;
+    if (e.estado !== "rota" && e.estado !== "atencion") return;
+    const pos = r.posiciones.find((p) => p.ticker === tk);
+    const cuanto = pos ? ` Son $${Math.round(pos.valor).toLocaleString("es-AR")} de tu cartera.` : "";
+    // La clave incluye los motivos: si aparece uno nuevo, vuelve a avisar.
+    const motivos = e.señales.map((x) => x.clave).sort().join("-");
+    alertas.push({
+      tipo: "tesis", clave: `tesis-${tk}-${e.estado}-${motivos}`,
+      titulo: e.estado === "rota"
+        ? `${tk}: la tesis se rompio`
+        : `${tk}: una señal para mirar`,
+      texto: e.señales.map((x) => "• " + x.texto).join("\n") + cuanto +
+        (e.estado === "rota"
+          ? " Dos señales a la vez ya es un patron, no un trimestre flojo."
+          : " Una sola señal puede ser un mal trimestre: mirala, no corras.")
+    });
+  });
+}
+
 // 4) Un grupo se corrio mucho del objetivo
 const gr = leer("grupos.json", null);
 if (gr && gr.grupos && r.valor > 0) {

@@ -1,0 +1,235 @@
+{
+ "ts": "2026-11-25T23:51:00.285Z",
+ "fuente": "Yahoo Finance via analysts.json",
+ "posiciones": {
+  "NVDA": {
+   "tk": "NVDA",
+   "perfil": "expansion",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 103%",
+    "margen 66%",
+    "genera US$ 99.2B de caja libre",
+    "deuda 14",
+    "4 de 4 balances superados"
+   ],
+   "margenHoy": 66.082
+  },
+  "MSFT": {
+   "tk": "MSFT",
+   "perfil": "madura",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 19%",
+    "margen 47%",
+    "genera US$ 3.0B de caja libre",
+    "deuda 28",
+    "4 de 4 balances superados"
+   ],
+   "margenHoy": 47.104
+  },
+  "SPY": {
+   "tk": "SPY",
+   "perfil": "indice",
+   "sinChequeo": true,
+   "señales": []
+  },
+  "PRMCAPB": {
+   "tk": "PRMCAPB",
+   "perfil": "indice",
+   "sinChequeo": true,
+   "señales": []
+  },
+  "MU": {
+   "tk": "MU",
+   "perfil": "expansion",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 379%",
+    "margen 75%",
+    "genera US$ 29.1B de caja libre",
+    "deuda 4",
+    "4 de 4 balances superados"
+   ],
+   "margenHoy": 74.586
+  },
+  "NU": {
+   "tk": "NU",
+   "perfil": "expansion",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 34%",
+    "margen 51%",
+    "2 de 4 balances superados"
+   ],
+   "margenHoy": 50.895999999999994
+  },
+  "IOLDOLD": {
+   "tk": "IOLDOLD",
+   "perfil": "indice",
+   "sinChequeo": true,
+   "señales": []
+  },
+  "META": {
+   "tk": "META",
+   "perfil": "madura",
+   "estado": "atencion",
+   "señales": [
+    {
+     "clave": "balances",
+     "texto": "Fallo los ultimos 2 balances seguidos"
+    }
+   ],
+   "ok": [
+    "crece 26%",
+    "margen 38%",
+    "genera US$ 16.8B de caja libre",
+    "deuda 42"
+   ],
+   "margenHoy": 37.777
+  },
+  "ACN": {
+   "tk": "ACN",
+   "perfil": "madura",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 6%",
+    "margen 16%",
+    "genera US$ 10.7B de caja libre",
+    "deuda 40",
+    "4 de 4 balances superados"
+   ],
+   "margenHoy": 16.419001
+  },
+  "MCD": {
+   "tk": "MCD",
+   "perfil": "madura",
+   "estado": "atencion",
+   "señales": [
+    {
+     "clave": "crecimiento",
+     "texto": "Ventas creciendo 1%, por debajo del 5% que le pedis a una madura"
+    }
+   ],
+   "ok": [
+    "margen 46%",
+    "genera US$ 5.7B de caja libre",
+    "4 de 4 balances superados"
+   ],
+   "margenHoy": 46.077
+  },
+  "MELI": {
+   "tk": "MELI",
+   "perfil": "expansion",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 45%",
+    "margen 7%",
+    "caja negativa pero creciendo: es inversion, no fuga",
+    "deuda 197",
+    "2 de 4 balances superados"
+   ],
+   "margenHoy": 7.422
+  },
+  "ADBE": {
+   "tk": "ADBE",
+   "perfil": "madura",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 13%",
+    "margen 36%",
+    "genera US$ 9.3B de caja libre",
+    "deuda 58",
+    "4 de 4 balances superados"
+   ],
+   "margenHoy": 36.323001999999995
+  },
+  "IBIT": {
+   "tk": "IBIT",
+   "perfil": "indice",
+   "sinChequeo": true,
+   "señales": []
+  },
+  "PAMP": {
+   "tk": "PAMP",
+   "perfil": "expansion",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 34%",
+    "margen 18%",
+    "caja negativa pero creciendo: es inversion, no fuga",
+    "deuda 68",
+    "4 de 4 balances superados"
+   ],
+   "margenHoy": 18.029
+  },
+  "PANW": {
+   "tk": "PANW",
+   "perfil": "expansion",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 39%",
+    "margen 5%",
+    "genera US$ 4.5B de caja libre",
+    "deuda 9",
+    "4 de 4 balances superados"
+   ],
+   "margenHoy": 4.947
+  },
+  "VIST": {
+   "tk": "VIST",
+   "perfil": "expansion",
+   "estado": "atencion",
+   "señales": [
+    {
+     "clave": "balances",
+     "texto": "Fallo los ultimos 2 balances seguidos"
+    }
+   ],
+   "ok": [
+    "crece 83%",
+    "margen 38%",
+    "genera US$ 0.8B de caja libre",
+    "deuda 99"
+   ],
+   "margenHoy": 37.557998
+  },
+  "NFLX": {
+   "tk": "NFLX",
+   "perfil": "madura",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 12%",
+    "margen 31%",
+    "genera US$ 25.5B de caja libre",
+    "deuda 60",
+    "3 de 4 balances superados"
+   ],
+   "margenHoy": 31.296000000000003
+  },
+  "GOOGL": {
+   "tk": "GOOGL",
+   "perfil": "expansion",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 25%",
+    "margen 33%",
+    "caja negativa pero creciendo: es inversion, no fuga",
+    "deuda 22",
+    "3 de 4 balances superados"
+   ],
+   "margenHoy": 33.321
+  }
+ }
+}
