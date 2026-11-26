@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-26T05:10:54.141Z",
+ "ts": "2026-11-26T20:16:13.514Z",
  "fuente": "Yahoo Finance via analysts.json",
  "posiciones": {
   "NVDA": {
@@ -106,6 +106,20 @@
    ],
    "margenHoy": 16.419001
   },
+  "MELI": {
+   "tk": "MELI",
+   "perfil": "expansion",
+   "estado": "intacta",
+   "señales": [],
+   "ok": [
+    "crece 45%",
+    "margen 7%",
+    "caja negativa pero creciendo: es inversion, no fuga",
+    "deuda 197",
+    "2 de 4 balances superados"
+   ],
+   "margenHoy": 7.422
+  },
   "MCD": {
    "tk": "MCD",
    "perfil": "madura",
@@ -122,20 +136,6 @@
     "4 de 4 balances superados"
    ],
    "margenHoy": 46.077
-  },
-  "MELI": {
-   "tk": "MELI",
-   "perfil": "expansion",
-   "estado": "intacta",
-   "señales": [],
-   "ok": [
-    "crece 45%",
-    "margen 7%",
-    "caja negativa pero creciendo: es inversion, no fuga",
-    "deuda 197",
-    "2 de 4 balances superados"
-   ],
-   "margenHoy": 7.422
   },
   "ADBE": {
    "tk": "ADBE",
