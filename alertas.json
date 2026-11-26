@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-25T23:02:35.927Z",
+ "ts": "2026-11-26T00:13:36.720Z",
  "avisadas": [
   "reb-Tecnologia e IA-2026-10",
   "justo-UBER-70",
@@ -69,7 +69,10 @@
   "mov-NVDA-2026-11-25",
   "mov-MELI-2026-11-25",
   "mov-MU-2026-11-25",
-  "justo-AMD-520"
+  "justo-AMD-520",
+  "tesis-META-atencion-balances",
+  "tesis-MCD-atencion-crecimiento",
+  "tesis-VIST-atencion-balances"
  ],
  "alertas": [
   {
@@ -107,6 +110,24 @@
    "clave": "manual-2026-10-30-2",
    "titulo": "Los fondos IOL llevan 26 dias sin actualizar",
    "texto": "El precio de IOLCAMA e IOLDOLD se carga a mano en precios-manuales.json y la ultima vez fue el 2026-10-30. Son $1.728.638 de tu cartera valuados con un precio viejo."
+  },
+  {
+   "tipo": "tesis",
+   "clave": "tesis-META-atencion-balances",
+   "titulo": "META: una señal para mirar",
+   "texto": "• Fallo los ultimos 2 balances seguidos Son $676.500 de tu cartera. Una sola señal puede ser un mal trimestre: mirala, no corras."
+  },
+  {
+   "tipo": "tesis",
+   "clave": "tesis-MCD-atencion-crecimiento",
+   "titulo": "MCD: una señal para mirar",
+   "texto": "• Ventas creciendo 1%, por debajo del 5% que le pedis a una madura Son $504.960 de tu cartera. Una sola señal puede ser un mal trimestre: mirala, no corras."
+  },
+  {
+   "tipo": "tesis",
+   "clave": "tesis-VIST-atencion-balances",
+   "titulo": "VIST: una señal para mirar",
+   "texto": "• Fallo los ultimos 2 balances seguidos Son $358.080 de tu cartera. Una sola señal puede ser un mal trimestre: mirala, no corras."
   },
   {
    "tipo": "rebalanceo",
