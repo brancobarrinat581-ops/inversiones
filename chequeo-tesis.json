@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-27T05:07:35.181Z",
+ "ts": "2026-11-27T20:03:16.735Z",
  "fuente": "Yahoo Finance via analysts.json",
  "posiciones": {
   "NVDA": {
@@ -151,12 +151,6 @@
    ],
    "margenHoy": 36.323001999999995
   },
-  "IBIT": {
-   "tk": "IBIT",
-   "perfil": "indice",
-   "sinChequeo": true,
-   "señales": []
-  },
   "PAMP": {
    "tk": "PAMP",
    "perfil": "expansion",
@@ -170,6 +164,12 @@
     "4 de 4 balances superados"
    ],
    "margenHoy": 18.029
+  },
+  "IBIT": {
+   "tk": "IBIT",
+   "perfil": "indice",
+   "sinChequeo": true,
+   "señales": []
   },
   "PANW": {
    "tk": "PANW",
